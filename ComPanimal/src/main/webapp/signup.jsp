@@ -94,12 +94,6 @@ body {
 										required>
 									<div class="invalid-feedback">이름을 입력해주세요.</div>
 								</div>
-								<div class="col-md-6 mb-3">
-									<label for="nickname">반려견 이름</label> <input type="text"
-										class="form-control" id="nickname" placeholder="" value=""
-										required>
-									<div class="invalid-feedback">반려견 이름을 입력해주세요.</div>
-								</div>
 							</div>
 
 							<div class="mb-3">
