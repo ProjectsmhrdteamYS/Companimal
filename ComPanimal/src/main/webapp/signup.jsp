@@ -6,14 +6,14 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
+
 <link rel ="stylesheet" href="./template.css">
   <title>회원가입 화면 </title>
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-=======
+
 <link rel="stylesheet" href="./template.css">
 <title>회원가입 화면</title>
 <!-- Bootstrap CSS -->
@@ -21,15 +21,12 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
 	crossorigin="anonymous">
->>>>>>> branch 'master' of https://github.com/ProjectsmhrdteamYS/Companimal.git
+
 
 
 <style>
-<<<<<<< HEAD
-
-=======
 /*  배경색 */
->>>>>>> branch 'master' of https://github.com/ProjectsmhrdteamYS/Companimal.git
+
 body {
 	min-height: 100vh;
 	background: -webkit-gradient(linear, left bottom, right top, from(#92b5db),
@@ -171,10 +168,10 @@ body {
 
   </script>
 
-<<<<<<< HEAD
+
 			<footer>
 	<p class="text-muted position-absolute bottom-0 start-0">
-		Muted text with a <a href="#" class="text-reset">reset link 말하자면 Footer입니다.</a>
+		<a href="#" class="text-reset">여기 뭐 적을거 있나?</a>
 	</p>
 </footer>
 		</div>
