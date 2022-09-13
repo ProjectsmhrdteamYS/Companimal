@@ -18,19 +18,20 @@
 
 <style>
 /* 전체 레이아웃 */
-header{margin:0 auto;}
 
-#wrap{margin:0 auto;}
+
+.container-fluid{width: 1600px; margin:0 auto;}
+#wrap{width: 1600px; margin:0 auto;}
 
 /* 컨테이너 */
-#content{width : 1200px; height:600px; background : #888;}
-.side{float: left; width : 600px; height:600px; background : #fff; padding:50px;}
-.con1{float: left; width : 600px; height:450px; background : #fff; padding:50px;}
-.con2{float: left; width : 600px; height:150px; background : #fff; padding-left:50px; padding-top:30px;}
+#content{width : 1600px; height:600px; background : #888;}
+.side{float: left; width : 800px; height:600px; background : #fff; padding-top:50px;}
+.con1{float: left; width : 800px; height:450px; background : #fff; padding-top:50px;}
+.con2{float: left; width : 800px; height:150px; background : #fff; padding-top:50px;}
 
 
 /* 세부디자인 */
-.side > img{width:500px; height:500px;}
+.side > img{width:700px; height:500px;}
 .con1_tit{font-size:40px; font-weight:bold; color:#0d6efd}
 .con1_cont{font-size:18px; font-weight:mideum; color:#555}
 
@@ -42,7 +43,7 @@ header{margin:0 auto;}
 </head>
 
 <header>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 		<div class="container-fluid">
 			<a class="navbar-brand " href="#"> <img
 				src="https://img.insight.co.kr/static/2018/11/05/700/888208025o428h6408hs.jpg"
@@ -69,7 +70,7 @@ header{margin:0 auto;}
 	</nav>
 </header>
 <body>
-	<div id="wrap" margin="0 auto">
+	<div id="wrap">
 		
 				<!-- CONTENT -->
 				<div id="content">
@@ -81,7 +82,7 @@ header{margin:0 auto;}
 				<div class="con1">
 				<div class="con1_tit">COMPANIMAL</div>
 				<br><br>
-				<div class="con1_cont">The dog or domestic dog (Canis familiaris or Canis lupus familiaris) is a domesticated descendant of the wolf. The dog is derived from an ancient, extinct wolf, and the modern wolf is the dog's nearest living relative. The dog was the first species to be domesticated, by hunter-gatherers over 15,000 years ago, before the development of agriculture. Due to their long association with humans, dogs have expanded to a large number of domestic individuals and gained the ability to thrive on a starch-rich diet that would be inadequate for other canids</div>
+				<div class="con1_cont">The dog or domestic dog (Canis familiaris or Canis lupus familiaris) is a domesticated descendant of the wolf.<br> The dog is derived from an ancient, extinct wolf, and the modern wolf is the dog's nearest<br> living relative. The dog was the first species to be domesticated, by hunter-gatherers over 15,000<br> years ago, before the development of agriculture. Due to their long association with humans, dogs have expanded to a large number of domestic individuals and gained<br> the ability to thrive on a starch-rich diet that would be inadequate for other canids</div>
 				</div>
 				<div class ="con2">
 				<input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
@@ -91,6 +92,10 @@ header{margin:0 auto;}
 		
 	</div>
 </body>
+
+<br>
+<hr>
+<br><br>
 
 <footer>
 	<div class="container">
