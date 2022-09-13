@@ -3,7 +3,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>동물 등록</title>
+<meta charset="UTF-8">
+<title>동물조회</title>
+
 <style>
 body {
 	font-family: Arial;
@@ -78,29 +80,31 @@ div.container {
 	</nav>
 </header>
 <body>
+	<p>동물 조회</p>
+
 	<div class="container">
 		<form action="#">
-			<label for="fname">동물등록번호</label> <input type="text" id="fname"
-				name="firstname" placeholder="등록번호 15자리"> <label for="lname">동물
-				이름</label> <input type="text" id="lname" name="lastname"
-				placeholder="Pet name.."> <label for="lname">동물 사진 등록 </label>
-			<input type="file" id="myFile" name="filename"> <input
-				type="submit" value="등록">
+			<P>
+				<label for="fname">동물등록번호</label> <input type="text" id="fname"
+					name="firstname" placeholder="등록번호 15자리"> <label
+					for="lname">소유자명</label> <input type="text" id="lname"
+					name="lastname" placeholder="Pet name..">
+			<hr>
+			<label for="lname">QR이미지로 조회<img src="   "></label>
+			<br>
+			<input	type="file" id="myFile" name="filename">
+			<hr>
+			<input type="submit" value="조회">
 		</form>
 	</div>
 </body>
 <footer>
 	<div class="container">
-		<p class="float-end mb-1">
-			<a href="#">Back to top</a>
-		</p>
-		<p class="mb-1">Album example is &copy; Bootstrap, but please
-			download and customize it for yourself!</p>
-		<p class="mb-0">
-			New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a
-				href="/docs/5.1/getting-started/introduction/">getting started
-				guide</a>.
-		</p>
-	</div>
+    <p class="float-end mb-1">
+      <a href="#">Back to top</a>
+    </p>
+    <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+    <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="/docs/5.1/getting-started/introduction/">getting started guide</a>.</p>
+  </div>
 </footer>
 </html>
