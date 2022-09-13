@@ -16,6 +16,23 @@
 	crossorigin="anonymous"></script>
 <title>COMPANIMAL</title>
 
+<style>
+#wrap{margin: 0 auto;}
+#content{width : 1200px; height:600px; background : #888;}
+.side{float: left; width : 600px; height:600px; background : #777; }
+.con1{float: left; width : 600px; height:300px; background : #666;}
+.con2{float: left; width : 600px; height:300px; background : #555;}
+
+
+#footer{clear:both; width:1200px; height:80px; background:#222;}
+
+</style>
+
+
+
+</head>
+
+
 <header>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
 		<div class="container-fluid">
@@ -38,23 +55,6 @@
 		</div>
 	</nav>
 </header>
-
-</head>
-
-<style>
-body{margin: 0 auto;}
-#content{width : 1200px; height:600px; background : #888;}
-.side{float: left; width : 600px; height:600px; background : #777; }
-.con1{float: left; width : 600px; height:300px; background : #666;}
-.con2{float: left; width : 600px; height:300px; background : #555;}
-
-
-
-#footer{clear:both; width:1200px; height:80px; background:#222;}
-
-</style>
-
-
 <body>
 	<div id="wrap">
 		</div>
@@ -65,13 +65,16 @@ body{margin: 0 auto;}
 				<div class ="con2">내용</div>
 				</div>
 		
-		<div id="footer">
-			<footer id="footerType" class="footer__wrap section gmarket gray">
-				<div class="footer__inner container">
-					<address class="footer__right">푸터영역</address>
-				</div>
-			</footer>
-		</div>
-	</div>
+
 </body>
+
+<footer>
+	<div class="container">
+    <p class="float-end mb-1">
+      <a href="#">Back to top</a>
+    </p>
+    <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+    <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="/docs/5.1/getting-started/introduction/">getting started guide</a>.</p>
+  </div>
+</footer>
 </html>
