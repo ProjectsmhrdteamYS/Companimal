@@ -14,8 +14,10 @@
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 	crossorigin="anonymous"></script>
-<title>COMPANIMAL</title>
 
+<title>레이아웃 유형01</title>
+
+</head>
 <header>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
 		<div class="container-fluid">
@@ -29,49 +31,58 @@
 					<li class="nav-item"><a class="nav-link active"
 						aria-current="page" href="#">Home</a></li>
 					<li class="nav-item"><a class="nav-link active"
-						aria-current="page" href="#">Features</a></li>
+						aria-current="page" href="#">Features</a>
+					</li>
 					<li class="nav-item"><a class="nav-link active"
-						aria-current="page" href="#">Pricing</a></li>
+						aria-current="page" href="#">Pricing</a>
+					</li>
 					<button type="button" class="btn btn-info">로그인</button>
 				</ul>
 			</div>
 		</div>
 	</nav>
 </header>
-
-</head>
-
-<style>
-body{margin: 0 auto;}
-#content{width : 1200px; height:600px; background : #888;}
-.side{float: left; width : 600px; height:600px; background : #777; }
-.con1{float: left; width : 600px; height:300px; background : #666;}
-.con2{float: left; width : 600px; height:300px; background : #555;}
-
-
-
-#footer{clear:both; width:1200px; height:80px; background:#222;}
-
-</style>
-
-
 <body>
-	<div id="wrap">
-		</div>
-				<!-- CONTENT -->
-				<div id="content">
-				<div class ="side" >이미지구간</div>
-				<div class ="con1">타이틀</div>
-				<div class ="con2">내용</div>
-				</div>
-		
-		<div id="footer">
-			<footer id="footerType" class="footer__wrap section gmarket gray">
-				<div class="footer__inner container">
-					<address class="footer__right">푸터영역</address>
-				</div>
-			</footer>
-		</div>
+	<div class="container-fluid p-3 mb-2 bg-info text-white">
+		Content here <br> <br> <br> <br> <img src="..."
+			class="img-thumbnail" alt="..."> <br> <br> <br>
+		h
+	</div>
+	<div>
+		<table class="table">
+			<thead>
+				<tr>
+					<th scope="col">#</th>
+					<th scope="col">First</th>
+					<th scope="col">Last</th>
+					<th scope="col">Handle</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">1</th>
+					<td>Mark</td>
+					<td>Otto</td>
+					<td>@mdo</td>
+				</tr>
+				<tr>
+					<th scope="row">2</th>
+					<td>Jacob</td>
+					<td>Thornton</td>
+					<td>@fat</td>
+				</tr>
+				<tr>
+					<th scope="row">3</th>
+					<td colspan="2">Larry the Bird</td>
+					<td>@twitter</td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 </body>
+<footer>
+	<p class="text-muted position-absolute bottom-0 start-0">
+		Muted text with a <a href="#" class="text-reset">reset link 말하자면 Footer입니다.</a>
+	</p>
+</footer>
 </html>
