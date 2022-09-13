@@ -97,7 +97,7 @@ body {
 									<div class="invalid-feedback">이름을 입력해주세요.</div>
 							</div>
 							<div class="col-md-6 mb-3">
-								<label for="birth">생년월일</label> <input type="number"
+								<label for="birth">생년월일</label> <input type="text"
 									class="form-control" id="brith" placeholder="220913" value=""
 									required>
 								<div class="invalid-feedback">생년월일을 입력해주세요.</div>
@@ -121,7 +121,7 @@ body {
 
 
 							<div class="mb-3">
-								<label for="phnum">전화번호</label> <input type="number"
+								<label for="phnum">전화번호</label> <input type="text"
 									class="form-control" id="phnum" placeholder="01012345678"
 									required>
 								<div class="invalid-feedback">전화번호를 입력해주세요.</div>
