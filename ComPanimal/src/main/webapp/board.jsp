@@ -7,8 +7,6 @@
 <title>Insert title here</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel ="stylesheet" href="./template.css">
-
 <!-- Css -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
 
@@ -16,6 +14,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
 </head>
 <body>
+
 <header>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
 		<div class="container-fluid">
@@ -42,8 +41,7 @@
 </header>
  
       <div>
-      <table class="table table-striped table-primary">
-  
+  <table class="table table-striped table-primary">
   <div class="row row-cols-1 row-cols-md-3 g-4">
   <div class="col">
     <div class="card h-100">
@@ -101,6 +99,10 @@
     </div>
   </div>
 </div>
+
+</table>
+</div>
+
  <footer>
 	<div class="container">
     <p class="float-end mb-1">
@@ -110,7 +112,7 @@
     <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="/docs/5.1/getting-started/introduction/">getting started guide</a>.</p>
   </div>
 </footer>
-      </div>
+  
 
 </body>
 </html>
