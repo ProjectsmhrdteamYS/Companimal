@@ -25,6 +25,7 @@
 
 
 <style>
+/*  배경색 */
 body {
 	min-height: 100vh;
 	background: -webkit-gradient(linear, left bottom, right top, from(#92b5db),
