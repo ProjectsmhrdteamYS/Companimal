@@ -31,11 +31,9 @@
 					<li class="nav-item"><a class="nav-link active"
 						aria-current="page" href="#">Home</a></li>
 					<li class="nav-item"><a class="nav-link active"
-						aria-current="page" href="#">Features</a>
-					</li>
+						aria-current="page" href="#">Features</a></li>
 					<li class="nav-item"><a class="nav-link active"
-						aria-current="page" href="#">Pricing</a>
-					</li>
+						aria-current="page" href="#">Pricing</a></li>
 					<button type="button" class="btn btn-info">로그인</button>
 				</ul>
 			</div>
@@ -43,46 +41,16 @@
 	</nav>
 </header>
 <body>
-	<div class="container-fluid p-3 mb-2 bg-info text-white">
-		Content here <br> <br> <br> <br> <img src="..."
-			class="img-thumbnail" alt="..."> <br> <br> <br>
-		h
-	</div>
-	<div>
-		<table class="table">
-			<thead>
-				<tr>
-					<th scope="col">#</th>
-					<th scope="col">First</th>
-					<th scope="col">Last</th>
-					<th scope="col">Handle</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<th scope="row">1</th>
-					<td>Mark</td>
-					<td>Otto</td>
-					<td>@mdo</td>
-				</tr>
-				<tr>
-					<th scope="row">2</th>
-					<td>Jacob</td>
-					<td>Thornton</td>
-					<td>@fat</td>
-				</tr>
-				<tr>
-					<th scope="row">3</th>
-					<td colspan="2">Larry the Bird</td>
-					<td>@twitter</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
+내용 입력
+
 </body>
 <footer>
-	<p class="text-muted position-absolute bottom-0 start-0">
-		Muted text with a <a href="#" class="text-reset">reset link 말하자면 Footer입니다.</a>
-	</p>
+	<div class="container">
+    <p class="float-end mb-1">
+      <a href="#">Back to top</a>
+    </p>
+    <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+    <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="/docs/5.1/getting-started/introduction/">getting started guide</a>.</p>
+  </div>
 </footer>
 </html>
