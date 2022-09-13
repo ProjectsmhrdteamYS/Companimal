@@ -137,11 +137,7 @@ body {
 								<div class="invalid-feedback">주소를 입력해주세요.</div>
 							</div>
 
-							<div class="mb-3">
-								<label for="address2">상세주소<span class="text-muted">&nbsp;(필수
-										아님)</span></label> <input type="text" class="form-control" id="address2"
-									placeholder="상세주소를 입력해주세요.">
-							</div>
+							
 
 
 							<hr class="mb-4">
