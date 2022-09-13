@@ -7,8 +7,6 @@
 <title>Insert title here</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel ="stylesheet" href="./template.css">
-
 <!-- Css -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
 
@@ -16,34 +14,36 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
 </head>
 <body>
+
 <header>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
 		<div class="container-fluid">
 			<a class="navbar-brand " href="#"> <img
 				src="https://img.insight.co.kr/static/2018/11/05/700/888208025o428h6408hs.jpg"
 				alt="" width="30" height="24" class="d-inline-block align-text-top">
-				Companimal
+				CompAnimal Home
 			</a>
 			<div class="collapse navbar-collapse" id="navbarText">
 				<ul class="nav nav-pills nav-fill">
 					<li class="nav-item"><a class="nav-link active"
-						aria-current="page" href="#">Home</a></li>
+						aria-current="page" href="#">CompAnimal 소개</a></li>
 					<li class="nav-item"><a class="nav-link active"
-						aria-current="page" href="#">Features</a>
-					</li>
+						aria-current="page" href="#">동물 정보 조회</a></li>
 					<li class="nav-item"><a class="nav-link active"
-						aria-current="page" href="#">Pricing</a>
-					</li>
+						aria-current="page" href="#">동물 정보 등록</a></li>
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="#">게시판</a></li>
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="#">찾아주세요</a></li>
 					<button type="button" class="btn btn-info">로그인</button>
+					<button type="button" class="btn btn-info">회원가입</button>
 				</ul>
 			</div>
 		</div>
 	</nav>
 </header>
- 
       <div>
-      <table class="table table-striped table-primary">
-  
+  <table class="table table-striped table-primary">
   <div class="row row-cols-1 row-cols-md-3 g-4">
   <div class="col">
     <div class="card h-100">
@@ -101,6 +101,10 @@
     </div>
   </div>
 </div>
+
+</table>
+</div>
+
  <footer>
 	<div class="container">
     <p class="float-end mb-1">
@@ -110,7 +114,7 @@
     <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="/docs/5.1/getting-started/introduction/">getting started guide</a>.</p>
   </div>
 </footer>
-      </div>
+  
 
 </body>
 </html>
