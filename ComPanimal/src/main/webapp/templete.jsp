@@ -38,6 +38,8 @@
 						aria-current="page" href="#">게시판</a></li>
 					<li class="nav-item"><a class="nav-link active"
 						aria-current="page" href="#">찾아주세요</a></li>
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="#">Pricing</a></li>
 					<button type="button" class="btn btn-info">로그인</button>
 					<button type="button" class="btn btn-info">회원가입</button>
 				</ul>
