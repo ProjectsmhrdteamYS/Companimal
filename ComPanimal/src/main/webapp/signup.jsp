@@ -6,14 +6,14 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
+
 <link rel ="stylesheet" href="./template.css">
   <title>회원가입 화면 </title>
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-=======
+
 <link rel="stylesheet" href="./template.css">
 <title>회원가입 화면</title>
 <!-- Bootstrap CSS -->
@@ -21,15 +21,12 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
 	crossorigin="anonymous">
->>>>>>> branch 'master' of https://github.com/ProjectsmhrdteamYS/Companimal.git
+
 
 
 <style>
-<<<<<<< HEAD
-
-=======
 /*  배경색 */
->>>>>>> branch 'master' of https://github.com/ProjectsmhrdteamYS/Companimal.git
+
 body {
 	min-height: 100vh;
 	background: -webkit-gradient(linear, left bottom, right top, from(#92b5db),
@@ -55,30 +52,33 @@ body {
 
 
 </head>
+<header>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
+		<div class="container-fluid">
+			<a class="navbar-brand " href="#"> <img
+				src="https://img.insight.co.kr/static/2018/11/05/700/888208025o428h6408hs.jpg"
+				alt="" width="30" height="24" class="d-inline-block align-text-top">
+				Companimal
+			</a>
+			<div class="collapse navbar-collapse" id="navbarText">
+				<ul class="nav nav-pills nav-fill">
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="#">Home</a></li>
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="#">Features</a>
+					</li>
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="#">Pricing</a>
+					</li>
+					<button type="button" class="btn btn-info">로그인</button>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</header>
 
 
 <body>
-	<div id="wrap">
-		<div id="header">
-			<header id="headerType" class="header__wrap nexon">
-				<div class="header__inner">
-					<div class="header__logo">
-						<a href="#">web <em>site</em></a>
-					</div>
-					<nav class="header__menu">
-						<ul>
-							<li><a href="#">헤더영역</a></li>
-							<li><a href="#">슬라이드 영역</a></li>
-							<li><a href="#">컨텐츠 영역</a></li>
-							<li><a href="#">푸터 영역</a></li>
-						</ul>
-					</nav>
-					<div class="header__member">
-						<a href="#">로그인</a>
-					</div>
-				</div>
-			</header>
-		</div>
 		<div class="input-form col-md-12 mx-auto">
 			<form class="validation-form" novalidate>
 
@@ -164,15 +164,18 @@ body {
       });
     }, false);
     
-    <div id="footer">
-    <footer id="footerType" class="footer__wrap section gmarket gray">
-       <div class="footer__inner container">
-          <address class="footer__right">어거 왜 안사라짐?</address>
-       </div>
-    </footer>
- </div>
+
 
   </script>
 
+
+			<footer>
+	<p class="text-muted position-absolute bottom-0 start-0">
+		<a href="#" class="text-reset">여기 뭐 적을거 있나?</a>
+	</p>
+</footer>
+		</div>
+=======
+>>>>>>> branch 'master' of https://github.com/ProjectsmhrdteamYS/Companimal.git
 </body>
 </html>
