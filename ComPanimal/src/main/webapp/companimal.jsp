@@ -17,13 +17,16 @@
 <title>COMPANIMAL</title>
 
 <style>
-#wrap{margin: 0 auto;}
+/* 전체 레이아웃 */
+header{margin:0 auto;}
+
+#wrap{margin:0 auto;}
 
 /* 컨테이너 */
 #content{width : 1200px; height:600px; background : #888;}
 .side{float: left; width : 600px; height:600px; background : #fff; padding:50px;}
-.con1{float: left; width : 600px; height:450px; background : #fff; padding-left:50px; padding-top:40px;}
-.con2{float: left; width : 600px; height:150px; background : #fff; padding-left:50px; padding-top:20px;}
+.con1{float: left; width : 600px; height:450px; background : #fff; padding:50px;}
+.con2{float: left; width : 600px; height:150px; background : #fff; padding-left:50px; padding-top:30px;}
 
 
 /* 세부디자인 */
@@ -36,8 +39,8 @@
 </style>
 
 
-
 </head>
+
 <header>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
 		<div class="container-fluid">
@@ -66,8 +69,8 @@
 	</nav>
 </header>
 <body>
-	<div id="wrap">
-		</div>
+	<div id="wrap" margin="0 auto">
+		
 				<!-- CONTENT -->
 				<div id="content">
 				<div class ="side" >
@@ -86,7 +89,7 @@
 				</div>
 				</div>
 		
-
+	</div>
 </body>
 
 <footer>
