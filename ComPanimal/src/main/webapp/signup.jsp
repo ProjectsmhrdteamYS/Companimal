@@ -95,8 +95,16 @@ body {
 										class="form-control" id="name" placeholder="" value=""
 										required>
 									<div class="invalid-feedback">이름을 입력해주세요.</div>
-								</div>
 							</div>
+							<div class="col-md-6 mb-3">
+								<label for="birth">생년월일</label> <input type="number"
+									class="form-control" id="brith" placeholder="220913" value=""
+									required>
+								<div class="invalid-feedback">생년월일을 입력해주세요.</div>
+							</div>
+							</div>
+
+
 
 							<div class="mb-3">
 								<label for="phnum">전화번호</label> <input type="number"
@@ -106,12 +114,6 @@ body {
 							</div>
 
 
-
-							<div class="mb-3">
-								<label for="email">생년월일</label> <input type="birth"
-									class="form-control" id="email" placeholder="220913" required>
-								<div class="invalid-feedback">생년월일을 입력해주세요.</div>
-							</div>
 
 
 							<div class="mb-3">
@@ -142,6 +144,11 @@ body {
 					</div>
 				</div>
 			</div>
+
+
+
+
+
 			<script>
     window.addEventListener('load', () => {
       const forms = document.getElementsByClassName('validation-form');
@@ -161,15 +168,19 @@ body {
 
 
   		</script>
-	</div>
 </body>
 <footer>
 	<div class="container">
-    <p class="float-end mb-1">
-      <a href="#">Back to top</a>
-    </p>
-    <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-    <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="/docs/5.1/getting-started/introduction/">getting started guide</a>.</p>
-  </div>
+		<p class="float-end mb-1">
+			<a href="#">Back to top</a>
+		</p>
+		<p class="mb-1">Album example is &copy; Bootstrap, but please
+			download and customize it for yourself!</p>
+		<p class="mb-0">
+			New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a
+				href="/docs/5.1/getting-started/introduction/">getting started
+				guide</a>.
+		</p>
+	</div>
 </footer>
 </html>
