@@ -104,6 +104,20 @@ body {
 							</div>
 							</div>
 
+								<div class="mb-3">
+								<label for="id">ID</label> <input type="text"
+									class="form-control" id="id" placeholder=""
+									required>
+								<div class="invalid-feedback">아이디를 입력해주세요.</div>
+							</div>
+							
+							<div class="mb-3">
+								<label for="pw">비밀번호</label> <input type="text"
+									class="form-control" id="pw" placeholder="8~16자 영문 소문자, 숫자를 사용하세요."
+									required>
+								<div class="invalid-feedback">비밀번호를 입력해주세요.</div>
+							</div>
+
 
 
 							<div class="mb-3">
