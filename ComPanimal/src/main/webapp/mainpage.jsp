@@ -53,8 +53,8 @@
   <!-- 내용 -->
   <div id="wrap">
    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
-    <div class="col-md-5 p-lg-5 mx-auto my-5">
-      <h1 class="display-4 fw-normal">Punny headline</h1>
+    <div class="col-md-5 p-lg-5 mx-auto my-5"> 
+      <h1 class="display-4 fw-normal">메인화면 배너</h1>
       <p class="lead fw-normal">And an even wittier subheading to boot. Jumpstart your marketing efforts with this example based on Apple’s marketing pages.</p>
       <a class="btn btn-outline-secondary" href="#">Coming soon</a>
     </div>
@@ -71,23 +71,81 @@
       </div>
     </nav>
     <section id=" section">
-      <div class="container">
-        <div class="img_center">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT17oPyev-_ISYx2i75CrZnAcNqlJIlynlQ8g&usqp=CAU" alt="">
-          <!--           good1 -->
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT17oPyev-_ISYx2i75CrZnAcNqlJIlynlQ8g&usqp=CAU" alt="">
-          <!--           good2 -->
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT17oPyev-_ISYx2i75CrZnAcNqlJIlynlQ8g&usqp=CAU" alt="">
-          <!--           good3 -->
+			<div class="row" style="margin: auto;">
+				<div class="col-lg-4">
+					<svg class="bd-placeholder-img rounded-circle" width="140"
+						height="140" xmlns="" role="img" aria-label="자리 표시자: 140x140"
+						preserveAspectRatio="xMidYMid slice" focusable="false">
+						<title>Placeholder
+						</title>
+						<rect width="100%" height="100%" fill="#777"></rect>
+						<text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+						</svg>
 
-        </div>
-        <div class="text_center">
-          good1
-          good1
-          good3
-        </div>
-      </div>
-    </section>
+					<h2 class="fw-normal">
+						<font style="vertical-align: inherit;"><font
+							style="vertical-align: inherit;">good1</font></font>
+					</h2>
+					<p>
+						<font style="vertical-align: inherit;"><font
+							style="vertical-align: inherit;">첫번째 이미지</font></font>
+					</p>
+					<p>
+						<a class="btn btn-secondary" href="#"><font
+							style="vertical-align: inherit;"><font
+								style="vertical-align: inherit;">세부 정보보기</font></font></a>
+					</p>
+				</div>
+				<!-- /.col-lg-4 -->
+				<div class="col-lg-4">
+					<svg class="bd-placeholder-img rounded-circle" width="140"
+						height="140" xmlns="http://www.w3.org/2000/svg" role="img"
+						aria-label="자리 표시자: 140x140" preserveAspectRatio="xMidYMid slice"
+						focusable="false">
+						<title>Placeholder</title><rect width="100%" height="100%"
+							fill="#777"></rect>
+						<text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+
+					<h2 class="fw-normal">
+						<font style="vertical-align: inherit;"><font
+							style="vertical-align: inherit;">good2</font></font>
+					</h2>
+					<p>
+						<font style="vertical-align: inherit;"><font
+							style="vertical-align: inherit;">두번째 이미지</font></font>
+					</p>
+					<p>
+						<a class="btn btn-secondary" href="#"><font
+							style="vertical-align: inherit;"><font
+								style="vertical-align: inherit;">세부 정보보기</font></font></a>
+					</p>
+				</div>
+				<!-- /.col-lg-4 -->
+				<div class="col-lg-4">
+					<svg class="bd-placeholder-img rounded-circle" width="140"
+						height="140" xmlns="http://www.w3.org/2000/svg" role="img"
+						aria-label="자리 표시자: 140x140" preserveAspectRatio="xMidYMid slice"
+						focusable="false">
+						<title> Placeholder</title>
+        <rect width="100%" height="100%" fill="#777"></rect>
+        <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+					<h2 class="fw-normal">
+						<font style="vertical-align: inherit;"><font
+							style="vertical-align: inherit;">good3</font></font>
+					</h2>
+					<p>
+						<font style="vertical-align: inherit;"><font
+							style="vertical-align: inherit;">세번째 이미지</font></font>
+					</p>
+					<p>
+						<a class="btn btn-secondary" href="#"><font
+							style="vertical-align: inherit;"><font
+								style="vertical-align: inherit;">세부 정보보기</font></font></a>
+					</p>
+				</div>
+				<!-- /.col-lg-4 -->
+			</div>
+		</section>
   </div>
 </body>
 
