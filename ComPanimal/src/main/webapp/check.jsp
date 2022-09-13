@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<title>동물등록</title>
+<title>동물 등록</title>
 <style>
 body {
   font-family: Arial;
