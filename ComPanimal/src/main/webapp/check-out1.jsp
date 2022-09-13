@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,38 +8,38 @@
 
 <style>
 body {
-  font-family: Arial;
+	font-family: Arial;
 }
 
 input[type=text], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
 }
 
 input[type=submit] {
-  width: 100%;
-  background-color: #04AA6D;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+	width: 100%;
+	background-color: #04AA6D;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
 }
 
 input[type=submit]:hover {
-  background-color: #45a049;
+	background-color: #45a049;
 }
 
 div.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
+	border-radius: 5px;
+	background-color: #f2f2f2;
+	padding: 20px;
 }
 </style>
 <link
@@ -76,26 +76,31 @@ div.container {
 </header>
 
 <body>
-<p>동물 조회</p>
+	<p>동물 조회</p>
 
-<div class="container">
-  <form action="#">
-  	<label for="lname">QR이미지로 조회<img src="    "></label>
-  	<input type="file" id="myFile" name="filename"> 
-  	<hr><P> 
-  
-    <label for="fname">동물등록번호</label>
-    <input type="text" id="fname" name="firstname" placeholder="등록번호 15자리">
-
-    <label for="lname">소유자명</label>
-    <input type="text" id="lname" name="lastname" placeholder="Pet name..">
-    <hr>
-
-
-
-    <input type="submit" value="조회">
-  </form>
-</div>
-
+	<div class="container">
+		<form action="#">
+			<P>
+				<label for="fname">동물등록번호</label> <input type="text" id="fname"
+					name="firstname" placeholder="등록번호 15자리"> <label
+					for="lname">소유자명</label> <input type="text" id="lname"
+					name="lastname" placeholder="Pet name..">
+			<hr>
+			<label for="lname">QR이미지로 조회<img src="   "></label>
+			<br>
+			<input	type="file" id="myFile" name="filename">
+			<hr>
+			<input type="submit" value="조회">
+		</form>
+	</div>
 </body>
+<footer>
+	<div class="container">
+    <p class="float-end mb-1">
+      <a href="#">Back to top</a>
+    </p>
+    <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+    <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="/docs/5.1/getting-started/introduction/">getting started guide</a>.</p>
+  </div>
+</footer>
 </html>
