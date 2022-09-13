@@ -52,13 +52,15 @@
 <body>
   <!-- 내용 -->
   <div id="wrap">
-    <header id="header">
-      <div class="container">
-        <div id="header_imglist">
-          <img id="header_img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT17oPyev-_ISYx2i75CrZnAcNqlJIlynlQ8g&usqp=CAU" alt="">
-        </div>
-      </div>
-    </header>
+   <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+    <div class="col-md-5 p-lg-5 mx-auto my-5">
+      <h1 class="display-4 fw-normal">Punny headline</h1>
+      <p class="lead fw-normal">And an even wittier subheading to boot. Jumpstart your marketing efforts with this example based on Apple’s marketing pages.</p>
+      <a class="btn btn-outline-secondary" href="#">Coming soon</a>
+    </div>
+    <div class="product-device shadow-sm d-none d-md-block"></div>
+    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+  </div>
     <nav id="nav">
       <div class="container">
         <h1 style="text-align: center;">Companimal</h1>
@@ -86,16 +88,17 @@
         </div>
       </div>
     </section>
-    <footer id="footer">
-      <div class="container" style="text-align: center;">음... 어케하면좋지 </div>
-    </footer>
   </div>
 </body>
 
 <footer>
-	<p class="text-muted position-absolute bottom-0 start-0">
-		Muted text with a <a href="#" class="text-reset">reset link 말하자면 Footer입니다.</a>
-	</p>
+	<div class="container">
+    <p class="float-end mb-1">
+      <a href="#">Back to top</a>
+    </p>
+    <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+    <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="/docs/5.1/getting-started/introduction/">getting started guide</a>.</p>
+  </div>
 </footer>
 
 </html>
