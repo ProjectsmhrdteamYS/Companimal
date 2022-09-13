@@ -53,7 +53,7 @@
    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
     <div class="col-md-5 p-lg-5 mx-auto my-5"> 
       <h1 class="display-4 fw-normal">메인화면 배너</h1>
-      <p class="lead fw-normal">And an even wittier subheading to boot. Jumpstart your marketing efforts with this example based on Apple’s marketing pages.</p>
+      <p class="lead fw-normal">And an even wittier subheading to boot. Jumpstart your marketing efforts with this example based on Apple's marketing pages.</p>
       <a class="btn btn-outline-secondary" href="#">Coming soon</a>
     </div>
     <div class="product-device shadow-sm d-none d-md-block"></div>
@@ -68,15 +68,15 @@
           gher.</h4>
       </div>
     </nav>
-    <section id=" section">
-			<div class="row" style="margin: auto;">
+     <div class="container marketing" >
+			<div class="row" style = "text-align: center; margin: 0 auto;" >
 				<div class="col-lg-4">
 					<svg class="bd-placeholder-img rounded-circle" width="140"
 						height="140" xmlns="" role="img" aria-label="자리 표시자: 140x140"
 						preserveAspectRatio="xMidYMid slice" focusable="false">
 						<title>Placeholder
 						</title>
-						<rect width="100%" height="100%" fill="#777"></rect>
+						<rect width="100%" height="100%" fill="#777"/>
 						<text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
 						</svg>
 
@@ -101,7 +101,7 @@
 						aria-label="자리 표시자: 140x140" preserveAspectRatio="xMidYMid slice"
 						focusable="false">
 						<title>Placeholder</title><rect width="100%" height="100%"
-							fill="#777"></rect>
+							fill="#777"/>
 						<text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
 
 					<h2 class="fw-normal">
@@ -125,7 +125,7 @@
 						aria-label="자리 표시자: 140x140" preserveAspectRatio="xMidYMid slice"
 						focusable="false">
 						<title> Placeholder</title>
-        <rect width="100%" height="100%" fill="#777"></rect>
+        <rect width="100%" height="100%" fill="#777"/>
         <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
 					<h2 class="fw-normal">
 						<font style="vertical-align: inherit;"><font
@@ -143,8 +143,7 @@
 				</div>
 				<!-- /.col-lg-4 -->
 			</div>
-		</section>
-  </div>
+		</div>
 </body>
 
 <footer>
