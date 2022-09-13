@@ -59,24 +59,27 @@ body {
 			<a class="navbar-brand " href="#"> <img
 				src="https://img.insight.co.kr/static/2018/11/05/700/888208025o428h6408hs.jpg"
 				alt="" width="30" height="24" class="d-inline-block align-text-top">
-				Companimal
+				CompAnimal Home
 			</a>
 			<div class="collapse navbar-collapse" id="navbarText">
 				<ul class="nav nav-pills nav-fill">
 					<li class="nav-item"><a class="nav-link active"
-						aria-current="page" href="#">Home</a></li>
+						aria-current="page" href="#">CompAnimal 소개</a></li>
 					<li class="nav-item"><a class="nav-link active"
-						aria-current="page" href="#">Features</a></li>
+						aria-current="page" href="#">동물 정보 조회</a></li>
 					<li class="nav-item"><a class="nav-link active"
-						aria-current="page" href="#">Pricing</a></li>
+						aria-current="page" href="#">동물 정보 등록</a></li>
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="#">게시판</a></li>
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="#">찾아주세요</a></li>
 					<button type="button" class="btn btn-info">로그인</button>
+					<button type="button" class="btn btn-info">회원가입</button>
 				</ul>
 			</div>
 		</div>
 	</nav>
 </header>
-
-
 <body>
 	<div class="input-form col-md-12 mx-auto">
 		<form class="validation-form" novalidate>
@@ -92,12 +95,6 @@ body {
 										class="form-control" id="name" placeholder="" value=""
 										required>
 									<div class="invalid-feedback">이름을 입력해주세요.</div>
-								</div>
-								<div class="col-md-6 mb-3">
-									<label for="nickname">반려견 이름</label> <input type="text"
-										class="form-control" id="nickname" placeholder="" value=""
-										required>
-									<div class="invalid-feedback">반려견 이름을 입력해주세요.</div>
 								</div>
 							</div>
 
