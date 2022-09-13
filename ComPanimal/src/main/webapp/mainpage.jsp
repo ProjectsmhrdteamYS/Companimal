@@ -18,9 +18,11 @@
 
 
 
+
 </head>
 
 <header>
+
 	<nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
 		<div class="container-fluid">
 			<a class="navbar-brand " href="#"> <img
@@ -48,6 +50,7 @@
 
 
 
+
 <!-- 추후에 수정하기로함  -->
 <body>
   <!-- 내용 -->
@@ -70,8 +73,9 @@
           gher.</h4>
       </div>
     </nav>
+      <div class="container marketing">
     <section id=" section">
-			<div class="row" style="margin: auto;">
+			<div class="row" >
 				<div class="col-lg-4">
 					<svg class="bd-placeholder-img rounded-circle" width="140"
 						height="140" xmlns="" role="img" aria-label="자리 표시자: 140x140"
@@ -147,6 +151,7 @@
 			</div>
 		</section>
   </div>
+  
 </body>
 
 <footer>
