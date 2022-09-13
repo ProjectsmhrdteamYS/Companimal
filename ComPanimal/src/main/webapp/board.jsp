@@ -16,29 +16,33 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
 </head>
 <body>
-	<div id="wrap">
-		<div id="header">
-			<header id="headerType" class="header__wrap nexon">
-				<div class="header__inner">
-					<div class="header__logo">
-						<a href="#">web <em>site</em></a>
-					</div>
-					<nav class="header__menu">
-						<ul>
-							<li><a href="#">헤더 영역</a></li>
-							<li><a href="#">슬라이드 영역</a></li>
-							<li><a href="#">컨텐츠 영역</a></li>
-							<li><a href="#">푸터 영역</a></li>
-						</ul>
-					</nav>
-					<div class="header__member">
-						<a href="#">로그인</a>
-					</div>
-				</div>
-			</header>
+<header>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
+		<div class="container-fluid">
+			<a class="navbar-brand " href="#"> <img
+				src="https://img.insight.co.kr/static/2018/11/05/700/888208025o428h6408hs.jpg"
+				alt="" width="30" height="24" class="d-inline-block align-text-top">
+				Companimal
+			</a>
+			<div class="collapse navbar-collapse" id="navbarText">
+				<ul class="nav nav-pills nav-fill">
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="#">Home</a></li>
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="#">Features</a>
+					</li>
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="#">Pricing</a>
+					</li>
+					<button type="button" class="btn btn-info">로그인</button>
+				</ul>
+			</div>
 		</div>
-		<div>
-		<table class="table table-striped table-primary">
+	</nav>
+</header>
+ 
+      <div>
+      <table class="table table-striped table-primary">
   
   <div class="row row-cols-1 row-cols-md-3 g-4">
   <div class="col">
@@ -97,13 +101,16 @@
     </div>
   </div>
 </div>
-	<div id="footer">
-			<footer id="footerType" class="footer__wrap section gmarket gray">
-				<div class="footer__inner container">
-					<address class="footer__right">진ㅉㅏ ㅈㄴ 어렵다</address>
-				</div>
-			</footer>
-		</div>
-	</div>
+ <footer>
+	<div class="container">
+    <p class="float-end mb-1">
+      <a href="#">Back to top</a>
+    </p>
+    <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+    <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="/docs/5.1/getting-started/introduction/">getting started guide</a>.</p>
+  </div>
+</footer>
+      </div>
+
 </body>
 </html>
