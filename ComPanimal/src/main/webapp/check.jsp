@@ -1,42 +1,43 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
+<head>
 <title>동물 등록</title>
 <style>
 body {
-  font-family: Arial;
+	font-family: Arial;
 }
 
 input[type=text], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
 }
 
 input[type=submit] {
-  width: 100%;
-  background-color: #04AA6D;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+	width: 100%;
+	background-color: #04AA6D;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
 }
 
 input[type=submit]:hover {
-  background-color: #45a049;
+	background-color: #45a049;
 }
 
 div.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
+	border-radius: 5px;
+	background-color: #f2f2f2;
+	padding: 20px;
 }
 </style>
 <link
@@ -48,6 +49,7 @@ div.container {
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 	crossorigin="anonymous"></script>
+</head>
 <header>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
 		<div class="container-fluid">
@@ -72,24 +74,21 @@ div.container {
 </header>
 <body>
 
-<a href="#" class="btn btn-primary my-2">동물 등록</a> <a href="#" class="btn btn-primary my-2">동물 조회</a>
+	<a href="#" class="btn btn-primary my-2">동물 등록</a>
+	<a href="#" class="btn btn-primary my-2">동물 조회</a>
 
-<div class="container">
-  <form action="#">
-    <label for="fname">동물등록번호</label>
-    <input type="text" id="fname" name="firstname" placeholder="등록번호 15자리">
+	<div class="container">
+		<form action="#">
+			<label for="fname">동물등록번호</label> <input type="text" id="fname"
+				name="firstname" placeholder="등록번호 15자리"> <label for="lname">동물
+				이름</label> <input type="text" id="lname" name="lastname"
+				placeholder="Pet name.."> <label for="lname">사진 등록 </label>
+			<input type="file" id="myFile" name="filename"> <input
+				type="submit" value="등록">
+		</form>
+	</div>
 
-    <label for="lname">동물 이름</label>
-    <input type="text" id="lname" name="lastname" placeholder="Pet name..">
-
-	<label for="lname">사진 등록    </label>
-  	<input type="file" id="myFile" name="filename">
-
-    <input type="submit" value="등록">
-  </form>
-</div>
-
-<pre> - 구성할 내용(임시메모)
+	<pre> - 구성할 내용(임시메모)
 동물 등록정보 DB
 
 [등록하기]
@@ -131,16 +130,22 @@ QR 이미지 : 업로드 [확인]
 품종	:	0	중성화여부:  0
 관할기관	:	0	관할기관연락처: 000
 관할기관 지도
- </pre>
- -->
+ 
+	</pre>
+	-->
 </body>
 <footer>
 	<div class="container">
-    <p class="float-end mb-1">
-      <a href="#">Back to top</a>
-    </p>
-    <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-    <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="/docs/5.1/getting-started/introduction/">getting started guide</a>.</p>
-  </div>
+		<p class="float-end mb-1">
+			<a href="#">Back to top</a>
+		</p>
+		<p class="mb-1">Album example is &copy; Bootstrap, but please
+			download and customize it for yourself!</p>
+		<p class="mb-0">
+			New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a
+				href="/docs/5.1/getting-started/introduction/">getting started
+				guide</a>.
+		</p>
+	</div>
 </footer>
 </html>
