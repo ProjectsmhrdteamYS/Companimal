@@ -56,21 +56,22 @@ div.container {
 			<a class="navbar-brand " href="#"> <img
 				src="https://img.insight.co.kr/static/2018/11/05/700/888208025o428h6408hs.jpg"
 				alt="" width="30" height="24" class="d-inline-block align-text-top">
-				Companimal
+				CompAnimal Home
 			</a>
 			<div class="collapse navbar-collapse" id="navbarText">
 				<ul class="nav nav-pills nav-fill">
 					<li class="nav-item"><a class="nav-link active"
-						aria-current="page" href="#">Home</a></li>
+						aria-current="page" href="#">CompAnimal 소개</a></li>
 					<li class="nav-item"><a class="nav-link active"
-						aria-current="page" href="#">Features</a></li>
+						aria-current="page" href="#">동물 정보 조회</a></li>
 					<li class="nav-item"><a class="nav-link active"
-						aria-current="page" href="#">Pricing</a></li>
+						aria-current="page" href="#">동물 정보 등록</a></li>
 					<li class="nav-item"><a class="nav-link active"
-						aria-current="page" href="#">동물 등록</a></li>
+						aria-current="page" href="#">게시판</a></li>
 					<li class="nav-item"><a class="nav-link active"
-						aria-current="page" href="#">동물 조회</a></li>
+						aria-current="page" href="#">찾아주세요</a></li>
 					<button type="button" class="btn btn-info">로그인</button>
+					<button type="button" class="btn btn-info">회원가입</button>
 				</ul>
 			</div>
 		</div>

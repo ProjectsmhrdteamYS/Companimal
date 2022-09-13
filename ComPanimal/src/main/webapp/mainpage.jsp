@@ -19,35 +19,33 @@
 
 
 </head>
-
 <header>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
 		<div class="container-fluid">
 			<a class="navbar-brand " href="#"> <img
 				src="https://img.insight.co.kr/static/2018/11/05/700/888208025o428h6408hs.jpg"
 				alt="" width="30" height="24" class="d-inline-block align-text-top">
-				Companimal
+				CompAnimal Home
 			</a>
 			<div class="collapse navbar-collapse" id="navbarText">
 				<ul class="nav nav-pills nav-fill">
-					            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">메인화면</a></li>
-            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">컴패니멀</a></li>
-            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">반려견등록</a></li>
-            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">찾아주세요</a>
-            </li>
-            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">스토리</a>
-            </li>
-            <button type="button" class="btn btn-info">회원가입</button>
-
-            <button type="button" class="btn btn-info">로그인</button>
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="#">CompAnimal 소개</a></li>
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="#">동물 정보 조회</a></li>
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="#">동물 정보 등록</a></li>
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="#">게시판</a></li>
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="#">찾아주세요</a></li>
+					<button type="button" class="btn btn-info">로그인</button>
+					<button type="button" class="btn btn-info">회원가입</button>
 				</ul>
 			</div>
 		</div>
 	</nav>
 </header>
-
-
-
 <!-- 추후에 수정하기로함  -->
 <body>
   <!-- 내용 -->
