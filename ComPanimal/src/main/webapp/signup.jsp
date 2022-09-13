@@ -52,6 +52,30 @@ body {
 
 
 </head>
+<header>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
+		<div class="container-fluid">
+			<a class="navbar-brand " href="#"> <img
+				src="https://img.insight.co.kr/static/2018/11/05/700/888208025o428h6408hs.jpg"
+				alt="" width="30" height="24" class="d-inline-block align-text-top">
+				Companimal
+			</a>
+			<div class="collapse navbar-collapse" id="navbarText">
+				<ul class="nav nav-pills nav-fill">
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="#">Home</a></li>
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="#">Features</a>
+					</li>
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="#">Pricing</a>
+					</li>
+					<button type="button" class="btn btn-info">로그인</button>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</header>
 
 
 <body>
@@ -162,13 +186,11 @@ body {
     }, false);
   </script>
 
-				<div id="footer">
-					<footer id="footerType" class="footer__wrap section gmarket gray">
-						<div class="footer__inner container">
-							<address class="footer__right">어거 왜 안사라짐?</address>
-						</div>
-					</footer>
-				</div>
+			<footer>
+	<p class="text-muted position-absolute bottom-0 start-0">
+		Muted text with a <a href="#" class="text-reset">reset link 말하자면 Footer입니다.</a>
+	</p>
+</footer>
 		</div>
 </body>
 </html>
