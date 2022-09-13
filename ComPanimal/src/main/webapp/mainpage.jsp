@@ -18,10 +18,8 @@
 
 
 
-
 </head>
 <header>
-
 	<nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
 		<div class="container-fluid">
 			<a class="navbar-brand " href="#"> <img
@@ -48,13 +46,6 @@
 		</div>
 	</nav>
 </header>
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> branch 'master' of https://github.com/ProjectsmhrdteamYS/Companimal.git
 <!-- 추후에 수정하기로함  -->
 <body>
   <!-- 내용 -->
@@ -62,7 +53,7 @@
    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
     <div class="col-md-5 p-lg-5 mx-auto my-5"> 
       <h1 class="display-4 fw-normal">메인화면 배너</h1>
-      <p class="lead fw-normal">And an even wittier subheading to boot. Jumpstart your marketing efforts with this example based on Apple’s marketing pages.</p>
+      <p class="lead fw-normal">And an even wittier subheading to boot. Jumpstart your marketing efforts with this example based on Apple's marketing pages.</p>
       <a class="btn btn-outline-secondary" href="#">Coming soon</a>
     </div>
     <div class="product-device shadow-sm d-none d-md-block"></div>
@@ -77,14 +68,8 @@
           gher.</h4>
       </div>
     </nav>
-<<<<<<< HEAD
-      <div class="container marketing">
-    <section id=" section">
-			<div class="row" >
-=======
      <div class="container marketing" >
 			<div class="row" style = "text-align: center; margin: 0 auto;" >
->>>>>>> branch 'master' of https://github.com/ProjectsmhrdteamYS/Companimal.git
 				<div class="col-lg-4">
 					<svg class="bd-placeholder-img rounded-circle" width="140"
 						height="140" xmlns="" role="img" aria-label="자리 표시자: 140x140"
@@ -158,13 +143,7 @@
 				</div>
 				<!-- /.col-lg-4 -->
 			</div>
-<<<<<<< HEAD
-		</section>
-  </div>
-  
-=======
 		</div>
->>>>>>> branch 'master' of https://github.com/ProjectsmhrdteamYS/Companimal.git
 </body>
 
 <footer>
