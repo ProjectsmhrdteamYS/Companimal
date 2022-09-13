@@ -25,7 +25,11 @@
 
 
 <style>
+<<<<<<< HEAD
+
+=======
 /*  배경색 */
+>>>>>>> branch 'master' of https://github.com/ProjectsmhrdteamYS/Companimal.git
 body {
 	min-height: 100vh;
 	background: -webkit-gradient(linear, left bottom, right top, from(#92b5db),
@@ -35,7 +39,6 @@ body {
 	background: -o-linear-gradient(bottom left, #92b5db 0%, #1d466c 100%);
 	background: linear-gradient(to top right, #92b5db 0%, #1d466c 100%);
 }
-
 .input-form {
 	max-width: 680px;
 	margin-top: 80px;
@@ -160,15 +163,16 @@ body {
         }, false);
       });
     }, false);
+    
+    <div id="footer">
+    <footer id="footerType" class="footer__wrap section gmarket gray">
+       <div class="footer__inner container">
+          <address class="footer__right">어거 왜 안사라짐?</address>
+       </div>
+    </footer>
+ </div>
+
   </script>
 
-				<div id="footer">
-					<footer id="footerType" class="footer__wrap section gmarket gray">
-						<div class="footer__inner container">
-							<address class="footer__right">어거 왜 안사라짐?</address>
-						</div>
-					</footer>
-				</div>
-		</div>
 </body>
 </html>
