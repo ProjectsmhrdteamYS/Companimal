@@ -29,12 +29,12 @@
 /*  배경색 */
 body {
 	min-height: 100vh;
-	background: -webkit-gradient(linear, left bottom, right top, from(red),
-		to(red));
-	background: -webkit-linear-gradient(bottom left, red, red);
-	background: -moz-linear-gradient(bottom left, red, red);
-	background: -o-linear-gradient(bottom left, red, red);
-	background: linear-gradient(to top right, red, red);
+	background: -webkit-gradient(linear, left bottom, right top, from(white),
+		to(white));
+	background: -webkit-linear-gradient(bottom left, white, white);
+	background: -moz-linear-gradient(bottom left, white, white);
+	background: -o-linear-gradient(bottom left, white, white);
+	background: linear-gradient(to top right, white, white);
 }
 
 .input-form {
@@ -81,7 +81,7 @@ body {
 	</nav>
 </header>
 <body>
-	<div class="input-form col-md-12 mx-auto">
+	<!-- <div class="input-form col-md-12 mx-auto"> -->
 		<form class="validation-form" novalidate>
 
 			<div class="container">
@@ -139,7 +139,7 @@ body {
 							<button class="btn btn-primary btn-lg btn-block" type="submit">가입
 								완료</button>
 						</form>
-					</div>
+				<!-- 	</div> -->
 				</div>
 			</div>
 			<script>
