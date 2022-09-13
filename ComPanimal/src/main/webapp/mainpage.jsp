@@ -77,16 +77,21 @@
           gher.</h4>
       </div>
     </nav>
+<<<<<<< HEAD
       <div class="container marketing">
     <section id=" section">
 			<div class="row" >
+=======
+     <div class="container marketing" >
+			<div class="row" style = "text-align: center; margin: 0 auto;" >
+>>>>>>> branch 'master' of https://github.com/ProjectsmhrdteamYS/Companimal.git
 				<div class="col-lg-4">
 					<svg class="bd-placeholder-img rounded-circle" width="140"
 						height="140" xmlns="" role="img" aria-label="자리 표시자: 140x140"
 						preserveAspectRatio="xMidYMid slice" focusable="false">
 						<title>Placeholder
 						</title>
-						<rect width="100%" height="100%" fill="#777"></rect>
+						<rect width="100%" height="100%" fill="#777"/>
 						<text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
 						</svg>
 
@@ -111,7 +116,7 @@
 						aria-label="자리 표시자: 140x140" preserveAspectRatio="xMidYMid slice"
 						focusable="false">
 						<title>Placeholder</title><rect width="100%" height="100%"
-							fill="#777"></rect>
+							fill="#777"/>
 						<text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
 
 					<h2 class="fw-normal">
@@ -135,7 +140,7 @@
 						aria-label="자리 표시자: 140x140" preserveAspectRatio="xMidYMid slice"
 						focusable="false">
 						<title> Placeholder</title>
-        <rect width="100%" height="100%" fill="#777"></rect>
+        <rect width="100%" height="100%" fill="#777"/>
         <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
 					<h2 class="fw-normal">
 						<font style="vertical-align: inherit;"><font
@@ -153,9 +158,13 @@
 				</div>
 				<!-- /.col-lg-4 -->
 			</div>
+<<<<<<< HEAD
 		</section>
   </div>
   
+=======
+		</div>
+>>>>>>> branch 'master' of https://github.com/ProjectsmhrdteamYS/Companimal.git
 </body>
 
 <footer>
