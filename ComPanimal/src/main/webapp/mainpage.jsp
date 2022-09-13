@@ -19,38 +19,42 @@
 
 </head>
 
+<header>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
+		<div class="container-fluid">
+			<a class="navbar-brand " href="#"> <img
+				src="https://img.insight.co.kr/static/2018/11/05/700/888208025o428h6408hs.jpg"
+				alt="" width="30" height="24" class="d-inline-block align-text-top">
+				Companimal
+			</a>
+			<div class="collapse navbar-collapse" id="navbarText">
+				<ul class="nav nav-pills nav-fill">
+					            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">메인화면</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">컴패니멀</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">반려견등록</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">찾아주세요</a>
+            </li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">스토리</a>
+            </li>
+            <button type="button" class="btn btn-info">회원가입</button>
+
+            <button type="button" class="btn btn-info">로그인</button>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</header>
+
+
+
 <!-- 추후에 수정하기로함  -->
 <body>
-	<!--  배너 -->
-  <header id="headerType" class="header__wrap nexon">
-    <div class="header__inner">
-      <div class="header__logo">
-        <a href="#">Compani <em>mal</em></a>
-      </div>
-      <nav class="header__menu">
-        <ul>
-          <li><a href="#">Logo</a></li>
-          <li><a href="#">컴패니멀</a></li>
-          <li><a href="#">반려견 등록</a></li>
-          <li><a href="#">찾아주세요</a></li>
-          <li><a href="#">스토리</a></li>
-        </ul>
-      </nav>
-      <div class="header__member">
-        <a href="#">Join</a>
-      </div>
-      <div class="header__members">
-        <a href="#">Login</a>
-      </div>
-    </div>
-
-  </header>
   <!-- 내용 -->
   <div id="wrap">
     <header id="header">
       <div class="container">
         <div id="header_imglist">
-          <img id="header_img" src="images.png" alt="">
+          <img id="header_img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT17oPyev-_ISYx2i75CrZnAcNqlJIlynlQ8g&usqp=CAU" alt="">
         </div>
       </div>
     </header>
@@ -66,11 +70,11 @@
     <section id=" section">
       <div class="container">
         <div class="img_center">
-          <img src="images.png" alt="">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT17oPyev-_ISYx2i75CrZnAcNqlJIlynlQ8g&usqp=CAU" alt="">
           <!--           good1 -->
-          <img src="images.png" alt="">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT17oPyev-_ISYx2i75CrZnAcNqlJIlynlQ8g&usqp=CAU" alt="">
           <!--           good2 -->
-          <img src="images.png" alt="">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT17oPyev-_ISYx2i75CrZnAcNqlJIlynlQ8g&usqp=CAU" alt="">
           <!--           good3 -->
 
         </div>
@@ -82,8 +86,15 @@
       </div>
     </section>
     <footer id="footer">
-      <div class="container" style="text-align: center;">긴글 안쓴다 ㅅㄱ </div>
+      <div class="container" style="text-align: center;">음... 어케하면좋지 </div>
     </footer>
   </div>
 </body>
+
+<footer>
+	<p class="text-muted position-absolute bottom-0 start-0">
+		Muted text with a <a href="#" class="text-reset">reset link 말하자면 Footer입니다.</a>
+	</p>
+</footer>
+
 </html>
