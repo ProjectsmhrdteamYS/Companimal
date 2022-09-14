@@ -128,11 +128,12 @@ body {
     
 <main class="form-signin">
   <form>
-    <div class="spinner-border text-primary" role="status">
-  <span class="visually-hidden">Loading...</span>
-</div>
-    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-
+    
+    <a class="navbar-brand text-dark" href="#"> <img
+				src="https://img.insight.co.kr/static/2018/11/05/700/888208025o428h6408hs.jpg"
+				alt="" width="100%" max-width="330px" padding="15px" class="d-inline-block align-text-top">
+				</a>
+	<p>로고</p>
     <div class="form-floating">
       <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
       <label for="floatingInput">ID</label>

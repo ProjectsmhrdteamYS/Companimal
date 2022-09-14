@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -82,6 +83,7 @@
                   <button type="button" class="btn btn-sm btn-outline-secondary">수정</button>
                   <button type="button" class="btn btn-sm btn-outline-secondary">삭제</button>
                 </div>
+                <small class="text-muted">작성자</small>
                 <small class="text-muted">조회수</small>
               </div>
             </div>
@@ -99,6 +101,7 @@
                   <button type="button" class="btn btn-sm btn-outline-secondary">수정</button>
                   <button type="button" class="btn btn-sm btn-outline-secondary">삭제</button>
                 </div>
+                <small class="text-muted">작성자</small>
                 <small class="text-muted">조회수</small>
               </div>
             </div>
@@ -116,6 +119,7 @@
                   <button type="button" class="btn btn-sm btn-outline-secondary">수정</button>
                   <button type="button" class="btn btn-sm btn-outline-secondary">삭제</button>
                 </div>
+                <small class="text-muted">작성자</small>
                 <small class="text-muted">조회수</small>
               </div>
             </div>
@@ -134,6 +138,7 @@
                   <button type="button" class="btn btn-sm btn-outline-secondary">수정</button>
                   <button type="button" class="btn btn-sm btn-outline-secondary">삭제</button>
                 </div>
+                <small class="text-muted">작성자</small>
                 <small class="text-muted">조회수</small>
               </div>
             </div>
@@ -151,6 +156,7 @@
                   <button type="button" class="btn btn-sm btn-outline-secondary">수정</button>
                   <button type="button" class="btn btn-sm btn-outline-secondary">삭제</button>
                 </div>
+                <small class="text-muted">작성자</small>
                 <small class="text-muted">조회수</small>
               </div>
             </div>
@@ -168,6 +174,7 @@
                   <button type="button" class="btn btn-sm btn-outline-secondary">수정</button>
                   <button type="button" class="btn btn-sm btn-outline-secondary">삭제</button>
                 </div>
+                <small class="text-muted">작성자</small>
                 <small class="text-muted">조회수</small>
               </div>
             </div>
@@ -186,6 +193,7 @@
                   <button type="button" class="btn btn-sm btn-outline-secondary">수정</button>
                   <button type="button" class="btn btn-sm btn-outline-secondary">삭제</button>
                 </div>
+                <small class="text-muted">작성자</small>
                 <small class="text-muted">조회수</small>
               </div>
             </div>
@@ -203,6 +211,7 @@
                   <button type="button" class="btn btn-sm btn-outline-secondary">수정</button>
                   <button type="button" class="btn btn-sm btn-outline-secondary">삭제</button>
                 </div>
+                <small class="text-muted">작성자</small>
                 <small class="text-muted">조회수</small>
               </div>
             </div>
@@ -220,6 +229,7 @@
                   <button type="button" class="btn btn-sm btn-outline-secondary">수정</button>
                   <button type="button" class="btn btn-sm btn-outline-secondary">삭제</button>
                 </div>
+                <small class="text-muted">작성자</small>
                 <small class="text-muted">조회수</small>
               </div>
             </div>
