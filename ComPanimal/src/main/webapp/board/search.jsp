@@ -108,7 +108,7 @@ div.container {
 			<hr>
 			
 			<!-- 이미지 업로드해서 조회 - 삭제:
-			<label for="lname">QR이미지로 조회<img src="   "></label>
+			<label for="lname">QR이미지로 조회<img src=""></label>
 			<br>
 			<input	type="file" id="myFile" name="filename">
 			<hr>
