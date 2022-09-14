@@ -35,9 +35,11 @@ input[type=submit]:hover {
 }
 
 div.container {
+	max-width: 500px;
+	margin-top: 80px;
+	padding: 32px;
 	border-radius: 5px;
-	background-color: #f2f2f2;
-	padding: 20px;
+	background-color: #fff;
 }
 </style>
 <link
@@ -52,16 +54,15 @@ div.container {
 	<!-- 외부 CSS -->
 <link rel="stylesheet" href="basic.css">
 </head>
+<body>
 <header>
 	<!-- 여기서 헤드바 컬러수정 -->
-	<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary"> -->
-	<nav class="navbar navbar-expand-lg navbar-dark bg-light  ">
-		<div class="container-fluid">
+	<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-light  "> -->
+	<nav class="navbar">
 			<!-- 로고 -->
-			<a class="navbar-brand text-dark" href="#"> <img
-				src="https://img.insight.co.kr/static/2018/11/05/700/888208025o428h6408hs.jpg"
-				alt="" width="30" height="24" class="d-inline-block align-text-top">
-				CompAnimal Home
+			<a class="logo" href="http://localhost:8081/ComPanimal/board/mainpage.jsp"> <img
+				src="../images/logo.png"
+				alt="" width="380px" class="d-inline-block align-text-top">
 			</a>
 			<!-- 네비 -->
 			<!-- <div class="collapse navbar-collapse" id="navbarText"> -->
@@ -69,45 +70,41 @@ div.container {
 				<!-- 여기서 nav수정 컬러수정 -->
 				<!-- <ul class="nav nav-pills nav-fill"> -->
 				<ul class="nav">
-					<li class="nav-item"><a class="nav-link active bg-light text-dark"
-						aria-current="page" href="#">CompAnimal 소개</a></li>
-					<li class="nav-item"><a class="nav-link active bg-light text-dark"
-						aria-current="page" href="#">동물 정보 조회</a></li>
-					<li class="nav-item"><a class="nav-link active bg-light text-dark"
-						aria-current="page" href="#">동물 정보 등록</a></li>
-					<li class="nav-item"><a class="nav-link active bg-light text-dark"
-						aria-current="page" href="#">게시판</a></li>
-					<li class="nav-item"><a class="nav-link active bg-light text-dark"
-						aria-current="page" href="#">찾아주세요</a></li>
+					<li class="nav-item"><a class="nav-link active text-dark"
+						aria-current="page" href="http://localhost:8081/ComPanimal/board/companimal.jsp">CompAnimal 소개</a></li>
+					<li class="nav-item"><a class="nav-link active text-dark"
+						aria-current="page" href="http://localhost:8081/ComPanimal/board/search.jsp">동물 정보 조회</a></li>
+					<li class="nav-item"><a class="nav-link active  text-dark"
+						aria-current="page" href="http://localhost:8081/ComPanimal/board/check.jsp">동물 정보 등록</a></li>
+					<li class="nav-item"><a class="nav-link active text-dark"
+						aria-current="page" href="http://localhost:8081/ComPanimal/board/board.jsp">게시판</a></li>
+					<li class="nav-item"><a class="nav-link active text-dark"
+						aria-current="page" href="http://localhost:8081/ComPanimal/board/findboard.jsp">찾아주세요</a></li>
+					</ul>
 					<!-- 버튼 -->
-
-			
-					<!-- <div id="btn-basic">
-					<button type="button" class="btn btn-dark">로그인</button>
-					<button type="button" class="btn btn-dark">회원가입</button>
-					</div> -->
-				</ul>
 				<ul id="btn-basic">
-					<li><button type="button" class="btn btn-dark">로그인</button></li>
-					<li><button type="button" class="btn btn-dark">회원가입</button></li>
+					<li><button type="button" class="btn btn-dark" onclick="location.href='http://localhost:8081/ComPanimal/board/signin.jsp'">로그인</button></li>
+					<li><button type="button" class="btn btn-dark" onclick="location.href='http://localhost:8081/ComPanimal/board/signup.jsp'">회원가입</button></li>
 				</ul>
 			</div>
-		</div>
 	</nav>
 </header>
-<body>
-	<p></p>
+<main id="wrap">
 	<div class="container">
 		<form action="#">
-			<label for="fname">동물등록번호</label> <input type="text" id="fname"
-				name="firstname" placeholder="등록번호 15자리"> <label for="lname">동물
-				이름</label> <input type="text" id="lname" name="lastname"
-				placeholder="Pet name.."> <label for="lname">동물 사진 등록   </label>
-			<input type="file" id="myFile" name="filename"> <input
-				type="submit" value="등록">
+		<a class="logo" href="http://localhost:8081/ComPanimal/board/mainpage.jsp">
+		<img src="../images/logo.png" alt="" width="380px" class="d-inline-block align-text-top"> </a>
+			<br><br><br>
+			<label for="lname">동물 이름</label> <input type="text" id="lname" name="lastname" placeholder="Pet name..">
+			<label for="fname">동물등록번호</label> <input type="text" id="fname" name="firstname" placeholder="등록번호 15자리">
+			<label for="lname">동물 사진 등록 </label>
+			<br><br><br>
+			<input type="file" id="myFile" name="filename">
+			<br>
+			<input type="submit" value="등록">
 		</form>
 	</div>
-</body>
+</main>
  <footer>
 	<div class="container">
     <p class="float-end mb-1">
@@ -117,4 +114,5 @@ div.container {
     <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="/docs/5.1/getting-started/introduction/">getting started guide</a>.</p>
   </div>
 </footer>
+</body>
 </html>

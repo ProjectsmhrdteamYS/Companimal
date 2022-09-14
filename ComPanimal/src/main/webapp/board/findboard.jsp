@@ -16,19 +16,24 @@
 	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 	crossorigin="anonymous"></script>
 <!-- 외부 CSS -->
+<style type="text/css">
+body {
+  
+  background-color: #fff;
+}
+</style>
 <link rel="stylesheet" href="basic.css">
 <title>찾아주세요 게시판</title>
 </head>
+<body>
 <header>
 	<!-- 여기서 헤드바 컬러수정 -->
-	<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary"> -->
-	<nav class="navbar navbar-expand-lg navbar-dark bg-light  ">
-		<div class="container-fluid">
+	<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-light  "> -->
+	<nav class="navbar">
 			<!-- 로고 -->
-			<a class="navbar-brand text-dark" href="#"> <img
-				src="https://img.insight.co.kr/static/2018/11/05/700/888208025o428h6408hs.jpg"
-				alt="" width="30" height="24" class="d-inline-block align-text-top">
-				CompAnimal Home
+			<a class="logo" href="http://localhost:8081/ComPanimal/board/mainpage.jsp"> <img
+				src="../images/logo.png"
+				alt="" width="380px" class="d-inline-block align-text-top">
 			</a>
 			<!-- 네비 -->
 			<!-- <div class="collapse navbar-collapse" id="navbarText"> -->
@@ -36,39 +41,35 @@
 				<!-- 여기서 nav수정 컬러수정 -->
 				<!-- <ul class="nav nav-pills nav-fill"> -->
 				<ul class="nav">
-					<li class="nav-item"><a class="nav-link active bg-light text-dark"
-						aria-current="page" href="#">CompAnimal 소개</a></li>
-					<li class="nav-item"><a class="nav-link active bg-light text-dark"
-						aria-current="page" href="#">동물 정보 조회</a></li>
-					<li class="nav-item"><a class="nav-link active bg-light text-dark"
-						aria-current="page" href="#">동물 정보 등록</a></li>
-					<li class="nav-item"><a class="nav-link active bg-light text-dark"
-						aria-current="page" href="#">게시판</a></li>
-					<li class="nav-item"><a class="nav-link active bg-light text-dark"
-						aria-current="page" href="#">찾아주세요</a></li>
+					<li class="nav-item"><a class="nav-link active text-dark"
+						aria-current="page" href="http://localhost:8081/ComPanimal/board/companimal.jsp">CompAnimal 소개</a></li>
+					<li class="nav-item"><a class="nav-link active text-dark"
+						aria-current="page" href="http://localhost:8081/ComPanimal/board/search.jsp">동물 정보 조회</a></li>
+					<li class="nav-item"><a class="nav-link active  text-dark"
+						aria-current="page" href="http://localhost:8081/ComPanimal/board/check.jsp">동물 정보 등록</a></li>
+					<li class="nav-item"><a class="nav-link active text-dark"
+						aria-current="page" href="http://localhost:8081/ComPanimal/board/board.jsp">게시판</a></li>
+					<li class="nav-item"><a class="nav-link active text-dark"
+						aria-current="page" href="http://localhost:8081/ComPanimal/board/findboard.jsp">찾아주세요</a></li>
+					</ul>
 					<!-- 버튼 -->
-
-			
-					<!-- <div id="btn-basic">
-					<button type="button" class="btn btn-dark">로그인</button>
-					<button type="button" class="btn btn-dark">회원가입</button>
-					</div> -->
-				</ul>
 				<ul id="btn-basic">
-					<li><button type="button" class="btn btn-dark">로그인</button></li>
-					<li><button type="button" class="btn btn-dark">회원가입</button></li>
+					<li><button type="button" class="btn btn-dark" onclick="location.href='http://localhost:8081/ComPanimal/board/signin.jsp'">로그인</button></li>
+					<li><button type="button" class="btn btn-dark" onclick="location.href='http://localhost:8081/ComPanimal/board/signup.jsp'">회원가입</button></li>
 				</ul>
 			</div>
-		</div>
 	</nav>
-</header>
-<main>
-	<div class="album py-5 bg-light">
+</header> 
+<main id=wrap>
+	<div class="album py-5">
 		<div class="container">
+			<img src="../images/bichon.jpg" alt="" width="380px" class="d-inline-block align-text-top">
+			<h2>현상수배</h2>
+			<hr>
 			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 				<c:forEach begin="0" end="2">
 					<div class="col">
-						<div class="card shadow-sm">
+						<div class="card">
 							<img
 								src="https://img.insight.co.kr/static/2018/11/05/700/888208025o428h6408hs.jpg"
 								class="bd-placeholder-img card-img-top" width="100%"
@@ -111,4 +112,5 @@
 		</p>
 	</div>
 </footer>
+</body>
 </html>
