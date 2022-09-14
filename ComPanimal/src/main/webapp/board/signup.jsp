@@ -93,6 +93,7 @@ body {
 				<div class="input-form-backgroud row" >
 					<div class="input-form col-md-12 mx-auto" >
 						<br>		
+					<!--사진 크기조절  -->
 					<div style="text-align:center";>
 					<img alt="erorr" src="../images/logo (1).png" width="320" >
 					</div>
