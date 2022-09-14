@@ -71,15 +71,11 @@ crossorigin="anonymous">
 		  <p class="lead fw-normal">And an even wittier subheading to boot. Jumpstart your marketing efforts with this example based on Apple's marketing pages.</p>
 		  <a class="btn btn-outline-secondary" href="#">Coming soon</a>
 	  </div>
-	  
 		 <!-- 나중에 추가할것있으면 해도되는데 필요없는 경우에는 삭제하기로 -->
 		<!-- <div class="product-device shadow-sm d-none d-md-block"></div> -->
 		<!-- <div class="product-device product-device-2 shadow-sm d-none d-md-block">hello</div> -->
 	
-	</div>
-
-	
-
+  </div>
     <!-- <nav id="nav"> -->
       <div class="position-relative p-0 p-md-3 m-md-0 text-center bg-light">
         <h1 style="text-align: center;">Companimal</h1>
@@ -102,26 +98,24 @@ crossorigin="anonymous">
 					role="img" aria-label="자리 표시자: 140x140"
 					preserveAspectRatio="xMidYMid slice" 
 					focusable="false">
-			
 					<!-- <title>Placeholder</title> -->
 					<rect width="100%" height="100%" fill="#777"/>
-					
-					<text x="50%" y="50%" fill="#777" dy=".3em">
-						140x140
-					</text>
+					<!-- <text x="50%" y="50%" fill="#777" dy=".3em">
+					140x140
+					</text> -->
 				</svg>
-					<h2 class="fw-normal">
+				<h2 class="fw-normal">
+					<font style="vertical-align: inherit;">
+					good1
+					</font>
+				</h2>
+				<p>
+					<a class="btn btn-secondary" href="#">
 						<font style="vertical-align: inherit;">
-						good1
+						세부 정보보기
 						</font>
-					</h2>
-					<p>
-						<a class="btn btn-secondary" href="#">
-						 <font style="vertical-align: inherit;">
-						 세부 정보보기
-						 </font>
-						</a>
-					</p>
+					</a>
+				</p>
 			</div>
 			
 			<!-- 이미지2 -->
@@ -131,23 +125,22 @@ crossorigin="anonymous">
 					focusable="false">
 				<!-- <title>Placeholder</title> -->
 					<rect width="100%" height="100%" fill="#777"/>
-					<text x="50%" y="50%" fill="#777" dy=".3em">
+					<!-- <text x="50%" y="50%" fill="#777" dy=".3em">
 					140x140
-					</text>
+					</text> -->
 				</svg>
-
-					<h2 class="fw-normal">
-						<font style="vertical-align: inherit;">
-						good2
-						</font>
-					</h2>
-					<p>
-						<a class="btn btn-secondary" href="#">
-						<font style="vertical-align: inherit;">
-						세부 정보보기
-						</font>
-						</a>
-					</p>
+				<h2 class="fw-normal">
+					<font style="vertical-align: inherit;">
+					good2
+					</font>
+				</h2>
+				<p>
+					<a class="btn btn-secondary" href="#">
+					<font style="vertical-align: inherit;">
+					세부 정보보기
+					</font>
+					</a>
+				</p>
 			</div>
 
 			<!-- 이미지3 -->
@@ -157,24 +150,20 @@ crossorigin="anonymous">
 					focusable="false">
 				<!-- <title> Placeholder</title> -->
         			<rect width="100%" height="100%" fill="#777"/>
-        			<text x="50%" y="50%" fill="#777" dy=".3em">
-        			140x140
-        			</text>
         		</svg>
-					<h2 class="fw-normal">
-						<font style="vertical-align: inherit;">
-						good3
-						</font>
-					</h2>
-					<p>
-						<a class="btn btn-secondary" href="#">
-						<font style="vertical-align: inherit;">
-						세부 정보보기
-						</font>
-						</a>
-					</p>
-			</div>
-				
+				<h2 class="fw-normal">
+					<font style="vertical-align: inherit;">
+					good3
+					</font>
+				</h2>
+				<p>
+					<a class="btn btn-secondary" href="#">
+					<font style="vertical-align: inherit;">
+					세부 정보보기
+					</font>
+					</a>
+				</p>
+			</div>	
 		</div>
 	</div>
 </body>
