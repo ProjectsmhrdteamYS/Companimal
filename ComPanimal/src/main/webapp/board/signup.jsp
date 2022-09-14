@@ -95,7 +95,7 @@ body {
 						<br>		
 					<!--사진 크기조절  -->
 					<div style="text-align:center";>
-					<img alt="erorr" src="../images/logo (1).png" width="320" >
+					<img alt="erorr" src="../images/logo.png" width="320" >
 					</div>
 					<br><br>
 						<form class="validation-form" novalidate>
