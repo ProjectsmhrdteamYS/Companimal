@@ -76,7 +76,7 @@ body {
       }
       
     </style>
-<title>회원가입</title>
+<title>로그인</title>
 <link href="signin.css" rel="stylesheet">
 <!-- 외부 CSS -->
 <link rel="stylesheet" href="basic.css">
