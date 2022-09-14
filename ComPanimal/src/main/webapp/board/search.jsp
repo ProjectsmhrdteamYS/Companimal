@@ -104,7 +104,7 @@ div.container {
 				<label for="fname">동물등록번호</label> <input type="text" id="fname"
 					name="firstname" placeholder="등록번호 15자리"> <label
 					for="lname">소유자명</label> <input type="text" id="lname"
-					name="lastname" placeholder="Pet name..">
+					name="lastname" placeholder="소유자명">
 			<hr>
 			
 			<!-- 이미지 업로드해서 조회 - 삭제:

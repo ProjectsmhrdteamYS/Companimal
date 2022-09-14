@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<!-- <%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%> -->
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -10,10 +10,16 @@
 	rel="stylesheet"
 	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
 	crossorigin="anonymous">
+
+
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 	crossorigin="anonymous"></script>
+
+<!-- 외부 CSS -->
+<link rel="stylesheet" href="basic.css">
+
 <title>COMPANIMAL</title>
 
 <style>
@@ -32,27 +38,25 @@
 
 /* 세부디자인 */
 .side > img{width:700px; height:500px;}
-.con1_tit{font-size:40px; font-weight:bold; color:#0d6efd}
+.con1_tit{font-size:40px; font-weight:bold; color:#ff8330}
 .con1_cont{font-size:18px; font-weight:mideum; color:#555}
+.con2 > .btn {width:200px; height: 60px; color:#fff; background:#ff8330; font-size: 28px; line-height: 40px;}
 
-#footer{clear:both; width:1200px; height:80px; background:#222;}
+#footer{clear:both; width:1600px; height:80px; background:#222;}
 
 </style>
 
-<!-- 외부 CSS -->
-<link rel="stylesheet" href="basic.css">
+
 </head>
 
 <header>
 	<!-- 여기서 헤드바 컬러수정 -->
-	<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary"> -->
-	<nav class="navbar navbar-expand-lg navbar-dark bg-light  ">
-		<div class="container-fluid">
+	<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-light  "> -->
+	<nav class="navbar">
 			<!-- 로고 -->
-			<a class="navbar-brand text-dark" href="#"> <img
-				src="https://img.insight.co.kr/static/2018/11/05/700/888208025o428h6408hs.jpg"
-				alt="" width="30" height="24" class="d-inline-block align-text-top">
-				CompAnimal Home
+			<a class="logo" href="#"> <img
+				src="../images/logo (1).png"
+				alt="" width="380px" class="d-inline-block align-text-top">
 			</a>
 			<!-- 네비 -->
 			<!-- <div class="collapse navbar-collapse" id="navbarText"> -->
@@ -60,30 +64,23 @@
 				<!-- 여기서 nav수정 컬러수정 -->
 				<!-- <ul class="nav nav-pills nav-fill"> -->
 				<ul class="nav">
-					<li class="nav-item"><a class="nav-link active bg-light text-dark"
+					<li class="nav-item"><a class="nav-link active text-dark"
 						aria-current="page" href="#">CompAnimal 소개</a></li>
-					<li class="nav-item"><a class="nav-link active bg-light text-dark"
+					<li class="nav-item"><a class="nav-link active text-dark"
 						aria-current="page" href="#">동물 정보 조회</a></li>
-					<li class="nav-item"><a class="nav-link active bg-light text-dark"
+					<li class="nav-item"><a class="nav-link active  text-dark"
 						aria-current="page" href="#">동물 정보 등록</a></li>
-					<li class="nav-item"><a class="nav-link active bg-light text-dark"
+					<li class="nav-item"><a class="nav-link active text-dark"
 						aria-current="page" href="#">게시판</a></li>
-					<li class="nav-item"><a class="nav-link active bg-light text-dark"
+					<li class="nav-item"><a class="nav-link active text-dark"
 						aria-current="page" href="#">찾아주세요</a></li>
+					</ul>
 					<!-- 버튼 -->
-
-			
-					<!-- <div id="btn-basic">
-					<button type="button" class="btn btn-dark">로그인</button>
-					<button type="button" class="btn btn-dark">회원가입</button>
-					</div> -->
-				</ul>
 				<ul id="btn-basic">
 					<li><button type="button" class="btn btn-dark">로그인</button></li>
 					<li><button type="button" class="btn btn-dark">회원가입</button></li>
 				</ul>
 			</div>
-		</div>
 	</nav>
 </header>
 <body>
@@ -103,7 +100,7 @@
 				</div>
 				<div class ="con2">
 				<input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
-				<label class="btn btn-primary" for="btn-check">Companimal View</label>
+				<label class="btn" for="btn-check"><strong>Companimal View</strong></label>
 				</div>
 				</div>
 		
