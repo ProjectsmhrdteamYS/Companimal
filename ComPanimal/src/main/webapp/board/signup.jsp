@@ -166,7 +166,7 @@ body {
 									이용에 동의합니다.</label>
 							</div>
 							<div class="mb-4"></div>
-							<button class="btn btn-warning btn-lg btn-block" style="background-color: #ff7530"type="submit">가입
+							<button  class="btn-lg btn-block"  style="background-color: #ff7530 ; border : none ; color :white" type="submit">가입
 								하기</button>
 						</form>
 				<!-- 	</div> -->
