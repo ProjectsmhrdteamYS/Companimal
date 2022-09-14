@@ -26,7 +26,7 @@ crossorigin="anonymous">
 	crossorigin="anonymous"></script>
 
 </head>
-<body>
+
 
 <header>
 	<!-- 여기서 헤드바 컬러수정 -->
@@ -48,7 +48,7 @@ crossorigin="anonymous">
 					<li class="nav-item"><a class="nav-link active bg-light text-dark"
 						aria-current="page" href="#">CompAnimal 소개</a></li>
 					<li class="nav-item"><a class="nav-link active bg-light text-dark"
-						aria-current="page" href="search.jsp">동물 정보 조회</a></li>
+						aria-current="page" href="#">동물 정보 조회</a></li>
 					<li class="nav-item"><a class="nav-link active bg-light text-dark"
 						aria-current="page" href="#">동물 정보 등록</a></li>
 					<li class="nav-item"><a class="nav-link active bg-light text-dark"

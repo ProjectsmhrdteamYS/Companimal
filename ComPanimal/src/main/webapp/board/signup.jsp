@@ -89,10 +89,15 @@ body {
 <body>
 	<!-- <div class="input-form col-md-12 mx-auto"> -->
 		<form class="validation-form" novalidate>
-			<div class="container">
-				<div class="input-form-backgroud row">
-					<div class="input-form col-md-12 mx-auto">
-						<h4 class="mb-3">Companimal</h4>
+			<div class="container"></div>
+				<div class="input-form-backgroud row" >
+					<div class="input-form col-md-12 mx-auto" >
+						<br>		
+					<!--사진 크기조절  -->
+					<div style="text-align:center";>
+					<img alt="erorr" src="../images/logo (1).png" width="320" >
+					</div>
+					<br><br>
 						<form class="validation-form" novalidate>
 							<div class="row">
 								<div class="col-md-6 mb-3">
