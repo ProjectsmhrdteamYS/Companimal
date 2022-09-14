@@ -80,11 +80,12 @@ crossorigin="anonymous">
   <p>The .table-striped class adds zebra-stripes to a table:</p>            
   <table class="table table-striped">
     
-    <thead>
+    <thead>-
     <tr>
       <th scope="col">번호</th>
       <th scope="col">제목</th>
       <th scope="col">내용</th>
+      <th scope="col">작성자</th>
       <th scope="col">작성일</th>
       <th scope="col">조회수</th>
     </tr>
@@ -93,13 +94,14 @@ crossorigin="anonymous">
 <tbody>
 
 <c:forEach begin="0" end="2">
-    
+ 
     <tr>
       <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-       <td>@mdo</td>
+      <td>오늘의 일기</td>
+      <td>일기내용</td>
+      <td>선경주</td>
+      <td>20220914</td>
+       <td>1</td>
     </tr>
     </c:forEach>
   </table>
