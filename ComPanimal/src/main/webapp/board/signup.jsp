@@ -42,7 +42,6 @@ body {
 </style>
 <link rel="stylesheet" href="basic.css">
 </head>
-
 <header>
 	<!-- 여기서 헤드바 컬러수정 -->
 	<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary"> -->

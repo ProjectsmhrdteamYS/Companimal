@@ -18,8 +18,6 @@
 
 <style>
 /* 전체 레이아웃 */
-
-
 .container-fluid{width: 1600px; margin:0 auto;}
 #wrap{width: 1600px; margin:0 auto;}
 
@@ -29,20 +27,15 @@
 .con1{float: left; width : 800px; height:450px; background : #fff; padding-top:50px;}
 .con2{float: left; width : 800px; height:150px; background : #fff; padding-top:50px;}
 
-
 /* 세부디자인 */
 .side > img{width:700px; height:500px;}
 .con1_tit{font-size:40px; font-weight:bold; color:#0d6efd}
 .con1_cont{font-size:18px; font-weight:mideum; color:#555}
-
 #footer{clear:both; width:1200px; height:80px; background:#222;}
-
 </style>
-
 <!-- 외부 CSS -->
 <link rel="stylesheet" href="basic.css">
 </head>
-
 <header>
 	<!-- 여기서 헤드바 컬러수정 -->
 	<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary"> -->

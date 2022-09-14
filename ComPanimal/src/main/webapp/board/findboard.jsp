@@ -36,22 +36,19 @@
 				<!-- 여기서 nav수정 컬러수정 -->
 				<!-- <ul class="nav nav-pills nav-fill"> -->
 				<ul class="nav">
-					<li class="nav-item"><a
-						class="nav-link active bg-light text-dark" aria-current="page"
-						href="#">CompAnimal 소개</a></li>
-					<li class="nav-item"><a
-						class="nav-link active bg-light text-dark" aria-current="page"
-						href="#">동물 정보 조회</a></li>
-					<li class="nav-item"><a
-						class="nav-link active bg-light text-dark" aria-current="page"
-						href="#">동물 정보 등록</a></li>
-					<li class="nav-item"><a
-						class="nav-link active bg-light text-dark" aria-current="page"
-						href="#">게시판</a></li>
-					<li class="nav-item"><a
-						class="nav-link active bg-light text-dark" aria-current="page"
-						href="#">찾아주세요</a></li>
+					<li class="nav-item"><a class="nav-link active bg-light text-dark"
+						aria-current="page" href="#">CompAnimal 소개</a></li>
+					<li class="nav-item"><a class="nav-link active bg-light text-dark"
+						aria-current="page" href="#">동물 정보 조회</a></li>
+					<li class="nav-item"><a class="nav-link active bg-light text-dark"
+						aria-current="page" href="#">동물 정보 등록</a></li>
+					<li class="nav-item"><a class="nav-link active bg-light text-dark"
+						aria-current="page" href="#">게시판</a></li>
+					<li class="nav-item"><a class="nav-link active bg-light text-dark"
+						aria-current="page" href="#">찾아주세요</a></li>
 					<!-- 버튼 -->
+
+			
 					<!-- <div id="btn-basic">
 					<button type="button" class="btn btn-dark">로그인</button>
 					<button type="button" class="btn btn-dark">회원가입</button>

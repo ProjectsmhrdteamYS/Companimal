@@ -26,11 +26,10 @@ crossorigin="anonymous">
 <title>메인페이지</title>
 
 </head>
-
-<!-- header -->
 <header>
 	<!-- 여기서 헤드바 컬러수정 -->
-	<nav class="navbar navbar-expand-lg navbar-dark bg-light">
+	<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary"> -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-light  ">
 		<div class="container-fluid">
 			<!-- 로고 -->
 			<a class="navbar-brand text-dark" href="#"> <img
@@ -39,8 +38,10 @@ crossorigin="anonymous">
 				CompAnimal Home
 			</a>
 			<!-- 네비 -->
+			<!-- <div class="collapse navbar-collapse" id="navbarText"> -->
 			<div id="navbarText">
 				<!-- 여기서 nav수정 컬러수정 -->
+				<!-- <ul class="nav nav-pills nav-fill"> -->
 				<ul class="nav">
 					<li class="nav-item"><a class="nav-link active bg-light text-dark"
 						aria-current="page" href="#">CompAnimal 소개</a></li>
@@ -52,6 +53,13 @@ crossorigin="anonymous">
 						aria-current="page" href="#">게시판</a></li>
 					<li class="nav-item"><a class="nav-link active bg-light text-dark"
 						aria-current="page" href="#">찾아주세요</a></li>
+					<!-- 버튼 -->
+
+			
+					<!-- <div id="btn-basic">
+					<button type="button" class="btn btn-dark">로그인</button>
+					<button type="button" class="btn btn-dark">회원가입</button>
+					</div> -->
 				</ul>
 				<ul id="btn-basic">
 					<li><button type="button" class="btn btn-dark">로그인</button></li>
@@ -61,8 +69,6 @@ crossorigin="anonymous">
 		</div>
 	</nav>
 </header>
-
-
 <body>
   <!-- 내용 -->
   <div class="position-relative overflow-hidden p-3 p-md-2 m-md-1 text-center bg-light">
