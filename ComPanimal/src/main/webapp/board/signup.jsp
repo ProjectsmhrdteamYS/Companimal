@@ -38,6 +38,7 @@ body {
 	-moz-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
 	box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15)
 }
+
 </style>
 <link rel="stylesheet" href="basic.css">
 </head>
@@ -152,7 +153,7 @@ body {
 									이용에 동의합니다.</label>
 							</div>
 							<div class="mb-4"></div>
-							<button class="btn btn-primary btn-lg btn-block" type="submit">가입
+							<button class="btn btn-warning btn-lg btn-block" style="background-color: #ff7530"type="submit">가입
 								하기</button>
 						</form>
 				<!-- 	</div> -->
