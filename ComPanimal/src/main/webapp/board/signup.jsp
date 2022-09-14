@@ -6,26 +6,14 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>회원가입 화면</title>
-
-
 <!-- Bootstrap CSS -->
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
 	crossorigin="anonymous">
-
 <link rel="stylesheet" href="./template.css">
 <title>회원가입 화면</title>
 <!-- Bootstrap CSS -->
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-	crossorigin="anonymous">
-
-
-
 <style>
 /*  배경색 */
 body {
@@ -101,7 +89,6 @@ body {
 <body>
 	<!-- <div class="input-form col-md-12 mx-auto"> -->
 		<form class="validation-form" novalidate>
-
 			<div class="container">
 				<div class="input-form-backgroud row">
 					<div class="input-form col-md-12 mx-auto">
@@ -166,7 +153,7 @@ body {
 									이용에 동의합니다.</label>
 							</div>
 							<div class="mb-4"></div>
-							<button class="btn btn-warning btn-lg btn-block" style="background-color: #ff7530"type="submit">가입
+							<button  class="btn-lg btn-block"  style="background-color: #ff7530 ; border : none ; color :white" type="submit">가입
 								하기</button>
 						</form>
 				<!-- 	</div> -->

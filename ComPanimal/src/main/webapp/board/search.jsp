@@ -51,6 +51,8 @@ div.container {
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 	crossorigin="anonymous"></script>
+	<!-- 외부 CSS -->
+<link rel="stylesheet" href="basic.css">
 </head>
 <header>
 	<!-- 여기서 헤드바 컬러수정 -->
@@ -106,7 +108,7 @@ div.container {
 			<hr>
 			
 			<!-- 이미지 업로드해서 조회 - 삭제:
-			<label for="lname">QR이미지로 조회<img src="   "></label>
+			<label for="lname">QR이미지로 조회<img src=""></label>
 			<br>
 			<input	type="file" id="myFile" name="filename">
 			<hr>

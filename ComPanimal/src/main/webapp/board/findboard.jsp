@@ -17,10 +17,7 @@
 	crossorigin="anonymous"></script>
 <!-- 외부 CSS -->
 <link rel="stylesheet" href="basic.css">
-
-
 <title>찾아주세요 게시판</title>
-
 </head>
 <header>
 	<!-- 여기서 헤드바 컬러수정 -->
@@ -55,8 +52,6 @@
 						class="nav-link active bg-light text-dark" aria-current="page"
 						href="#">찾아주세요</a></li>
 					<!-- 버튼 -->
-
-
 					<!-- <div id="btn-basic">
 					<button type="button" class="btn btn-dark">로그인</button>
 					<button type="button" class="btn btn-dark">회원가입</button>
@@ -73,7 +68,6 @@
 <main>
 	<div class="album py-5 bg-light">
 		<div class="container">
-
 			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 				<c:forEach begin="0" end="2">
 					<div class="col">
@@ -102,13 +96,10 @@
 						</div>
 					</div>
 				</c:forEach>
-
 			</div>
 		</div>
 	</div>
-
 </main>
-
 <footer>
 	<div class="container">
 		<p class="float-end mb-1">
