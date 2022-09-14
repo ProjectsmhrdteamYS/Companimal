@@ -94,10 +94,11 @@ crossorigin="anonymous">
     
 	<!-- container marketing 원래되돌리고싶으면 이걸로  -->
      <div class="position-relative position-relative p-0 p-md-3 m-md-0 text-center bg-light" >
-		<div class="row" style = "text-align: center; margin: 0 auto;" >
+		<div class="row" style = "text-align: center; margin: 0;" >
 			<!-- 이미지1 -->
 			<div class="col-lg-4">
-				<svg class="bd-placeholder-img rounded-circle" width="140" height="140"
+			<!-- svg class =bd-placeholder-img rounded-circle -->
+				<svg class="bd-placeholder-img" width="400" height="400"
 					role="img" aria-label="자리 표시자: 140x140"
 					preserveAspectRatio="xMidYMid slice" 
 					focusable="false">
@@ -125,7 +126,7 @@ crossorigin="anonymous">
 			
 			<!-- 이미지2 -->
 			<div class="col-lg-4">
-				<svg class="bd-placeholder-img rounded-circle" width="140" height="140"
+				<svg class="bd-placeholder-img" width="400" height="400"
 					role="img" aria-label="자리 표시자: 140x140" preserveAspectRatio="xMidYMid slice"
 					focusable="false">
 				<!-- <title>Placeholder</title> -->
@@ -151,7 +152,7 @@ crossorigin="anonymous">
 
 			<!-- 이미지3 -->
 			<div class="col-lg-4">
-				<svg class="bd-placeholder-img rounded-circle" width="140" height="140"
+				<svg class="bd-placeholder-img" width="400" height="400"
 					role="img" aria-label="자리 표시자: 140x140" preserveAspectRatio="xMidYMid slice"
 					focusable="false">
 				<!-- <title> Placeholder</title> -->
