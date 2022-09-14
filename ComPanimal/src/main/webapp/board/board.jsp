@@ -26,7 +26,7 @@ crossorigin="anonymous">
 	crossorigin="anonymous"></script>
 
 </head>
-<body>
+
 
 <header>
 	<!-- 여기서 헤드바 컬러수정 -->
@@ -34,8 +34,9 @@ crossorigin="anonymous">
 	<nav class="navbar navbar-expand-lg navbar-dark bg-light  ">
 		<div class="container-fluid">
 			<!-- 로고 -->
-			<a class="navbar-brand text-dark" href="#">
-			<img src="./logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+			<a class="navbar-brand text-dark" href="#"> <img
+				src="https://img.insight.co.kr/static/2018/11/05/700/888208025o428h6408hs.jpg"
+				alt="" width="30" height="24" class="d-inline-block align-text-top">
 				CompAnimal Home
 			</a>
 			<!-- 네비 -->
@@ -47,7 +48,7 @@ crossorigin="anonymous">
 					<li class="nav-item"><a class="nav-link active bg-light text-dark"
 						aria-current="page" href="#">CompAnimal 소개</a></li>
 					<li class="nav-item"><a class="nav-link active bg-light text-dark"
-						aria-current="page" href="search.jsp">동물 정보 조회</a></li>
+						aria-current="page" href="#">동물 정보 조회</a></li>
 					<li class="nav-item"><a class="nav-link active bg-light text-dark"
 						aria-current="page" href="#">동물 정보 등록</a></li>
 					<li class="nav-item"><a class="nav-link active bg-light text-dark"
