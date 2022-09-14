@@ -55,7 +55,7 @@
 	<nav class="navbar">
 			<!-- 로고 -->
 			<a class="logo" href="#"> <img
-				src="../logo.png"
+				src="../images/logo (1).png"
 				alt="" width="380px" class="d-inline-block align-text-top">
 			</a>
 			<!-- 네비 -->
