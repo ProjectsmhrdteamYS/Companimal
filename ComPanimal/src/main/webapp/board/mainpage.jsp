@@ -65,7 +65,7 @@ crossorigin="anonymous">
 
 <body>
   <!-- 내용 -->
-  <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+  <div class="position-relative overflow-hidden p-3 p-md-2 m-md-1 text-center bg-light">
 	  <div class="col-md-5 p-lg-5 mx-auto my-5">
 		  <h1 class="display-4 fw-normal">메인화면 배너</h1>
 		  <p class="lead fw-normal">And an even wittier subheading to boot. Jumpstart your marketing efforts with this example based on Apple's marketing pages.</p>
@@ -81,7 +81,7 @@ crossorigin="anonymous">
 	
 
     <!-- <nav id="nav"> -->
-      <div class="position-relative p-3 p-md-5 m-md-3 text-center bg-light">
+      <div class="position-relative p-0 p-md-3 m-md-0 text-center bg-light">
         <h1 style="text-align: center;">Companimal</h1>
         <h4 style="text-align: center; margin: 0 auto;">
           So she was considering in her own mind,(as well as she could, for the hat day
@@ -93,7 +93,7 @@ crossorigin="anonymous">
     <!-- </nav> -->
     
 	<!-- container marketing 원래되돌리고싶으면 이걸로  -->
-     <div class="position-relative position-relative p-3 p-md-5 m-md-3 text-center bg-light" >
+     <div class="position-relative position-relative p-0 p-md-3 m-md-0 text-center bg-light" >
 		<div class="row" style = "text-align: center; margin: 0 auto;" >
 			<!-- 이미지1 -->
 			<div class="col-lg-4">
@@ -179,7 +179,7 @@ crossorigin="anonymous">
 </body>
 
 <footer>
-	<div class="position-relative position-relative p-3 p-md-5 m-md-3 text-center bg-light">
+	<div class="container">
     <p class="float-end mb-1">
       <a href="#">Back to top</a>
     </p>
