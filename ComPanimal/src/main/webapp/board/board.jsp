@@ -34,9 +34,8 @@ crossorigin="anonymous">
 	<nav class="navbar navbar-expand-lg navbar-dark bg-light  ">
 		<div class="container-fluid">
 			<!-- 로고 -->
-			<a class="navbar-brand text-dark" href="#"> <img
-				src="https://img.insight.co.kr/static/2018/11/05/700/888208025o428h6408hs.jpg"
-				alt="" width="30" height="24" class="d-inline-block align-text-top">
+			<a class="navbar-brand text-dark" href="#">
+			<img src="./logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
 				CompAnimal Home
 			</a>
 			<!-- 네비 -->
