@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>Insert title here</title>
+<title>커뮤니티 게시판</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link
