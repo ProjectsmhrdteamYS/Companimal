@@ -80,7 +80,7 @@ crossorigin="anonymous">
   <p>The .table-striped class adds zebra-stripes to a table:</p>            
   <table class="table table-striped">
     
-    <thead>-
+    <thead>
     <tr>
       <th scope="col">번호</th>
       <th scope="col">제목</th>
