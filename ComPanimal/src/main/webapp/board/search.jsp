@@ -4,8 +4,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>동물조회</title>
 
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+	crossorigin="anonymous">
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+	crossorigin="anonymous"></script>
 <style>
 body {
 	font-family: Arial;
@@ -37,33 +45,26 @@ input[type=submit]:hover {
 }
 
 div.container {
+	max-width: 500px;
+	margin-top: 80px;
+	padding: 32px;
 	border-radius: 5px;
-	background-color: #f2f2f2;
-	padding: 20px;
+	background-color: #fff;
 }
 </style>
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-	crossorigin="anonymous">
-<script
-	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-	crossorigin="anonymous"></script>
+<title>동물조회</title>
 	<!-- 외부 CSS -->
 <link rel="stylesheet" href="basic.css">
 </head>
+<body>
 <header>
 	<!-- 여기서 헤드바 컬러수정 -->
-	<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary"> -->
-	<nav class="navbar navbar-expand-lg navbar-dark bg-light  ">
-		<div class="container-fluid">
+	<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-light  "> -->
+	<nav class="navbar">
 			<!-- 로고 -->
-			<a class="navbar-brand text-dark" href="#"> <img
-				src="https://img.insight.co.kr/static/2018/11/05/700/888208025o428h6408hs.jpg"
-				alt="" width="30" height="24" class="d-inline-block align-text-top">
-				CompAnimal Home
+			<a class="logo" href="http://localhost:8081/ComPanimal/board/mainpage.jsp"> <img
+				src="../images/logo.png"
+				alt="" width="380px" class="d-inline-block align-text-top">
 			</a>
 			<!-- 네비 -->
 			<!-- <div class="collapse navbar-collapse" id="navbarText"> -->
@@ -71,40 +72,37 @@ div.container {
 				<!-- 여기서 nav수정 컬러수정 -->
 				<!-- <ul class="nav nav-pills nav-fill"> -->
 				<ul class="nav">
-					<li class="nav-item"><a class="nav-link active bg-light text-dark"
-						aria-current="page" href="#">CompAnimal 소개</a></li>
-					<li class="nav-item"><a class="nav-link active bg-light text-dark"
-						aria-current="page" href="search.jsp">동물 정보 조회</a></li>
-					<li class="nav-item"><a class="nav-link active bg-light text-dark"
-						aria-current="page" href="#">동물 정보 등록</a></li>
-					<li class="nav-item"><a class="nav-link active bg-light text-dark"
-						aria-current="page" href="#">게시판</a></li>
-					<li class="nav-item"><a class="nav-link active bg-light text-dark"
-						aria-current="page" href="#">찾아주세요</a></li>
+					<li class="nav-item"><a class="nav-link active text-dark"
+						aria-current="page" href="http://localhost:8081/ComPanimal/board/companimal.jsp">CompAnimal 소개</a></li>
+					<li class="nav-item"><a class="nav-link active text-dark"
+						aria-current="page" href="http://localhost:8081/ComPanimal/board/search.jsp">동물 정보 조회</a></li>
+					<li class="nav-item"><a class="nav-link active  text-dark"
+						aria-current="page" href="http://localhost:8081/ComPanimal/board/check.jsp">동물 정보 등록</a></li>
+					<li class="nav-item"><a class="nav-link active text-dark"
+						aria-current="page" href="http://localhost:8081/ComPanimal/board/board.jsp">게시판</a></li>
+					<li class="nav-item"><a class="nav-link active text-dark"
+						aria-current="page" href="http://localhost:8081/ComPanimal/board/findboard.jsp">찾아주세요</a></li>
+					</ul>
 					<!-- 버튼 -->
-
-			
-					<!-- <div id="btn-basic">
-					<button type="button" class="btn btn-dark">로그인</button>
-					<button type="button" class="btn btn-dark">회원가입</button>
-					</div> -->
-				</ul>
 				<ul id="btn-basic">
-					<li><button type="button" class="btn btn-dark">로그인</button></li>
-					<li><button type="button" class="btn btn-dark">회원가입</button></li>
+					<li><button type="button" class="btn btn-dark" onclick="location.href='http://localhost:8081/ComPanimal/board/signin.jsp'">로그인</button></li>
+					<li><button type="button" class="btn btn-dark" onclick="location.href='http://localhost:8081/ComPanimal/board/signup.jsp'">회원가입</button></li>
 				</ul>
 			</div>
-		</div>
 	</nav>
 </header>
-<body>
+<main id="wrap">
 	<p></p>
 	<div class="container">
 		<form action="#">
-				<label for="fname">동물등록번호</label> <input type="text" id="fname"
-					name="firstname" placeholder="등록번호 15자리"> <label
-					for="lname">소유자명</label> <input type="text" id="lname"
-					name="lastname" placeholder="소유자명">
+		<a class="logo" href="http://localhost:8081/ComPanimal/board/mainpage.jsp"> <img
+				src="../images/logo.png"
+				alt="" width="380px" class="d-inline-block align-text-top"></a>
+			<br><br><br>
+			<label for="lname">소유자명</label>
+			<input type="text" id="lname" name="lastname" placeholder="소유자명">
+			<label for="fname">동물등록번호</label>
+			<input type="text" id="fname" name="firstname" placeholder="등록번호 15자리">
 			<hr>
 			
 			<!-- 이미지 업로드해서 조회 - 삭제:
@@ -117,7 +115,7 @@ div.container {
 			<input type="submit" value="조회">
 		</form>
 	</div>
-</body>
+</main>
  <footer>
 	<div class="container">
     <p class="float-end mb-1">
@@ -127,4 +125,5 @@ div.container {
     <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="/docs/5.1/getting-started/introduction/">getting started guide</a>.</p>
   </div>
 </footer>
+</body>
 </html>
