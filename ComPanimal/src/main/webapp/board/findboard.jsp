@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<c:set var="cpath" value="${pageContext.request.contextPath }"/>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -22,7 +24,7 @@ body {
   background-color: #fff;
 }
 </style>
-<link rel="stylesheet" href="basic.css">
+<link rel="stylesheet" href="${cpath }/board/basic.css">
 <title>찾아주세요 게시판</title>
 </head>
 <body>
@@ -31,8 +33,8 @@ body {
 	<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-light  "> -->
 	<nav class="navbar">
 			<!-- 로고 -->
-			<a class="logo" href="http://localhost:8081/ComPanimal/board/mainpage.jsp"> <img
-				src="../images/logo.png"
+			<a class="logo" href="${cpath }/mainpage.do"> <img
+				src="${cpath }/images/logo.png"
 				alt="" width="380px" class="d-inline-block align-text-top">
 			</a>
 			<!-- 네비 -->
@@ -42,28 +44,28 @@ body {
 				<!-- <ul class="nav nav-pills nav-fill"> -->
 				<ul class="nav">
 					<li class="nav-item"><a class="nav-link active text-dark"
-						aria-current="page" href="http://localhost:8081/ComPanimal/board/companimal.jsp">CompAnimal 소개</a></li>
+						aria-current="page" href="${cpath }/companimal.do">CompAnimal 소개</a></li>
 					<li class="nav-item"><a class="nav-link active text-dark"
-						aria-current="page" href="http://localhost:8081/ComPanimal/board/search.jsp">동물 정보 조회</a></li>
+						aria-current="page" href="${cpath }/search.do">동물 정보 조회</a></li>
 					<li class="nav-item"><a class="nav-link active  text-dark"
-						aria-current="page" href="http://localhost:8081/ComPanimal/board/check.jsp">동물 정보 등록</a></li>
+						aria-current="page" href="${cpath }/check.do">동물 정보 등록</a></li>
 					<li class="nav-item"><a class="nav-link active text-dark"
-						aria-current="page" href="http://localhost:8081/ComPanimal/board/board.jsp">게시판</a></li>
+						aria-current="page" href="${cpath }/board.do">게시판</a></li>
 					<li class="nav-item"><a class="nav-link active text-dark"
-						aria-current="page" href="http://localhost:8081/ComPanimal/board/findboard.jsp">찾아주세요</a></li>
+						aria-current="page" href="${cpath }/findboard.do">찾아주세요</a></li>
 					</ul>
 					<!-- 버튼 -->
 				<ul id="btn-basic">
-					<li><button type="button" class="btn btn-dark" onclick="location.href='http://localhost:8081/ComPanimal/board/signin.jsp'">로그인</button></li>
-					<li><button type="button" class="btn btn-dark" onclick="location.href='http://localhost:8081/ComPanimal/board/signup.jsp'">회원가입</button></li>
+					<li><button type="button" class="btn btn-dark" onclick="location.href='${cpath }/signin.do'">로그인</button></li>
+					<li><button type="button" class="btn btn-dark" onclick="location.href='${cpath }/signup.do'">회원가입</button></li>
 				</ul>
 			</div>
 	</nav>
-</header> 
+</header>
 <main id=wrap>
 	<div class="album py-5">
 		<div class="container">
-			<img src="../images/bichon.jpg" alt="" width="380px" class="d-inline-block align-text-top">
+			<img src="${cpath }/images/bichon.jpg" alt="" width="380px" class="d-inline-block align-text-top">
 			<h2>현상수배</h2>
 			<hr>
 			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">

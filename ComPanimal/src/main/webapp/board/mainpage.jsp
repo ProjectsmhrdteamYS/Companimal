@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="UTF-8"%>
+<%@page import="java.util.List"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<c:set var="cpath" value="${pageContext.request.contextPath }"/>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +16,7 @@ integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jI
 crossorigin="anonymous">
 
 <!-- 외부 CSS -->
-<link rel="stylesheet" href="basic.css">
+<link rel="stylesheet" href="${cpath }/board/basic.css">
 
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
@@ -29,8 +33,9 @@ crossorigin="anonymous">
 	<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-light  "> -->
 	<nav class="navbar">
 			<!-- 로고 -->
-			<a class="logo" href="http://localhost:8081/ComPanimal/board/mainpage.jsp">
-			<img src="../images/logo.png" alt="" width="380px" class="d-inline-block align-text-top">
+			<a class="logo" href="${cpath }/mainpage.do"> <img
+				src="${cpath }/images/logo.png"
+				alt="" width="380px" class="d-inline-block align-text-top">
 			</a>
 			<!-- 네비 -->
 			<!-- <div class="collapse navbar-collapse" id="navbarText"> -->
@@ -39,20 +44,20 @@ crossorigin="anonymous">
 				<!-- <ul class="nav nav-pills nav-fill"> -->
 				<ul class="nav">
 					<li class="nav-item"><a class="nav-link active text-dark"
-						aria-current="page" href="http://localhost:8081/ComPanimal/board/companimal.jsp">CompAnimal 소개</a></li>
+						aria-current="page" href="${cpath }/companimal.do">CompAnimal 소개</a></li>
 					<li class="nav-item"><a class="nav-link active text-dark"
-						aria-current="page" href="http://localhost:8081/ComPanimal/board/search.jsp">동물 정보 조회</a></li>
+						aria-current="page" href="${cpath }/search.do">동물 정보 조회</a></li>
 					<li class="nav-item"><a class="nav-link active  text-dark"
-						aria-current="page" href="http://localhost:8081/ComPanimal/board/check.jsp">동물 정보 등록</a></li>
+						aria-current="page" href="${cpath }/check.do">동물 정보 등록</a></li>
 					<li class="nav-item"><a class="nav-link active text-dark"
-						aria-current="page" href="http://localhost:8081/ComPanimal/board/board.jsp">게시판</a></li>
+						aria-current="page" href="${cpath }/board.do">게시판</a></li>
 					<li class="nav-item"><a class="nav-link active text-dark"
-						aria-current="page" href="http://localhost:8081/ComPanimal/board/findboard.jsp">찾아주세요</a></li>
+						aria-current="page" href="${cpath }/findboard.do">찾아주세요</a></li>
 					</ul>
 					<!-- 버튼 -->
 				<ul id="btn-basic">
-					<li><button type="button" class="btn btn-dark" onclick="location.href='http://localhost:8081/ComPanimal/board/signin.jsp'">로그인</button></li>
-					<li><button type="button" class="btn btn-dark" onclick="location.href='http://localhost:8081/ComPanimal/board/signup.jsp'">회원가입</button></li>
+					<li><button type="button" class="btn btn-dark" onclick="location.href='${cpath }/signin.do'">로그인</button></li>
+					<li><button type="button" class="btn btn-dark" onclick="location.href='${cpath }/signup.do'">회원가입</button></li>
 				</ul>
 			</div>
 	</nav>
@@ -62,7 +67,7 @@ crossorigin="anonymous">
   <div class="position-relative overflow-hidden p-3 p-md-2 m-md-1 text-center " >
 	  <div class="col-md-5 p-lg-5 mx-auto my-5">
 		  <h2 class="display-4 fw-normal">메인화면 배너</h2>
-		   <img src="../images/baner.jpg" alt="" width="350px" class="d-inline-block align-text-top">
+		   <img src="${cpath }/images/baner.jpg" alt="" width="350px" class="d-inline-block align-text-top">
 		   <br>
 		  <a class="btn btn-outline-secondary" href="#">Coming soon</a>
 	  </div>
