@@ -11,7 +11,7 @@ public class MainPageController implements Controller {
 	@Override
 	public String requestHandler(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		// 메인페이지 불러오기
 		return "mainpage";
 	}
 

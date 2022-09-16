@@ -1,9 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>	
-<c:set var="cpath" value="${pageContext.request.contextPath}"/>
+<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<c:set var="cpath" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -43,14 +42,14 @@ body {
 <link rel="stylesheet" href="${cpath }/board/basic.css">
 </head>
 <body>
-<header>
-	<!-- 여기서 헤드바 컬러수정 -->
-	<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-light  "> -->
-	<nav class="navbar">
+	<header>
+		<!-- 여기서 헤드바 컬러수정 -->
+		<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-light  "> -->
+		<nav class="navbar">
 			<!-- 로고 -->
 			<a class="logo" href="${cpath }/mainpage.do"> <img
-				src="${cpath }/images/logo.png"
-				alt="" width="380px" class="d-inline-block align-text-top">
+				src="${cpath }/images/logo.png" alt="" width="380px"
+				class="d-inline-block align-text-top">
 			</a>
 			<!-- 네비 -->
 			<!-- <div class="collapse navbar-collapse" id="navbarText"> -->
@@ -59,37 +58,41 @@ body {
 				<!-- <ul class="nav nav-pills nav-fill"> -->
 				<ul class="nav">
 					<li class="nav-item"><a class="nav-link active text-dark"
-						aria-current="page" href="${cpath }/companimal.do">CompAnimal 소개</a></li>
+						aria-current="page" href="${cpath }/companimal.do">CompAnimal
+							소개</a></li>
 					<li class="nav-item"><a class="nav-link active text-dark"
-						aria-current="page" href="${cpath }/search.do">동물 정보 조회</a></li>
+						aria-current="page" href="${cpath }/searchform.do">동물 정보 조회</a></li>
 					<li class="nav-item"><a class="nav-link active  text-dark"
-						aria-current="page" href="${cpath }/check.do">동물 정보 등록</a></li>
+						aria-current="page" href="${cpath }/checkform.do">동물 정보 등록</a></li>
 					<li class="nav-item"><a class="nav-link active text-dark"
-						aria-current="page" href="${cpath }/board.do">게시판</a></li>
+						aria-current="page" href="${cpath }/boardform.do">게시판</a></li>
 					<li class="nav-item"><a class="nav-link active text-dark"
-						aria-current="page" href="${cpath }/findboard.do">찾아주세요</a></li>
-					</ul>
-					<!-- 버튼 -->
+						aria-current="page" href="${cpath }/findboardform.do">찾아주세요</a></li>
+				</ul>
+				<!-- 버튼 -->
 				<ul id="btn-basic">
-					<li><button type="button" class="btn btn-dark" onclick="location.href='${cpath }/signin.do'">로그인</button></li>
-					<li><button type="button" class="btn btn-dark" onclick="location.href='${cpath }/signup.do'">회원가입</button></li>
+					<li><button type="button" class="btn btn-dark"
+							onclick="location.href='${cpath }/signinform.do'">로그인</button></li>
+					<li><button type="button" class="btn btn-dark"
+							onclick="location.href='${cpath }/signupform.do'">회원가입</button></li>
 				</ul>
 			</div>
-	</nav>
-</header>
+		</nav>
+	</header>
 	<main id="wrap">
 		<!-- <div class="input-form col-md-12 mx-auto"> -->
-			<div class="container"></div>
-			<div class="input-form-backgroud row">
-				<div class="input-form col-md-12 mx-auto">
-					<br>
-					<!--사진 크기조절  -->
-					<div style="text-align: center";>
-						<img alt="erorr" src="${cpath }/images/logo.png" width="320">
-					</div>
-					<br> <br>
-					<form class="validation-form" action="${cpath}/Signup.do" method="get">
-						<div class="row">
+		<div class="container"></div>
+		<div class="input-form-backgroud row">
+			<div class="input-form col-md-12 mx-auto">
+				<br>
+				<!--사진 크기조절  -->
+				<div style="text-align: center";>
+					<img alt="erorr" src="${cpath }/images/logo.png" width="320">
+				</div>
+				<br> <br>
+				<form class="validation-form" action="${cpath}/signup.do"
+					method="get">
+					<div class="row">
 						<div class="mb-3">
 							<label for="id">ID</label> <input type="text"
 								class="form-control" name="user_id" placeholder="" required>
@@ -101,17 +104,18 @@ body {
 								placeholder="8~16자 영문 소문자, 숫자를 사용하세요." required>
 							<div class="invalid-feedback">비밀번호를 입력해주세요.</div>
 						</div>
-							<div class="col-md-6 mb-3">
-								<label for="name">이름</label> <input type="text"
-									class="form-control" name="user_name" placeholder="" value="" required>
-								<div class="invalid-feedback">이름을 입력해주세요.</div>
-							</div>
-							<div class="col-md-6 mb-3">
-								<label for="birth">생년월일</label> <input type="text"
-									class="form-control" name="user_birth" placeholder="220913" value=""
-									required>
-								<div class="invalid-feedback">생년월일을 입력해주세요.</div>
-							</div>
+						<div class="col-md-6 mb-3">
+							<label for="name">이름</label> <input type="text"
+								class="form-control" name="user_name" placeholder="" value=""
+								required>
+							<div class="invalid-feedback">이름을 입력해주세요.</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<label for="birth">생년월일</label> <input type="text"
+								class="form-control" name="user_birth" placeholder="220913"
+								value="" required>
+							<div class="invalid-feedback">생년월일을 입력해주세요.</div>
+						</div>
 						<div class="mb-3">
 							<label for="phnum">전화번호</label> <input type="text"
 								class="form-control" name="user_tel" placeholder="01012345678"
@@ -124,23 +128,22 @@ body {
 								required>
 							<div class="invalid-feedback">주소를 입력해주세요.</div>
 						</div>
-						</div>
-						<hr class="mb-4">
-						<div class="custom-control custom-checkbox">
-							<input type="checkbox" class="custom-control-input"
-								id="aggrement" required> <label
-								class="custom-control-label" for="aggrement">개인정보 수집 및
-								이용에 동의합니다</label>
-						</div>
-						<div class="mb-4"></div>
-						<button class="btn-lg btn-block"
-							style="background-color: #ff7530; border: none; color: white"
-							type="submit">가입 하기</button>
-					</form>
-					<!-- 	</div> -->
-				</div>
+					</div>
+					<hr class="mb-4">
+					<div class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input" id="aggrement"
+							required> <label class="custom-control-label"
+							for="aggrement">개인정보 수집 및 이용에 동의합니다</label>
+					</div>
+					<div class="mb-4"></div>
+					<button class="btn-lg btn-block"
+						style="background-color: #ff7530; border: none; color: white"
+						type="submit">가입 하기</button>
+				</form>
+				<!-- 	</div> -->
 			</div>
-			<script>window.addEventListener('load', () => {
+		</div>
+		<script>window.addEventListener('load', () => {
       const forms = document.getElementsByClassName('validation-form');
       Array.prototype.filter.call(forms, (form) => {
         form.addEventListener('submit', function (event) {
