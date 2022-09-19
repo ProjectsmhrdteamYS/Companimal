@@ -95,6 +95,7 @@ System.out.println("setUser_id:"+ user_id);
 	}
 
 	public void setUser_joindate(String user_joindate) {
+		System.out.println(user_joindate);
 		this.user_joindate = user_joindate;
 	}
 
