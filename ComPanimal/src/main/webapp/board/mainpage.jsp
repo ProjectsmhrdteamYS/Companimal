@@ -22,7 +22,10 @@
   
 
     <style>
+<<<<<<< HEAD
 
+=======
+>>>>>>> branch 'master' of https://github.com/ProjectsmhrdteamYS/Companimal.git
     ul li{list-style: none; font-weight: 600; }
     a {text-decoration: none;}
     </style>

@@ -21,9 +21,15 @@
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 	crossorigin="anonymous"></script>
-
+	
+	<style>
+    ul li{list-style: none; font-weight: 600; }
+    a {text-decoration: none;}
+    </style>
 </head>
 <body>
+
+	<!-- header -->
 	<header class=" container-fluid p-3 bg-white ">
 		<div class="container p-3">
 			<div
@@ -32,10 +38,8 @@
 					src="${cpath }/images/logo.png" alt="" width="286"
 					class="d-inline-block align-text-top ">
 				</a>
-
 				<ul
 					class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-
 					<li><a href="${cpath }/companimal.do"
 						class="nav-link px-3 link-dark">COMPANIMAL</a></li>
 					<li><a href="${cpath }/searchform.do"
@@ -47,7 +51,6 @@
 					<li><a href="${cpath }/findboardform.do"
 						class="nav-link px-3 link-dark">찾아주세요</a></li>
 				</ul>
-
 				<form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-2">
 					<input type="search" class="form-control form-control-dark"
 						placeholder="Search..." aria-label="Search">
@@ -62,40 +65,42 @@
 			</div>
 		</div>
 	</header>
-	<main id="wrap">
-		<div class="container my-5">
-			<div
-				class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
-				<div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
-					<h1 class="display-4 fw-bold lh-1">Companimal</h1>
-					<br>
-					<br>
-					<p class="lead">Quickly design and customize responsive
-						mobile-first sites with Bootstrap, the world’s most popular
-						front-end open source toolkit, featuring Sass variables and
-						mixins, responsive grid system, extensive prebuilt components, and
-						powerful JavaScript plugins.</p>
-					<br>
-					<br>
-					<div
-						class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-
-						<button type="button"
-							class="btn btn-primary btn-lg px-4 me-md-2 fw-bold">Primary</button>
-						<button type="button"
-							class="btn btn-outline-secondary btn-lg px-4">Default</button>
-					</div>
-				</div>
-				<div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
-					<img class="rounded-lg-3" src="images/222.jpg" alt="" width="720">
-				</div>
-			</div>
-		</div>
-	</main>
-	<br>
-	<hr>
-	<br>
-	<br>
+	<main>
+	 <form action="${cpath}/boardUpdate.do" method="post">
+    	<input type="hidden" name="idx" value="${vo.idx}"> <!-- idx값을 get방식이 아닌 post 방식으로 넘기기, hidden을 사용해서 수정을 못하게 함 -->
+    	<table class="table table-boardered">
+    		<tr>
+    			<td>제목</td>
+    			<td>
+    				<input type="text" class="form-control" name="title" value="${vo.title}">
+    			</td>
+    		</tr>
+    		<tr>
+    			<td>내용</td>
+    			<td>
+    				<textarea rows="10" class="form-control" name="content">${vo.content}</textarea>
+    			</td>
+    		</tr>
+    		<tr>
+    			<td>작성자</td>
+    			<td>${vo.writer}</td>
+    		</tr>
+    		<tr>
+    			<td>작성일</td>
+    			<td>${vo.indate}</td>
+    		</tr>
+    		<tr>
+    			<td colspan="2" align="center">
+    				<button type="submit" class = "btn btn-sm btn-success" >수정</button>
+    				<button type="reset" class="btn btn-sm btn-danger ">취소</button>
+    				<button type="button" class="btn btn-sm btn-primary"
+							onclick="location.href='${cpath }/mainpage.do'">리스트</button>
+    			</td>
+    		</tr>
+    	</table>
+    </form>
+    </main>
+	<!-- footer -->
 	<footer class="py-5 ">
 		<div class="d-flex justify-content-between py-4 my-4 border-top">
 			<div class="row">
@@ -120,5 +125,6 @@
 				<li class="btn btn-primary py-4 me-2">농농농</li>
 			</ul>
 	</footer>
+
 </body>
 </html>
