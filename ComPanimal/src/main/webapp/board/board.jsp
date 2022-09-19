@@ -85,15 +85,15 @@
 					</tr>
 				</thead>
 				<tbody>
-					<c:forEach begin="0" end="2">
+					<c:forEach var="vo" items="${list }">
 						<tr>
-							<th>1</th>
+							<th>${vo.c_seq }</th>
 							<td><A CLASS="fw-bold text-dark"
 								HREF="${cpath }/cdetailform.do">오늘의 일기</A></td>
-							<td>일기내용</td>
-							<td>선경주</td>
+							<td>${vo.c_content }</td>
+							<td>${vo.user_id }</td>
 							<td>20220914</td>
-							<td>1</td>
+							<td>${vo.c_cnt }</td>
 						</tr>
 					</c:forEach>
 			</table>

@@ -17,7 +17,7 @@ public class BoardFormController implements Controller {
 			throws ServletException, IOException {
 		// 커뮤니티 게시판 목록 불러오기
 		ProjectDAO dao = new ProjectDAO();
-		List<cboardVO> list = dao.cList();
+		List<cboardVO> list = dao.allList();
 		request.setAttribute("list", list);
 		return "board";
 	}
