@@ -90,7 +90,9 @@ body {
 					<img alt="erorr" src="${cpath }/images/logo.png" width="320">
 				</div>
 				<br> <br>
-				<form class="validation-form" action="${cpath}/signup.do"
+				
+				<!-- form methods 선정되는거 없으면 get방식임 -->
+				<form accept-charset = "UTF-8" class="validation-form" action="${cpath}/signup.do"
 					method="get">
 					<div class="row">
 						<div class="mb-3">
@@ -131,9 +133,16 @@ body {
 					</div>
 					<hr class="mb-4">
 					<div class="custom-control custom-checkbox">
-						<input type="checkbox" class="custom-control-input" id="aggrement"
-							required> <label class="custom-control-label"
-							for="aggrement">개인정보 수집 및 이용에 동의합니다</label>
+						<!-- <input type="checkbox" class="custom-control-input" id="aggrement"
+							required> --> 
+							<label class="custom-control-label" for="aggrement">개인정보 수집 및 이용에 동의합니다</label>
+							<br>
+							<input type="radio" class="custom-control-input" id="aggrement"
+							required name = "user_type" value = "1">
+							<label class="custom-control-label" for="aggrement">동의</label>
+							<input type="radio" class="custom-control-input" id="aggrement"
+							required name = "user_type" value = "0">
+							<label class="custom-control-label" for="aggrement">비동의</label>
 					</div>
 					<div class="mb-4"></div>
 					<button class="btn-lg btn-block"

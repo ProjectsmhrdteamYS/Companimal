@@ -10,6 +10,9 @@ import javax.servlet.http.HttpSession;
 import ca.board.dao.ProjectDAO;
 import ca.board.dao.userVO;
 
+import ca.board.dao.ProjectDAO;
+import ca.board.dao.userVO;
+
 public class SigninController implements Controller {
 
 	@Override
@@ -30,6 +33,19 @@ public class SigninController implements Controller {
 			// session으로 바인딩 시 동일한 session으로 jsp들이 정보를 받을 수 있음.
 			session.setAttribute("mvo", mvo);
 		}
+		userVO vo1 = new userVO();
+		ProjectDAO dao2 = new ProjectDAO();
+		
+		String user_name = request.getParameter("user_id");
+		String user_password = request.getParameter("user_pw");
+		vo.setUser_id(user_name);
+		vo.setUser_pw(user_password);
+		System.out.println(vo.getUser_id());
+		System.out.println(vo.getUser_pw());
+		dao.loginMethod(vo);
+		
+		
+		// 임시적으로 메인페이지 넘어감 그 이후에 수정할예정
 		return "redirect:/mainpage.do";
 	}
 

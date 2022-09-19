@@ -1,8 +1,19 @@
+<%@page import="ca.board.dao.ProjectDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <c:set var="cpath" value="${pageContext.request.contextPath }" />
+
+
+<!-- 테스트하는 중 이것부터 -->
+<%!ProjectDAO dao = new ProjectDAO(); %>
+
+<% String userid = request.getParameter("user_id");
+   String userpw = request.getParameter("user_pw");
+%>
+<!-- 이것까지 -->
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -114,12 +125,14 @@ main {
 			<br>
 			<br>
 			<div class="form-floating">
-				<input type="email" class="form-control" id="floatingInput"
-					placeholder="name@example.com"> <label for="floatingInput">ID</label>
+				<input type="text" class="form-control"
+				id="floatingInput" name = "user_id" placeholder="id"> 
+					<label for="floatingInput">ID</label>
 			</div>
 			<div class="form-floating">
-				<input type="password" class="form-control" id="floatingPassword"
-					placeholder="Password"> <label for="floatingPassword">Password</label>
+				<input type="password" class="form-control"
+				id="floatingPassword" name = "user_pw" placeholder="Password"> 
+					<label for="floatingPassword">Password</label>
 			</div>
 			<button class="w-100 btn btn-lg btn-primary" type="submit">Sign
 				in</button>
