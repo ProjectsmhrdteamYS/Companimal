@@ -10,7 +10,9 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>찾아주세요 게시판 글쓰기</title>
+<title>메인</title>
+
+
 <link rel="stylesheet" href="${cpath }/css/bootstrap.css">
 <link rel="stylesheet" href="${cpath }/css/bootstrap-grid.css">
 <link rel="stylesheet" href="${cpath }/css/bootstrap-reboot.css">
@@ -19,9 +21,14 @@
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 	crossorigin="anonymous"></script>
-
+	
+	<style>
+    ul li{list-style: none; font-weight: 600; }
+    a {text-decoration: none;}
+    </style>
 </head>
 <body>
+
 	<!-- header -->
 	<header class=" container-fluid p-3 bg-white ">
 		<div class="container p-3">
@@ -31,10 +38,8 @@
 					src="${cpath }/images/logo.png" alt="" width="286"
 					class="d-inline-block align-text-top ">
 				</a>
-
 				<ul
 					class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-
 					<li><a href="${cpath }/companimal.do"
 						class="nav-link px-3 link-dark">COMPANIMAL</a></li>
 					<li><a href="${cpath }/searchform.do"
@@ -46,7 +51,6 @@
 					<li><a href="${cpath }/findboardform.do"
 						class="nav-link px-3 link-dark">찾아주세요</a></li>
 				</ul>
-
 				<form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-2">
 					<input type="search" class="form-control form-control-dark"
 						placeholder="Search..." aria-label="Search">
@@ -61,49 +65,41 @@
 			</div>
 		</div>
 	</header>
-	<main id="wrap" class="position-relative">
-		<div class="container">
-			<img src="${cpath }/images/mongja.jpg" alt="" width="380px"
-				class="d-inline-block align-text-top">
-			<h2>현상수배</h2>
-			<BR>
-			<form action="${cpath}/findWrite.do">
-				<input type="hidden" name="memId" value="${mvo.memId}">
-				<div class="input-group flex-nowrap">
-					<span class="input-group-text" id="addon-wrapping">제목</span> <input
-						type="text" class="form-control" placeholder="ctitle"
-						aria-label="title" aria-describedby="addon-wrapping">
-				</div>
-				<br>
-				<div class="input-group">
-					<span class="input-group-text">내용</span>
-					<textarea class="form-control" aria-label="With textarea"
-						style="height: 300px"></textarea>
-				</div>
-				<br>
-				<div class="mb-3">
-					<label for="formFile" class="form-label">사진 첨부</label>
-					 <input class="form-control" type="file" id="formFile">
-				</div>
-				<br>
-				<div>
-					<input class="form-control" type="text"
-						placeholder="${cpath } << 작성자 여기에 넣으면 됨" disabled>
-				</div>
-
-				<br>
-				<div class="form-group">
-					<div class="col-sm-offset-2 col-sm-10">
-						<button type="submit" class="btn btn-success btn-sm">등록</button>
-						<button type="button" class="btn btn-sm btn-primary"
-							onclick="location.href='${cpath }/findboardform.do'">취소</button>
-					</div>
-				</div>
-			</form>
-
-		</div>
-		</div>
-	</main>
+	<main>
+	 <form action="${cpath}/boardUpdate.do" method="post">
+    	<input type="hidden" name="idx" value="${vo.idx}"> <!-- idx값을 get방식이 아닌 post 방식으로 넘기기, hidden을 사용해서 수정을 못하게 함 -->
+    	<table class="table table-boardered">
+    		<tr>
+    			<td>제목</td>
+    			<td>
+    				<input type="text" class="form-control" name="title" value="${vo.title}">
+    			</td>
+    		</tr>
+    		<tr>
+    			<td>내용</td>
+    			<td>
+    				<textarea rows="10" class="form-control" name="content">${vo.content}</textarea>
+    			</td>
+    		</tr>
+    		<tr>
+    			<td>작성자</td>
+    			<td>${vo.writer}</td>
+    		</tr>
+    		<tr>
+    			<td>작성일</td>
+    			<td>${vo.indate}</td>
+    		</tr>
+    		<tr>
+    			<td colspan="2" align="center">
+    				<button type="submit" class = "btn btn-sm btn-success" >수정</button>
+    				<button type="reset" class="btn btn-sm btn-danger ">취소</button>
+    				<button type="button" class="btn btn-sm btn-primary"
+							onclick="location.href='${cpath }/findboardform.do'">리스트</button>
+    			</td>
+    		</tr>
+    	</table>
+    </form>
+    </main>
 	<!-- footer -->
 	<footer class="py-5 ">
 		<div class="d-flex justify-content-between py-4 my-4 border-top">
@@ -129,5 +125,6 @@
 				<li class="btn btn-primary py-4 me-2">농농농</li>
 			</ul>
 	</footer>
+
 </body>
 </html>

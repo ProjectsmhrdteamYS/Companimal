@@ -6,7 +6,20 @@ public class petVO {
 	private String pet_img;
 	private String owner_nm;
 	private String reg_date;
+	private String user_id;
 	public petVO() {};
+	
+	
+	public String getUser_id() {
+		return user_id;
+	}
+
+
+	public void setUser_id(String user_id) {
+		this.user_id = user_id;
+	}
+
+
 	public String getPet_regno() {
 		return pet_regno;
 	}
@@ -37,18 +50,20 @@ public class petVO {
 	public void setReg_date(String reg_date) {
 		this.reg_date = reg_date;
 	}
-	public petVO(String pet_regno, String dognm, String pet_img, String owner_nm, String reg_date) {
+
+	public petVO(String pet_regno, String dognm, String pet_img, String owner_nm, String reg_date, String user_id) {
 		super();
 		this.pet_regno = pet_regno;
 		this.dognm = dognm;
 		this.pet_img = pet_img;
 		this.owner_nm = owner_nm;
 		this.reg_date = reg_date;
+		this.user_id = user_id;
 	}
 	@Override
 	public String toString() {
 		return "petVO [pet_regno=" + pet_regno + ", dognm=" + dognm + ", pet_img=" + pet_img + ", owner_nm=" + owner_nm
-				+ ", reg_date=" + reg_date + "]";
+				+ ", reg_date=" + reg_date + ", user_id=" + user_id + "]";
 	}
 	
 }

@@ -1,11 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var="cpath" value="${pageContext.request.contextPath }" />
+
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
+<<<<<<< HEAD
 <meta charset="EUC-KR">
 <<<<<<< HEAD
 <title>Ä¿¹Â´ÏÆ¼ °Ô½ÃÆÇ</title>
@@ -24,61 +26,67 @@
 	crossorigin="anonymous"></script>
 <!-- ¿ÜºÎ CSS -->
 <link rel="stylesheet" href="${cpath }/board/basic.css">
+=======
+<meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>ì»¤ë®¤ë‹ˆí‹° ê²Œì‹œíŒ</title>
+
+
+   <link rel="stylesheet" href="${cpath }/css/bootstrap.css">
+   <link rel="stylesheet" href="${cpath }/css/bootstrap-grid.css">
+   <link rel="stylesheet" href="${cpath }/css/bootstrap-reboot.css">
+   <link rel="stylesheet" href="${cpath }/css/bootstrap-utilities.css">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+>>>>>>> branch 'master' of https://github.com/ProjectsmhrdteamYS/Companimal.git
 </head>
 <body>
-	<header>
-		<!-- ¿©±â¼­ Çìµå¹Ù ÄÃ·¯¼öÁ¤ -->
-		<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-light  "> -->
-		<nav class="navbar">
-			<!-- ·Î°í -->
-			<a class="logo" href="${cpath }/mainpage.do"> <img
-				src="${cpath }/images/logo.png" alt="" width="380px"
-				class="d-inline-block align-text-top">
-			</a>
-			<!-- ³×ºñ -->
-			<!-- <div class="collapse navbar-collapse" id="navbarText"> -->
-			<div id="navbarText">
-				<!-- ¿©±â¼­ nav¼öÁ¤ ÄÃ·¯¼öÁ¤ -->
-				<!-- <ul class="nav nav-pills nav-fill"> -->
-				<ul class="nav">
-					<li class="nav-item"><a class="nav-link active text-dark"
-						aria-current="page" href="${cpath }/companimal.do">CompAnimal
-							¼Ò°³</a></li>
-					<li class="nav-item"><a class="nav-link active text-dark"
-						aria-current="page" href="${cpath }/searchform.do">µ¿¹° Á¤º¸ Á¶È¸</a></li>
-					<li class="nav-item"><a class="nav-link active  text-dark"
-						aria-current="page" href="${cpath }/checkform.do">µ¿¹° Á¤º¸ µî·Ï</a></li>
-					<li class="nav-item"><a class="nav-link active text-dark"
-						aria-current="page" href="${cpath }/boardform.do">°Ô½ÃÆÇ</a></li>
-					<li class="nav-item"><a class="nav-link active text-dark"
-						aria-current="page" href="${cpath }/findboardform.do">Ã£¾ÆÁÖ¼¼¿ä</a></li>
-				</ul>
-				<!-- ¹öÆ° -->
-				<ul id="btn-basic">
-					<li><button type="button" class="btn btn-dark"
-							onclick="location.href='${cpath }/signinform.do'">·Î±×ÀÎ</button></li>
-					<li><button type="button" class="btn btn-dark"
-							onclick="location.href='${cpath }/signupform.do'">È¸¿ø°¡ÀÔ</button></li>
-				</ul>
-			</div>
-		</nav>
-	</header>
-	<main id="wrap">
+	<!-- header -->
+    <header class=" container-fluid p-3 bg-white ">
+        <div class="container p-3">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start ">
+            <a class="navbar-brand me-4" href="${cpath }/mainpage.do"  >
+                <img src="${cpath }/images/logo.png" alt="" width="286" class="d-inline-block align-text-top ">
+            </a>
+    
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              
+              <li><a href="${cpath }/companimal.do" class="nav-link px-3 link-dark">COMPANIMAL</a></li>
+              <li><a href="${cpath }/searchform.do" class="nav-link px-3 link-dark">ë°˜ë ¤ê²¬ì¡°íšŒ</a></li>
+              <li><a href="${cpath }/checkform.do" class="nav-link px-3 link-dark">ë°˜ë ¤ê²¬ë“±ë¡</a></li>
+              <li><a href="${cpath }/boardform.do" class="nav-link px-3 link-dark">ê²Œì‹œíŒ</a></li>
+              <li><a href="${cpath }/findboardform.do" class="nav-link px-3 link-dark">ì°¾ì•„ì£¼ì„¸ìš”</a></li>
+            </ul>
+    
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-2">
+              <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
+            </form>
+    
+            <div class="text-end">
+              <button type="button" class="btn btn-outline-secondary me-1" onclick="location.href='${cpath }/signinform.do'">Login</button>
+              <button type="button" class="btn btn-primary" onclick="location.href='${cpath }/signupform.do'">Sign-up</button>
+            </div>
+          </div>
+        </div>
+      </header>
+      
+	<main id="wrap" class="position-relative">
 		<div class="container">
 			<img src="${cpath }/images/mongja.jpg" alt="" width="380px"
 				class="d-inline-block align-text-top">
-			<h2>ÀÌ¾ß±â</h2>
+			<h2>ì´ì•¼ê¸°</h2>
 			<BR>
 			<HR>
 			<table class="table">
 				<thead>
 					<tr>
-						<th scope="col">¹øÈ£</th>
-						<th scope="col">Á¦¸ñ</th>
-						<th scope="col">³»¿ë</th>
-						<th scope="col">ÀÛ¼ºÀÚ</th>
-						<th scope="col">ÀÛ¼ºÀÏ</th>
-						<th scope="col">Á¶È¸¼ö</th>
+						<th scope="col">ë²ˆí˜¸</th>
+						<th scope="col">ì œëª©</th>
+						<th scope="col">ë‚´ìš©</th>
+						<th scope="col">ì‘ì„±ì</th>
+						<th scope="col">ì‘ì„±ì¼</th>
+						<th scope="col">ì¡°íšŒìˆ˜</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -86,37 +94,54 @@
 						<tr>
 							<th>1</th>
 							<td><A CLASS="fw-bold text-dark"
-								HREF="${cpath }/cdetailform.do">¿À´ÃÀÇ ÀÏ±â</A></td>
-							<td>ÀÏ±â³»¿ë</td>
-							<td>¼±°æÁÖ</td>
+								HREF="${cpath }/cdetailform.do">ì˜¤ëŠ˜ì˜ ì¼ê¸°</A></td>
+							<td>ì¼ê¸°ë‚´ìš©</td>
+							<td>ì„ ê²½ì£¼</td>
 							<td>20220914</td>
 							<td>1</td>
 						</tr>
 					</c:forEach>
 			</table>
+		<p> </p>
+		<div align="right">
+			<button type="button" class="btn btn-primary"
+				onclick="location.href='${cpath }/boardwriteform.do'">ê²Œì‹œë¬¼
+				ì‘ì„±</button>
 		</div>
-		<div>
-			<button type="button" class="btn btn-dark"
-				onclick="location.href='${cpath }/boardwriteform.do'">°Ô½Ã¹°
-				ÀÛ¼º</button>
 		</div>
 	</main>
+<footer class="py-5 " >
 
 
-	<footer>
-		<div class="container">
-			<p class="float-end mb-1">
-				<a href="#">Back to top</a>
-			</p>
-			<p class="mb-1">Album example is &copy; Bootstrap, but please
-				download and customize it for yourself!</p>
-			<p class="mb-0">
-				New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a
-					href="/docs/5.1/getting-started/introduction/">getting started
-					guide</a>.
-			</p>
-		</div>
-	</footer>
+    <div class="d-flex justify-content-between py-4 my-4 border-top">
+        
+        <div class="row">
+        <div class="col">
+        <ul>
+            <li>Â© 2022 Company, Inc. All rights reserved.</li>
+            <li>ì£¼ì‹íšŒì‚¬ ì»´íŒ¨ë‹ˆë©€ ì–´ì©Œêµ¬ ì €ì©Œêµ¬</li>
+            <li>ê·¸ë˜ì„œ ë§Œë“ ì‚¬ëŒ ì–´ì©Œêµ¬ì €ì©Œêµ¬</li>
+        </ul>
+    </div>
+        
+        <div class="col">
+        <ul>
+            <li>Â© 2022 Company, Inc. All rights reserved.</li>
+            <li>ì£¼ì‹íšŒì‚¬ ì»´íŒ¨ë‹ˆë©€ ì–´ì©Œêµ¬ ì €ì©Œêµ¬</li>
+            <li>ê·¸ë˜ì„œ ë§Œë“ ì‚¬ëŒ ì–´ì©Œêµ¬ì €ì©Œêµ¬</li>
+        </ul>
+    </div>
+</div>
+      
+
+      <ul class="list-unstyled d-flex ">
+        <li class="btn btn-primary py-4 me-2" >ì§¹ì§¹ì´</li>
+        <li class="btn btn-outline-secondary py-4 me-2">ì¸ì„œíƒ€</li>
+        <li class="btn btn-primary py-4 me-2">ë†ë†ë†</li>
+      </ul>
+
+
+  </footer>
 </body>
 
 </html>
