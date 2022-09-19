@@ -95,12 +95,9 @@
 				<div class="form-group">
 					<div class="col-sm-offset-2 col-sm-10">
 						<button type="submit" class="btn btn-success btn-sm">등록</button>
-						<button type="button" class="btn btn-sm btn-primary"
-<<<<<<< HEAD
-							onclick="location.href='${cpath }/mainpage.do'">취소</button>
-=======
-							onclick="location.href='${cpath }/boardform.do'">취소</button>
->>>>>>> branch 'master' of https://github.com/ProjectsmhrdteamYS/Companimal.git
+						<button type="button" class="btn btn-sm btn-primary" 
+						onclick="location.href='${cpath }/boardform.do'">취소</button>
+
 					</div>
 				</div>
 			</form>

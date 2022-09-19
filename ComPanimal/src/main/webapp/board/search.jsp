@@ -11,11 +11,9 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>메인</title>
 
-<<<<<<< HEAD
-<title>동물 등록</title>
-=======
+
+
 <title>동물 조회</title>
->>>>>>> branch 'master' of https://github.com/ProjectsmhrdteamYS/Companimal.git
    <link rel="stylesheet" href="${cpath }/css/bootstrap.css">
    <link rel="stylesheet" href="${cpath }/css/bootstrap-grid.css">
    <link rel="stylesheet" href="${cpath }/css/bootstrap-reboot.css">
@@ -67,18 +65,17 @@ ul li{list-style: none;}
   	<form  class="border rounded-4 p-5 mx-auto" style="width: 650px; height: 680px;">
     <br>
     <img class="mb-4" src="${cpath }/images/222.jpg"alt="로고" width="100%" height="120px">
-<<<<<<< HEAD
-    <h1 class="h3 mt-3 fw-normal text-center">반려동물 등록 서비스</h1>
-=======
+
+
     <h1 class="h3 mt-3 fw-normal text-center">반려동물 조회 서비스</h1>
->>>>>>> branch 'master' of https://github.com/ProjectsmhrdteamYS/Companimal.git
+
 
     <div class="mb-3">
-<<<<<<< HEAD
+
       <label for="exampleFormControlInput1" class="form-label">반려동물 이름</label>
-=======
+
       <label for="exampleFormControlInput1" class="form-label">소유자 명</label>
->>>>>>> branch 'master' of https://github.com/ProjectsmhrdteamYS/Companimal.git
+
       <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="소유자 이름을 입력하세요"
       style="height: 3em;">
     </div>
@@ -90,13 +87,12 @@ ul li{list-style: none;}
     
 
     <div class="checkbox mt-3 mb-3 " >
-<<<<<<< HEAD
       <label>
         <input type="checkbox" value="remember-me"> Remember me
       </label>
-=======
+
       
->>>>>>> branch 'master' of https://github.com/ProjectsmhrdteamYS/Companimal.git
+
     </div>
     <button class="w-100 btn btn-lg btn-primary" type="submit" style="height: 60px;">submit</button>
     <p class="mt-5 mb-3 text-muted">© 2022–2025</p>
