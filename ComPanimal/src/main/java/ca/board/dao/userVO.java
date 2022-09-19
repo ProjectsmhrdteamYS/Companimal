@@ -64,7 +64,7 @@ public class userVO {
 	}
 
 	public void setUser_id(String user_id) {
-System.out.println("setUser_id:"+ user_id);
+//System.out.println("setUser_id:"+ user_id);
 		this.user_id = user_id;
 	}
 
@@ -97,7 +97,7 @@ System.out.println("setUser_id:"+ user_id);
 	}
 
 	public void setUser_joindate(Date user_joindate) {
-		System.out.println(user_joindate);
+//		System.out.println(user_joindate);
 		this.user_joindate = user_joindate;
 	}
 
