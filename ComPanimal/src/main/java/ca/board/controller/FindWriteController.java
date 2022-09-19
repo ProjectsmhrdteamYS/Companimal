@@ -12,7 +12,7 @@ public class FindWriteController implements Controller {
 	public String requestHandler(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// 찾아주세요 게시판 글쓰기 기능
-		return null;
+		return null; 
 	}
 
 }
