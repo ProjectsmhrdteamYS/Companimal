@@ -9,9 +9,78 @@
 	insert into tbl_user(user_id,user_pw,user_name,user_birth,user_tel,user_addr,user_joindate,user_type)
 	values(#{user_id},#{user_pw},#{user_name},#{user_birth},#{user_tel},#{user_addr},to_date(sysdate,'mm-dd'),#{user_type})
 </insert>
+
 <!-- 2. 로그인 -->
 <select id="loginMethod" resultType="ca.board.dao.userVO" parameterType="ca.board.dao.userVO">
 	select * from tbl_user where user_id=#{user_id} and user_pw=#{user_pw}
 </select>
 
+<!-- 3. 커뮤니티 게시판 전체 리스트  -->
+<select id="cList" resultType="ca.board.dao.cboardVO" > 
+  <!-- resultType의 정보를 id 인 allList sql문 -->
+    select * from tbl_community order by c_seq desc
+  </select>
+ <!-- 4. 커뮤니티 게시판 글쓰기 --> 
+  <insert id="insertc" parameterType="ca.board.dao.cboardVO">
+  	insert into tbl_community(c_seq,c_title,c_content,c_date,c_file,user_id,c_cnt)
+  	values(tbl_community_SEQ.NEXTVAL,#{c_title},#{c_content},#{c_date},#{c_file},#{user_id},#{c_cnt})
+  	<!-- 일단 values를 이렇게 하는데 서브쿼리를 사용해야 할꺼같음 (tbl_user) -->
+  </insert>
+  
+ <!-- 5. 커뮤니티 게시판 상세 페이지 -->
+  <select id = "cdetail" parameterType="int" resultType="ca.board.dao.cboardVO">
+   	<!-- parameterType이 1개이면 parameterType을 생략할 수 있음. -->
+   	select * from tbl_community where c_seq = #{c_seq}
+  </select>
+  
+  <!-- 6. 커뮤니티 게시판 조회수 증가-->
+  <update id="countc" >  
+  <!-- parameter타입 생략 가능 -->
+  	update tbl_community set c_cnt=c_cnt+1 where c_seq = #{c_seq}
+  </update>
+  
+  <!-- 7. 커뮤니티 게시판 삭제 -->
+  <delete id="cboardDelete">
+	delete from tbl_community where c_seq=#{c_seq}
+  </delete>
+  
+  <!-- 8. 커뮤니티 게시판 수정 -->
+  <update id="boardUpdate" parameterType="ca.board.dao.cboardVO">
+	update tbl_community set c_title=#{c_title},c_content=#{c_content} where c_seq = #{c_seq}
+  </update>
+  
+ <!-- 9. 찾아주세요 게시판 전체 리스트 -->
+  <select id="fList" resultType="ca.board.dao.fboardVO" > 
+  <!-- resultType의 정보를 id 인 allList sql문 -->
+    select * from tbl_find order by f_seq desc
+  </select>
+  
+  <!-- 10. 찾아주세요 게시판 글쓰기 --> 
+  <insert id="insertc" parameterType="ca.board.dao.cboardVO">
+  		insert into tbl_find(f_seq,f_title,f_content,f_date,f_file,user_id,f_cnt)
+  	values(tbl_find_SEQ.NEXTVAL,#{f_title},#{f_content},#{f_date},#{f_file},#{user_id},#{f_cnt})
+  </insert>
+  
+ <!-- 11. 찾아주세요 게시판 상세 페이지 -->
+  <select id = "fdetail" parameterType="int" resultType="ca.board.dao.fboardVO">
+   	<!-- parameterType이 1개이면 parameterType을 생략할 수 있음. -->
+   	select * from tbl_find where f_seq = #{f_seq}
+  </select>
+  
+  <!-- 12. 찾아주세요 게시판 조회수 증가 -->
+  <update id="countf" >  
+  <!-- parameter타입 생략 가능 -->
+  	update tbl_find set f_cnt=f_cnt+1 where f_seq = #{f_seq}
+  </update>
+  
+  <!-- 13. 찾아주세요 게시판 삭제 -->
+  <delete id="fboardDelete">
+	delete from tbl_find where f_seq = #{f_seq}
+  </delete>
+  
+  <!-- 14. 찾아주세요 게시판 수정 -->
+  <update id="fUpdate" parameterType="ca.board.dao.cboardVO">
+	update tbl_find set f_title=#{f_title},f_content=#{f_content} where f_seq = #{f_seq}
+  </update>
+  
 </mapper>
