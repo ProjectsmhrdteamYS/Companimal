@@ -5,20 +5,31 @@ public class fboardVO {
 	private String f_title;
 	private String f_content;
 	private String f_date;
-	private String f_file;
-	private int f_cnt;
-	
-	public fboardVO() {}
+	private String user_id;
+	public String getUser_id() {
+		return user_id;
+	}
 
-	public fboardVO(int f_seq, String f_title, String f_content, String f_date, String f_file, int f_cnt) {
+	public fboardVO(int f_seq, String f_title, String f_content, String f_date, String user_id, String f_file,
+			int f_cnt) {
 		super();
 		this.f_seq = f_seq;
 		this.f_title = f_title;
 		this.f_content = f_content;
 		this.f_date = f_date;
-		this.f_file = f_file;
+		this.user_id = user_id;
 		this.f_cnt = f_cnt;
+		this.f_file = f_file;
 	}
+
+	public void setUser_id(String user_id) {
+		this.user_id = user_id;
+	}
+
+	private String f_file;
+	private int f_cnt;
+	
+	public fboardVO() {}
 
 	public int getF_seq() {
 		return f_seq;
@@ -71,7 +82,7 @@ public class fboardVO {
 	@Override
 	public String toString() {
 		return "fboardVO [f_seq=" + f_seq + ", f_title=" + f_title + ", f_content=" + f_content + ", f_date=" + f_date
-				+ ", f_file=" + f_file + ", f_cnt=" + f_cnt + "]";
+				+ ", user_id=" + user_id + ", f_file=" + f_file + ", f_cnt=" + f_cnt + "]";
 	};
 	
 }
