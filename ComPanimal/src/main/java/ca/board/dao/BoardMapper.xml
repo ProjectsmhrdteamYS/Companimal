@@ -51,7 +51,11 @@
   <delete id="cboardDelete">
 	delete from tbl_community where c_seq=#{c_seq}
   </delete>
-  
+  <!-- 여기까지는 테이블 연동이 가능함 -->
+
+
+
+  <!-- 근데 여기서부터 문제(테이블 연동 불가능) -->
   <!-- 8. 커뮤니티 게시판 수정 -->
   <update id="boardUpdate" parameterType="ca.board.dao.cboardVO">
 	update tbl_community set c_title=#{c_title},c_content=#{c_content} where c_seq = #{c_seq}
