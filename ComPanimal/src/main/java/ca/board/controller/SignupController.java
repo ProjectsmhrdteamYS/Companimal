@@ -6,6 +6,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import ca.board.dao.ProjectDAO;
 import ca.board.dao.userVO;
 
 public class SignupController implements Controller {
@@ -13,6 +14,9 @@ public class SignupController implements Controller {
 	@Override
 	public String requestHandler(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		// 회원가입의 데이터베이스와 연동시키는 기능
+		ProjectDAO dao = new ProjectDAO();
+		
 		// 회원가입 기능
 		String user_id  = request.getParameter("user_id");
 		String user_pw = request.getParameter("user_pw");
@@ -31,7 +35,11 @@ public class SignupController implements Controller {
 		vo.setUser_addr(user_addr);
 		vo.setUser_joindate(user_joindate);
 		vo.setUser_type(user_type);
+		// 여기서  데이터베이스 연동을 성공한후에 회원가입 성공시 알람을 떴어야함
 		
+		// 문제
+		dao.signupMethod(vo);
+	
 		return "redirect:/mainpage.do";
 	}
 
