@@ -13,8 +13,8 @@
 	<!-- insert into tbl_user(user_id,user_pw,user_name,user_birth,user_tel,user_addr,user_joindate,user_type)
 	values(#{user_id},#{user_pw},#{user_name},#{user_birth},#{user_tel},#{user_addr},#{user_joindate},#{user_type}) -->
 	
-	insert into tbl_user(user_id,user_pw,user_name,user_birth,user_tel,user_addr,user_type)
-	values(#{user_id},#{user_pw},#{user_name},#{user_birth},#{user_tel},#{user_addr},#{user_type})
+	insert into tbl_user(user_id,user_pw,user_name,user_birth,user_tel,user_addr,user_type,user_joindate)
+	values(#{user_id},#{user_pw},#{user_name},#{user_birth},#{user_tel},#{user_addr},#{user_type},sysdate)
 </insert>
 
 <!-- 2. 로그인 -->

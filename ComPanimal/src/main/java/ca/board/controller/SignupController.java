@@ -1,7 +1,7 @@
 package ca.board.controller;
 
 import java.io.IOException;
-import java.util.Date;
+import java.sql.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -19,7 +19,7 @@ public class SignupController implements Controller {
 		ProjectDAO dao = new ProjectDAO();
 		
 		//
-		Date now = new Date();
+//		Date now = new Date();
 		// 회원가입 기능
 		String user_id  = request.getParameter("user_id");
 		String user_pw = request.getParameter("user_pw");
@@ -27,8 +27,7 @@ public class SignupController implements Controller {
 		int user_birth = Integer.parseInt(request.getParameter("user_birth"));
 		int user_tel = Integer.parseInt(request.getParameter("user_tel"));
 		String user_addr = request.getParameter("user_addr");
-//		Data user_joindate = request.getParameter("user_joindate");
-//		java.sql.Date user_joindate = request.getParameter("user_joindate");
+//		Date user_joindate = request.getParameter("user_joindate"); 이거는 안해도 상관없음
 		String user_type = request.getParameter("user_type"); // 개인정보 동의
 		userVO vo = new userVO();
 		vo.setUser_id(user_id);
@@ -41,10 +40,9 @@ public class SignupController implements Controller {
 		vo.setUser_type(user_type);
 		// 여기서  데이터베이스 연동을 성공한후에 회원가입 성공시 알람을 떴어야함
 		// 제대로 작동되었는지 확인
-		System.out.println(vo.getUser_joindate()); // null 확인 이거는 없이 사용가능함
-		System.out.println(vo.getUser_type()); // null 확인 이후에 jsp페이지에 들어갈 권장 완료
+//		System.out.println(vo.getUser_joindate()); // null 확인 이거는 없이 사용가능함
+		System.out.println(vo.getUser_type()); // null 확인 이후에 jsp페이지에 들어갈 값 완료
 		System.out.println(vo.getUser_tel());
-		// 문제
 		dao.signupMethod(vo);
 	
 		return "redirect:/mainpage.do";
