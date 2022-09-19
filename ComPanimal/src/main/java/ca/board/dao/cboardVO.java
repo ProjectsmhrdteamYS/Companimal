@@ -7,6 +7,7 @@ public class cboardVO {
 	private String c_date;
 	private String c_file;
 	private String user_id;
+	
 	public cboardVO(int c_seq, String c_title, String c_content, String c_date, String c_file, String user_id,
 			int c_cnt) {
 		super();

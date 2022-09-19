@@ -58,19 +58,19 @@
 			<table class="table">
     		<tr>
     			<td>제목</td>
-    			<td>${vo.title}</td>
+    			<td>${vo.c_title}</td>
     		</tr>
     		<tr>
     			<td>내용</td>
-    			<td>${fn:replace(vo.content,newLine,"<br>") }</td>
+    			<td>${fn:replace(vo.c_content,newLine,"<br>") }</td>
     		</tr>
     		<tr>
     			<td>작성자</td>
-    			<td>${vo.writer}</td>
+    			<td>${vo.user_id}</td>
     		</tr>
     		<tr>
     			<td>작성일</td>
-    			<td>${fn:split(vo.indate," ")[0] }</td>
+    			<td>${fn:split(vo.c_date," ")[0] }</td>
     		</tr>
     		<tr>
     			<td colspan="2" align="center">

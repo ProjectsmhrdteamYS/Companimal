@@ -7,13 +7,9 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<<<<<<< HEAD
 <meta charset="EUC-KR">
-<<<<<<< HEAD
-<title>Ä¿¹Â´ÏÆ¼ °Ô½ÃÆÇ</title>
-=======
-<title>°Ô½ÃÆÇ</title>
->>>>>>> branch 'master' of https://github.com/ProjectsmhrdteamYS/Companimal.git
+
+<title>ì»¤ë®¤ë‹ˆí‹° ê²Œì‹œíŒ</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
@@ -24,7 +20,7 @@
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 	crossorigin="anonymous"></script>
-<!-- ¿ÜºÎ CSS -->
+<!-- ï¿½Üºï¿½ CSS -->
 <link rel="stylesheet" href="${cpath }/board/basic.css">
 =======
 <meta charset="UTF-8">
@@ -39,7 +35,6 @@
    <link rel="stylesheet" href="${cpath }/css/bootstrap-utilities.css">
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
->>>>>>> branch 'master' of https://github.com/ProjectsmhrdteamYS/Companimal.git
 </head>
 <body>
 	<!-- header -->
