@@ -18,8 +18,9 @@
 <!-- 3. 커뮤니티 게시판 전체 리스트  -->
 <select id="cList" resultType="ca.board.dao.cboardVO" > 
   <!-- resultType의 정보를 id 인 allList sql문 -->
-    select * from tbl_community order by c_seq desc
+    select * from tbl_community
   </select>
+  
  <!-- 4. 커뮤니티 게시판 글쓰기 --> 
   <insert id="insertc" parameterType="ca.board.dao.cboardVO">
   	insert into tbl_community(c_seq,c_title,c_content,c_date,c_file,user_id,c_cnt)

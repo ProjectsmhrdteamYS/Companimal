@@ -156,19 +156,29 @@ body {
       });
     }, false);</script>
 	</main>
-	<footer>
-		<div class="container">
-			<p class="float-end mb-1">
-				<a href="#">Back to top</a>
-			</p>
-			<p class="mb-1">Album example is &copy; Bootstrap, but please
-				download and customize it for yourself!</p>
-			<p class="mb-0">
-				New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a
-					href="/docs/5.1/getting-started/introduction/">getting started
-					guide</a>.
-			</p>
-		</div>
+<footer class="py-5 ">
+		<div class="d-flex justify-content-between py-4 my-4 border-top">
+			<div class="row">
+				<div class="col">
+					<ul>
+						<li>© 2022 Company, Inc. All rights reserved.</li>
+						<li>주식회사 컴패니멀 어쩌구 저쩌구</li>
+						<li>그래서 만든사람 어쩌구저쩌구</li>
+					</ul>
+				</div>
+				<div class="col">
+					<ul>
+						<li>© 2022 Company, Inc. All rights reserved.</li>
+						<li>주식회사 컴패니멀 어쩌구 저쩌구</li>
+						<li>그래서 만든사람 어쩌구저쩌구</li>
+					</ul>
+				</div>
+			</div>
+			<ul class="list-unstyled d-flex ">
+				<li class="btn btn-primary py-4 me-2">짹짹이</li>
+				<li class="btn btn-outline-secondary py-4 me-2">인서타</li>
+				<li class="btn btn-primary py-4 me-2">농농농</li>
+			</ul>
 	</footer>
 </body>
 </html>
