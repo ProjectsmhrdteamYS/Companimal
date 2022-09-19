@@ -15,6 +15,9 @@ public class SignupController implements Controller {
 	@Override
 	public String requestHandler(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		// 한글설정
+		request.setCharacterEncoding("UTF-8");
+		
 		// 회원가입의 데이터베이스와 연동시키는 기능
 		ProjectDAO dao = new ProjectDAO();
 		
@@ -41,7 +44,10 @@ public class SignupController implements Controller {
 		// 여기서  데이터베이스 연동을 성공한후에 회원가입 성공시 알람을 떴어야함
 		// 제대로 작동되었는지 확인
 //		System.out.println(vo.getUser_joindate()); // null 확인 이거는 없이 사용가능함
-		System.out.println(vo.getUser_type()); // null 확인 이후에 jsp페이지에 들어갈 값 완료
+		System.out.println(vo.getUser_id()); // null 확인 이후에 jsp페이지에 들어갈 값 완료
+		System.out.println(vo.getUser_pw());
+		System.out.println(vo.getUser_name());
+		System.out.println(vo.getUser_addr());
 		System.out.println(vo.getUser_tel());
 		dao.signupMethod(vo);
 	

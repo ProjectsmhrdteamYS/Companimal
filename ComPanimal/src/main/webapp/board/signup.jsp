@@ -90,7 +90,9 @@ body {
 					<img alt="erorr" src="${cpath }/images/logo.png" width="320">
 				</div>
 				<br> <br>
-				<form class="validation-form" action="${cpath}/signup.do"
+				
+				<!-- form methods 선정되는거 없으면 get방식임 -->
+				<form accept-charset = "UTF-8" class="validation-form" action="${cpath}/signup.do"
 					method="get">
 					<div class="row">
 						<div class="mb-3">
