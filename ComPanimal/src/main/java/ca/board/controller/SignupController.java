@@ -49,9 +49,15 @@ public class SignupController implements Controller {
 		System.out.println(vo.getUser_name());
 		System.out.println(vo.getUser_addr());
 		System.out.println(vo.getUser_tel());
+		System.out.println(vo.getUser_birth());
+		System.out.println(vo.getUser_type());
+		System.out.println(vo.getUser_joindate());
+//		
+		//이부분이 문제라고볼수있음(만약 컨텍스트 패스 뭐라고 나오면은 무조건 BoardMapper.xml 문제라고 볼수있음)
 		dao.signupMethod(vo);
 	
 		return "redirect:/mainpage.do";
+//		return null;
 	}
 
 }
