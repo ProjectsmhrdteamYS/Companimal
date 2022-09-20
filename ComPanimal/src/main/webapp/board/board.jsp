@@ -3,37 +3,23 @@
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var="cpath" value="${pageContext.request.contextPath }" />
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="EUC-KR">
-
 <title>커뮤니티 게시판</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-	crossorigin="anonymous">
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 	crossorigin="anonymous"></script>
-<!-- �ܺ� CSS -->
-<link rel="stylesheet" href="${cpath }/board/basic.css">
-
 <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>커뮤니티 게시판</title>
-
-
-   <link rel="stylesheet" href="${cpath }/css/bootstrap.css">
-   <link rel="stylesheet" href="${cpath }/css/bootstrap-grid.css">
-   <link rel="stylesheet" href="${cpath }/css/bootstrap-reboot.css">
-   <link rel="stylesheet" href="${cpath }/css/bootstrap-utilities.css">
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>커뮤니티 게시판</title>
+<link rel="stylesheet" href="${cpath }/css/bootstrap.css">
+<link rel="stylesheet" href="${cpath }/css/bootstrap-grid.css">
+<link rel="stylesheet" href="${cpath }/css/bootstrap-reboot.css">
+<link rel="stylesheet" href="${cpath }/css/bootstrap-utilities.css">
 </head>
 <body>
 	<!-- header -->
@@ -56,26 +42,21 @@
             <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-2">
               <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
             </form>
-    
             <div class="text-end">
               <c:if test= "${empty uvo }">
               <button type="button" class="btn btn-outline-secondary me-1" onclick="location.href='${cpath }/signinform.do'">Login</button>              
               <button type="button" class="btn btn-primary" onclick="location.href='${cpath }/signupform.do'">Sign-up</button>
               </c:if>
-
               <c:if test= "${!empty uvo }">
               ${uvo.user_id}님 환영합니다.
               <button type="button" class="btn btn-outline-secondary me-1" onclick="location.href='${cpath }/logout.do'">Logout</button>             
               </c:if>
-              
             </div>
           </div>
         </div>
       </header>
   	<main id="wrap">
 		<div class="container">
-			<img src="${cpath }/images/mongja.jpg" alt="" width="380px"
-				class="d-inline-block align-text-top">
 			<h2>이야기</h2>
 			<BR>
 			<HR>
@@ -107,7 +88,7 @@
 		<c:if test="${!empty uvo }">
 				<div align="right">
 					<button type="button" class="btn btn-primary"
-						onclick="location.href='${cpath }/findwriteform.do'">게시물
+						onclick="location.href='${cpath }/boardwriteform.do'">게시물
 						작성</button>
 				</div>
 				</c:if>

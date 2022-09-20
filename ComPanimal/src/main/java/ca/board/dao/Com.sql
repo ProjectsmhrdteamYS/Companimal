@@ -3,7 +3,6 @@ select * from tbl_community
 select * from TBL_USER
 =======
 
-drop table tbl_community
 
 alter table tbl_community modify c_cnt number(15) default 1 not null; 
 

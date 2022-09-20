@@ -12,11 +12,8 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>메인</title>
 
-<<<<<<< HEAD
 <!-- 외부 CSS -->
 <link rel="stylesheet" href="${cpath}/board/basic.css">
-=======
->>>>>>> branch 'master' of https://github.com/ProjectsmhrdteamYS/Companimal.git
 
    <link rel="stylesheet" href="${cpath }/css/bootstrap.css">
    <link rel="stylesheet" href="${cpath }/css/bootstrap-grid.css">
@@ -33,59 +30,6 @@
 
 </head>
 <body>
-<<<<<<< HEAD
-	<header>
-		<!-- 여기서 헤드바 컬러수정 -->
-		<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-light  "> -->
-		<nav class="navbar">
-			<!-- 로고 -->
-			<a class="logo" href="${cpath }/mainpage.do"> <img
-				src="${cpath }/images/logo.png" alt="" width="380px"
-				class="d-inline-block align-text-top">
-			</a>
-			<!-- 네비 -->
-			<!-- <div class="collapse navbar-collapse" id="navbarText"> -->
-			<div id="navbarText">
-				<!-- 여기서 nav수정 컬러수정 -->
-				<!-- <ul class="nav nav-pills nav-fill"> -->
-				<ul class="nav">
-					<li class="nav-item"><a class="nav-link active text-dark"
-						aria-current="page" href="${cpath}/companimal.do">CompAnimal
-							소개</a></li>
-					<li class="nav-item"><a class="nav-link active text-dark"
-						aria-current="page" href="${cpath}/searchform.do">동물 정보 조회</a></li>
-					<li class="nav-item"><a class="nav-link active  text-dark"
-						aria-current="page" href="${cpath}/checkform.do">동물 정보 등록</a></li>
-					<li class="nav-item"><a class="nav-link active text-dark"
-						aria-current="page" href="${cpath }/boardform.do">게시판</a></li>
-					<li class="nav-item"><a class="nav-link active text-dark"
-						aria-current="page" href="${cpath}/findboardform.do">찾아주세요</a></li>
-				</ul>
-				<!-- 버튼 -->
-				<ul id="btn-basic">
-					<li><button type="button" class="btn btn-dark"
-							onclick="location.href='${cpath}/signinform.do'">로그인</button></li>
-					<li><button type="button" class="btn btn-dark"
-							onclick="location.href='${cpath}/signupform.do'">회원가입</button></li>
-				</ul>
-			</div>
-		</nav>
-	</header>
-	<main id="wrap">
-		<!-- 내용 -->
-		<div
-			class="position-relative overflow-hidden p-3 p-md-2 m-md-1 text-center ">
-			<div class="col-md-5 p-lg-5 mx-auto my-5">
-				<h2 class="display-4 fw-normal">메인화면 배너</h2>
-				<img src="${cpath }/images/baner.jpg" alt="" width="350px"
-					class="d-inline-block align-text-top"> <br> <a
-					class="btn btn-outline-secondary" href="#">Coming soon</a>
-			</div>
-			<!-- 나중에 추가할것있으면 해도되는데 필요없는 경우에는 삭제하기로 -->
-			<!-- <div class="product-device shadow-sm d-none d-md-block"></div> -->
-			<!-- <div class="product-device product-device-2 shadow-sm d-none d-md-block">hello</div> -->
-=======
-    
     <!-- header -->
     <header class=" container-fluid p-3 bg-white ">
         <div class="container p-3">
@@ -112,7 +56,6 @@
               <button type="button" class="btn btn-outline-secondary me-1" onclick="location.href='${cpath }/signinform.do'">Login</button>              
               <button type="button" class="btn btn-primary" onclick="location.href='${cpath }/signupform.do'">Sign-up</button>
               </c:if>
->>>>>>> branch 'master' of https://github.com/ProjectsmhrdteamYS/Companimal.git
 
               <c:if test= "${!empty uvo }">
               ${uvo.user_id}님 환영합니다.

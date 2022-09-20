@@ -28,35 +28,6 @@
     </style>
 </head>
 <body>
-<<<<<<< HEAD
-	<header>
-		<!-- 여기서 헤드바 컬러수정 -->
-		<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-light  "> -->
-		<nav class="navbar">
-			<!-- 로고 -->
-			<a class="logo" href="${cpath}/mainpage.do"> <img
-				src="${cpath }/images/logo.png" alt="" width="380px"
-				class="d-inline-block align-text-top">
-			</a>
-			<!-- 네비 -->
-			<!-- <div class="collapse navbar-collapse" id="navbarText"> -->
-			<div id="navbarText">
-				<!-- 여기서 nav수정 컬러수정 -->
-				<!-- <ul class="nav nav-pills nav-fill"> -->
-				<ul class="nav">
-					<li class="nav-item"><a class="nav-link active text-dark"
-						aria-current="page" href="${cpath }/companimal.do">CompAnimal
-							소개</a></li>
-					<li class="nav-item"><a class="nav-link active text-dark"
-						aria-current="page" href="${cpath }/searchform.do">동물 정보 조회</a></li>
-					<li class="nav-item"><a class="nav-link active  text-dark"
-						aria-current="page" href="${cpath }/checkform.do">동물 정보 등록</a></li>
-					<li class="nav-item"><a class="nav-link active text-dark"
-						aria-current="page" href="${cpath }/boardform.do">게시판</a></li>
-					<li class="nav-item"><a class="nav-link active text-dark"
-						aria-current="page" href="${cpath }/findboardform.do">찾아주세요</a></li>
-=======
-
 	<!-- header -->
 	<header class=" container-fluid p-3 bg-white ">
 		<div class="container p-3">
@@ -78,7 +49,6 @@
 						class="nav-link px-3 link-dark">게시판</a></li>
 					<li><a href="${cpath }/findboardform.do"
 						class="nav-link px-3 link-dark">찾아주세요</a></li>
->>>>>>> branch 'master' of https://github.com/ProjectsmhrdteamYS/Companimal.git
 				</ul>
 				<form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-2">
 					<input type="search" class="form-control form-control-dark"
