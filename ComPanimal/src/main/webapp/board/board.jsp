@@ -104,11 +104,13 @@
 					</c:forEach>
 			</table>
 		</div>
-		<div>
-			<button type="button" class="btn btn-dark"
-				onclick="location.href='${cpath }/boardwriteform.do'">게시물
-				작성</button>
-		</div>
+		<c:if test="${!empty uvo }">
+				<div align="right">
+					<button type="button" class="btn btn-primary"
+						onclick="location.href='${cpath }/findwriteform.do'">게시물
+						작성</button>
+				</div>
+				</c:if>
 	</main>
 <footer class="py-5 " >
 
