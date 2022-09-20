@@ -12,6 +12,7 @@ public class CdetailFormController implements Controller {
 	public String requestHandler(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// 상세정보 페이지 내용 불러오기
+		
 		return "cdetail";
 	}
 

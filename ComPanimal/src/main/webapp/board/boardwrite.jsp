@@ -53,10 +53,18 @@
 				</form>
 
 				<div class="text-end">
-					<button type="button" class="btn btn-outline-secondary me-1"
-						onclick="location.href='${cpath }/signinform.do'">Login</button>
-					<button type="button" class="btn btn-primary"
-						onclick="location.href='${cpath }/signupform.do'">Sign-up</button>
+					<c:if test="${empty uvo }">
+						<button type="button" class="btn btn-outline-secondary me-1"
+							onclick="location.href='${cpath }/signinform.do'">Login</button>
+						<button type="button" class="btn btn-primary" onclick="location.href='${cpath }/signupform.do'">Sign-up</button>
+					</c:if>
+
+					<c:if test="${!empty uvo }">
+		              ${uvo.user_id}님 환영합니다.
+         		     <button type="button" class="btn btn-outline-secondary me-1"
+							onclick="location.href='${cpath }/logout.do'">Logout</button>
+					</c:if>
+					
 				</div>
 			</div>
 		</div>
@@ -67,28 +75,29 @@
 				class="d-inline-block align-text-top">
 			<h2>이야기</h2>
 			<BR>
-			<form action="${cpath}/boardWrite.do">
-				<input type="hidden" name="memId" value="${mvo.memId}">
+			<form action="${cpath}/boardwrite.do" class="form-horizontal" method="post">
+				<input  type="hidden" name="user_id" value="test1">
 				<div class="input-group flex-nowrap">
-					<span class="input-group-text" id="addon-wrapping">제목</span> <input
-						type="text" class="form-control" placeholder="ctitle"
+					<span class="input-group-text" id="addon-wrapping">제목</span> 
+					<input
+						type="text" class="form-control" placeholder="제목을 입력하세요" name = "c_title"
 						aria-label="title" aria-describedby="addon-wrapping">
 				</div>
 				<br>
 				<div class="input-group">
 					<span class="input-group-text">내용</span>
 					<textarea class="form-control" aria-label="With textarea"
-						style="height: 300px"></textarea>
+						style="height: 300px" name = "c_content"></textarea>
 				</div>
 				<br>
 				<div class="mb-3">
 					<label for="formFile" class="form-label">사진 첨부</label>
-					 <input class="form-control" type="file" id="formFile">
+					 <input class="form-control" type="file" name="c_file">
 				</div>
 				<br>
 				<div>
 					<input class="form-control" type="text"
-						placeholder="${cpath } << 작성자 여기에 넣으면 됨" disabled>
+						placeholder=" << 작성자 여기에 넣으면 됨" disabled>
 				</div>
 
 				<br>

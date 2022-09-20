@@ -7,6 +7,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="EUC-KR">
+
+<title>커뮤니티 게시판</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+	crossorigin="anonymous">
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+	crossorigin="anonymous"></script>
+<!-- �ܺ� CSS -->
+<link rel="stylesheet" href="${cpath }/board/basic.css">
+=======
 <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>커뮤니티 게시판</title>
@@ -42,14 +58,21 @@
             </form>
     
             <div class="text-end">
-              <button type="button" class="btn btn-outline-secondary me-1" onclick="location.href='${cpath }/signinform.do'">Login</button>
+              <c:if test= "${empty uvo }">
+              <button type="button" class="btn btn-outline-secondary me-1" onclick="location.href='${cpath }/signinform.do'">Login</button>              
               <button type="button" class="btn btn-primary" onclick="location.href='${cpath }/signupform.do'">Sign-up</button>
+              </c:if>
+
+              <c:if test= "${!empty uvo }">
+              ${uvo.user_id}님 환영합니다.
+              <button type="button" class="btn btn-outline-secondary me-1" onclick="location.href='${cpath }/logout.do'">Logout</button>             
+              </c:if>
+              
             </div>
           </div>
         </div>
       </header>
-      
-	<main id="wrap" class="position-relative">
+  	<main id="wrap">
 		<div class="container">
 			<img src="${cpath }/images/mongja.jpg" alt="" width="380px"
 				class="d-inline-block align-text-top">
@@ -70,22 +93,21 @@
 				<tbody>
 					<c:forEach var="vo" items="${list }">
 						<tr>
-							<th>${vo.c_seq }</th>
+							<th>${vo.c_seq}</th>
 							<td><A CLASS="fw-bold text-dark"
-								HREF="${cpath }/cdetailform.do">오늘의 일기</A></td>
+								HREF="${cpath }/cdetailform.do">${vo.c_title}</A></td>
 							<td>${vo.c_content }</td>
 							<td>${vo.user_id }</td>
-							<td>20220914</td>
+							<td>${vo.c_date}</td>
 							<td>1</td>
 						</tr>
 					</c:forEach>
 			</table>
-		<p> </p>
-		<div align="right">
-			<button type="button" class="btn btn-primary"
+		</div>
+		<div>
+			<button type="button" class="btn btn-dark"
 				onclick="location.href='${cpath }/boardwriteform.do'">게시물
 				작성</button>
-		</div>
 		</div>
 	</main>
 <footer class="py-5 " >

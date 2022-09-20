@@ -6,6 +6,7 @@ public class cboardVO {
 	private String c_content;
 	private String c_date;
 	private String c_file;
+	private int c_cnt;
 	private String user_id;
 	
 	public cboardVO(int c_seq, String c_title, String c_content, String c_date, String c_file, String user_id,
@@ -25,7 +26,7 @@ public class cboardVO {
 	public void setUser_id(String user_id) {
 		this.user_id = user_id;
 	}
-	private int c_cnt;
+	
 	
 	public cboardVO() {};
 	

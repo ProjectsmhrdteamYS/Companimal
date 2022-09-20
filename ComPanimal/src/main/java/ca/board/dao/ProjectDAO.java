@@ -7,6 +7,7 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import ca.board.dao.cboardVO;
 
 public class ProjectDAO {
 	private static SqlSessionFactory sqlSessionFactory;
@@ -37,6 +38,7 @@ public class ProjectDAO {
 		return uvo;
 	}
 	// 커뮤니티 게시판 전체 리스트 가져오기 메소드
+
 	public List<cboardVO> cList() {
 		SqlSession session = sqlSessionFactory.openSession();
 		List<cboardVO> list = session.selectList("cList");

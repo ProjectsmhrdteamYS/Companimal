@@ -11,7 +11,11 @@ import ca.board.controller.CheckController;
 import ca.board.controller.CheckFormController;
 import ca.board.controller.CompanimalController;
 import ca.board.controller.Controller;
+<<<<<<< HEAD
 import ca.board.controller.FdeleteController;
+=======
+import ca.board.controller.DeleteController;
+>>>>>>> branch 'master' of https://github.com/ProjectsmhrdteamYS/Companimal.git
 import ca.board.controller.FdetailController;
 import ca.board.controller.FdetailFormController;
 import ca.board.controller.FindWriteController;
@@ -24,6 +28,8 @@ import ca.board.controller.SigninController;
 import ca.board.controller.SigninFormController;
 import ca.board.controller.SignupController;
 import ca.board.controller.SignupFormController;
+import ca.board.controller.logoutController;
+import ca.board.controller.logoutFormController;
 
 public class HandlerMapping {
 	
@@ -52,9 +58,9 @@ public class HandlerMapping {
 		mappings.put("/signin.do", new SigninController());
 		mappings.put("/signupform.do", new SignupFormController());
 		mappings.put("/signup.do", new SignupController());
-		
-		
-		
+		mappings.put("/cdelete.do", new DeleteController());
+		mappings.put("/logout.do", new logoutController());
+		mappings.put("/logoutform.do", new logoutFormController());
 	}
 	public Controller getController(String key) {
 		return mappings.get(key);

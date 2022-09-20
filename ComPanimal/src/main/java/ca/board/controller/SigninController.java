@@ -25,26 +25,37 @@ public class SigninController implements Controller {
 		vo.setUser_id(user_id);
 		vo.setUser_pw(user_pw);
 		ProjectDAO dao = new ProjectDAO();
-		userVO mvo = dao.loginMethod(vo);
+		userVO uvo = dao.loginMethod(vo);
 		
-		if(mvo!=null) {
+		if(uvo!=null) {
 			//로그인 성공 => 세션을 만들어 준다. ( request로 객체 바인딩 시 return하는 해당 jsp만 로그인 정보를 받아볼 수 있다)
 			HttpSession session = request.getSession(); // 세션id 값이 있는지 먼저 확인 -> 있다 -> 쓰면됨 (getSession은 가지고 오는 것만 아니라 내려보내는것까지 해줌)
 			// session으로 바인딩 시 동일한 session으로 jsp들이 정보를 받을 수 있음.
-			session.setAttribute("mvo", mvo);
+			session.setAttribute("uvo", uvo);
+			
+			
 		}
-		userVO vo1 = new userVO();
-		ProjectDAO dao2 = new ProjectDAO();
 		
-		String user_name = request.getParameter("user_id");
-		String user_password = request.getParameter("user_pw");
-		vo.setUser_id(user_name);
-		vo.setUser_pw(user_password);
+		
+		
+		
+//		
+//		HttpSession session = request.getSession();
+//		session.invalidate(); // 무효화(
+//		return "redirect:/boardList.do";
+//		userVO vo1 = new userVO();
+//		ProjectDAO dao2 = new ProjectDAO();
+//		
+//		String user_name = request.getParameter("user_id");
+//		String user_password = request.getParameter("user_pw");
+//		vo.setUser_id(user_name);
+//		vo.setUser_pw(user_password);
+//		System.out.println(vo.getUser_id());
+//		System.out.println(vo.getUser_pw());
+//		dao.loginMethod(vo);
+		
 		System.out.println(vo.getUser_id());
 		System.out.println(vo.getUser_pw());
-		dao.loginMethod(vo);
-		
-		
 		// 임시적으로 메인페이지 넘어감 그 이후에 수정할예정
 		return "redirect:/mainpage.do";
 	}
