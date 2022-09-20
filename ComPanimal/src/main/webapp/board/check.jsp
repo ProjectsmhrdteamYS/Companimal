@@ -56,6 +56,9 @@ ul li{list-style: none;}
               ${uvo.user_id}님 환영합니다.
               <button type="button" class="btn btn-outline-secondary me-1" onclick="location.href='${cpath }/logout.do'">Logout</button>             
               </c:if>
+              
+              <button type="button" class="btn btn-primary"
+						onclick="location.href='${cpath }/signupform.do'">Sign-up</button>
             </div>
           </div>
         </div>
