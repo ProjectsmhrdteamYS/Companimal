@@ -71,10 +71,19 @@ body {
 				</ul>
 				<!-- 버튼 -->
 				<ul id="btn-basic">
-					<li><button type="button" class="btn btn-dark"
-							onclick="location.href='${cpath }/signinform.do'">로그인</button></li>
-					<li><button type="button" class="btn btn-dark"
-							onclick="location.href='${cpath }/signupform.do'">회원가입</button></li>
+
+					<c:if test="${empty uvo }">
+						<button type="button" class="btn btn-outline-secondary me-1"
+							onclick="location.href='${cpath }/signinform.do'">Login</button>
+					</c:if>
+
+					<c:if test="${!empty uvo }">
+              			${uvo.user_id}님 환영합니다.
+              			<button type="button" class="btn btn-outline-secondary me-1"
+							onclick="location.href='${cpath }/signinform.do'">Logout</button>
+					</c:if>
+					
+					<li><button type="button" class="btn btn-primary" onclick="location.href='${cpath }/signupform.do'">Sign-up</button>
 				</ul>
 			</div>
 		</nav>
