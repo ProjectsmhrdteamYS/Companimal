@@ -5,10 +5,9 @@
 <c:set var="cpath" value="${pageContext.request.contextPath }" />
 
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 <head>
 <meta charset="UTF-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>커뮤니티 게시판</title>
 
@@ -77,7 +76,7 @@
 							<td>${vo.c_content }</td>
 							<td>${vo.user_id }</td>
 							<td>20220914</td>
-							<td>${vo.c_cnt }</td>
+							<td>1</td>
 						</tr>
 					</c:forEach>
 			</table>
