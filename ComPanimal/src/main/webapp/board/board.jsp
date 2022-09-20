@@ -65,8 +65,7 @@
           </div>
         </div>
       </header>
-      
-	<main id="wrap" class="position-relative">
+  	<main id="wrap">
 		<div class="container">
 			<img src="${cpath }/images/mongja.jpg" alt="" width="380px"
 				class="d-inline-block align-text-top">
@@ -87,22 +86,21 @@
 				<tbody>
 					<c:forEach var="vo" items="${list }">
 						<tr>
-							<th>${vo.c_seq }</th>
+							<th>1</th>
 							<td><A CLASS="fw-bold text-dark"
 								HREF="${cpath }/cdetailform.do">오늘의 일기</A></td>
 							<td>${vo.c_content }</td>
 							<td>${vo.user_id }</td>
 							<td>20220914</td>
-							<td>${vo.c_cnt }</td>
+							<td>1</td>
 						</tr>
 					</c:forEach>
 			</table>
-		<p> </p>
-		<div align="right">
-			<button type="button" class="btn btn-primary"
+		</div>
+		<div>
+			<button type="button" class="btn btn-dark"
 				onclick="location.href='${cpath }/boardwriteform.do'">게시물
 				작성</button>
-		</div>
 		</div>
 	</main>
 <footer class="py-5 " >
