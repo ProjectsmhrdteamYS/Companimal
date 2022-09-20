@@ -9,17 +9,18 @@ import javax.servlet.http.HttpServletResponse;
 import ca.board.dao.ProjectDAO;
 
 
-public class DeleteController implements Controller {
+public class CdeleteController implements Controller {
 
 	@Override
 	public String requestHandler(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-	ProjectDAO dao = new ProjectDAO();
-		
-		int cseq = Integer.parseInt(request.getParameter("c_seq"));
-		dao.cboardDelete(cseq);
 	
-		return "redirect:/boardList.do";
+		ProjectDAO dao = new ProjectDAO();
+		
+		int c_seq = Integer.parseInt(request.getParameter("c_seq"));
+		dao.cboardDelete(c_seq);
+	
+		return "redirect:/boardform.do";
 	}
 
 }

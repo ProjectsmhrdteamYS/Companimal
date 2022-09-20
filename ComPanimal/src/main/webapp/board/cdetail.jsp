@@ -23,10 +23,10 @@
 
 <script type="text/javascript">
 	function goDel(c_seq){
-		location.href="${cpath}/cdelete.do?idx="+c_seq;
+		location.href="${cpath}/cdelete.do?c_seq="+c_seq;
 	}
 	function goUpdate(c_seq){
-		location.href="${cpath}/boardupdateForm.do?idx="+idx;
+		location.href="${cpath}/cupdateForm.do?c_seq="+c_seq;
 	
 	}
 
@@ -96,18 +96,18 @@
     		</tr>
     		<tr>
     			<td colspan="2" align="center">
-    			<c:if test="${uvo.user_id eq vo.user_id}">
-    					<button class="btn btn-sm btn-success">수정</button>
-    					<button class="btn btn-sm btn-danger"  onclick = "goDel(${vo.c_seq})'">삭제</button>
-				</c:if>
-    			<c:if test="${uvo.user_id ne vo.user_id}">
-    					<button class="btn btn-sm btn-success" disabled="disabled" onclick="location.href='${cpath}/boardUpdateForm.do?idx=${vo.idx}'">수정</button>
-    					<button class="btn btn-sm btn-danger" disabled="disabled" onclick = "goDel(${vo.c_seq})'">삭제</button>
-    			</c:if>
-    			
-    				<button type="button" class="btn btn-sm btn-primary"
-					onclick="location.href='${cpath }/boardform.do'">리스트</button>
-
+    	<%-- <c:if test="${uvo.user_id eq vo.user_id}"> --%>
+    	<button class = "btn btn-sm btn-success" onclick = "goUpdate(${vo.c_seq})">수정</button>
+    	<button class = "btn btn-sm btn-warning" onclick = "goDel(${vo.c_seq})">삭제</button>
+    	<button class = "btn btn-sm btn-info" onclick = "location.href='${cpath}/boardform.do'">리스트</button>
+  <%--  		</c:if>
+    
+        <c:if test="${uvo.user_id ne vo.user_id}">
+    	<button class = "btn btn-sm btn-success" disabled="disabled" onclick = "goUpdate(${vo.idx})">수정</button>
+    	<button class = "btn btn-sm btn-warning" disabled="disabled" onclick = "goDel(${vo.idx})">삭제</button>
+    	<button class = "btn btn-sm btn-info" onclick = "location.href='${cpath}/boardList.do'">리스트</button>
+    </c:if> --%>
+  
     				
     			</td>
     		</tr>

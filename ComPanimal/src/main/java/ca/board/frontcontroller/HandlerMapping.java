@@ -12,7 +12,7 @@ import ca.board.controller.CheckFormController;
 import ca.board.controller.CompanimalController;
 import ca.board.controller.Controller;
 import ca.board.controller.FdeleteController;
-import ca.board.controller.DeleteController;
+import ca.board.controller.CdeleteController;
 import ca.board.controller.FdetailController;
 import ca.board.controller.FdetailFormController;
 import ca.board.controller.FindWriteController;
@@ -43,8 +43,9 @@ public class HandlerMapping {
 		mappings.put("/boardform.do", new BoardFormController());
 		mappings.put("/boardwriteform.do", new BoardWriteFormController());
 		mappings.put("/boardwrite.do", new BoardWriteController());
-		mappings.put("/cdetailform.do", new CdetailFormController());
-		mappings.put("/cdetail.do", new CdetailController());
+		mappings.put("/cdetailform.do", new CdetailFormController()); // 상세페이지 
+		mappings.put("/cdetail.do", new CdetailController()); // 수정하기 눌렀을때 
+		// cupdateForm 만들어서 업데이트 페이지로 보내기
 		mappings.put("/findboardform.do", new FindboardFormController());
 		mappings.put("/findwriteform.do", new FindWriteFormController());
 		mappings.put("/findwrite.do", new FindWriteController());
@@ -55,7 +56,7 @@ public class HandlerMapping {
 		mappings.put("/signin.do", new SigninController());
 		mappings.put("/signupform.do", new SignupFormController());
 		mappings.put("/signup.do", new SignupController());
-		mappings.put("/cdelete.do", new DeleteController());
+		mappings.put("/cdelete.do", new CdeleteController());// 삭제
 		mappings.put("/logout.do", new logoutController());
 		mappings.put("/logoutform.do", new logoutFormController());
 	}
