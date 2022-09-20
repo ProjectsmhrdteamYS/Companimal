@@ -53,30 +53,30 @@ public class ProjectDAO {
 		session.close();
 	}
 	// 커뮤니티 게시판 상세보기 메소드
-	public cboardVO cdetail(int idx) {
+	public cboardVO cdetail(int c_seq) {
 		SqlSession session = sqlSessionFactory.openSession();
-		cboardVO vo = session.selectOne("cdetail", idx);
+		cboardVO vo = session.selectOne("cdetail", c_seq);
 		session.close();
 		return vo;
 	}
 	// 커뮤니티 게시판 조회수 증가 메소드
-	public void countc(int idx) {
+	public void countc(int c_seq) {
 		SqlSession session = sqlSessionFactory.openSession();
-		session.update("countc",idx);
+		session.update("countc",c_seq);
 		session.commit();
 		session.close();
 	}
 	// 커뮤니티 게시판 수정 메소드
-	public void cUpdate(int idx) {
+	public void cUpdate(int c_seq) {
 		SqlSession session = sqlSessionFactory.openSession();
-		session.update("cUpdate",idx);
+		session.update("cUpdate",c_seq);
 		session.commit();
 		session.close();
 	}
 	// 커뮤니티 게시판 삭제 메소드
-	public void cboardDelete(int idx) {
+	public void cboardDelete(int c_seq) {
 		SqlSession session = sqlSessionFactory.openSession();
-		cboardVO vo = session.selectOne("cboardDelete", idx);
+		cboardVO vo = session.selectOne("cboardDelete", c_seq);
 		session.commit();
 		session.close();
 	}

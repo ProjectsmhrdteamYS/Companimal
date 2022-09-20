@@ -22,7 +22,7 @@
 	crossorigin="anonymous"></script>
 <!-- �ܺ� CSS -->
 <link rel="stylesheet" href="${cpath }/board/basic.css">
-=======
+
 <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>커뮤니티 게시판</title>
@@ -99,7 +99,7 @@
 							<td>${vo.c_content }</td>
 							<td>${vo.user_id }</td>
 							<td>${vo.c_date}</td>
-							<td>1</td>
+							<td>${vo.c_cnt}</td>
 						</tr>
 					</c:forEach>
 			</table>

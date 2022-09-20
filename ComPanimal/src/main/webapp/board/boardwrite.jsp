@@ -76,7 +76,7 @@
 			<h2>이야기</h2>
 			<BR>
 			<form action="${cpath}/boardwrite.do" class="form-horizontal" method="post">
-				<input  type="hidden" name="user_id" value="test1">
+					<input type="hidden" name="user_id" value="${uvo.user_id}">
 				<div class="input-group flex-nowrap">
 					<span class="input-group-text" id="addon-wrapping">제목</span> 
 					<input
@@ -96,8 +96,7 @@
 				</div>
 				<br>
 				<div>
-					<input class="form-control" type="text"
-						placeholder=" << 작성자 여기에 넣으면 됨" disabled>
+			<input type="text" readonly="readonly" class="form-control" name ="writer" value="${uvo.user_name} ">
 				</div>
 
 				<br>

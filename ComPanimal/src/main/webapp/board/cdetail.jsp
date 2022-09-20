@@ -96,11 +96,11 @@
     		</tr>
     		<tr>
     			<td colspan="2" align="center">
-    			<c:if test="${mvo.memId eq vo.memId }">
+    			<c:if test="${uvo.user_id eq vo.user_id}">
     					<button class="btn btn-sm btn-success" onclick="location.href='${cpath}/boardUpdateForm.do?idx=${vo.idx}'">수정</button>
     					<button class="btn btn-sm btn-danger"  onclick = "goDel(${vo.c_seq})'">삭제</button>
 				</c:if>
-    			<c:if test="${mvo.memId ne vo.memId }">
+    			<c:if test="${uvo.user_id ne vo.user_id}">
     					<button class="btn btn-sm btn-success" disabled="disabled" onclick="location.href='${cpath}/boardUpdateForm.do?idx=${vo.idx}'">수정</button>
     					<button class="btn btn-sm btn-danger" disabled="disabled" onclick = "goDel(${vo.c_seq})'">삭제</button>
     			</c:if>
