@@ -22,7 +22,7 @@
 </select>
 
 <!-- 3. 커뮤니티 게시판 전체 리스트  -->
-<select id="allList" resultType="ca.board.dao.cboardVO">
+<select id="cList" resultType="ca.board.dao.cboardVO">
 		select * from tbl_community order by c_seq desc
 </select>
   
