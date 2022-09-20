@@ -74,32 +74,32 @@
 		</div>
 	</header>
 	<main>
-	 <form action="${cpath}/boardUpdate.do" method="post">
-    	<input type="hidden" name="idx" value="${vo.idx}"> <!-- idx값을 get방식이 아닌 post 방식으로 넘기기, hidden을 사용해서 수정을 못하게 함 -->
+	 <form action="${cpath}/fdetail.do?f_seq=${vo.f_seq}" method="post">
+    	<input type="hidden" name="f_seq" value="${vo.f_seq}"> <!-- idx값을 get방식이 아닌 post 방식으로 넘기기, hidden을 사용해서 수정을 못하게 함 -->
     	<table class="table table-boardered">
     		<tr>
     			<td>제목</td>
     			<td>
-    				<input type="text" class="form-control" name="title" value="${vo.title}">
+    				<input type="text" class="form-control" name="f_title" value="${vo.f_title}">
     			</td>
     		</tr>
     		<tr>
     			<td>내용</td>
     			<td>
-    				<textarea rows="10" class="form-control" name="content">${vo.content}</textarea>
+    				<textarea rows="10" class="form-control" name="f_content">${vo.f_content}</textarea>
     			</td>
     		</tr>
     		<tr>
     			<td>작성자</td>
-    			<td>${vo.writer}</td>
+    			<td>${vo.user_id}</td>
     		</tr>
     		<tr>
     			<td>작성일</td>
-    			<td>${vo.indate}</td>
+    			<td>${vo.f_date}</td>
     		</tr>
     		<tr>
     			<td colspan="2" align="center">
-    				<button type="submit" class = "btn btn-sm btn-success" >수정</button>
+    				<button type="submit" class = "btn btn-sm btn-success">수정</button>
     				<button type="reset" class="btn btn-sm btn-danger ">취소</button>
     				<button type="button" class="btn btn-sm btn-primary"
 							onclick="location.href='${cpath }/findboardform.do'">리스트</button>

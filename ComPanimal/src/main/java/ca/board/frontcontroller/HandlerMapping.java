@@ -15,6 +15,7 @@ import ca.board.controller.FdeleteController;
 import ca.board.controller.CdeleteController;
 import ca.board.controller.FdetailController;
 import ca.board.controller.FdetailFormController;
+import ca.board.controller.FindUpdateFormController;
 import ca.board.controller.FindWriteController;
 import ca.board.controller.FindWriteFormController;
 import ca.board.controller.FindboardFormController;
@@ -59,6 +60,7 @@ public class HandlerMapping {
 		mappings.put("/cdelete.do", new CdeleteController());// 삭제
 		mappings.put("/logout.do", new logoutController());
 		mappings.put("/logoutform.do", new logoutFormController());
+		mappings.put("/fupdateform.do", new FindUpdateFormController());
 	}
 	public Controller getController(String key) {
 		return mappings.get(key);
