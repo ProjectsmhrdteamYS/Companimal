@@ -3,17 +3,21 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <c:set var="cpath" value="${pageContext.request.contextPath }" />
+<c:set var="newLine" value="<%='\n' %>" />
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
 	rel="stylesheet"
 	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
 	crossorigin="anonymous">
-<script
+<script>
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 	crossorigin="anonymous"></script>
@@ -58,6 +62,16 @@ div.container {
 <title>동물조회</title>
 <!-- 외부 CSS -->
 <link rel="stylesheet" href="${cpath }/board/basic.css">
+
+<!-- 디비 연결되면 petView(idx) 로 바꾸기 -->
+  <script type="text/javascript">
+  	function petView() {
+  		$("#ct").css("display","table-row");
+  		
+  	}    
+     </script>
+
+
 </head>
 <body>
 	<header>
@@ -100,7 +114,7 @@ div.container {
 	<main id="wrap">
 		<p></p>
 		<div class="container">
-			<form action="${cpath }/search.do">
+			<form action="javascript:petView()">
 				<a class="logo" href="${cpath }/mainpage.do"> <img
 					src="${cpath }/images/logo.png" alt="" width="380px"
 					class="d-inline-block align-text-top"></a> <br>
@@ -117,10 +131,52 @@ div.container {
 			<input	type="file" id="myFile" name="filename">
 			<hr>
 			 -->
-
-				<input type="submit" value="조회">
+				<input id="btn1" type="submit" value="조회">
 			</form>
 		</div>
+		
+			
+			<!-- 조회버튼시 나오는 표  -->
+    		<!-- 디비연결되면 <tr id="ct${vo.idx}" style="display: none">로 변경-->
+		  <div id="petList"></div>
+    <script>
+        $('#btn1').click(()=>{
+            $.ajax({
+                url : 'http://apis.data.go.kr/1543061/animalInfoSrvc/animalInfo?_type=json&dog_reg_no=410100008069936&owner_nm=홍승희&serviceKey=%2FR3EvQD0BDHw%2FwKWewHQFMQ8MXNoIIlhw1%2BNBkbz7Ut52RP7ylh84FK27bQDPhcXi2xxtpfnbsF5iRjvUnskxg%3D%3D',
+                type : 'get',
+                success : (res)=>{
+                    
+                	let code='<table class ="table table-bordered table-hover" id="ct" border="4"><tr>'
+                        code +='<th>번호</th>'
+                        code +='<th>이름</th>'
+                        code +='<th>견종</th>'
+                        code +='<th>성별</th>'
+                        code +='<th>중성화여부</th>'
+                        code +='<th>관할</th>'
+                        code +='<th>관할센터번호</th></tr>'
+                	console.log(res.response.body.item);
+                    let items = res.response.body.item;
+                    //console.log(items);
+                    
+                    code += '<tr>';
+                	code += '<td>'+res.response.body.item.dogRegNo+'</td>';
+                	code += '<td>'+res.response.body.item.dogNm+'</td>';
+                	code += '<td>'+res.response.body.item.sexNm+'</td>';
+                	code += '<td>'+res.response.body.item.kindNm+'</td>';
+                	code += '<td>'+res.response.body.item.neuterYn+'</td>';
+                	code += '<td>'+res.response.body.item.orgNm+'</td>';
+                	code += '<td>'+res.response.body.item.officeTel+'</td>';
+                	code += '</tr>';
+                	code +='</table>'
+                    
+                    $('#petList').html(code);
+                } ,
+                error : function(){
+                    alert('error!')
+            }
+        })
+    })
+    </script>
 	</main>
 	<footer>
 		<div class="container">

@@ -29,7 +29,7 @@
 		<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-light  "> -->
 		<nav class="navbar">
 			<!-- 로고 -->
-			<a class="logo" href="${cpath }/mainpage.do"> <img
+			<a class="logo" href="${cpath}/mainpage.do"> <img
 				src="${cpath }/images/logo.png" alt="" width="380px"
 				class="d-inline-block align-text-top">
 			</a>

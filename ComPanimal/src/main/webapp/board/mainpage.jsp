@@ -17,7 +17,7 @@
 	crossorigin="anonymous">
 
 <!-- 외부 CSS -->
-<link rel="stylesheet" href="${cpath }/board/basic.css">
+<link rel="stylesheet" href="${cpath}/board/basic.css">
 
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
@@ -45,23 +45,23 @@
 				<!-- <ul class="nav nav-pills nav-fill"> -->
 				<ul class="nav">
 					<li class="nav-item"><a class="nav-link active text-dark"
-						aria-current="page" href="${cpath }/companimal.do">CompAnimal
+						aria-current="page" href="${cpath}/companimal.do">CompAnimal
 							소개</a></li>
 					<li class="nav-item"><a class="nav-link active text-dark"
-						aria-current="page" href="${cpath }/searchform.do">동물 정보 조회</a></li>
+						aria-current="page" href="${cpath}/searchform.do">동물 정보 조회</a></li>
 					<li class="nav-item"><a class="nav-link active  text-dark"
-						aria-current="page" href="${cpath }/checkform.do">동물 정보 등록</a></li>
+						aria-current="page" href="${cpath}/checkform.do">동물 정보 등록</a></li>
 					<li class="nav-item"><a class="nav-link active text-dark"
 						aria-current="page" href="${cpath }/boardform.do">게시판</a></li>
 					<li class="nav-item"><a class="nav-link active text-dark"
-						aria-current="page" href="${cpath }/findboardform.do">찾아주세요</a></li>
+						aria-current="page" href="${cpath}/findboardform.do">찾아주세요</a></li>
 				</ul>
 				<!-- 버튼 -->
 				<ul id="btn-basic">
 					<li><button type="button" class="btn btn-dark"
-							onclick="location.href='${cpath }/signinform.do'">로그인</button></li>
+							onclick="location.href='${cpath}/signinform.do'">로그인</button></li>
 					<li><button type="button" class="btn btn-dark"
-							onclick="location.href='${cpath }/signupform.do'">회원가입</button></li>
+							onclick="location.href='${cpath}/signupform.do'">회원가입</button></li>
 				</ul>
 			</div>
 		</nav>
