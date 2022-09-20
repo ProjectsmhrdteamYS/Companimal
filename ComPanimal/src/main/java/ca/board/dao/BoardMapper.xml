@@ -26,7 +26,7 @@
 	<!-- 7. 커뮤니티 게시판 삭제 -->
 	<delete id="cboardDelete"> delete from tbl_community where c_seq=#{c_seq} </delete>
 	<!-- 8. 커뮤니티 게시판 수정 -->
-	<update id="cUpdate" parameterType="ca.board.dao.cboardVO">
+	<update id="cupdate" parameterType="ca.board.dao.cboardVO">
 		update tbl_community set c_title=#{c_title},c_content=#{c_content} where c_seq=#{c_seq}	</update>
 	<!-- 9. 찾아주세요 게시판 전체 리스트 -->
 	<select id="fList" resultType="ca.board.dao.fboardVO"> select * from tbl_find order by f_seq desc </select>

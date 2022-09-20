@@ -67,9 +67,9 @@ public class ProjectDAO {
 		session.close();
 	}
 	// 커뮤니티 게시판 수정 메소드
-	public void cUpdate(int c_seq) {
+	public void cupdate(cboardVO vo) {
 		SqlSession session = sqlSessionFactory.openSession();
-		session.update("cupdate",c_seq);
+		session.update("cupdate",vo);
 		session.commit();
 		session.close();
 	}

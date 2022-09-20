@@ -11,6 +11,8 @@ import ca.board.controller.CheckController;
 import ca.board.controller.CheckFormController;
 import ca.board.controller.CompanimalController;
 import ca.board.controller.Controller;
+import ca.board.controller.CupdateController;
+import ca.board.controller.CupdateFormController;
 import ca.board.controller.FdeleteController;
 import ca.board.controller.CdeleteController;
 import ca.board.controller.FdetailController;
@@ -61,6 +63,8 @@ public class HandlerMapping {
 		mappings.put("/logout.do", new logoutController());
 		mappings.put("/logoutform.do", new logoutFormController());
 		mappings.put("/fupdateform.do", new FindUpdateFormController());
+		mappings.put("/cupdateform.do", new CupdateFormController());
+		mappings.put("/cupdate.do", new CupdateController());
 	}
 	public Controller getController(String key) {
 		return mappings.get(key);

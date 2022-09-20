@@ -3,6 +3,7 @@
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var="cpath" value="${pageContext.request.contextPath }" />
+<%@page import="ca.board.dao.cboardVO"%>
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -74,35 +75,35 @@
 		</div>
 	</header>
 	<main>
-	 <form action="${cpath}/boardUpdate.do" method="post">
-    	<input type="hidden" name="idx" value="${vo.idx}"> <!-- idx값을 get방식이 아닌 post 방식으로 넘기기, hidden을 사용해서 수정을 못하게 함 -->
+	 <form action="${cpath}/cupdate.do" method="post">
+    	<input type="hidden" name="c_seq" value="${vo.c_seq}"> <!-- idx값을 get방식이 아닌 post 방식으로 넘기기, hidden을 사용해서 수정을 못하게 함 -->
     	<table class="table table-boardered">
     		<tr>
     			<td>제목</td>
     			<td>
-    				<input type="text" class="form-control" name="title" value="${vo.title}">
+    				<input type="text" class="form-control" name="c_title" value="${vo.c_title}">
     			</td>
     		</tr>
     		<tr>
     			<td>내용</td>
     			<td>
-    				<textarea rows="10" class="form-control" name="content">${vo.content}</textarea>
+    				<textarea rows="10" class="form-control" name="c_content">${vo.c_content}</textarea>
     			</td>
     		</tr>
     		<tr>
     			<td>작성자</td>
-    			<td>${vo.writer}</td>
+    			<td>${vo.user_id}</td>
     		</tr>
     		<tr>
     			<td>작성일</td>
-    			<td>${vo.indate}</td>
+    			<td>${vo.c_date}</td>
     		</tr>
     		<tr>
     			<td colspan="2" align="center">
     				<button type="submit" class = "btn btn-sm btn-success" >수정</button>
     				<button type="reset" class="btn btn-sm btn-danger ">취소</button>
     				<button type="button" class="btn btn-sm btn-primary"
-							onclick="location.href='${cpath }/mainpage.do'">리스트</button>
+							onclick="location.href='${cpath }/boardform.do'">리스트</button>
     			</td>
     		</tr>
     	</table>
