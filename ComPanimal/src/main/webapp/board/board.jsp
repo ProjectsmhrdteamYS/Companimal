@@ -95,7 +95,7 @@
 						<tr>
 							<th>${vo.c_seq}</th>
 							<td><A CLASS="fw-bold text-dark"
-								HREF="${cpath }/cdetailform.do">${vo.c_title}</A></td>
+								HREF="${cpath }/cdetailform.do?c_seq=${vo.c_seq}">${vo.c_title}</A></td>
 							<td>${vo.c_content }</td>
 							<td>${vo.user_id }</td>
 							<td>${vo.c_date}</td>

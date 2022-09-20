@@ -22,10 +22,10 @@
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 <script type="text/javascript">
-	function goDel(idx){
+	function goDel(c_seq){
 		location.href="${cpath}/cdelete.do?idx="+c_seq;
 	}
-	function goUpdate(idx){
+	function goUpdate(c_seq){
 		location.href="${cpath}/boardupdateForm.do?idx="+idx;
 	
 	}
@@ -97,7 +97,7 @@
     		<tr>
     			<td colspan="2" align="center">
     			<c:if test="${uvo.user_id eq vo.user_id}">
-    					<button class="btn btn-sm btn-success" onclick="location.href='${cpath}/boardUpdateForm.do?idx=${vo.idx}'">수정</button>
+    					<button class="btn btn-sm btn-success">수정</button>
     					<button class="btn btn-sm btn-danger"  onclick = "goDel(${vo.c_seq})'">삭제</button>
 				</c:if>
     			<c:if test="${uvo.user_id ne vo.user_id}">
