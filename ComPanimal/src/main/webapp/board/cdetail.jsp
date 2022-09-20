@@ -57,8 +57,16 @@
             </form>
     
             <div class="text-end">
-              <button type="button" class="btn btn-outline-secondary me-1" onclick="location.href='${cpath }/signinform.do'">Login</button>
+              <c:if test= "${empty uvo }">
+              <button type="button" class="btn btn-outline-secondary me-1" onclick="location.href='${cpath }/signinform.do'">Login</button>              
               <button type="button" class="btn btn-primary" onclick="location.href='${cpath }/signupform.do'">Sign-up</button>
+              </c:if>
+
+              <c:if test= "${!empty uvo }">
+              ${uvo.user_id}님 환영합니다.
+              <button type="button" class="btn btn-outline-secondary me-1" onclick="location.href='${cpath }/logout.do'">Logout</button>             
+              </c:if>
+              
             </div>
           </div>
         </div>
@@ -88,16 +96,19 @@
     		</tr>
     		<tr>
     			<td colspan="2" align="center">
-    				<%-- <c:if test="${mvo.memId eq vo.memId }"> --%>
+    			<c:if test="${mvo.memId eq vo.memId }">
     					<button class="btn btn-sm btn-success" onclick="location.href='${cpath}/boardUpdateForm.do?idx=${vo.idx}'">수정</button>
     					<button class="btn btn-sm btn-danger"  onclick = "goDel(${vo.c_seq})'">삭제</button>
-    			<%-- 	</c:if>
-    				<c:if test="${mvo.memId ne vo.memId }">
+				</c:if>
+    			<c:if test="${mvo.memId ne vo.memId }">
     					<button class="btn btn-sm btn-success" disabled="disabled" onclick="location.href='${cpath}/boardUpdateForm.do?idx=${vo.idx}'">수정</button>
     					<button class="btn btn-sm btn-danger" disabled="disabled" onclick = "goDel(${vo.c_seq})'">삭제</button>
-    				</c:if> --%>
+    			</c:if>
+    			
     				<button type="button" class="btn btn-sm btn-primary"
 					onclick="location.href='${cpath }/boardform.do'">리스트</button>
+
+    				
     			</td>
     		</tr>
     	</table>

@@ -24,6 +24,8 @@ import ca.board.controller.SigninController;
 import ca.board.controller.SigninFormController;
 import ca.board.controller.SignupController;
 import ca.board.controller.SignupFormController;
+import ca.board.controller.logoutController;
+import ca.board.controller.logoutFormController;
 
 public class HandlerMapping {
 	
@@ -51,9 +53,12 @@ public class HandlerMapping {
 		mappings.put("/signin.do", new SigninController());
 		mappings.put("/signupform.do", new SignupFormController());
 		mappings.put("/signup.do", new SignupController());
+
 		mappings.put("/cdelete.do", new DeleteController());
-		
-		
+
+		mappings.put("/logout.do", new logoutController());
+		mappings.put("/logoutform.do", new logoutFormController());
+
 	}
 	public Controller getController(String key) {
 		return mappings.get(key);
