@@ -69,7 +69,7 @@
 				<h2>현상수배</h2>
 				<hr>
 				<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-					<c:forEach begin="0" end="2">
+					<c:forEach var="vo" items="${list }">
 						<div class="col">
 							<div class="card">
 								<img
@@ -83,18 +83,18 @@
 								</img>
 
 								<div class="card-body">
-									<p class="card-text">내용</p>
+									<small class="text-muted">글 번호 : ${vo.f_seq }</small>
 									<div class="d-flex justify-content-between align-items-center">
 										<div class="btn-group">
 											<button type="button"
 												class="btn btn-sm btn-primary "
-												onclick="location.href='${cpath }/fdetailform.do'">상세보기</button>
-											<button type="button"
-												class="btn btn-sm btn-outline-secondary" onclick="">삭제</button>
-										</div>
-										<small class="text-muted">작성자</small> <small
-											class="text-muted">조회수</small>
+												onclick="location.href='${cpath }/fdetailform.do'">상태 : ${vo.f_title }</button>
 									</div>
+									<p class="card-text">위치 : ${vo.f_content }</p>
+									</div>
+										<small class="text-muted">작성자 : ${vo.user_id}</small>
+										<small class="text-muted">조회수 : ${vo.f_cnt }</small>
+										<small class="text-muted">작성일 : ${vo.f_date }</small>
 								</div>
 							</div>
 						</div>

@@ -67,28 +67,28 @@
 				class="d-inline-block align-text-top">
 			<h2>현상수배</h2>
 			<BR>
-			<form action="${cpath}/findWrite.do">
-				<input type="hidden" name="memId" value="${mvo.memId}">
+			<form action="${cpath}/findwrite.do">
+				<input type="hidden" name="user_id" value="test1">
 				<div class="input-group flex-nowrap">
-					<span class="input-group-text" id="addon-wrapping">제목</span> <input
-						type="text" class="form-control" placeholder="ctitle"
-						aria-label="title" aria-describedby="addon-wrapping">
+					<span class="input-group-text" id="addon-wrapping">제목</span>
+					 <input	type="text" class="form-control"aria-label="title" 
+					 aria-describedby="addon-wrapping" placeholder="반려견 상태를 적어주세요"name="f_title">
 				</div>
 				<br>
 				<div class="input-group">
 					<span class="input-group-text">내용</span>
 					<textarea class="form-control" aria-label="With textarea"
-						style="height: 300px"></textarea>
+						style="height: 300px" placeholder="잃어버린 지역 위치를 적어주세요" name="f_content"></textarea>
 				</div>
 				<br>
 				<div class="mb-3">
 					<label for="formFile" class="form-label">사진 첨부</label>
-					 <input class="form-control" type="file" id="formFile">
+					 <input class="form-control" type="file" name="f_file" placeholder="반려견 사진을 올려주세요">
 				</div>
 				<br>
 				<div>
 					<input class="form-control" type="text"
-						placeholder="${cpath } << 작성자 여기에 넣으면 됨" disabled>
+						placeholder=" << 작성자 여기에 넣으면 됨" disabled>
 				</div>
 
 				<br>

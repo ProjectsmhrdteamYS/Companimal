@@ -31,9 +31,9 @@
 	<!-- 9. 찾아주세요 게시판 전체 리스트 -->
 	<select id="fList" resultType="ca.board.dao.fboardVO"> select * from tbl_find order by f_seq desc </select>
 	<!-- 10. 찾아주세요 게시판 글쓰기 -->
-	<insert id="insertf" parameterType="ca.board.dao.cboardVO">
+	<insert id="insertf" parameterType="ca.board.dao.fboardVO">
 		insert into tbl_find(f_seq,f_title,f_content,f_date,f_file,user_id,f_cnt)
-		values(tbl_find_SEQ.NEXTVAL,#{f_title},#{f_content},#{f_date},#{f_file},#{user_id},#{f_cnt}) </insert>
+		values(tbl_find_SEQ.NEXTVAL,#{f_title},#{f_content},sysdate,#{f_file},#{user_id},23) </insert>
 	<!-- 11. 찾아주세요 게시판 상세 페이지 -->
 	<select id="fdetail" parameterType="int" resultType="ca.board.dao.fboardVO">
 		select * from tbl_find where f_seq = #{f_seq} </select>
@@ -44,6 +44,6 @@
 	<delete id="fboardDelete">
 		delete from tbl_find where f_seq=#{f_seq}	</delete>
 	<!-- 14. 찾아주세요 게시판 수정 -->
-	<update id="fUpdate" parameterType="ca.board.dao.cboardVO">
+	<update id="fUpdate" parameterType="ca.board.dao.fboardVO">
 		update tbl_find set f_title=#{f_title},f_content=#{f_content} where f_seq=#{f_seq} </update>
 </mapper>

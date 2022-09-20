@@ -11,6 +11,7 @@ import ca.board.controller.CheckController;
 import ca.board.controller.CheckFormController;
 import ca.board.controller.CompanimalController;
 import ca.board.controller.Controller;
+import ca.board.controller.FdeleteController;
 import ca.board.controller.FdetailController;
 import ca.board.controller.FdetailFormController;
 import ca.board.controller.FindWriteController;
@@ -46,10 +47,12 @@ public class HandlerMapping {
 		mappings.put("/findwrite.do", new FindWriteController());
 		mappings.put("/fdetailform.do", new FdetailFormController());
 		mappings.put("/fdetail.do", new FdetailController());
+		mappings.put("/fdelete.do", new FdeleteController());
 		mappings.put("/signinform.do", new SigninFormController());
 		mappings.put("/signin.do", new SigninController());
 		mappings.put("/signupform.do", new SignupFormController());
 		mappings.put("/signup.do", new SignupController());
+		
 		
 		
 	}

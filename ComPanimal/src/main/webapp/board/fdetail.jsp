@@ -80,7 +80,7 @@
     				</c:if>
     				<c:if test="${mvo.memId ne vo.memId }">
     					<button class="btn btn-sm btn-success" disabled="disabled" onclick="location.href='${cpath}/boardUpdateForm.do?idx=${vo.idx}'">수정</button>
-    					<button class="btn btn-sm btn-danger" disabled="disabled" onclick="location.href='${cpath}/boardDelete.do?idx=${vo.idx}'">삭제</button>
+    					<button class="btn btn-sm btn-danger" disabled="disabled" onclick="location.href='${cpath}/fdelete.do?idx=${vo.idx}'">삭제</button>
     				</c:if>
     				<button type="button" class="btn btn-sm btn-primary"
 							onclick="location.href='${cpath }/findboardform.do'">리스트</button>
