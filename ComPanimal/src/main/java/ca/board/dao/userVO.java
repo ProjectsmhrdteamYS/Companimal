@@ -13,7 +13,7 @@ public class userVO {
 	private String user_type;
 	
 	public userVO(String user_id, String user_pw, String user_name, int user_birth, int user_tel, String user_addr,
-			java.sql.Date user_joindate, String user_type) {
+			Date user_joindate, String user_type) {
 		super();
 		this.user_id = user_id;
 		this.user_pw = user_pw;
