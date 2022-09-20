@@ -14,5 +14,5 @@ public class MainPageController implements Controller {
 		// 메인페이지 불러오기
 		return "mainpage";
 	}
-
+	
 }

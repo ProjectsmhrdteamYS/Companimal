@@ -4,6 +4,4 @@
 <%
 	String cpath = request.getContextPath();
 	response.sendRedirect(cpath+"/mainpage.do");
-	
-
 %>

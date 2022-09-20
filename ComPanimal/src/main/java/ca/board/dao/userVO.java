@@ -1,5 +1,7 @@
 package ca.board.dao;
 
+import java.sql.Date;
+
 public class userVO {
 	private String user_id;
 	private String user_pw;
@@ -7,11 +9,11 @@ public class userVO {
 	private int user_birth;
 	private int user_tel;
 	private String user_addr;
-	private String user_joindate;
+	private Date user_joindate;
 	private String user_type;
 	
 	public userVO(String user_id, String user_pw, String user_name, int user_birth, int user_tel, String user_addr,
-			String user_joindate, String user_type) {
+			Date user_joindate, String user_type) {
 		super();
 		this.user_id = user_id;
 		this.user_pw = user_pw;
@@ -62,7 +64,7 @@ public class userVO {
 	}
 
 	public void setUser_id(String user_id) {
-System.out.println("setUser_id:"+ user_id);
+//System.out.println("setUser_id:"+ user_id);
 		this.user_id = user_id;
 	}
 
@@ -90,11 +92,12 @@ System.out.println("setUser_id:"+ user_id);
 		this.user_addr = user_addr;
 	}
 
-	public String getUser_joindate() {
+	public Date getUser_joindate() {
 		return user_joindate;
 	}
 
-	public void setUser_joindate(String user_joindate) {
+	public void setUser_joindate(Date user_joindate) {
+//		System.out.println(user_joindate);
 		this.user_joindate = user_joindate;
 	}
 

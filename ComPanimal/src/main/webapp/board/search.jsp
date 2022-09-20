@@ -4,6 +4,9 @@
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <c:set var="cpath" value="${pageContext.request.contextPath }" />
 <c:set var="newLine" value="<%='\n' %>" />
+
+<!-- 조회 css -->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +23,8 @@
 <script>
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-	crossorigin="anonymous"></script>
+	crossorigin="anonymous"
+	</script>
 <style>
 body {
 	font-family: Arial;
@@ -64,13 +68,7 @@ div.container {
 <link rel="stylesheet" href="${cpath }/board/basic.css">
 
 <!-- 디비 연결되면 petView(idx) 로 바꾸기 -->
-  <script type="text/javascript">
-  	function petView() {
-  		$("#ct").css("display","table-row");
-  		
-  	}    
-     </script>
-
+ 
 
 </head>
 <body>
@@ -112,6 +110,14 @@ div.container {
 		</nav>
 	</header>
 	<main id="wrap">
+	
+	 <script type="text/javascript">
+  	function petView() {
+  		$("#ct").css("display","table-row");
+ 
+  	}    
+     </script>
+	
 		<p></p>
 		<div class="container">
 			<form action="javascript:petView()">
@@ -119,10 +125,9 @@ div.container {
 					src="${cpath }/images/logo.png" alt="" width="380px"
 					class="d-inline-block align-text-top"></a> <br>
 				<br>
-				<br> <label for="lname">소유자명</label> <input type="text"
-					id="lname" name="lastname" placeholder="소유자명"> <label
+				<br> <label for="lname">소유자명</label> <input type="text" id="lname" placeholder="소유자명"> <label
 					for="fname">동물등록번호</label> <input type="text" id="fname"
-					name="firstname" placeholder="등록번호 15자리">
+					 placeholder="등록번호 15자리">
 				<hr>
 
 				<!-- 이미지 업로드해서 조회 - 삭제:
@@ -139,14 +144,19 @@ div.container {
 			<!-- 조회버튼시 나오는 표  -->
     		<!-- 디비연결되면 <tr id="ct${vo.idx}" style="display: none">로 변경-->
 		  <div id="petList"></div>
-    <script>
+  
+   <script>
+   var lname=document.getElementById('lname');
+   var fname=document.getElementById('fname');
+   
+   
+   
         $('#btn1').click(()=>{
-            $.ajax({
-                url : 'http://apis.data.go.kr/1543061/animalInfoSrvc/animalInfo?_type=json&dog_reg_no=410100008069936&owner_nm=홍승희&serviceKey=%2FR3EvQD0BDHw%2FwKWewHQFMQ8MXNoIIlhw1%2BNBkbz7Ut52RP7ylh84FK27bQDPhcXi2xxtpfnbsF5iRjvUnskxg%3D%3D',
+            $.ajax({                
+                url : "http://apis.data.go.kr/1543061/animalInfoSrvc/animalInfo?_type=json&dog_reg_no="+fname.value+"&owner_nm="+lname.value+"&serviceKey=%2FR3EvQD0BDHw%2FwKWewHQFMQ8MXNoIIlhw1%2BNBkbz7Ut52RP7ylh84FK27bQDPhcXi2xxtpfnbsF5iRjvUnskxg%3D%3D", 
                 type : 'get',
                 success : (res)=>{
-                    
-                	let code='<table class ="table table-bordered table-hover" id="ct" border="4"><tr>'
+                	let code='<table class ="table table-bordered" id="ct"><tr style="background-color:#F57F32">'
                         code +='<th>번호</th>'
                         code +='<th>이름</th>'
                         code +='<th>견종</th>'
@@ -156,23 +166,21 @@ div.container {
                         code +='<th>관할센터번호</th></tr>'
                 	console.log(res.response.body.item);
                     let items = res.response.body.item;
-                    //console.log(items);
-                    
                     code += '<tr>';
-                	code += '<td>'+res.response.body.item.dogRegNo+'</td>';
-                	code += '<td>'+res.response.body.item.dogNm+'</td>';
-                	code += '<td>'+res.response.body.item.sexNm+'</td>';
-                	code += '<td>'+res.response.body.item.kindNm+'</td>';
-                	code += '<td>'+res.response.body.item.neuterYn+'</td>';
-                	code += '<td>'+res.response.body.item.orgNm+'</td>';
-                	code += '<td>'+res.response.body.item.officeTel+'</td>';
+                	code += '<td>'+items.dogRegNo+'</td>';
+                	code += '<td>'+items.dogNm+'</td>';
+                	code += '<td>'+items.sexNm+'</td>';
+                	code += '<td>'+items.kindNm+'</td>';
+                	code += '<td>'+items.neuterYn+'</td>';
+                	code += '<td>'+items.orgNm+'</td>';
+                	code += '<td>'+items.officeTel+'</td>';
                 	code += '</tr>';
+                       
                 	code +='</table>'
-                    
                     $('#petList').html(code);
                 } ,
                 error : function(){
-                    alert('error!')
+                    alert('등록되지 않은 번호 입니다')
             }
         })
     })

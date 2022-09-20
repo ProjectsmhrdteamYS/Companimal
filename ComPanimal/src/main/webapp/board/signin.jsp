@@ -1,8 +1,19 @@
+<%@page import="ca.board.dao.ProjectDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <c:set var="cpath" value="${pageContext.request.contextPath }" />
+
+
+<!-- 테스트하는 중 이것부터 -->
+<%!ProjectDAO dao = new ProjectDAO(); %>
+
+<% String userid = request.getParameter("user_id");
+   String userpw = request.getParameter("user_pw");
+%>
+<!-- 이것까지 -->
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -97,10 +108,19 @@ main {
 				</ul>
 				<!-- 버튼 -->
 				<ul id="btn-basic">
-					<li><button type="button" class="btn btn-dark"
-							onclick="location.href='${cpath }/signinform.do'">로그인</button></li>
-					<li><button type="button" class="btn btn-dark"
-							onclick="location.href='${cpath }/signupform.do'">회원가입</button></li>
+
+					<c:if test="${empty uvo }">
+						<button type="button" class="btn btn-outline-secondary me-1"
+							onclick="location.href='${cpath }/signinform.do'">Login</button>
+						<button type="button" class="btn btn-dark"
+							onclick="location.href='${cpath }/signupform.do'">회원가입</button>
+					</c:if>
+
+					<c:if test="${!empty uvo }">
+              			${uvo.user_id}님 환영합니다.
+              			<button type="button" class="btn btn-outline-secondary me-1"
+							onclick="location.href='${cpath }/signinform.do'">Logout</button>
+					</c:if>
 				</ul>
 			</div>
 		</nav>
@@ -114,31 +134,43 @@ main {
 			<br>
 			<br>
 			<div class="form-floating">
-				<input type="email" class="form-control" id="floatingInput"
-					placeholder="name@example.com"> <label for="floatingInput">ID</label>
+				<input type="text" class="form-control"
+				id="floatingInput" name = "user_id" placeholder="id"> 
+					<label for="floatingInput">ID</label>
 			</div>
 			<div class="form-floating">
-				<input type="password" class="form-control" id="floatingPassword"
-					placeholder="Password"> <label for="floatingPassword">Password</label>
+				<input type="password" class="form-control"
+				id="floatingPassword" name = "user_pw" placeholder="Password"> 
+					<label for="floatingPassword">Password</label>
 			</div>
 			<button class="w-100 btn btn-lg btn-primary" type="submit">Sign
 				in</button>
 			<p class="mt-5 mb-3 text-muted">&copy; 2022 CompAnimal</p>
 		</form>
 	</main>
-	<footer>
-		<div class="container">
-			<p class="float-end mb-1">
-				<a href="#">Back to top</a>
-			</p>
-			<p class="mb-1">Album example is &copy; Bootstrap, but please
-				download and customize it for yourself!</p>
-			<p class="mb-0">
-				New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a
-					href="/docs/5.1/getting-started/introduction/">getting started
-					guide</a>.
-			</p>
-		</div>
+<footer class="py-5 ">
+		<div class="d-flex justify-content-between py-4 my-4 border-top">
+			<div class="row">
+				<div class="col">
+					<ul>
+						<li>© 2022 Company, Inc. All rights reserved.</li>
+						<li>주식회사 컴패니멀 어쩌구 저쩌구</li>
+						<li>그래서 만든사람 어쩌구저쩌구</li>
+					</ul>
+				</div>
+				<div class="col">
+					<ul>
+						<li>© 2022 Company, Inc. All rights reserved.</li>
+						<li>주식회사 컴패니멀 어쩌구 저쩌구</li>
+						<li>그래서 만든사람 어쩌구저쩌구</li>
+					</ul>
+				</div>
+			</div>
+			<ul class="list-unstyled d-flex ">
+				<li class="btn btn-primary py-4 me-2">짹짹이</li>
+				<li class="btn btn-outline-secondary py-4 me-2">인서타</li>
+				<li class="btn btn-primary py-4 me-2">농농농</li>
+			</ul>
 	</footer>
 </body>
 </html>
