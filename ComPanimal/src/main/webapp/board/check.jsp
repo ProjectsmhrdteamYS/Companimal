@@ -54,7 +54,7 @@ ul li{list-style: none;}
 
               <c:if test= "${!empty uvo }">
               ${uvo.user_id}님 환영합니다.
-              <button type="button" class="btn btn-outline-secondary me-1" onclick="location.href='${cpath }/signinform.do'">Logout</button>             
+              <button type="button" class="btn btn-outline-secondary me-1" onclick="location.href='${cpath }/logout.do'">Logout</button>             
               </c:if>
             </div>
           </div>

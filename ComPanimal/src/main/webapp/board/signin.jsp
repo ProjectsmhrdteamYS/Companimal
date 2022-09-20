@@ -120,7 +120,7 @@ main {
 							onclick="location.href='${cpath }/signinform.do'">Logout</button>
 					</c:if>
 					<li><button type="button" class="btn btn-dark"
-							onclick="location.href='${cpath }/signupform.do'">회원가입</button></li>
+							onclick="location.href='${cpath }/logout.do'">회원가입</button></li>
 				</ul>
 			</div>
 		</nav>
