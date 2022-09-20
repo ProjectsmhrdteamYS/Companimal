@@ -3,14 +3,21 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <c:set var="cpath" value="${pageContext.request.contextPath }" />
+<c:set var="newLine" value="<%='\n'%>" />
+
+<!-- 조회 css -->
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>메인</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+<<<<<<< HEAD
 
 
 <title>동물 조회</title>
@@ -26,9 +33,27 @@
 ul li{list-style: none;}
     </style>
 
+=======
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+	crossorigin="anonymous">
+<script>
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+	crossorigin="anonymous"
+	</script>
+<link rel="stylesheet" href="${cpath }/css/bootstrap.css">
+<link rel="stylesheet" href="${cpath }/css/bootstrap-grid.css">
+<link rel="stylesheet" href="${cpath }/css/bootstrap-reboot.css">
+<link rel="stylesheet" href="${cpath }/css/bootstrap-utilities.css">
+<title>동물조회</title>
+>>>>>>> branch 'master' of https://github.com/ProjectsmhrdteamYS/Companimal.git
 </head>
 <body>
 	<!-- header -->
+<<<<<<< HEAD
     <header class=" container-fluid p-3 bg-white ">
         <div class="container p-3">
           <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start ">
@@ -68,7 +93,35 @@ ul li{list-style: none;}
 
 
     <h1 class="h3 mt-3 fw-normal text-center">반려동물 조회 서비스</h1>
+=======
+	<header class=" container-fluid p-3 bg-white ">
+		<div class="container p-3">
+			<div
+				class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start ">
+				<a class="navbar-brand me-4" href="${cpath }/mainpage.do"> <img
+					src="${cpath }/images/logo.png" alt="" width="286"
+					class="d-inline-block align-text-top ">
+				</a>
+				<ul
+					class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+					<li><a href="${cpath }/companimal.do"
+						class="nav-link px-3 link-dark">COMPANIMAL</a></li>
+					<li><a href="${cpath }/searchform.do"
+						class="nav-link px-3 link-dark">반려견조회</a></li>
+					<li><a href="${cpath }/checkform.do"
+						class="nav-link px-3 link-dark">반려견등록</a></li>
+					<li><a href="${cpath }/boardform.do"
+						class="nav-link px-3 link-dark">게시판</a></li>
+					<li><a href="${cpath }/findboardform.do"
+						class="nav-link px-3 link-dark">찾아주세요</a></li>
+				</ul>
+				<form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-2">
+					<input type="search" class="form-control form-control-dark"
+						placeholder="Search..." aria-label="Search">
+				</form>
+>>>>>>> branch 'master' of https://github.com/ProjectsmhrdteamYS/Companimal.git
 
+<<<<<<< HEAD
 
     <div class="mb-3">
 
@@ -85,7 +138,21 @@ ul li{list-style: none;}
       style="height: 3em;">
     </div>
     
+=======
+				<div class="text-end">
+					<button type="button" class="btn btn-outline-secondary me-1"
+						onclick="location.href='${cpath }/signinform.do'">Login</button>
+					<button type="button" class="btn btn-primary"
+						onclick="location.href='${cpath }/signupform.do'">Sign-up</button>
+				</div>
+			</div>
+		</div>
+	</header>
+	
+	<main id="wrap">
+>>>>>>> branch 'master' of https://github.com/ProjectsmhrdteamYS/Companimal.git
 
+<<<<<<< HEAD
     <div class="checkbox mt-3 mb-3 " >
       <label>
         <input type="checkbox" value="remember-me"> Remember me
@@ -98,9 +165,94 @@ ul li{list-style: none;}
     <p class="mt-5 mb-3 text-muted">© 2022–2025</p>
   </form>
 </div>
+=======
+		<script type="text/javascript">
+  	function petView() {
+  		$("#ct").css("display","table-row");
+ 
+  	}    
+     </script>
+>>>>>>> branch 'master' of https://github.com/ProjectsmhrdteamYS/Companimal.git
 
-</div>
-    
+		<p></p>
+		<div class="container p-lg-5" style="height: 780px;">
+			<div class="form-signin mx-auto mt-5">
+				<form class="border rounded-4 p-5 mx-auto"
+					style="width: 650px; height: 720px;" action="javascript:petView()">
+					<img class="mb-4" src="${cpath }/images/222.jpg" alt="로고"
+						width="100%" height="120px">
+					<h1 class="h3 mt-3 fw-normal text-center">반려동물 조회 서비스</h1>
+					<br> <br> <br>
+					<div class="mb-3">
+						<label for="lname">소유자명</label> <input type="text"
+							class="form-control" style="height: 3em;"
+							lname" placeholder="소유자명">
+					</div>
+					<div class="mb-3">
+						<label for="fname">동물등록번호</label> <input type="text"
+							class="form-control" style="height: 3em;"
+							fname" placeholder="등록번호 15자리">
+					</div>
+					<hr>
+
+					<!-- 이미지 업로드해서 조회 - 삭제:
+			<label for="lname">QR이미지로 조회<img src=""></label>
+			<br>
+			<input	type="file" id="myFile" name="filename">
+			<hr>
+			 -->
+					<input class="w-100 btn btn-lg btn-primary" style="height: 60px;"
+						id="btn1" type="submit" value="조회">
+				</form>
+			</div>
+
+
+			<!-- 조회버튼시 나오는 표  -->
+			<!-- 디비연결되면 <tr id="ct${vo.idx}" style="display: none">로 변경-->
+			<div id="petList"></div>
+
+			<script>
+   var lname=document.getElementById('lname');
+   var fname=document.getElementById('fname');
+   
+   
+   
+        $('#btn1').click(()=>{
+            $.ajax({                
+                url : "http://apis.data.go.kr/1543061/animalInfoSrvc/animalInfo?_type=json&dog_reg_no="+fname.value+"&owner_nm="+lname.value+"&serviceKey=%2FR3EvQD0BDHw%2FwKWewHQFMQ8MXNoIIlhw1%2BNBkbz7Ut52RP7ylh84FK27bQDPhcXi2xxtpfnbsF5iRjvUnskxg%3D%3D", 
+                type : 'get',
+                success : (res)=>{
+                	let code='<table class ="table table-bordered" id="ct"><tr style="background-color:#F57F32">'
+                        code +='<th>번호</th>'
+                        code +='<th>이름</th>'
+                        code +='<th>견종</th>'
+                        code +='<th>성별</th>'
+                        code +='<th>중성화여부</th>'
+                        code +='<th>관할</th>'
+                        code +='<th>관할센터번호</th></tr>'
+                	console.log(res.response.body.item);
+                    let items = res.response.body.item;
+                    code += '<tr>';
+                	code += '<td>'+items.dogRegNo+'</td>';
+                	code += '<td>'+items.dogNm+'</td>';
+                	code += '<td>'+items.sexNm+'</td>';
+                	code += '<td>'+items.kindNm+'</td>';
+                	code += '<td>'+items.neuterYn+'</td>';
+                	code += '<td>'+items.orgNm+'</td>';
+                	code += '<td>'+items.officeTel+'</td>';
+                	code += '</tr>';
+                       
+                	code +='</table>'
+                    $('#petList').html(code);
+                } ,
+                error : function(){
+                    alert('등록되지 않은 번호 입니다')
+            }
+        })
+    })
+    </script>
+	</main>
+	
 	<footer class="py-5 " >
 
 

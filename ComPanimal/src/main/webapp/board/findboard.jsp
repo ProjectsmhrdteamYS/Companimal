@@ -53,10 +53,18 @@
 				</form>
 
 				<div class="text-end">
-					<button type="button" class="btn btn-outline-secondary me-1"
-						onclick="location.href='${cpath }/signinform.do'">Login</button>
-					<button type="button" class="btn btn-primary"
-						onclick="location.href='${cpath }/signupform.do'">Sign-up</button>
+					<c:if test="${empty uvo }">
+						<button type="button" class="btn btn-outline-secondary me-1"
+							onclick="location.href='${cpath }/signinform.do'">Login</button>
+						<button type="button" class="btn btn-primary" onclick="location.href='${cpath }/signupform.do'">Sign-up</button>
+					</c:if>
+
+					<c:if test="${!empty uvo }">
+			            ${uvo.user_id}님 환영합니다.
+            			  <button type="button" class="btn btn-outline-secondary me-1"
+							onclick="location.href='${cpath }/logout.do'">Logout</button>
+					</c:if>
+					
 				</div>
 			</div>
 		</div>
@@ -69,7 +77,7 @@
 				<h2>현상수배</h2>
 				<hr>
 				<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-					<c:forEach begin="0" end="2">
+					<c:forEach var="vo" items="${list }">
 						<div class="col">
 							<div class="card">
 								<img
@@ -83,18 +91,18 @@
 								</img>
 
 								<div class="card-body">
-									<p class="card-text">내용</p>
+									<small class="text-muted">글 번호 : ${vo.f_seq }</small>
 									<div class="d-flex justify-content-between align-items-center">
 										<div class="btn-group">
 											<button type="button"
 												class="btn btn-sm btn-primary "
-												onclick="location.href='${cpath }/fdetailform.do'">상세보기</button>
-											<button type="button"
-												class="btn btn-sm btn-outline-secondary" onclick="">삭제</button>
-										</div>
-										<small class="text-muted">작성자</small> <small
-											class="text-muted">조회수</small>
+												onclick="location.href='${cpath }/fdetailform.do?f_seq=${vo.f_seq}'">상태 : ${vo.f_title }</button>
 									</div>
+									<p class="card-text">위치 : ${vo.f_content }</p>
+									</div>
+										<small class="text-muted">작성자 : ${vo.user_id}</small>
+										<small class="text-muted">조회수 : ${vo.f_cnt }</small>
+										<small class="text-muted">작성일 : ${vo.f_date }</small>
 								</div>
 							</div>
 						</div>
@@ -102,11 +110,13 @@
 
 				</div>
 				<p></p>
+				<c:if test="${!empty uvo }">
 				<div align="right">
 					<button type="button" class="btn btn-primary"
 						onclick="location.href='${cpath }/findwriteform.do'">게시물
 						작성</button>
 				</div>
+				</c:if>
 			</div>
 		</div>
 	</main>

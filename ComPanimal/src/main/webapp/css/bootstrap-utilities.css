@@ -12,12 +12,12 @@
 
 .text-bg-primary {
   color: #fff !important;
-  background-color: RGBA(13, 110, 253, var(--bs-bg-opacity, 1)) !important;
+  background-color: RGBA(245, 127, 50, var(--bs-bg-opacity, 1)) !important;
 }
 
 .text-bg-secondary {
   color: #fff !important;
-  background-color: RGBA(108, 117, 125, var(--bs-bg-opacity, 1)) !important;
+  background-color: RGBA(227, 80, 36, var(--bs-bg-opacity, 1)) !important;
 }
 
 .text-bg-success {
@@ -51,17 +51,17 @@
 }
 
 .link-primary {
-  color: #0d6efd !important;
+  color: #F57F32 !important;
 }
 .link-primary:hover, .link-primary:focus {
-  color: #0a58ca !important;
+  color: #e35024 !important;
 }
 
 .link-secondary {
-  color: #6c757d !important;
+  color: #E35024 !important;
 }
 .link-secondary:hover, .link-secondary:focus {
-  color: #565e64 !important;
+  color: #c33206 !important;
 }
 
 .link-success {
@@ -100,10 +100,10 @@
 }
 
 .link-dark {
-  color: #212529 !important;
+  color: #505050 !important;
 }
 .link-dark:hover, .link-dark:focus {
-  color: #1a1e21 !important;
+  color: #F57F32 !important;
 }
 
 .ratio {

@@ -8,7 +8,6 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<<<<<<< HEAD
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>메인</title>
@@ -20,7 +19,6 @@
    <link rel="stylesheet" href="${cpath }/css/bootstrap-utilities.css">
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
-=======
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>메인</title>
@@ -39,10 +37,9 @@
     ul li{list-style: none; font-weight: 600; }
     a {text-decoration: none;}
     </style>
->>>>>>> branch 'master' of https://github.com/ProjectsmhrdteamYS/Companimal.git
+
 </head>
 <body>
-<<<<<<< HEAD
 	<!-- header -->
     <header class=" container-fluid p-3 bg-white ">
         <div class="container p-3">
@@ -115,8 +112,6 @@
 
 
   </footer>
-=======
-
 	<!-- header -->
 	<header class=" container-fluid p-3 bg-white ">
 		<div class="container p-3">
@@ -180,6 +175,5 @@
 			</ul>
 	</footer>
 
->>>>>>> branch 'master' of https://github.com/ProjectsmhrdteamYS/Companimal.git
 </body>
 </html>

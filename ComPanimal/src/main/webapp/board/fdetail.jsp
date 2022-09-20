@@ -43,47 +43,50 @@
             </form>
     
             <div class="text-end">
-              <button type="button" class="btn btn-outline-secondary me-1" onclick="location.href='${cpath }/signinform.do'">Login</button>
-              <button type="button" class="btn btn-primary" onclick="location.href='${cpath }/signupform.do'">Sign-up</button>
+              <c:if test= "${empty uvo }">
+              <button type="button" class="btn btn-outline-secondary me-1" onclick="location.href='${cpath }/signinform.do'">Login</button>              
+              <button type="button" class="btn btn-primary"	onclick="location.href='${cpath }/signupform.do'">Sign-up</button>
+              </c:if>
+
+              <c:if test= "${!empty uvo }">
+              ${uvo.user_id}님 환영합니다.
+              <button type="button" class="btn btn-outline-secondary me-1" onclick="location.href='${cpath }/logout.do'">Logout</button>        
+              </c:if>
             </div>
           </div>
         </div>
       </header>
     <main id="wrap" class="position-relative">
 		<div class="container">
-			<img src="${cpath }/images/mongja.jpg" alt="" width="380px"
-				class="d-inline-block align-text-top">
 			<h2>현상수배</h2>
 			<BR>
 			<table class="table">
     		<tr>
     			<td>제목</td>
-    			<td>${vo.title}</td>
+    			<td>${vo.f_title}</td>
     		</tr>
     		<tr>
     			<td>내용</td>
-    			<td>${fn:replace(vo.content,newLine,"<br>") }</td>
+    			<td>${fn:replace(vo.f_content,newLine,"<br>") }</td>
     		</tr>
     		<tr>
     			<td>작성자</td>
-    			<td>${vo.writer}</td>
+    			<td>${vo.user_id}</td>
     		</tr>
     		<tr>
     			<td>작성일</td>
-    			<td>${fn:split(vo.indate," ")[0] }</td>
+    			<td>${fn:split(vo.f_date," ")[0] }</td>
     		</tr>
     		<tr>
     			<td colspan="2" align="center">
-    				<c:if test="${mvo.memId eq vo.memId }">
-    					<button class="btn btn-sm btn-success" onclick="location.href='${cpath}/boardUpdateForm.do?idx=${vo.idx}'">수정</button>
-    					<button class="btn btn-sm btn-danger" onclick="location.href='${cpath}/boardDelete.do?idx=${vo.idx}'">삭제</button>
+    				<c:if test="${uvo.user_id eq vo.user_id }">
+    					<button class="btn btn-sm btn-success" onclick="location.href='${cpath}/fupdateform.do?f_seq=${vo.f_seq}'">수정</button>
+    					<button class="btn btn-sm btn-danger" onclick="location.href='${cpath}/fdelete.do?f_seq=${vo.f_seq}'">삭제</button>
     				</c:if>
-    				<c:if test="${mvo.memId ne vo.memId }">
-    					<button class="btn btn-sm btn-success" disabled="disabled" onclick="location.href='${cpath}/boardUpdateForm.do?idx=${vo.idx}'">수정</button>
-    					<button class="btn btn-sm btn-danger" disabled="disabled" onclick="location.href='${cpath}/boardDelete.do?idx=${vo.idx}'">삭제</button>
-    				</c:if>
+    				<c:if test="${uvo.user_id ne vo.user_id  }">
     				<button type="button" class="btn btn-sm btn-primary"
 							onclick="location.href='${cpath }/findboardform.do'">리스트</button>
+    				</c:if>
     			</td>
     		</tr>
     	</table>

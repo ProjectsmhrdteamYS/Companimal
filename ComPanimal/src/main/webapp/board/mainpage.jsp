@@ -12,6 +12,8 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>메인</title>
 
+<!-- 외부 CSS -->
+<link rel="stylesheet" href="${cpath}/board/basic.css">
 
    <link rel="stylesheet" href="${cpath }/css/bootstrap.css">
    <link rel="stylesheet" href="${cpath }/css/bootstrap-grid.css">
@@ -32,7 +34,6 @@
 
 </head>
 <body>
-    
     <!-- header -->
     <header class=" container-fluid p-3 bg-white ">
         <div class="container p-3">
@@ -55,8 +56,16 @@
             </form>
     
             <div class="text-end">
-              <button type="button" class="btn btn-outline-secondary me-1" onclick="location.href='${cpath }/signinform.do'">Login</button>
+              <c:if test= "${empty uvo }">
+              <button type="button" class="btn btn-outline-secondary me-1" onclick="location.href='${cpath }/signinform.do'">Login</button>              
               <button type="button" class="btn btn-primary" onclick="location.href='${cpath }/signupform.do'">Sign-up</button>
+              </c:if>
+
+              <c:if test= "${!empty uvo }">
+              ${uvo.user_id}님 환영합니다.
+              <button type="button" class="btn btn-outline-secondary me-1" onclick="location.href='${cpath }/logout.do'">Logout</button>              
+              </c:if>              
+            
             </div>
           </div>
         </div>

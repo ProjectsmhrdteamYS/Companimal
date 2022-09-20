@@ -7,6 +7,7 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import ca.board.dao.cboardVO;
 
 public class ProjectDAO {
 	private static SqlSessionFactory sqlSessionFactory;
@@ -37,13 +38,11 @@ public class ProjectDAO {
 		return uvo;
 	}
 	// 커뮤니티 게시판 전체 리스트 가져오기 메소드
-	public List<cboardVO> cList() {  
-		//List는 ArrayList의 부모라고 생각 (좀 더 범용적으로 사용하기 위해)
-		//sessionPool에서 session 하나 꺼내기
-		SqlSession session=sqlSessionFactory.openSession();
-		// 꺼내온 session에서 sql문 실어서 db에 보내기
-		List<cboardVO> list = session.selectList("cList");  
-		session.close(); //ssesion 반납
+
+	public List<cboardVO> cList() {
+		SqlSession session = sqlSessionFactory.openSession();
+		List<cboardVO> list = session.selectList("cList");
+		session.close();
 		return list;
 	}
 	// 커뮤니티 게시판 글쓰기 메소드
@@ -54,41 +53,38 @@ public class ProjectDAO {
 		session.close();
 	}
 	// 커뮤니티 게시판 상세보기 메소드
-	public cboardVO cdetail(int idx) {
+	public cboardVO cdetail(int c_seq) {
 		SqlSession session = sqlSessionFactory.openSession();
-		cboardVO vo = session.selectOne("cdetail", idx);
+		cboardVO vo = session.selectOne("cdetail", c_seq);
 		session.close();
 		return vo;
 	}
 	// 커뮤니티 게시판 조회수 증가 메소드
-	public void countc(int idx) {
+	public void countc(int c_seq) {
 		SqlSession session = sqlSessionFactory.openSession();
-		session.update("countc",idx);
+		session.update("countc",c_seq);
 		session.commit();
 		session.close();
 	}
 	// 커뮤니티 게시판 수정 메소드
-	public void cUpdate(int idx) {
+	public void cupdate(cboardVO vo) {
 		SqlSession session = sqlSessionFactory.openSession();
-		session.update("cUpdate",idx);
+		session.update("cupdate",vo);
 		session.commit();
 		session.close();
 	}
 	// 커뮤니티 게시판 삭제 메소드
-	public void cboardDelete(int idx) {
+	public void cboardDelete(int c_seq) {
 		SqlSession session = sqlSessionFactory.openSession();
-		cboardVO vo = session.selectOne("cboardDelete", idx);
+		cboardVO vo = session.selectOne("cboardDelete", c_seq);
 		session.commit();
 		session.close();
 	}
 	// 찾아주세요 게시판 전체 리스트 가져오기 메소드
 	public List<fboardVO> fList() {  
-		//List는 ArrayList의 부모라고 생각 (좀 더 범용적으로 사용하기 위해)
-		//sessionPool에서 session 하나 꺼내기
 		SqlSession session=sqlSessionFactory.openSession();
-		// 꺼내온 session에서 sql문 실어서 db에 보내기
 		List<fboardVO> list = session.selectList("fList");  
-		session.close(); //ssesion 반납
+		session.close();
 		return list;
 	}
 	// 찾아주세요 게시판 글쓰기 메소드
@@ -99,23 +95,23 @@ public class ProjectDAO {
 			session.close();
 		}
 	// 찾아주세요 게시판 상세보기 메소드
-	public fboardVO fdetail(int idx) {
+	public fboardVO fdetail(int f_seq) {
 		SqlSession session = sqlSessionFactory.openSession();
-		fboardVO vo = session.selectOne("fdetail", idx);
+		fboardVO vo = session.selectOne("fdetail", f_seq);
 		session.close();
 		return vo;
 	}
 	// 찾아주세요 게시판 조회수 증가 메소드
-	public void countf(int idx) {
+	public void countf(int f_seq) {
 		SqlSession session = sqlSessionFactory.openSession();
-		session.update("countf",idx);
+		session.update("countf",f_seq);
 		session.commit();
 		session.close();
 	}
 	// 찾아주세요 게시판 수정 메소드
-	public void fUpdate(int idx) {
+	public void fUpdate(fboardVO vo) {
 		SqlSession session = sqlSessionFactory.openSession();
-		session.update("fUpdate",idx);
+		session.update("fUpdate",vo);
 		session.commit();
 		session.close();
 	}
