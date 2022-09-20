@@ -45,6 +45,7 @@
             <div class="text-end">
               <c:if test= "${empty uvo }">
               <button type="button" class="btn btn-outline-secondary me-1" onclick="location.href='${cpath }/signinform.do'">Login</button>              
+              <button type="button" class="btn btn-primary" onclick="location.href='${cpath }/signupform.do'">Sign-up</button>
               </c:if>
 
               <c:if test= "${!empty uvo }">
@@ -52,8 +53,6 @@
               <button type="button" class="btn btn-outline-secondary me-1" onclick="location.href='${cpath }/logout.do'">Logout</button>             
               </c:if>
               
-              <button type="button" class="btn btn-primary"
-						onclick="location.href='${cpath }/signupform.do'">Sign-up</button>
             </div>
           </div>
         </div>
@@ -91,8 +90,7 @@
     					<button class="btn btn-sm btn-success" disabled="disabled" onclick="location.href='${cpath}/boardUpdateForm.do?idx=${vo.idx}'">수정</button>
     					<button class="btn btn-sm btn-danger" disabled="disabled" onclick="location.href='${cpath}/boardDelete.do?idx=${vo.idx}'">삭제</button>
     				</c:if>
-    				<button type="button" class="btn btn-sm btn-primary"
-							onclick="location.href='${cpath }/boardform.do'">리스트</button>
+    				<button type="button" class="btn btn-sm btn-primary" onclick="location.href='${cpath }/boardform.do'">리스트</button>
     			</td>
     		</tr>
     	</table>

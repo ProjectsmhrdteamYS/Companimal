@@ -57,6 +57,7 @@
 					<c:if test="${empty uvo }">
 						<button type="button" class="btn btn-outline-secondary me-1"
 							onclick="location.href='${cpath }/signinform.do'">Login</button>
+						<button type="button" class="btn btn-primary" onclick="location.href='${cpath }/signupform.do'">Sign-up</button>
 					</c:if>
 
 					<c:if test="${!empty uvo }">
@@ -65,8 +66,6 @@
 							onclick="location.href='${cpath }/logout.do'">Logout</button>
 					</c:if>
 					
-					<button type="button" class="btn btn-primary"
-						onclick="location.href='${cpath }/signupform.do'">Sign-up</button>
 				</div>
 			</div>
 		</div>
