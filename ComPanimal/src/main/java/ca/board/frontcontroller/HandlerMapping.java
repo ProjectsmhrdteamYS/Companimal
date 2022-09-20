@@ -11,11 +11,8 @@ import ca.board.controller.CheckController;
 import ca.board.controller.CheckFormController;
 import ca.board.controller.CompanimalController;
 import ca.board.controller.Controller;
-<<<<<<< HEAD
 import ca.board.controller.FdeleteController;
-=======
 import ca.board.controller.DeleteController;
->>>>>>> branch 'master' of https://github.com/ProjectsmhrdteamYS/Companimal.git
 import ca.board.controller.FdetailController;
 import ca.board.controller.FdetailFormController;
 import ca.board.controller.FindWriteController;
