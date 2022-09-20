@@ -38,13 +38,11 @@ public class ProjectDAO {
 		return uvo;
 	}
 	// 커뮤니티 게시판 전체 리스트 가져오기 메소드
-	public List<cboardVO> allList() {  
-		//List는 ArrayList의 부모라고 생각 (좀 더 범용적으로 사용하기 위해)
-		//sessionPool에서 session 하나 꺼내기
-		SqlSession session=sqlSessionFactory.openSession();
-		// 꺼내온 session에서 sql문 실어서 db에 보내기
-		List<cboardVO> list = session.selectList("allList");  
-		session.close(); //ssesion 반납
+
+	public List<cboardVO> cList() {
+		SqlSession session = sqlSessionFactory.openSession();
+		List<cboardVO> list = session.selectList("cList");
+		session.close();
 		return list;
 	}
 	// 커뮤니티 게시판 글쓰기 메소드
@@ -84,12 +82,9 @@ public class ProjectDAO {
 	}
 	// 찾아주세요 게시판 전체 리스트 가져오기 메소드
 	public List<fboardVO> fList() {  
-		//List는 ArrayList의 부모라고 생각 (좀 더 범용적으로 사용하기 위해)
-		//sessionPool에서 session 하나 꺼내기
 		SqlSession session=sqlSessionFactory.openSession();
-		// 꺼내온 session에서 sql문 실어서 db에 보내기
 		List<fboardVO> list = session.selectList("fList");  
-		session.close(); //ssesion 반납
+		session.close();
 		return list;
 	}
 	// 찾아주세요 게시판 글쓰기 메소드

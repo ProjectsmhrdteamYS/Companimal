@@ -16,6 +16,7 @@ public class BoardWriteController implements Controller {
 			throws ServletException, IOException {
 		// 글쓰기 기능
 		ProjectDAO dao = new ProjectDAO();
+		// 파라미터 수집 
 		String c_title = request.getParameter("c_title");
 		String c_content = request.getParameter("c_content");
 		
@@ -32,7 +33,7 @@ public class BoardWriteController implements Controller {
 	
 		dao.insertc(vo);
 		
-		return "redirect:/boardList.do";
+		return "redirect:/boardform.do";
 	}
 
 }

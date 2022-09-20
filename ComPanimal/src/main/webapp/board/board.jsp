@@ -5,7 +5,7 @@
 <c:set var="cpath" value="${pageContext.request.contextPath }" />
 
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 <head>
 <meta charset="EUC-KR">
 
@@ -24,7 +24,6 @@
 <link rel="stylesheet" href="${cpath }/board/basic.css">
 =======
 <meta charset="UTF-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>커뮤니티 게시판</title>
 
@@ -86,12 +85,12 @@
 				<tbody>
 					<c:forEach var="vo" items="${list }">
 						<tr>
-							<th>1</th>
+							<th>${vo.c_seq}</th>
 							<td><A CLASS="fw-bold text-dark"
-								HREF="${cpath }/cdetailform.do">오늘의 일기</A></td>
+								HREF="${cpath }/cdetailform.do">${vo.c_title}</A></td>
 							<td>${vo.c_content }</td>
 							<td>${vo.user_id }</td>
-							<td>20220914</td>
+							<td>${vo.c_date}</td>
 							<td>1</td>
 						</tr>
 					</c:forEach>

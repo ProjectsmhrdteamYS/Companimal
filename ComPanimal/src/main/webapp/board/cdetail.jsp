@@ -2,7 +2,9 @@
 	pageEncoding="UTF-8"%>
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@page import="ca.board.dao.cboardVO"%>
 <c:set var="cpath" value="${pageContext.request.contextPath }" />
+<c:set var="newLine" value="<%='\n'%>"/>
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -10,7 +12,7 @@
 <meta charset="UTF-8">
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>찾아주세요 상세페이지</title>
+ <title>커뮤니티 상세페이지</title>
 
 
    <link rel="stylesheet" href="${cpath }/css/bootstrap.css">
@@ -18,6 +20,18 @@
    <link rel="stylesheet" href="${cpath }/css/bootstrap-reboot.css">
    <link rel="stylesheet" href="${cpath }/css/bootstrap-utilities.css">
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+	function goDel(idx){
+		location.href="${cpath}/cdelete.do?idx="+c_seq;
+	}
+	function goUpdate(idx){
+		location.href="${cpath}/boardupdateForm.do?idx="+idx;
+	
+	}
+
+
+</script>
 
 </head>
 <body>
@@ -53,7 +67,7 @@
 		<div class="container">
 			<img src="${cpath }/images/mongja.jpg" alt="" width="380px"
 				class="d-inline-block align-text-top">
-			<h2>현상수배</h2>
+			<h2>디테일페이지</h2>
 			<BR>
 			<table class="table">
     		<tr>
@@ -74,16 +88,16 @@
     		</tr>
     		<tr>
     			<td colspan="2" align="center">
-    				<c:if test="${mvo.memId eq vo.memId }">
+    				<%-- <c:if test="${mvo.memId eq vo.memId }"> --%>
     					<button class="btn btn-sm btn-success" onclick="location.href='${cpath}/boardUpdateForm.do?idx=${vo.idx}'">수정</button>
-    					<button class="btn btn-sm btn-danger" onclick="location.href='${cpath}/boardDelete.do?idx=${vo.idx}'">삭제</button>
-    				</c:if>
+    					<button class="btn btn-sm btn-danger"  onclick = "goDel(${vo.c_seq})'">삭제</button>
+    			<%-- 	</c:if>
     				<c:if test="${mvo.memId ne vo.memId }">
     					<button class="btn btn-sm btn-success" disabled="disabled" onclick="location.href='${cpath}/boardUpdateForm.do?idx=${vo.idx}'">수정</button>
-    					<button class="btn btn-sm btn-danger" disabled="disabled" onclick="location.href='${cpath}/boardDelete.do?idx=${vo.idx}'">삭제</button>
-    				</c:if>
+    					<button class="btn btn-sm btn-danger" disabled="disabled" onclick = "goDel(${vo.c_seq})'">삭제</button>
+    				</c:if> --%>
     				<button type="button" class="btn btn-sm btn-primary"
-							onclick="location.href='${cpath }/boardform.do'">리스트</button>
+					onclick="location.href='${cpath }/boardform.do'">리스트</button>
     			</td>
     		</tr>
     	</table>
