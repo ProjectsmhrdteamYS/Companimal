@@ -95,16 +95,16 @@ public class ProjectDAO {
 			session.close();
 		}
 	// 찾아주세요 게시판 상세보기 메소드
-	public fboardVO fdetail(int idx) {
+	public fboardVO fdetail(int f_seq) {
 		SqlSession session = sqlSessionFactory.openSession();
-		fboardVO vo = session.selectOne("fdetail", idx);
+		fboardVO vo = session.selectOne("fdetail", f_seq);
 		session.close();
 		return vo;
 	}
 	// 찾아주세요 게시판 조회수 증가 메소드
-	public void countf(int idx) {
+	public void countf(int f_seq) {
 		SqlSession session = sqlSessionFactory.openSession();
-		session.update("countf",idx);
+		session.update("countf",f_seq);
 		session.commit();
 		session.close();
 	}

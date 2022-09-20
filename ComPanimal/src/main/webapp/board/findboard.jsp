@@ -96,7 +96,7 @@
 										<div class="btn-group">
 											<button type="button"
 												class="btn btn-sm btn-primary "
-												onclick="location.href='${cpath }/fdetailform.do'">상태 : ${vo.f_title }</button>
+												onclick="location.href='${cpath }/fdetailform.do?f_seq=${vo.f_seq}'">상태 : ${vo.f_title }</button>
 									</div>
 									<p class="card-text">위치 : ${vo.f_content }</p>
 									</div>
@@ -110,11 +110,13 @@
 
 				</div>
 				<p></p>
+				<c:if test="${!empty uvo }">
 				<div align="right">
 					<button type="button" class="btn btn-primary"
 						onclick="location.href='${cpath }/findwriteform.do'">게시물
 						작성</button>
 				</div>
+				</c:if>
 			</div>
 		</div>
 	</main>

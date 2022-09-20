@@ -75,7 +75,7 @@
 			<h2>현상수배</h2>
 			<BR>
 			<form action="${cpath}/findwrite.do">
-				<input type="hidden" name="user_id" value="test1">
+				<input type="hidden" name="user_id" value="${uvo.user_id }">
 				<div class="input-group flex-nowrap">
 					<span class="input-group-text" id="addon-wrapping">제목</span>
 					 <input	type="text" class="form-control"aria-label="title" 
@@ -95,7 +95,7 @@
 				<br>
 				<div>
 					<input class="form-control" type="text"
-						placeholder=" << 작성자 여기에 넣으면 됨" disabled>
+						placeholder=" ${uvo.user_id}" disabled>
 				</div>
 
 				<br>

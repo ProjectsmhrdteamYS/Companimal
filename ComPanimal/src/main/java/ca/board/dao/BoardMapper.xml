@@ -3,11 +3,6 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="ca.board.dao.BoardMapper">
-
-	
-<!-- userVO에 사용하는 sql문 -->
-
-
 	<!-- 1. 회원가입 -->
 	<insert id="signupMethod" parameterType="ca.board.dao.userVO">
 		insert into	tbl_user(user_id,user_pw,user_name,user_birth,user_tel,user_addr,user_type,user_joindate)
@@ -20,8 +15,8 @@
 		select * from tbl_community order by c_seq desc	</select>
 	<!-- 4. 커뮤니티 게시판 글쓰기 -->
 	<insert id="insertc" parameterType="ca.board.dao.cboardVO">
-		insert into	tbl_community(c_seq,c_title,c_content,c_date,c_file,user_id)
-		values(tbl_community_SEQ.NEXTVAL,#{c_title},#{c_content},sysdate,#{c_file},#{user_id}) </insert>
+		insert into	tbl_community(c_seq,c_title,c_content,c_date,c_file,user_id,c_cnt)
+		values(tbl_community_SEQ.NEXTVAL,#{c_title},#{c_content},#{c_date},#{c_file},#{user_id},#{c_cnt}) </insert>
 	<!-- 5. 커뮤니티 게시판 상세 페이지 -->
 	<select id="cdetail" parameterType="int" resultType="ca.board.dao.cboardVO">
 		select * from tbl_community where c_seq=#{c_seq} </select>
@@ -37,8 +32,8 @@
 	<select id="fList" resultType="ca.board.dao.fboardVO"> select * from tbl_find order by f_seq desc </select>
 	<!-- 10. 찾아주세요 게시판 글쓰기 -->
 	<insert id="insertf" parameterType="ca.board.dao.fboardVO">
-		insert into tbl_find(f_seq,f_title,f_content,f_date,f_file,user_id,f_cnt)
-		values(tbl_find_SEQ.NEXTVAL,#{f_title},#{f_content},sysdate,#{f_file},#{user_id},23) </insert>
+		insert into tbl_find(f_seq,f_title,f_content,f_date,f_file,user_id)
+		values(tbl_find_SEQ.NEXTVAL,#{f_title},#{f_content},sysdate,#{f_file},#{user_id}) </insert>
 	<!-- 11. 찾아주세요 게시판 상세 페이지 -->
 	<select id="fdetail" parameterType="int" resultType="ca.board.dao.fboardVO">
 		select * from tbl_find where f_seq = #{f_seq} </select>
@@ -51,5 +46,4 @@
 	<!-- 14. 찾아주세요 게시판 수정 -->
 	<update id="fUpdate" parameterType="ca.board.dao.fboardVO">
 		update tbl_find set f_title=#{f_title},f_content=#{f_content} where f_seq=#{f_seq} </update>
-
 </mapper>
