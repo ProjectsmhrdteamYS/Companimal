@@ -198,7 +198,7 @@ div.container {
 					href="/docs/5.1/getting-started/introduction/">getting started
 					guide</a>.
 			</p>
-		</div>
+		</div> 
 	</footer>
 </body>
 </html>
