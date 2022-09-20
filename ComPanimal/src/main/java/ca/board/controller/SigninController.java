@@ -1,6 +1,7 @@
 package ca.board.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -32,8 +33,11 @@ public class SigninController implements Controller {
 			HttpSession session = request.getSession(); // 세션id 값이 있는지 먼저 확인 -> 있다 -> 쓰면됨 (getSession은 가지고 오는 것만 아니라 내려보내는것까지 해줌)
 			// session으로 바인딩 시 동일한 session으로 jsp들이 정보를 받을 수 있음.
 			session.setAttribute("uvo", uvo);
-			
-			
+//			response.setCharacterEncoding("UTF-8");
+//			response.setContentType("text/html; charset=UTF-8");
+//			
+//			PrintWriter out = response.getWriter();
+//			out.print("<script>alert('로그인성공');</script>");
 		}
 		
 		

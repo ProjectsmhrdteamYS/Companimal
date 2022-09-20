@@ -16,9 +16,9 @@ public class BoardFormController implements Controller {
 	public String requestHandler(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// 커뮤니티 게시판 목록 불러오기
-		ProjectDAO dao = new ProjectDAO();
-		List<cboardVO> list = dao.cList();
-		request.setAttribute("list", list);
+//		ProjectDAO dao = new ProjectDAO();
+//		List<cboardVO> list = dao.cList();
+//		request.setAttribute("list", list);
 		return "board";
 	}
 
