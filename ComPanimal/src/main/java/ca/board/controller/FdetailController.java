@@ -12,6 +12,7 @@ public class FdetailController implements Controller {
 	public String requestHandler(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// find게시판 수정 기능
+		
 		return null;
 	}
 
