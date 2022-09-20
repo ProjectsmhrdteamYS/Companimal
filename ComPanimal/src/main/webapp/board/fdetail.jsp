@@ -82,6 +82,7 @@
     				<c:if test="${uvo.user_id eq vo.user_id }">
     					<button class="btn btn-sm btn-success" onclick="location.href='${cpath}/fupdateform.do?f_seq=${vo.f_seq}'">수정</button>
     					<button class="btn btn-sm btn-danger" onclick="location.href='${cpath}/fdelete.do?f_seq=${vo.f_seq}'">삭제</button>
+    					<button class = "btn btn-sm btn-primary" onclick = "location.href='${cpath}/findboardform.do'">리스트</button>
     				</c:if>
     				<c:if test="${uvo.user_id ne vo.user_id  }">
     				<button type="button" class="btn btn-sm btn-primary"
