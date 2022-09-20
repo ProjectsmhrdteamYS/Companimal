@@ -109,9 +109,9 @@ public class ProjectDAO {
 		session.close();
 	}
 	// 찾아주세요 게시판 수정 메소드
-	public void fUpdate(int idx) {
+	public void fUpdate(fboardVO vo) {
 		SqlSession session = sqlSessionFactory.openSession();
-		session.update("fUpdate",idx);
+		session.update("fUpdate",vo);
 		session.commit();
 		session.close();
 	}

@@ -45,5 +45,5 @@
 		delete from tbl_find where f_seq=#{f_seq}	</delete>
 	<!-- 14. 찾아주세요 게시판 수정 -->
 	<update id="fUpdate" parameterType="ca.board.dao.fboardVO">
-		update tbl_find set f_title=#{f_title},f_content=#{f_content} where f_seq=#{f_seq} </update>
+		update tbl_find set f_seq=#{f_seq},f_title=#{f_title},f_content=#{f_content} where f_seq=#{f_seq} </update>
 </mapper>
