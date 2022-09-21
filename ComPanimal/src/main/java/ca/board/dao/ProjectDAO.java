@@ -76,7 +76,7 @@ public class ProjectDAO {
 	// 커뮤니티 게시판 삭제 메소드
 	public void cboardDelete(int c_seq) {
 		SqlSession session = sqlSessionFactory.openSession();
-		int del = session.delete("cboardDelete", c_seq);
+		int vo = session.delete("cboardDelete", c_seq);
 		session.commit();
 		session.close();
 	}
@@ -118,7 +118,7 @@ public class ProjectDAO {
 	// 찾아주세요 게시판 삭제 메소드
 	public void fboardDelete(int idx) {
 		SqlSession session = sqlSessionFactory.openSession();
-		fboardVO vo = session.selectOne("fboardDelete", idx);
+		int vo = session.delete("fboardDelete", idx);
 		session.commit();
 		session.close();
 	}
