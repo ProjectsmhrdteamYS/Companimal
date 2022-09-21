@@ -151,7 +151,6 @@ transition: background-color 0.5s;
   </form>
 </div>
 
-</div>
     
 	<div class="container">
 <footer class="py-5 " >
