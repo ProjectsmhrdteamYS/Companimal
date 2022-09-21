@@ -23,34 +23,17 @@
 	crossorigin="anonymous"></script>
 
 <style>
-/* 공통 style */
-.nav {
-	list-style-type: none;
-	font-weight: 600;
-	text-decoration: none;
-	color: #150906;
-}
+ /* 공통 style */
+    ul li{list-style: none; font-weight: 700; }
+    a {text-decoration: none;  color :#150906;}
+    a:hover {
+    color: orange;
+    transition: background-color 0.5s;
+  }
 
-/* 세부디자인 */
-.icon {
-	width: 100px;
-	font-weight: 500;
-	margin-top: 5px;
-}
+  /* 세부디자인 */
+  .icon{ width: 100px; font-weight: 500; margin-top: 5px;}
 </style>
-
-
-<style>
-ul li {
-	list-style: none;
-	font-weight: 600;
-}
-
-a {
-	text-decoration: none;
-}
-</style>
-
 
 </head>
 <body>
@@ -205,46 +188,42 @@ a {
 			</a>
 		</div>
 	</div>
+	
 	<div class="container">
 		<div class="row pt-5">
 			<div class="col-md-6">
 				<div class="h-100 p-5 text-white bg-dark rounded-3"
-					style="background-image: url(images/main_con_1.jpg); background-size: cover;">
-					<h2 class="fw-bold">Change the background</h2>
-					<p>Swap the background-color utility and add a `.text-*` color
-						utility to mix up the jumbotron look. Then, mix and match with
-						additional component themes and more.</p>
-					<button class="btn btn-outline-light" type="button">Example
-						button</button>
+					style="background-image: url(${cpath }/images/main_con_1.jpg); background-size: cover;">
+					<h2 class="fw-bold">찾아주세요</h2>
+					<p>Swap the background-color utility <br>
+				    and add a Then, mix and match with <br>
+				    additional component themes and more.</p>
+					 <button class="btn btn-outline-primary fw-bold" onclick="${cpath }location.href='/find.html'" type="button" style="width:130px;">Find</button>
 				</div>
 			</div>
 			<div class="col-md-6">
-				<div class="h-100 p-5 bg-light border rounded-3"
-					style="background-image: url(images/main_con_2.jpg); background-size: cover;">
-					<h2 class="fw-bold">Add borders</h2>
-					<p>Or, keep it light and add a border for some added definition
-						to the boundaries of your content. Be sure to look under the hood
-						at the source HTML here as we've adjusted the alignment and sizing
-						of both column's content for equal-height.</p>
-					<button class="btn btn-outline-secondary" type="button">Example
-						button</button>
+				<div class="h-100 p-5 text-white border rounded-3" style="background-image:url(${cpath }/images/main_con_2.jpg); background-size: cover;">
+					<h2 class="fw-bold">우리 댕댕이</h2>
+				   	  <p>Swap the background-color utility <br>
+				      and add a Then, mix and match with <br>
+				      additional component themes and more.</p>
+					<button class="btn btn-outline-light fw-bold" onclick="location.href='/${cpath }board.html'" type="button" style="width:130px;">board</button>
 				</div>
 			</div>
 		</div>
 	</div>
 
 
-
 	<!-- footer -->
 	<div class="container">
-		<footer class="py-5 ">
+		<footer class="py-5" style="color:#555;">
 			<div class="d-flex justify-content-between py-4 my-4 border-top">
 				<div class="row">
 					<div class="col">
 						<ul class="list-unstyled">
-							<li>© 2022 Company, Inc. All rights reserved.</li>
-							<li>주식회사 컴패니멀 어쩌구 저쩌구</li>
-							<li>그래서 만든사람 어쩌구저쩌구</li>
+							<li class="fw-normal">© 2022 Company, Inc. All rights reserved.</li>
+							<li class="fw-normal">주식회사 컴패니멀 어쩌구 저쩌구</li>
+							<li class="fw-normal">그래서 만든사람 어쩌구저쩌구</li>
 						</ul>
 					</div>
 				</div>

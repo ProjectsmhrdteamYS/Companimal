@@ -12,10 +12,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- ajax -->
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!-- <script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
 <title>동물 조회</title>
 <link rel="stylesheet" href="${cpath }/css/bootstrap.css">
 <link rel="stylesheet" href="${cpath }/css/bootstrap-grid.css">
@@ -35,10 +36,28 @@
   </script>
 	
 <style>
-ul li {
-	list-style: none;
-}
-</style>
+    /* 공통 style */
+    ul li{list-style: none; font-weight: 700; }
+    a {text-decoration: none;  color :#150906;}
+    a:hover {
+    color: orange;
+    transition: background-color 0.5s;
+  }
+
+
+.search {
+      max-width: 650px;
+      margin-top: 80px;
+      padding: 32px;
+      background: #fff;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      -webkit-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+      -moz-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+      box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15)
+    }
+    </style>
 </head>
 <body>
 	<!-- header -->
@@ -85,36 +104,35 @@ ul li {
 	
 
 		
-		<div class="container" ">
-			<div class="form-signin mx-auto mt-5 mb-5">
-				<form class="border rounded-4 p-5 mx-auto"
-					style="width: 650px; height: 620px;" action="javascript:petView()">
-					<img class="mb-4" src="${cpath }/images/222.jpg" alt="로고"
-						width="100%" height="120px">
-					<h1 class="h3 mt-3 fw-normal text-center">반려동물 조회 서비스</h1>
-					<br> <br> <br>
+		<div class="container">
+			<div class="form-signin mx-auto mt-5">
+			<!-- <div class="form-signin mx-auto mt-5 mb-5"> -->
+				<form class="search rounded-4 p-5 mx-auto h-100" 
+				  action="javascript:petView()">	
+					<img class="mx-5" src="${cpath }/images/logo.png" alt="로고"
+						width="80%">
+					<h1 class="h3 mt-3 fw-bold text-center" style=color:#444;>반려동물 조회 서비스</h1>
+					<br> <br>
 					<div class="mb-3">
 						<label for="lname">소유자명</label> <input type="text"
 							class="form-control" style="height: 3em;"
 							id="lname" placeholder="소유자명">
 					</div>
-					<div class="mb-3">
+					<div class="mb-5">
 						<label for="fname">동물등록번호</label> <input type="text"
 							class="form-control" style="height: 3em;"
 							id="fname" placeholder="등록번호 15자리">
 					</div>
-					<hr>
 
-					<!-- 이미지 업로드해서 조회 - 삭제:
+			<!-- 이미지 업로드해서 조회 - 삭제:
 			<label for="lname">QR이미지로 조회<img src=""></label>
 			<br>
 			<input	type="file" id="myFile" name="filename">
-			<hr>
-			 -->
+			<hr>-->
 					<input class="w-100 btn btn-lg btn-primary" style="height: 60px;"
 						id="btn1" type="submit" value="조회">
 				</form>
-			</div>
+		</div>
 	</div>
 
 			<!-- 조회버튼시 나오는 표  -->
@@ -138,7 +156,7 @@ ul li {
                 	alert(res.response.header.errorMsg)
                 	}
                 	else{
-                	let code='<div class="container"><table class ="table table-bordered" id="ct"><tr style="background-color:#F57F32">'
+                	let code='<div class="container"><table class ="table table-bordered mt-5" id="ct"><tr style="background-color:#F57F32">'
                         code +='<th>번호</th>'
                         code +='<th>이름</th>'
                         code +='<th>견종</th>'
@@ -176,14 +194,14 @@ ul li {
 	</main>
 <!-- footer -->
 	<div class="container">
-		<footer class="py-5 ">
+		<footer class="py-5" style="color:#555;">
 			<div class="d-flex justify-content-between py-4 my-4 border-top">
 				<div class="row">
 					<div class="col">
 						<ul class="list-unstyled">
-							<li>© 2022 Company, Inc. All rights reserved.</li>
-							<li>주식회사 컴패니멀 어쩌구 저쩌구</li>
-							<li>그래서 만든사람 어쩌구저쩌구</li>
+							<li class="fw-normal">© 2022 Company, Inc. All rights reserved.</li>
+							<li class="fw-normal">주식회사 컴패니멀 어쩌구 저쩌구</li>
+							<li class="fw-normal">그래서 만든사람 어쩌구저쩌구</li>
 						</ul>
 					</div>
 				</div>

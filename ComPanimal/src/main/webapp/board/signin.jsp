@@ -34,10 +34,8 @@
   }
       .search {
       max-width: 680px;
-
       margin-top: 80px;
       padding: 32px;
-
       background: #fff;
       -webkit-border-radius: 10px;
       -moz-border-radius: 10px;
@@ -91,30 +89,29 @@
 		</div>
 	</header>
 	
-	<main class="form-signin">
+	<div class="form-signin">
 		<form class="search rounded-4 p-5 mx-auto h-100" style="width: 650px;" action="${cpath }/signin.do">
-			<a class="logo" href="${cpath }/mainpage.do"> <img
-				src="${cpath }/images/logo.png" alt="로고" width="80%"
-				class="d-inline-block align-text-top">
+			<a class="logo" href="${cpath }/mainpage.do"> 
+			<img class="mx-5" src="${cpath }/images/logo.png" alt="로고" width="80%">
 			</a> <br>
 			<br>
 			<br>
-			<div class="form-floating">
+			<div class="form-floating mb-2">
 				<input type="text" class="form-control"
 				id="floatingInput" name = "user_id" placeholder="id"> 
-					<label for="floatingInput">ID</label>
+				<label for="floatingInput">ID</label>
 			</div>
-			<div class="form-floating">
+			<div class="form-floating mb-5">
 				<input type="password" class="form-control"
-				id="floatingPassword" name = "user_pw" placeholder="Password"
-				> 
+				id="floatingPassword" name = "user_pw" placeholder="Password"> 
 					<label for="floatingPassword">Password</label>
 			</div>
-			<button class="w-100 btn btn-lg btn-primary" type="submit">Sign
-				in</button>
-			<p class="mt-5 mb-3 text-muted">&copy; 2022 CompAnimal</p>
+			<button class="w-100 btn btn-lg btn-primary mb-4" type="submit">Sign in</button>
 		</form>
-	</main>
+	</div>
+
+
+
 <!-- footer -->
 	<div class="container">
 		<footer class="py-5 ">

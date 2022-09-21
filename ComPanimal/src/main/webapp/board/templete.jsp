@@ -81,14 +81,14 @@ a {
 
 	<!-- footer -->
 	<div class="container">
-		<footer class="py-5 ">
+		<footer class="py-5" style="color:#555;">
 			<div class="d-flex justify-content-between py-4 my-4 border-top">
 				<div class="row">
 					<div class="col">
 						<ul class="list-unstyled">
-							<li>© 2022 Company, Inc. All rights reserved.</li>
-							<li>주식회사 컴패니멀 어쩌구 저쩌구</li>
-							<li>그래서 만든사람 어쩌구저쩌구</li>
+							<li class="fw-normal">© 2022 Company, Inc. All rights reserved.</li>
+							<li class="fw-normal">주식회사 컴패니멀 어쩌구 저쩌구</li>
+							<li class="fw-normal">그래서 만든사람 어쩌구저쩌구</li>
 						</ul>
 					</div>
 				</div>
