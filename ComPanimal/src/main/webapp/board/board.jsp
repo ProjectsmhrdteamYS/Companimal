@@ -109,7 +109,6 @@ transition: background-color 0.5s;
 
     <main id="wrap" class="position-relative">
       <div class="container">
-        <!-- <img src="${cpath }/images/mongja.jpg" alt="" width="380px" -->
         <img src="${cpath }/images/board_banner_1.jpg" class="mt-2 mb-2" alt="" width="100%"
           class="d-inline-block align-text-top">
         <br><br>
@@ -145,8 +144,8 @@ transition: background-color 0.5s;
           onclick="location.href='${cpath }/boardwriteform.do'">
           게시물 작성</button>
       </div>
-      </div>
       	</c:if>
+      	</div>
     </main>
 
       <!-- footer -->
