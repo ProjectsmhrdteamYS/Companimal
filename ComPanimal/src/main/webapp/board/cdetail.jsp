@@ -33,10 +33,10 @@ transition: background-color 0.5s;
 
 <script type="text/javascript">
 	function goDel(c_seq) {
-		location.href = "${cpath}/cdelete.do?c_seq=" + c_seq;
+		location.href = "${cpath}/cdelete.do?c_seq="+c_seq;
 	}
 	function goUpdate(c_seq) {
-		location.href = "${cpath}/cupdateform.do?c_seq=" + c_seq;
+		location.href = "${cpath}/cupdateform.do?c_seq="+c_seq;
 
 	}
 	</script>
