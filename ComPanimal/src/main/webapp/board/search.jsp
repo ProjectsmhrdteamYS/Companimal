@@ -74,6 +74,12 @@ ul li {
 	</header>
 	<p></p>
 	<main>
+	
+	 <script type="text/javascript">
+  		function petView() {
+  		$("#ct").css("display","table-row");
+  	}    
+     </script>
 		<div class="container p-lg-5" style="height: 780px;">
 			<div class="form-signin mx-auto mt-5">
 				<form class="border rounded-4 p-5 mx-auto"
@@ -85,12 +91,12 @@ ul li {
 					<div class="mb-3">
 						<label for="lname">소유자명</label> <input type="text"
 							class="form-control" style="height: 3em;"
-							lname" placeholder="소유자명">
+							id="lname" placeholder="소유자명">
 					</div>
 					<div class="mb-3">
 						<label for="fname">동물등록번호</label> <input type="text"
 							class="form-control" style="height: 3em;"
-							fname" placeholder="등록번호 15자리">
+							id="fname" placeholder="등록번호 15자리">
 					</div>
 					<hr>
 
@@ -110,7 +116,7 @@ ul li {
 			<!-- 디비연결되면 <tr id="ct${vo.idx}" style="display: none">로 변경-->
 			<div id="petList"></div>
 
-			<script>
+		 <script>
    var lname=document.getElementById('lname');
    var fname=document.getElementById('fname');
    
@@ -121,6 +127,12 @@ ul li {
                 url : "http://apis.data.go.kr/1543061/animalInfoSrvc/animalInfo?_type=json&dog_reg_no="+fname.value+"&owner_nm="+lname.value+"&serviceKey=%2FR3EvQD0BDHw%2FwKWewHQFMQ8MXNoIIlhw1%2BNBkbz7Ut52RP7ylh84FK27bQDPhcXi2xxtpfnbsF5iRjvUnskxg%3D%3D", 
                 type : 'get',
                 success : (res)=>{
+               		let object=Object.keys(res.response.header)
+               		console.log(object)
+                	if(object.includes('errorMsg')){
+                	alert(res.response.header.errorMsg)
+                	}
+                	else{
                 	let code='<table class ="table table-bordered" id="ct"><tr style="background-color:#F57F32">'
                         code +='<th>번호</th>'
                         code +='<th>이름</th>'
@@ -129,20 +141,26 @@ ul li {
                         code +='<th>중성화여부</th>'
                         code +='<th>관할</th>'
                         code +='<th>관할센터번호</th></tr>'
-                	console.log(res.response.body.item);
-                    let items = res.response.body.item;
-                    code += '<tr>';
-                	code += '<td>'+items.dogRegNo+'</td>';
-                	code += '<td>'+items.dogNm+'</td>';
-                	code += '<td>'+items.sexNm+'</td>';
-                	code += '<td>'+items.kindNm+'</td>';
-                	code += '<td>'+items.neuterYn+'</td>';
-                	code += '<td>'+items.orgNm+'</td>';
-                	code += '<td>'+items.officeTel+'</td>';
-                	code += '</tr>';
                        
-                	code +='</table>'
+                    console.log(res.response.body.item)
+                    	/* 소유자명이나 등록번호(15자리 다쳣을경우)이 잘못됏을 경우 오류코드가 없어서 만듦  */
+                    	if(typeof res.response.body.item=="undefined"){
+                    	alert("소유자명 또는 동물등록번호가 잘못되었습니다.")
+                   		}else{
+                   		let items = res.response.body.item;
+                    	code += '<tr>';
+                		code += '<td>'+items.dogRegNo+'</td>';
+                		code += '<td>'+items.dogNm+'</td>';
+                		code += '<td>'+items.sexNm+'</td>';
+                		code += '<td>'+items.kindNm+'</td>';
+                		code += '<td>'+items.neuterYn+'</td>';
+                		code += '<td>'+items.orgNm+'</td>';
+                		code += '<td>'+items.officeTel+'</td>';
+                		code += '</tr>'; 
+                		code +='</table>';
                     $('#petList').html(code);
+                    }
+                	}
                 } ,
                 error : function(){
                     alert('등록되지 않은 번호 입니다')
