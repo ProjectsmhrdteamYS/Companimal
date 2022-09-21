@@ -16,7 +16,7 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<title>동물 조회</title>
+<title>반려동물조회</title>
 <link rel="stylesheet" href="${cpath }/css/bootstrap.css">
 <link rel="stylesheet" href="${cpath }/css/bootstrap-grid.css">
 <link rel="stylesheet" href="${cpath }/css/bootstrap-reboot.css">
@@ -26,15 +26,34 @@
 	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 	crossorigin="anonymous"></script>
 <style>
-ul li {
-	list-style: none;
-}
+  ul li{list-style: none; font-weight: 700; }
+    a {text-decoration: none;  color :#150906;}
+    a:hover {
+    color: orange;
+    transition: background-color 0.5s;
+  }
+  
+  .search {
+      max-width: 680px;
+
+      margin-top: 80px;
+      padding: 32px;
+
+      background: #fff;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      -webkit-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+      -moz-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+      box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15)
+    }
+  
 </style>
 </head>
 <body>
 	<!-- header -->
-	<<<<<<< HEAD
-	<header class=" container-fluid p-3 bg-white ">
+
+.	<header class=" container-fluid p-3 bg-white ">
 		<div class="container p-3">
 			<div
 				class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start ">
