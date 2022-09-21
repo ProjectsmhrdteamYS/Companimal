@@ -8,15 +8,12 @@
 <!-- 조회 css -->
 
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<title>동물 조회</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>메인</title>
 <link rel="stylesheet" href="${cpath }/css/bootstrap.css">
 <link rel="stylesheet" href="${cpath }/css/bootstrap-grid.css">
 <link rel="stylesheet" href="${cpath }/css/bootstrap-reboot.css">
@@ -25,7 +22,7 @@
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 	crossorigin="anonymous"></script>
-	
+<style>
 	
 <!--  메소드 -->	
 <script type="text/javascript">
@@ -34,9 +31,12 @@
 }    
   </script>
 	
-<style>
-ul li {
-	list-style: none;
+/* 공통 style */
+ul li{list-style: none; font-weight: 700; }
+a {text-decoration: none;  color :#150906;}
+a:hover {
+color: orange;
+transition: background-color 0.5s;
 }
 </style>
 </head>
@@ -175,9 +175,9 @@ ul li {
     </script>
 	</main>
 
+
+
 	<footer class="py-5 ">
-
-
 		<div class="d-flex justify-content-between py-4 my-4 border-top">
 
 			<div class="row">
