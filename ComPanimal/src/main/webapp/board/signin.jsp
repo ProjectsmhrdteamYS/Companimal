@@ -25,7 +25,6 @@
 
 
  <style>
-
     /* 공통 style */
     ul li{list-style: none; font-weight: 700; }
     a {text-decoration: none;  color :#150906;}
@@ -33,7 +32,6 @@
     color: orange;
     transition: background-color 0.5s;
   }
-
       .search {
       max-width: 680px;
 
@@ -48,9 +46,6 @@
       -moz-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
       box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15)
     }
-
-
-  
     </style>
 
 
@@ -120,31 +115,27 @@
 			<p class="mt-5 mb-3 text-muted">&copy; 2022 CompAnimal</p>
 		</form>
 	</main>
-<div class="container">
-<footer class="py-5 ">
-		<div class="d-flex justify-content-between py-4 my-4 border-top">
-			<div class="row">
-				<div class="col">
-					<ul>
-						<li>© 2022 Company, Inc. All rights reserved.</li>
-						<li>주식회사 컴패니멀 어쩌구 저쩌구</li>
-						<li>그래서 만든사람 어쩌구저쩌구</li>
-					</ul>
+<!-- footer -->
+	<div class="container">
+		<footer class="py-5 ">
+			<div class="d-flex justify-content-between py-4 my-4 border-top">
+				<div class="row">
+					<div class="col">
+						<ul class="list-unstyled">
+							<li>© 2022 Company, Inc. All rights reserved.</li>
+							<li>주식회사 컴패니멀 어쩌구 저쩌구</li>
+							<li>그래서 만든사람 어쩌구저쩌구</li>
+						</ul>
+					</div>
 				</div>
-				<div class="col">
-					<ul>
-						<li>© 2022 Company, Inc. All rights reserved.</li>
-						<li>주식회사 컴패니멀 어쩌구 저쩌구</li>
-						<li>그래서 만든사람 어쩌구저쩌구</li>
-					</ul>
-				</div>
+				<ul class="list-unstyled d-flex ">
+					<li class="btn btn-primary py-4 me-2">짹짹이</li>
+					<li class="btn btn-outline-secondary py-4 me-2">인서타</li>
+					<li class="btn btn-primary py-4 me-2">농농농</li>
+				</ul>
 			</div>
-			<ul class="list-unstyled d-flex ">
-				<li class="btn btn-primary py-4 me-2">짹짹이</li>
-				<li class="btn btn-outline-secondary py-4 me-2">인서타</li>
-				<li class="btn btn-primary py-4 me-2">농농농</li>
-			</ul>
-	</footer>
+		</footer>
 	</div>
+	<!-- footer end -->
 </body>
 </html>
