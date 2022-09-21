@@ -8,25 +8,57 @@
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+	crossorigin="anonymous"></script>
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+	</script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>메인</title>
 <link rel="stylesheet" href="${cpath }/css/bootstrap.css">
 <link rel="stylesheet" href="${cpath }/css/bootstrap-grid.css">
 <link rel="stylesheet" href="${cpath }/css/bootstrap-reboot.css">
 <link rel="stylesheet" href="${cpath }/css/bootstrap-utilities.css">
-<script
-	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-	crossorigin="anonymous"></script>
+<title>회원가입</title>
+
 <style>
-/* 공통 style */
-ul li{list-style: none; font-weight: 700; }
-a {text-decoration: none;  color :#150906;}
-a:hover {
-color: orange;
-transition: background-color 0.5s;
-}
-</style>
+
+  /* 공통 style */
+  ul li{list-style: none; font-weight: 700; }
+  a {text-decoration: none;  color :#150906;}
+  a:hover {
+  color: orange;
+  transition: background-color 0.5s;
+  }
+  body {
+    min-height: 100vh;
+  }
+
+  .input-form {
+    max-width: 650px;
+
+    margin-top: 80px;
+    padding: 50px;
+
+    background: #fff;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15)
+  }
+
+  .input-form  input{
+    height: 48px;
+  }
+  </style>
+
+
 </head>
 <body>
 	<!-- header -->
@@ -67,9 +99,8 @@ transition: background-color 0.5s;
 							onclick="location.href='${cpath }/signupform.do'">Sign-up</button>
 					</c:if>
 					<c:if test="${!empty uvo }">
-              ${uvo.user_id}님 환영합니다.
-              <button type="button"
-							class="btn btn-outline-secondary me-1"
+              		${uvo.user_id}님 환영합니다.
+              			<button type="button" class="btn btn-outline-secondary me-1"
 							onclick="location.href='${cpath }/logout.do'">Logout</button>
 					</c:if>
 				</div>
@@ -78,24 +109,15 @@ transition: background-color 0.5s;
 	</header>
 	<!-- header end -->
 	<main id="wrap">
-		<!-- <div class="input-form col-md-12 mx-auto"> -->
-		<div class="container"></div>
+		<div class="container">
 		<div class="input-form-backgroud row">
 			<div class="input-form col-md-12 mx-auto">
-				<br>
-				<!--사진 크기조절  -->
-				<div style="text-align: center";>
-					<img alt="erorr" src="${cpath }/images/logo.png" width="320">
-				</div>
-				<br> <br>
-
-				<!-- form methods 선정되는거 없으면 get방식임 -->
-				<form accept-charset="UTF-8" class="validation-form"
-					action="${cpath}/signup.do" method="get">
+				<img class="mx-5" src="${cpath }/images/logo.png" alt="로고" width="80%" >
+				<form class="validation-form" novalidate action="${cpath}/signup.do" method="get">
 					<div class="row">
 						<div class="mb-3">
-							<label for="id">ID</label> <input type="text"
-								class="form-control" name="user_id" placeholder="" required>
+							<label for="id">ID</label>
+							<input type="text" class="form-control" name="user_id" placeholder="" required>
 							<div class="invalid-feedback">아이디를 입력해주세요.</div>
 						</div>
 						<div class="mb-3">
@@ -131,37 +153,37 @@ transition: background-color 0.5s;
 					</div>
 					<hr class="mb-4">
 					<div class="custom-control custom-checkbox">
-						<!-- <input type="checkbox" class="custom-control-input" id="aggrement"
-							required> -->
 						<label class="custom-control-label" for="aggrement">개인정보
-							수집 및 이용에 동의합니다</label> <br> <input type="radio"
-							class="custom-control-input" id="aggrement" required
-							name="user_type" value="1"> <label
-							class="custom-control-label" for="aggrement">동의</label> <input
-							type="radio" class="custom-control-input" id="aggrement" required
-							name="user_type" value="0"> <label
-							class="custom-control-label" for="aggrement">비동의</label>
+							수집 및 이용에 동의합니다</label>
+							<br>
+							<input type="radio" class="custom-control-input" id="aggrement" required name="user_type" value="1">
+							<label class="custom-control-label" for="aggrement">동의</label>
+							<input type="radio" class="custom-control-input" id="aggrement" required name="user_type" value="0">
+							<label class="custom-control-label" for="aggrement">비동의</label>
 					</div>
 					<div class="mb-4"></div>
 					<button class="btn-lg btn-block"
 						style="background-color: #ff7530; border: none; color: white"
 						type="submit">가입 하기</button>
 				</form>
-				<!-- 	</div> -->
+			  </div>
 			</div>
 		</div>
+		
 		<script>window.addEventListener('load', () => {
-      const forms = document.getElementsByClassName('validation-form');
-      Array.prototype.filter.call(forms, (form) => {
-        form.addEventListener('submit', function (event) {
-          if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
-          }
-          form.classList.add('was-validated');
-        }, false);
-      });
-    }, false);</script>
+      		const forms = document.getElementsByClassName('validation-form');
+      
+      		Array.prototype.filter.call(forms, (form) => {
+        		form.addEventListener('submit', function (event) {
+          			if (form.checkValidity() === false) {
+            			event.preventDefault();
+            			event.stopPropagation();
+          			}
+          			form.classList.add('was-validated');
+        			}, false);
+      			});
+    		}, false);
+		</script>
 	</main>
 	<!-- footer -->
 	<div class="container">

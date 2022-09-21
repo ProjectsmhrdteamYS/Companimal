@@ -11,6 +11,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>메인</title>
+
+
 <link rel="stylesheet" href="${cpath }/css/bootstrap.css">
 <link rel="stylesheet" href="${cpath }/css/bootstrap-grid.css">
 <link rel="stylesheet" href="${cpath }/css/bootstrap-reboot.css">
@@ -19,18 +21,40 @@
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 	crossorigin="anonymous"></script>
+
 <style>
 /* 공통 style */
-ul li{list-style: none; font-weight: 700; }
-a {text-decoration: none;  color :#150906;}
-a:hover {
-color: orange;
-transition: background-color 0.5s;
+.nav {
+	list-style-type: none;
+	font-weight: 600;
+	text-decoration: none;
+	color: #150906;
+}
+
+/* 세부디자인 */
+.icon {
+	width: 100px;
+	font-weight: 500;
+	margin-top: 5px;
 }
 </style>
 
+
+<style>
+ul li {
+	list-style: none;
+	font-weight: 600;
+}
+
+a {
+	text-decoration: none;
+}
+</style>
+
+
 </head>
 <body>
+
 	<!-- header -->
 	<header class=" container-fluid p-3 bg-white ">
 		<div class="container p-3">
@@ -71,11 +95,10 @@ transition: background-color 0.5s;
 
 					<c:if test="${!empty uvo }">
               ${uvo.user_id}님 환영합니다.
-              <button type="button"
+              	<button type="button"
 							class="btn btn-outline-secondary me-1"
 							onclick="location.href='${cpath }/logout.do'">Logout</button>
 					</c:if>
-
 				</div>
 			</div>
 		</div>
@@ -125,15 +148,14 @@ transition: background-color 0.5s;
 			</p>
 			<br>
 			<div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-				<button type="button" class="btn btn-primary btn-lg px-4 gap-3">
-					<a class="text-white" href="check.html">반려견 등록
+				<button type="button" class="btn btn-primary btn-lg px-4 gap-3"
+					onclick="location.href='${cpath }/checkform.do'">
+					<a>반려견 등록</a>
 				</button>
-				</a>
-				<button type="button" class="btn btn-outline-secondary btn-lg px-4">
-					<a class="text-dark" href="search.html">반려견 조회</a>
+				<button type="button" class="btn btn-outline-secondary btn-lg px-4 "
+					onclick="location.href='${cpath }/searchform.do'">
+					<a>반려견 조회</a>
 				</button>
-
-
 			</div>
 		</div>
 	</div>
@@ -141,100 +163,99 @@ transition: background-color 0.5s;
 
 
 
+	<!-- <div class="container"> -->
+	<div class="row justify-content-center">
+
+		<div class="col-md-1 me-4 text-center ">
+			<a type="button" onclick="location.href='${cpath }/companimal.do'">
+				<img class="rounded-circle" src="${cpath }/images/icon_1.png"
+				alt="icon_1" width="100" height="100">
+			</a>
+		</div>
+
+		<!-- col_2 -->
+
+		<div class="col-md-1 me-4 text-center">
+			<a type="button" onclick="location.href='${cpath }/searchform.do'">
+				<img class="rounded-circle" src="${cpath }/images/icon_2.png"
+				alt="icon_1" width="100" height="100">
+			</a>
+		</div>
+		<!-- col_3 -->
+
+		<div class="col-md-1 me-4 text-center">
+			<a type="button" onclick="location.href='${cpath }/checkform.do'">
+				<img class="rounded-circle" src="${cpath }/images/icon_3.png"
+				alt="icon_1" width="100" height="100">
+			</a>
+		</div>
+		<!-- col_4 -->
+
+		<div class="col-md-1 me-4 text-center">
+			<a type="button" onclick="location.href='${cpath }/boardform.do'">
+				<img class="rounded-circle" src="${cpath }/images/icon_4.png"
+				alt="icon_1" width="100" height="100">
+			</a>
+		</div>
+		<!-- con_5 -->
+		<div class="col-md-1 me-4 text-center">
+			<a type="button" onclick="location.href='${cpath }/findboardform.do'">
+				<img class="rounded-circle" src="${cpath }/images/icon_5.png"
+				alt="icon_1" width="100" height="100">
+			</a>
+		</div>
+	</div>
 	<div class="container">
-		<!-- col_1 -->
-		<div class="row justify-content-center">
-			<div class="col-md-1 me-4 text-center ">
-				<a href="/companimal.html"><img class="rounded-circle"
-					src="${cpath }/images/icon_1.png" alt="icon_1" width="100"
-					height="100"></a>
-
-			</div>
-			<!-- col_2 -->
-
-			<div class="col-md-1 me-4 text-center">
-				<a href="/search.html"><img class="rounded-circle"
-					src="${cpath }/images/icon_2.png" alt="icon_1" width="100"
-					height="100"></a>
-
-			</div>
-			<!-- col_3 -->
-
-			<div class="col-md-1 me-4 text-center">
-				<a href="/check.html"><img class="rounded-circle"
-					src="${cpath }/images/icon_3.png" alt="icon_1" width="100"
-					height="100"></a>
-			</div>
-			<!-- col_4 -->
-
-			<div class="col-md-1 me-4 text-center">
-				<a href="/companimal.html"><img class="rounded-circle"
-					src="${cpath }/images/icon_4.png" alt="icon_1" width="100"
-					height="100"></a>
-
-			</div>
-			<!-- con_5 -->
-			<div class="col-md-1 me-4 text-center">
-				<a href="/companimal.html"><img class="rounded-circle"
-					src="${cpath }/images/icon_5.png" alt="icon_1" width="100"
-					height="100"></a>
-
-			</div>
-
-			<div class="row pt-5">
-				<div class="col-md-6">
-					<div class="h-100 p-5 text-white bg-dark rounded-3">
-						<h2>Change the background</h2>
-						<p>Swap the background-color utility and add a `.text-*` color
-							utility to mix up the jumbotron look. Then, mix and match with
-							additional component themes and more.</p>
-						<button class="btn btn-outline-light" type="button">Example
-							button</button>
-					</div>
+		<div class="row pt-5">
+			<div class="col-md-6">
+				<div class="h-100 p-5 text-white bg-dark rounded-3"
+					style="background-image: url(images/main_con_1.jpg); background-size: cover;">
+					<h2 class="fw-bold">Change the background</h2>
+					<p>Swap the background-color utility and add a `.text-*` color
+						utility to mix up the jumbotron look. Then, mix and match with
+						additional component themes and more.</p>
+					<button class="btn btn-outline-light" type="button">Example
+						button</button>
 				</div>
-				<div class="col-md-6">
-					<div class="h-100 p-5 bg-light border rounded-3">
-						<h2>Add borders</h2>
-						<p>Or, keep it light and add a border for some added
-							definition to the boundaries of your content. Be sure to look
-							under the hood at the source HTML here as we've adjusted the
-							alignment and sizing of both column's content for equal-height.</p>
-						<button class="btn btn-outline-secondary" type="button">Example
-							button</button>
-					</div>
+			</div>
+			<div class="col-md-6">
+				<div class="h-100 p-5 bg-light border rounded-3"
+					style="background-image: url(images/main_con_2.jpg); background-size: cover;">
+					<h2 class="fw-bold">Add borders</h2>
+					<p>Or, keep it light and add a border for some added definition
+						to the boundaries of your content. Be sure to look under the hood
+						at the source HTML here as we've adjusted the alignment and sizing
+						of both column's content for equal-height.</p>
+					<button class="btn btn-outline-secondary" type="button">Example
+						button</button>
 				</div>
 			</div>
 		</div>
+	</div>
 
+
+
+	<!-- footer -->
+	<div class="container">
 		<footer class="py-5 ">
-
-
 			<div class="d-flex justify-content-between py-4 my-4 border-top">
-
 				<div class="row">
 					<div class="col">
-						<ul>
-							<li>© 2022 Company, Inc. All rights reserved.</li>
-							<li>주식회사 컴패니멀 어쩌구 저쩌구</li>
-							<li>그래서 만든사람 어쩌구저쩌구</li>
-						</ul>
-					</div>
-
-					<div class="col">
-						<ul>
+						<ul class="list-unstyled">
 							<li>© 2022 Company, Inc. All rights reserved.</li>
 							<li>주식회사 컴패니멀 어쩌구 저쩌구</li>
 							<li>그래서 만든사람 어쩌구저쩌구</li>
 						</ul>
 					</div>
 				</div>
-
-
 				<ul class="list-unstyled d-flex ">
 					<li class="btn btn-primary py-4 me-2">짹짹이</li>
 					<li class="btn btn-outline-secondary py-4 me-2">인서타</li>
 					<li class="btn btn-primary py-4 me-2">농농농</li>
 				</ul>
+			</div>
 		</footer>
+	</div>
+	<!-- footer end -->
 </body>
 </html>

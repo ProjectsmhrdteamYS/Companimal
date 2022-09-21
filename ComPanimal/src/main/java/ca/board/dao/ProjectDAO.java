@@ -76,7 +76,7 @@ public class ProjectDAO {
 	// 커뮤니티 게시판 삭제 메소드
 	public void cboardDelete(int c_seq) {
 		SqlSession session = sqlSessionFactory.openSession();
-		cboardVO vo = session.selectOne("cboardDelete", c_seq);
+		int del = session.delete("cboardDelete", c_seq);
 		session.commit();
 		session.close();
 	}
