@@ -11,8 +11,6 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>메인</title>
-
-
 <link rel="stylesheet" href="${cpath }/css/bootstrap.css">
 <link rel="stylesheet" href="${cpath }/css/bootstrap-grid.css">
 <link rel="stylesheet" href="${cpath }/css/bootstrap-reboot.css">
@@ -22,8 +20,20 @@
 	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 	crossorigin="anonymous"></script>
 
+<style>
+/* 공통 style */
+ul li{list-style: none; font-weight: 700; }
+a {text-decoration: none;  color :#150906;}
+a:hover {
+color: orange;
+transition: background-color 0.5s;
+}
+</style>
+
+
 </head>
 <body>
+	<!-- header -->
 	<header class=" container-fluid p-3 bg-white ">
 		<div class="container p-3">
 			<div
@@ -57,76 +67,67 @@
 					<c:if test="${empty uvo }">
 						<button type="button" class="btn btn-outline-secondary me-1"
 							onclick="location.href='${cpath }/signinform.do'">Login</button>
-						<button type="button" class="btn btn-primary" onclick="location.href='${cpath }/signupform.do'">Sign-up</button>
+						<button type="button" class="btn btn-primary"
+							onclick="location.href='${cpath }/signupform.do'">Sign-up</button>
 					</c:if>
-
 					<c:if test="${!empty uvo }">
-		              ${uvo.user_id}님 환영합니다.
-        		      <button type="button" class="btn btn-outline-secondary me-1"
+              ${uvo.user_id}님 환영합니다.
+              <button type="button"
+							class="btn btn-outline-secondary me-1"
 							onclick="location.href='${cpath }/logout.do'">Logout</button>
 					</c:if>
-					
 				</div>
 			</div>
 		</div>
 	</header>
+	<!-- header end -->
 	<main id="wrap">
-		<div class="container my-5">
-			<div
-				class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
-				<div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
-					<h1 class="display-4 fw-bold lh-1">Companimal</h1>
-					<br>
-					<br>
-					<p class="lead">Quickly design and customize responsive
-						mobile-first sites with Bootstrap, the world’s most popular
-						front-end open source toolkit, featuring Sass variables and
-						mixins, responsive grid system, extensive prebuilt components, and
-						powerful JavaScript plugins.</p>
-					<br>
-					<br>
-					<div
-						class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+	  <div class="container my-5">
+        <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+          <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+            <h1 class="display-4 fw-bold lh-1 text-primary">Companimal</h1>
+            <br><br>
+            <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+            <br><br>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
 
-						<button type="button"
-							class="btn btn-primary btn-lg px-4 me-md-2 fw-bold">Primary</button>
-						<button type="button"
-							class="btn btn-outline-secondary btn-lg px-4">Default</button>
-					</div>
-				</div>
-				<div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
-					<img class="rounded-lg-3" src="images/222.jpg" alt="" width="720">
-				</div>
-			</div>
-		</div>
+              <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold">LOGIN</button>
+              <button type="button" class="btn btn-outline-secondary btn-lg px-4">VIEW</button>
+            </div>
+          </div>
+          <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+              <img class="rounded-lg-3 " src="${cpath }/images/companimal_banner.jpg" alt="" width="590px" >
+              <!-- <img class="rounded-lg-3 w-100" src="images/companimal_banner.jpg" alt="" width="720"> -->
+          </div>
+        </div>
+      </div>
+		
 	</main>
 	<br>
-	<hr>
 	<br>
 	<br>
-	<footer class="py-5 ">
-		<div class="d-flex justify-content-between py-4 my-4 border-top">
-			<div class="row">
-				<div class="col">
-					<ul>
-						<li>© 2022 Company, Inc. All rights reserved.</li>
-						<li>주식회사 컴패니멀 어쩌구 저쩌구</li>
-						<li>그래서 만든사람 어쩌구저쩌구</li>
-					</ul>
+	
+<!-- footer -->
+	<div class="container">
+		<footer class="py-5 ">
+			<div class="d-flex justify-content-between py-4 my-4 border-top">
+				<div class="row">
+					<div class="col">
+						<ul class="list-unstyled text-700">
+							<li>© 2022 Company, Inc. All rights reserved.</li>
+							<li>주식회사 컴패니멀 어쩌구 저쩌구</li>
+							<li>그래서 만든사람 어쩌구저쩌구</li>
+						</ul>
+					</div>
 				</div>
-				<div class="col">
-					<ul>
-						<li>© 2022 Company, Inc. All rights reserved.</li>
-						<li>주식회사 컴패니멀 어쩌구 저쩌구</li>
-						<li>그래서 만든사람 어쩌구저쩌구</li>
-					</ul>
-				</div>
+				<ul class="list-unstyled d-flex ">
+					<li class="btn btn-primary py-4 me-2">짹짹이</li>
+					<li class="btn btn-outline-secondary py-4 me-2">인서타</li>
+					<li class="btn btn-primary py-4 me-2">농농농</li>
+				</ul>
 			</div>
-			<ul class="list-unstyled d-flex ">
-				<li class="btn btn-primary py-4 me-2">짹짹이</li>
-				<li class="btn btn-outline-secondary py-4 me-2">인서타</li>
-				<li class="btn btn-primary py-4 me-2">농농농</li>
-			</ul>
-	</footer>
+		</footer>
+	</div>
+	<!-- footer end -->
 </body>
 </html>
