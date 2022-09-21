@@ -3,16 +3,13 @@
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var="cpath" value="${pageContext.request.contextPath }" />
-<c:set var="newLine" value="<%='\n' %>" />
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>찾아주세요</title>
-
-
+<title>메인</title>
 <link rel="stylesheet" href="${cpath }/css/bootstrap.css">
 <link rel="stylesheet" href="${cpath }/css/bootstrap-grid.css">
 <link rel="stylesheet" href="${cpath }/css/bootstrap-reboot.css">
@@ -21,6 +18,16 @@
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 	crossorigin="anonymous"></script>
+<style>
+ul li {
+	list-style: none;
+	font-weight: 600;
+}
+
+a {
+	text-decoration: none;
+}
+</style>
 </head>
 <body>
 	<!-- header -->
@@ -32,6 +39,7 @@
 					src="${cpath }/images/logo.png" alt="" width="286"
 					class="d-inline-block align-text-top ">
 				</a>
+
 				<ul
 					class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
 
@@ -56,93 +64,91 @@
 					<c:if test="${empty uvo }">
 						<button type="button" class="btn btn-outline-secondary me-1"
 							onclick="location.href='${cpath }/signinform.do'">Login</button>
-						<button type="button" class="btn btn-primary" onclick="location.href='${cpath }/signupform.do'">Sign-up</button>
+						<button type="button" class="btn btn-primary"
+							onclick="location.href='${cpath }/signupform.do'">Sign-up</button>
 					</c:if>
-
 					<c:if test="${!empty uvo }">
-			            ${uvo.user_id}님 환영합니다.
-            			  <button type="button" class="btn btn-outline-secondary me-1"
+              ${uvo.user_id}님 환영합니다.
+              <button type="button"
+							class="btn btn-outline-secondary me-1"
 							onclick="location.href='${cpath }/logout.do'">Logout</button>
 					</c:if>
-					
 				</div>
 			</div>
 		</div>
 	</header>
-	<main id=wrap>
-		<div class="album py-5">
-			<div class="container">
-				<img src="${cpath }/images/bichon.jpg" alt="" width="380px"
-					class="d-inline-block align-text-top">
-				<h2>현상수배</h2>
-				<hr>
-				<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-					<c:forEach var="vo" items="${list }">
-						<div class="col">
-							<div class="card">
-								<img
-									src="https://img.insight.co.kr/static/2018/11/05/700/888208025o428h6408hs.jpg"
-									class="bd-placeholder-img card-img-top" width="100%"
-									height="225" xmlns="http://www.w3.org/2000/svg" role="img"
-									aria-label="Placeholder: Thumbnail"
-									preserveAspectRatio="xMidYMid slice" focusable="false">
-								<title>Placeholder</title>
-								<rect width="100%" height="100%" fill="#55595c" />
-								</img>
+	<!-- header end -->
 
-								<div class="card-body">
-									<small class="text-muted">글 번호 : ${vo.f_seq }</small>
-									<div class="d-flex justify-content-between align-items-center">
-										<div class="btn-group">
-											<button type="button"
-												class="btn btn-sm btn-primary "
-												onclick="location.href='${cpath }/fdetailform.do?f_seq=${vo.f_seq}'">상태 : ${vo.f_title }</button>
+	<main id=wrap>
+		<div class="container">
+			<img src="${cpath }/images/board_banner_2.jpg" alt="" width="100%"
+				class="mt-2 mb-2 " class="d-inline-block align-text-top"> <br>
+			<br>
+			<hr>
+			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+				<c:forEach var="vo" items="${list }">
+					<div class="col">
+						<div class="card">
+							<img
+								src="https://img.insight.co.kr/static/2018/11/05/700/888208025o428h6408hs.jpg"
+								class="bd-placeholder-img card-img-top" width="100%"
+								height="225" xmlns="http://www.w3.org/2000/svg" role="img"
+								aria-label="Placeholder: Thumbnail"
+								preserveAspectRatio="xMidYMid slice" focusable="false">
+							<rect width="100%" height="100%" fill="#55595c" />
+							</img>
+
+							<div class="card-body">
+								<small class="text-muted">글 번호 : ${vo.f_seq }</small>
+								<div class="d-flex justify-content-between align-items-center">
+									<div class="btn-group">
+										<button type="button" class="btn btn-sm btn-primary "
+											onclick="location.href='${cpath }/fdetailform.do?f_seq=${vo.f_seq}'">상태
+											: ${vo.f_title }</button>
 									</div>
 									<p class="card-text">위치 : ${vo.f_content }</p>
-									</div>
-										<small class="text-muted">작성자 : ${vo.user_id}</small>
-										<small class="text-muted">조회수 : ${vo.f_cnt }</small>
-										<small class="text-muted">작성일 : ${vo.f_date }</small>
 								</div>
+								<small class="text-muted">작성자 : ${vo.user_id}</small> <small
+									class="text-muted">조회수 : ${vo.f_cnt }</small> <small
+									class="text-muted">작성일 : ${vo.f_date }</small>
 							</div>
 						</div>
-					</c:forEach>
+					</div>
+				</c:forEach>
 
-				</div>
-				<p></p>
-				<c:if test="${!empty uvo }">
-				<div align="right">
+			</div>
+			<p></p>
+			<c:if test="${!empty uvo }">
+				<div class="float-end">
 					<button type="button" class="btn btn-primary"
+						style="width: 120px; height: 50px;"
 						onclick="location.href='${cpath }/findwriteform.do'">게시물
 						작성</button>
 				</div>
-				</c:if>
-			</div>
+			</c:if>
 		</div>
 	</main>
+<!-- footer -->
+	<div class="container">
 		<footer class="py-5 ">
-		<div class="d-flex justify-content-between py-4 my-4 border-top">
-			<div class="row">
-				<div class="col">
-					<ul>
-						<li>© 2022 Company, Inc. All rights reserved.</li>
-						<li>주식회사 컴패니멀 어쩌구 저쩌구</li>
-						<li>그래서 만든사람 어쩌구저쩌구</li>
-					</ul>
+			<div class="d-flex justify-content-between py-4 my-4 border-top">
+				<div class="row">
+					<div class="col">
+						<ul class="list-unstyled">
+							<li>© 2022 Company, Inc. All rights reserved.</li>
+							<li>주식회사 컴패니멀 어쩌구 저쩌구</li>
+							<li>그래서 만든사람 어쩌구저쩌구</li>
+						</ul>
+					</div>
 				</div>
-				<div class="col">
-					<ul>
-						<li>© 2022 Company, Inc. All rights reserved.</li>
-						<li>주식회사 컴패니멀 어쩌구 저쩌구</li>
-						<li>그래서 만든사람 어쩌구저쩌구</li>
-					</ul>
-				</div>
+				<ul class="list-unstyled d-flex ">
+					<li class="btn btn-primary py-4 me-2">짹짹이</li>
+					<li class="btn btn-outline-secondary py-4 me-2">인서타</li>
+					<li class="btn btn-primary py-4 me-2">농농농</li>
+				</ul>
 			</div>
-			<ul class="list-unstyled d-flex ">
-				<li class="btn btn-primary py-4 me-2">짹짹이</li>
-				<li class="btn btn-outline-secondary py-4 me-2">인서타</li>
-				<li class="btn btn-primary py-4 me-2">농농농</li>
-			</ul>
-	</footer>
+		</footer>
+	</div>
+	<!-- footer end -->
 </body>
 </html>
