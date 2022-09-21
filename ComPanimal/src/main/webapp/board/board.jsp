@@ -5,13 +5,9 @@
 <c:set var="cpath" value="${pageContext.request.contextPath }" />
 
 <!DOCTYPE html>
-<<<<<<< HEAD
-=======
 
->>>>>>> branch 'master' of https://github.com/ProjectsmhrdteamYS/Companimal.git
 <html lang="ko">
 <head>
-<<<<<<< HEAD
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,7 +29,6 @@ color: orange;
 transition: background-color 0.5s;
 }
 </style>
-=======
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,7 +59,7 @@ transition: background-color 0.5s;
 }
 </style>
 
->>>>>>> branch 'master' of https://github.com/ProjectsmhrdteamYS/Companimal.git
+
 </head>
 
 <body>
