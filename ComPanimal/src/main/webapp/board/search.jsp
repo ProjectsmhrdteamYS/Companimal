@@ -25,6 +25,15 @@
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 	crossorigin="anonymous"></script>
+	
+	
+<!--  메소드 -->	
+<script type="text/javascript">
+	function petView() {
+	$("#ct").css("display","table-row");
+}    
+  </script>
+	
 <style>
 ul li {
 	list-style: none;
@@ -33,7 +42,6 @@ ul li {
 </head>
 <body>
 	<!-- header -->
-	<<<<<<< HEAD
 	<header class=" container-fluid p-3 bg-white ">
 		<div class="container p-3">
 			<div
@@ -75,15 +83,12 @@ ul li {
 	<p></p>
 	<main>
 	
-	 <script type="text/javascript">
-  		function petView() {
-  		$("#ct").css("display","table-row");
-  	}    
-     </script>
-		<div class="container p-lg-5" style="height: 780px;">
-			<div class="form-signin mx-auto mt-5">
+
+		
+		<div class="container" ">
+			<div class="form-signin mx-auto mt-5 mb-5">
 				<form class="border rounded-4 p-5 mx-auto"
-					style="width: 650px; height: 720px;" action="javascript:petView()">
+					style="width: 650px; height: 620px;" action="javascript:petView()">
 					<img class="mb-4" src="${cpath }/images/222.jpg" alt="로고"
 						width="100%" height="120px">
 					<h1 class="h3 mt-3 fw-normal text-center">반려동물 조회 서비스</h1>
@@ -110,7 +115,7 @@ ul li {
 						id="btn1" type="submit" value="조회">
 				</form>
 			</div>
-
+	</div>
 
 			<!-- 조회버튼시 나오는 표  -->
 			<!-- 디비연결되면 <tr id="ct${vo.idx}" style="display: none">로 변경-->
@@ -133,7 +138,7 @@ ul li {
                 	alert(res.response.header.errorMsg)
                 	}
                 	else{
-                	let code='<table class ="table table-bordered" id="ct"><tr style="background-color:#F57F32">'
+                	let code='<div class="container"><table class ="table table-bordered" id="ct"><tr style="background-color:#F57F32">'
                         code +='<th>번호</th>'
                         code +='<th>이름</th>'
                         code +='<th>견종</th>'
@@ -157,7 +162,7 @@ ul li {
                 		code += '<td>'+items.orgNm+'</td>';
                 		code += '<td>'+items.officeTel+'</td>';
                 		code += '</tr>'; 
-                		code +='</table>';
+                		code +='</table></div>';
                     $('#petList').html(code);
                     }
                 	}
