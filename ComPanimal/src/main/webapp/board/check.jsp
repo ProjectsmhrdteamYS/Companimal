@@ -26,6 +26,50 @@ a:hover {
 color: orange;
 transition: background-color 0.5s;
 }
+
+  /* 세부디자인 */
+.search {
+      max-width: 680px;
+
+      margin-top: 80px;
+      padding: 32px;
+
+      background: #fff;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      -webkit-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+      -moz-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+      box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15)
+    }
+
+/* 첨부파일 디자인 수정 */
+
+    .filebox input { 
+      width: 300px;
+      height: 40px;
+    }
+    .filebox label {
+    width: 236px;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    vertical-align: middle;
+    background-color:  #595350;
+    cursor: pointer;
+    height: 40px;
+    margin-left: 10px;
+}
+
+/* 기존 디자인 수정 */
+.filebox input[type="file"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}
 </style>
 </head>
 <body>
@@ -71,9 +115,9 @@ transition: background-color 0.5s;
       
 	<div class="container p-lg-5" style="height: 780px;">
 	<div class="form-signin mx-auto mt-5"  >
-  	<form  class="border rounded-4 p-5 mx-auto" style="width: 650px; height: 720px;">
+  	<form  class="border rounded-4 p-5 mx-auto" style="width: 650px;">
     <br>
-    <img class="mb-4" src="${cpath }/images/222.jpg"alt="로고" width="100%" height="120px">
+    <img class="mb-5" src="${cpath }/images/222.jpg"alt="로고" width="80%">
     <h1 class="h3 mt-3 fw-normal text-center">반려동물 등록 서비스</h1>
 
     <div class="mb-3">
