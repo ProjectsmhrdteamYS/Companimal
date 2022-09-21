@@ -8,7 +8,6 @@
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<<<<<<< HEAD
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
@@ -18,26 +17,15 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
 	</script>
 
-
-=======
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>메인</title>
->>>>>>> branch 'master' of https://github.com/ProjectsmhrdteamYS/Companimal.git
 <link rel="stylesheet" href="${cpath }/css/bootstrap.css">
 <link rel="stylesheet" href="${cpath }/css/bootstrap-grid.css">
 <link rel="stylesheet" href="${cpath }/css/bootstrap-reboot.css">
 <link rel="stylesheet" href="${cpath }/css/bootstrap-utilities.css">
-<<<<<<< HEAD
 <title>회원가입</title>
 
-=======
-<script
-	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-	crossorigin="anonymous"></script>
->>>>>>> branch 'master' of https://github.com/ProjectsmhrdteamYS/Companimal.git
 <style>
-<<<<<<< HEAD
 
   /* 공통 style */
   ul li{list-style: none; font-weight: 700; }
@@ -69,18 +57,7 @@
     height: 48px;
   }
   </style>
-  
-=======
-ul li {
-	list-style: none;
-	font-weight: 600;
-}
 
-a {
-	text-decoration: none;
-}
-</style>
->>>>>>> branch 'master' of https://github.com/ProjectsmhrdteamYS/Companimal.git
 </head>
 <body>
 	<!-- header -->
@@ -121,9 +98,8 @@ a {
 							onclick="location.href='${cpath }/signupform.do'">Sign-up</button>
 					</c:if>
 					<c:if test="${!empty uvo }">
-              ${uvo.user_id}님 환영합니다.
-              <button type="button"
-							class="btn btn-outline-secondary me-1"
+              		${uvo.user_id}님 환영합니다.
+              			<button type="button" class="btn btn-outline-secondary me-1"
 							onclick="location.href='${cpath }/logout.do'">Logout</button>
 					</c:if>
 				</div>
@@ -136,16 +112,11 @@ a {
 		<div class="input-form-backgroud row">
 			<div class="input-form col-md-12 mx-auto">
 				<img class="mx-5" src="${cpath }/images/logo.png" alt="로고" width="80%" >
-				
-				<br> <br>
-
-				<!-- form methods 선정되는거 없으면 get방식임 -->
-				<form accept-charset="UTF-8" class="validation-form"
-					action="${cpath}/signup.do" method="get">
+				<form class="validation-form" novalidate action="${cpath}/signup.do" method="get">
 					<div class="row">
 						<div class="mb-3">
-							<label for="id">ID</label> <input type="text"
-								class="form-control" name="user_id" placeholder="" required>
+							<label for="id">ID</label>
+							<input type="text" class="form-control" name="user_id" placeholder="" required>
 							<div class="invalid-feedback">아이디를 입력해주세요.</div>
 						</div>
 						<div class="mb-3">
@@ -181,37 +152,37 @@ a {
 					</div>
 					<hr class="mb-4">
 					<div class="custom-control custom-checkbox">
-						<!-- <input type="checkbox" class="custom-control-input" id="aggrement"
-							required> -->
 						<label class="custom-control-label" for="aggrement">개인정보
-							수집 및 이용에 동의합니다</label> <br> <input type="radio"
-							class="custom-control-input" id="aggrement" required
-							name="user_type" value="1"> <label
-							class="custom-control-label" for="aggrement">동의</label> <input
-							type="radio" class="custom-control-input" id="aggrement" required
-							name="user_type" value="0"> <label
-							class="custom-control-label" for="aggrement">비동의</label>
+							수집 및 이용에 동의합니다</label>
+							<br>
+							<input type="radio" class="custom-control-input" id="aggrement" required name="user_type" value="1">
+							<label class="custom-control-label" for="aggrement">동의</label>
+							<input type="radio" class="custom-control-input" id="aggrement" required name="user_type" value="0">
+							<label class="custom-control-label" for="aggrement">비동의</label>
 					</div>
 					<div class="mb-4"></div>
 					<button class="btn-lg btn-block"
 						style="background-color: #ff7530; border: none; color: white"
 						type="submit">가입 하기</button>
 				</form>
-				</div>
+			  </div>
 			</div>
 		</div>
+		
 		<script>window.addEventListener('load', () => {
-      const forms = document.getElementsByClassName('validation-form');
-      Array.prototype.filter.call(forms, (form) => {
-        form.addEventListener('submit', function (event) {
-          if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
-          }
-          form.classList.add('was-validated');
-        }, false);
-      });
-    }, false);</script>
+      		const forms = document.getElementsByClassName('validation-form');
+      
+      		Array.prototype.filter.call(forms, (form) => {
+        		form.addEventListener('submit', function (event) {
+          			if (form.checkValidity() === false) {
+            			event.preventDefault();
+            			event.stopPropagation();
+          			}
+          			form.classList.add('was-validated');
+        			}, false);
+      			});
+    		}, false);
+		</script>
 	</main>
 	<!-- footer -->
 	<div class="container">
