@@ -19,12 +19,13 @@
 	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 	crossorigin="anonymous"></script>
 <style>
-/* 공통 style */
-ul li{list-style: none; font-weight: 700; }
-a {text-decoration: none;  color :#150906;}
-a:hover {
-color: orange;
-transition: background-color 0.5s;
+ul li {
+	list-style: none;
+	font-weight: 600;
+}
+
+a {
+	text-decoration: none;
 }
 </style>
 </head>

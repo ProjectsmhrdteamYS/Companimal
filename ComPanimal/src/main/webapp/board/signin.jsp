@@ -22,19 +22,38 @@
 <link rel="stylesheet" href="${cpath }/css/bootstrap-grid.css">
 <link rel="stylesheet" href="${cpath }/css/bootstrap-reboot.css">
 <link rel="stylesheet" href="${cpath }/css/bootstrap-utilities.css">
-<script
-	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-	crossorigin="anonymous"></script>
-<style>
-/* 공통 style */
-ul li{list-style: none; font-weight: 700; }
-a {text-decoration: none;  color :#150906;}
-a:hover {
-color: orange;
-transition: background-color 0.5s;
-}
-</style>
+
+
+ <style>
+
+    /* 공통 style */
+    ul li{list-style: none; font-weight: 700; }
+    a {text-decoration: none;  color :#150906;}
+    a:hover {
+    color: orange;
+    transition: background-color 0.5s;
+  }
+
+      .search {
+      max-width: 680px;
+
+      margin-top: 80px;
+      padding: 32px;
+
+      background: #fff;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      -webkit-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+      -moz-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+      box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15)
+    }
+
+
+  
+    </style>
+
+
 
 <title>로그인</title>
 
@@ -76,10 +95,11 @@ transition: background-color 0.5s;
 			</div>
 		</div>
 	</header>
+	
 	<main class="form-signin">
-		<form action="${cpath }/signin.do">
+		<form class="search rounded-4 p-5 mx-auto h-100" style="width: 650px;" action="${cpath }/signin.do">
 			<a class="logo" href="${cpath }/mainpage.do"> <img
-				src="${cpath }/images/logo.png" alt="" width="380px"
+				src="${cpath }/images/logo.png" alt="로고" width="80%"
 				class="d-inline-block align-text-top">
 			</a> <br>
 			<br>
@@ -91,7 +111,8 @@ transition: background-color 0.5s;
 			</div>
 			<div class="form-floating">
 				<input type="password" class="form-control"
-				id="floatingPassword" name = "user_pw" placeholder="Password"> 
+				id="floatingPassword" name = "user_pw" placeholder="Password"
+				> 
 					<label for="floatingPassword">Password</label>
 			</div>
 			<button class="w-100 btn btn-lg btn-primary" type="submit">Sign
@@ -99,6 +120,7 @@ transition: background-color 0.5s;
 			<p class="mt-5 mb-3 text-muted">&copy; 2022 CompAnimal</p>
 		</form>
 	</main>
+<div class="container">
 <footer class="py-5 ">
 		<div class="d-flex justify-content-between py-4 my-4 border-top">
 			<div class="row">
@@ -123,5 +145,6 @@ transition: background-color 0.5s;
 				<li class="btn btn-primary py-4 me-2">농농농</li>
 			</ul>
 	</footer>
+	</div>
 </body>
 </html>

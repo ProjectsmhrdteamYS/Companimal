@@ -4,12 +4,12 @@
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <c:set var="cpath" value="${pageContext.request.contextPath }" />
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>메인</title>
+<title>반려동물등록</title>
 <link rel="stylesheet" href="${cpath }/css/bootstrap.css">
 <link rel="stylesheet" href="${cpath }/css/bootstrap-grid.css">
 <link rel="stylesheet" href="${cpath }/css/bootstrap-reboot.css">
@@ -113,11 +113,11 @@ transition: background-color 0.5s;
       
       <!-- content -->
       
-	<div class="container p-lg-5" style="height: 780px;">
+	<div class="container" style="height: 780px;">
 	<div class="form-signin mx-auto mt-5"  >
-  	<form  class="border rounded-4 p-5 mx-auto" style="width: 650px;">
+  	<form  class="search rounded-4 p-5 mx-auto h-100" style="width: 650px;">
     <br>
-    <img class="mb-5" src="${cpath }/images/222.jpg"alt="로고" width="80%">
+    <img class="mx-5" src="${cpath }/images/logo.png"alt="로고" width="80%">
     <h1 class="h3 mt-3 fw-normal text-center">반려동물 등록 서비스</h1>
 
     <div class="mb-3">
@@ -132,14 +132,19 @@ transition: background-color 0.5s;
     </div>
     <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">동물 사진 등록</label>
-    <br>
-      <input type="file" id="myFile" name="filename">
+     <div class="filebox">
+       <input class="upload-name" value="첨부파일" placeholder="첨부파일">
+        <label for="file">파일찾기</label> 
+        <input type="file" id="file">
+    </div>
     </div>
     
     
 
-    <div class="checkbox mt-3 mb-3 " >
-      
+     <div class="checkbox mt-3 mb-3 " >
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
     </div>
     <button class="w-100 btn btn-lg btn-primary" type="submit" style="height: 60px;">submit</button>
     <p class="mt-5 mb-3 text-muted">© 2022–2025</p>
@@ -148,37 +153,40 @@ transition: background-color 0.5s;
 
 </div>
     
-	<footer class="py-5 " >
+	<div class="container">
+<footer class="py-5 " >
 
 
-    <div class="d-flex justify-content-between py-4 my-4 border-top">
-        
-        <div class="row">
-        <div class="col">
-        <ul>
-            <li>© 2022 Company, Inc. All rights reserved.</li>
-            <li>주식회사 컴패니멀 어쩌구 저쩌구</li>
-            <li>그래서 만든사람 어쩌구저쩌구</li>
-        </ul>
-    </div>
-        
-        <div class="col">
-        <ul>
-            <li>© 2022 Company, Inc. All rights reserved.</li>
-            <li>주식회사 컴패니멀 어쩌구 저쩌구</li>
-            <li>그래서 만든사람 어쩌구저쩌구</li>
-        </ul>
-    </div>
-</div>
+  <div class="d-flex justify-content-between py-4 my-4 border-top">
       
-
-      <ul class="list-unstyled d-flex ">
-        <li class="btn btn-primary py-4 me-2" >짹짹이</li>
-        <li class="btn btn-outline-secondary py-4 me-2">인서타</li>
-        <li class="btn btn-primary py-4 me-2">농농농</li>
+      <div class="row">
+      <div class="col">
+      <ul>
+          <li>© 2022 Company, Inc. All rights reserved.</li>
+          <li>주식회사 컴패니멀 어쩌구 저쩌구</li>
+          <li>그래서 만든사람 어쩌구저쩌구</li>
       </ul>
+  </div>
+      
+      <div class="col">
+      <ul>
+          <li>© 2022 Company, Inc. All rights reserved.</li>
+          <li>주식회사 컴패니멀 어쩌구 저쩌구</li>
+          <li>그래서 만든사람 어쩌구저쩌구</li>
+      </ul>
+  </div>
+</div>
+    
+
+    <ul class="list-unstyled d-flex ">
+      <li class="btn btn-primary py-4 me-2" >짹짹이</li>
+      <li class="btn btn-outline-secondary py-4 me-2">인서타</li>
+      <li class="btn btn-primary py-4 me-2">농농농</li>
+    </ul>
 
 
-  </footer>
+</footer>
+</div>
+
 </body>
 </html>

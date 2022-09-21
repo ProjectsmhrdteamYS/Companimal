@@ -8,18 +8,15 @@
 <!-- 조회 css -->
 
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>메인</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<title>반려동물조회</title>
+<title>동물 조회</title>
 <link rel="stylesheet" href="${cpath }/css/bootstrap.css">
 <link rel="stylesheet" href="${cpath }/css/bootstrap-grid.css">
 <link rel="stylesheet" href="${cpath }/css/bootstrap-reboot.css">
@@ -29,6 +26,7 @@
 	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 	crossorigin="anonymous"></script>
 	
+	
 <!--  메소드 -->	
 <script type="text/javascript">
 	function petView() {
@@ -36,59 +34,28 @@
 }    
   </script>
 	
-
 <style>
-/* 공통 style */
-ul li{list-style: none; font-weight: 700; }
-a {text-decoration: none;  color :#150906;}
-a:hover {
-color: orange;
-transition: background-color 0.5s;
+ul li {
+	list-style: none;
 }
-
-  ul li{list-style: none; font-weight: 700; }
-    a {text-decoration: none;  color :#150906;}
-    a:hover {
-    color: orange;
-    transition: background-color 0.5s;
-  }
-  
-  .search {
-      max-width: 680px;
-      margin-top: 80px;
-      padding: 32px;
-      background: #fff;
-      -webkit-border-radius: 10px;
-      -moz-border-radius: 10px;
-      border-radius: 10px;
-      -webkit-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
-      -moz-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
-      box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15)
-    }
-  
-
 </style>
 </head>
-
-
 <body>
 	<!-- header -->
-
-
 	<header class=" container-fluid p-3 bg-white ">
 		<div class="container p-3">
 			<div
 				class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start ">
-				<a class="navbar-brand me-4" href="${cpath }/mainpage.do"> 
-				<img src="${cpath }/images/logo.png" alt="" width="286"
+				<a class="navbar-brand me-4" href="${cpath }/mainpage.do"> <img
+					src="${cpath }/images/logo.png" alt="" width="286"
 					class="d-inline-block align-text-top ">
 				</a>
 
 				<ul
 					class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
 
-					<li><a href="${cpath}/companimal.do"
-						class="nav-link px-3 link-dark" >COMPANIMAL</a></li>
+					<li><a href="${cpath }/companimal.do"
+						class="nav-link px-3 link-dark">COMPANIMAL</a></li>
 					<li><a href="${cpath }/searchform.do"
 						class="nav-link px-3 link-dark">반려견조회</a></li>
 					<li><a href="${cpath }/checkform.do"
@@ -113,27 +80,30 @@ transition: background-color 0.5s;
 			</div>
 		</div>
 	</header>
+	<p></p>
+	<main>
+	
 
-		<div class="container" style="height:530px;">
-			<div class="form-signin mx-auto mt-5">
-				<form class="search rounded-4 p-5 mx-auto h-100"
-					style="width: 650px;" action="javascript:petView()">
-					<br>
-					<img class="mx-5" src="${cpath}/images/logo.png" alt="로고"
-						width="80%">
+		
+		<div class="container" ">
+			<div class="form-signin mx-auto mt-5 mb-5">
+				<form class="border rounded-4 p-5 mx-auto"
+					style="width: 650px; height: 620px;" action="javascript:petView()">
+					<img class="mb-4" src="${cpath }/images/222.jpg" alt="로고"
+						width="100%" height="120px">
 					<h1 class="h3 mt-3 fw-normal text-center">반려동물 조회 서비스</h1>
-					<br> 
-					
+					<br> <br> <br>
 					<div class="mb-3">
-						<label for="exampleFormControlInput1" class="form-label">소유자명</label> 
-						<input type="text" class="form-control" style="height: 3em;"
-							id="lname" placeholder="소유자 이름을 입력하세요">
-					</div>
-					<div class="mb-3">
-						<label for="fname" class="form-label" >동물등록번호</label> <input type="text"
+						<label for="lname">소유자명</label> <input type="text"
 							class="form-control" style="height: 3em;"
-							id="fname" placeholder="등록번호 15자리를 입력하세요">
+							id="lname" placeholder="소유자명">
 					</div>
+					<div class="mb-3">
+						<label for="fname">동물등록번호</label> <input type="text"
+							class="form-control" style="height: 3em;"
+							id="fname" placeholder="등록번호 15자리">
+					</div>
+					<hr>
 
 					<!-- 이미지 업로드해서 조회 - 삭제:
 			<label for="lname">QR이미지로 조회<img src=""></label>
@@ -203,12 +173,11 @@ transition: background-color 0.5s;
         })
     })
     </script>
+	</main>
 
-
-
-
-<div class="container">
 	<footer class="py-5 ">
+
+
 		<div class="d-flex justify-content-between py-4 my-4 border-top">
 
 			<div class="row">
@@ -236,6 +205,5 @@ transition: background-color 0.5s;
 				<li class="btn btn-primary py-4 me-2">농농농</li>
 			</ul>
 	</footer>
-</div>
 </body>
 </html>
