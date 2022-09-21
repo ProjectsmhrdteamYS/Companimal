@@ -28,7 +28,6 @@
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 	crossorigin="anonymous"></script>
-<style>
 	
 <!--  메소드 -->	
 <script type="text/javascript">
@@ -37,7 +36,8 @@
 }    
   </script>
 	
-<<<<<<< HEAD
+
+<style>
 /* 공통 style */
 ul li{list-style: none; font-weight: 700; }
 a {text-decoration: none;  color :#150906;}
@@ -45,8 +45,7 @@ a:hover {
 color: orange;
 transition: background-color 0.5s;
 }
-=======
-<style>
+
   ul li{list-style: none; font-weight: 700; }
     a {text-decoration: none;  color :#150906;}
     a:hover {
@@ -67,7 +66,7 @@ transition: background-color 0.5s;
       box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15)
     }
   
->>>>>>> branch 'master' of https://github.com/ProjectsmhrdteamYS/Companimal.git
+
 </style>
 </head>
 
@@ -205,12 +204,10 @@ transition: background-color 0.5s;
     })
     </script>
 
-<<<<<<< HEAD
 
 
-=======
+
 <div class="container">
->>>>>>> branch 'master' of https://github.com/ProjectsmhrdteamYS/Companimal.git
 	<footer class="py-5 ">
 		<div class="d-flex justify-content-between py-4 my-4 border-top">
 
