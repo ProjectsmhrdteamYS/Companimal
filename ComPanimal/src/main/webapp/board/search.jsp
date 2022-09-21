@@ -25,6 +25,15 @@
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 	crossorigin="anonymous"></script>
+	
+	
+<!--  메소드 -->	
+<script type="text/javascript">
+	function petView() {
+	$("#ct").css("display","table-row");
+}    
+  </script>
+	
 <style>
   ul li{list-style: none; font-weight: 700; }
     a {text-decoration: none;  color :#150906;}
@@ -35,10 +44,8 @@
   
   .search {
       max-width: 680px;
-
       margin-top: 80px;
       padding: 32px;
-
       background: #fff;
       -webkit-border-radius: 10px;
       -moz-border-radius: 10px;
@@ -50,23 +57,26 @@
   
 </style>
 </head>
+
+
 <body>
 	<!-- header -->
 
-.	<header class=" container-fluid p-3 bg-white ">
+
+	<header class=" container-fluid p-3 bg-white ">
 		<div class="container p-3">
 			<div
 				class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start ">
-				<a class="navbar-brand me-4" href="${cpath }/mainpage.do"> <img
-					src="${cpath }/images/logo.png" alt="" width="286"
+				<a class="navbar-brand me-4" href="${cpath }/mainpage.do"> 
+				<img src="${cpath }/images/logo.png" alt="" width="286"
 					class="d-inline-block align-text-top ">
 				</a>
 
 				<ul
 					class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
 
-					<li><a href="${cpath }/companimal.do"
-						class="nav-link px-3 link-dark">COMPANIMAL</a></li>
+					<li><a href="${cpath}/companimal.do"
+						class="nav-link px-3 link-dark" >COMPANIMAL</a></li>
 					<li><a href="${cpath }/searchform.do"
 						class="nav-link px-3 link-dark">반려견조회</a></li>
 					<li><a href="${cpath }/checkform.do"
@@ -91,33 +101,27 @@
 			</div>
 		</div>
 	</header>
-	<p></p>
-	<main>
-	
-	 <script type="text/javascript">
-  		function petView() {
-  		$("#ct").css("display","table-row");
-  	}    
-     </script>
-		<div class="container p-lg-5" style="height: 780px;">
+
+		<div class="container" style="height:530px;">
 			<div class="form-signin mx-auto mt-5">
-				<form class="border rounded-4 p-5 mx-auto"
-					style="width: 650px; height: 720px;" action="javascript:petView()">
-					<img class="mb-4" src="${cpath }/images/222.jpg" alt="로고"
-						width="100%" height="120px">
+				<form class="search rounded-4 p-5 mx-auto h-100"
+					style="width: 650px;" action="javascript:petView()">
+					<br>
+					<img class="mx-5" src="${cpath}/images/logo.png" alt="로고"
+						width="80%">
 					<h1 class="h3 mt-3 fw-normal text-center">반려동물 조회 서비스</h1>
-					<br> <br> <br>
+					<br> 
+					
 					<div class="mb-3">
-						<label for="lname">소유자명</label> <input type="text"
-							class="form-control" style="height: 3em;"
-							id="lname" placeholder="소유자명">
+						<label for="exampleFormControlInput1" class="form-label">소유자명</label> 
+						<input type="text" class="form-control" style="height: 3em;"
+							id="lname" placeholder="소유자 이름을 입력하세요">
 					</div>
 					<div class="mb-3">
-						<label for="fname">동물등록번호</label> <input type="text"
+						<label for="fname" class="form-label" >동물등록번호</label> <input type="text"
 							class="form-control" style="height: 3em;"
-							id="fname" placeholder="등록번호 15자리">
+							id="fname" placeholder="등록번호 15자리를 입력하세요">
 					</div>
-					<hr>
 
 					<!-- 이미지 업로드해서 조회 - 삭제:
 			<label for="lname">QR이미지로 조회<img src=""></label>
@@ -129,7 +133,7 @@
 						id="btn1" type="submit" value="조회">
 				</form>
 			</div>
-
+	</div>
 
 			<!-- 조회버튼시 나오는 표  -->
 			<!-- 디비연결되면 <tr id="ct${vo.idx}" style="display: none">로 변경-->
@@ -152,7 +156,7 @@
                 	alert(res.response.header.errorMsg)
                 	}
                 	else{
-                	let code='<table class ="table table-bordered" id="ct"><tr style="background-color:#F57F32">'
+                	let code='<div class="container"><table class ="table table-bordered" id="ct"><tr style="background-color:#F57F32">'
                         code +='<th>번호</th>'
                         code +='<th>이름</th>'
                         code +='<th>견종</th>'
@@ -176,7 +180,7 @@
                 		code += '<td>'+items.orgNm+'</td>';
                 		code += '<td>'+items.officeTel+'</td>';
                 		code += '</tr>'; 
-                		code +='</table>';
+                		code +='</table></div>';
                     $('#petList').html(code);
                     }
                 	}
@@ -187,8 +191,8 @@
         })
     })
     </script>
-	</main>
 
+<div class="container">
 	<footer class="py-5 ">
 
 
@@ -219,5 +223,6 @@
 				<li class="btn btn-primary py-4 me-2">농농농</li>
 			</ul>
 	</footer>
+</div>
 </body>
 </html>
