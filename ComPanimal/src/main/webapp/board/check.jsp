@@ -29,11 +29,9 @@ transition: background-color 0.5s;
 
   /* 세부디자인 */
 .search {
-      max-width: 680px;
-
+      max-width: 650px;
       margin-top: 80px;
       padding: 32px;
-
       background: #fff;
       -webkit-border-radius: 10px;
       -moz-border-radius: 10px;
@@ -111,80 +109,65 @@ transition: background-color 0.5s;
       </header>
       
       
-      <!-- content -->
-      
-	<div class="container" style="height: 780px;">
-	<div class="form-signin mx-auto mt-5"  >
-  	<form  class="search rounded-4 p-5 mx-auto h-100" style="width: 650px;">
-    <br>
+     <!-- content -->
+	<div class="container">
+	<div class="form-signin mx-auto mt-5">
+  	<form class="search rounded-4 p-5 mx-auto h-100">
     <img class="mx-5" src="${cpath }/images/logo.png"alt="로고" width="80%">
-    <h1 class="h3 mt-3 fw-normal text-center">반려동물 등록 서비스</h1>
-
+    <h1 class="h3 mt-3 fw-bold text-center" style=color:#444;>반려동물 등록 서비스</h1>
+	<br><br>
+    
     <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">반려동물 이름</label>
       <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="반려견 이름을 입력하세요"
       style="height: 3em;">
     </div>
+    
     <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">동물 등록번호</label>
       <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="반려견 등록번호를 입력하세요"
       style="height: 3em;">
     </div>
-    <div class="mb-3">
+    
+    <div class="mb-5">
       <label for="exampleFormControlInput1" class="form-label">동물 사진 등록</label>
-     <div class="filebox">
+     	<div class="filebox">
        <input class="upload-name" value="첨부파일" placeholder="첨부파일">
-        <label for="file">파일찾기</label> 
+        <label for="file" style="background-color:#444;">파일찾기</label> 
         <input type="file" id="file">
     </div>
     </div>
-    
-    
 
      <div class="checkbox mt-3 mb-3 " >
-      <label>
-        <input type="checkbox" value="remember-me"> Remember me
-      </label>
     </div>
     <button class="w-100 btn btn-lg btn-primary" type="submit" style="height: 60px;">submit</button>
-    <p class="mt-5 mb-3 text-muted">© 2022–2025</p>
   </form>
 </div>
 
     
 	<div class="container">
-<footer class="py-5 " >
-
-
-  <div class="d-flex justify-content-between py-4 my-4 border-top">
-      
-      <div class="row">
-      <div class="col">
-      <ul>
-          <li>© 2022 Company, Inc. All rights reserved.</li>
-          <li>주식회사 컴패니멀 어쩌구 저쩌구</li>
-          <li>그래서 만든사람 어쩌구저쩌구</li>
-      </ul>
-  </div>
-      
-      <div class="col">
-      <ul>
-          <li>© 2022 Company, Inc. All rights reserved.</li>
-          <li>주식회사 컴패니멀 어쩌구 저쩌구</li>
-          <li>그래서 만든사람 어쩌구저쩌구</li>
-      </ul>
-  </div>
-</div>
-    
-
-    <ul class="list-unstyled d-flex ">
-      <li class="btn btn-primary py-4 me-2" >짹짹이</li>
-      <li class="btn btn-outline-secondary py-4 me-2">인서타</li>
-      <li class="btn btn-primary py-4 me-2">농농농</li>
-    </ul>
-
-
-</footer>
+<!-- footer -->
+	<div class="container">
+		<footer class="py-5" style="color:#555;">
+			<div class="d-flex justify-content-between py-4 my-4 border-top">
+				<div class="row">
+					<div class="col">
+						<ul class="list-unstyled">
+							<li class="fw-normal">© 2022 Company, Inc. All rights reserved.</li>
+							<li class="fw-normal">주식회사 컴패니멀 어쩌구 저쩌구</li>
+							<li class="fw-normal">그래서 만든사람 어쩌구저쩌구</li>
+						</ul>
+					</div>
+				</div>
+				<ul class="list-unstyled d-flex ">
+					<li class="btn btn-primary py-4 me-2">짹짹이</li>
+					<li class="btn btn-outline-secondary py-4 me-2">인서타</li>
+					<li class="btn btn-primary py-4 me-2">농농농</li>
+				</ul>
+			</div>
+		</footer>
+	</div>
+	<!-- footer end -->
 </div>
 
 </body>

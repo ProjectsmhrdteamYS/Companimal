@@ -23,34 +23,17 @@
 	crossorigin="anonymous"></script>
 
 <style>
-/* 공통 style */
-.nav {
-	list-style-type: none;
-	font-weight: 600;
-	text-decoration: none;
-	color: #150906;
-}
+ /* 공통 style */
+    ul li{list-style: none; font-weight: 700; }
+    a {text-decoration: none;  color :#150906;}
+    a:hover {
+    color: orange;
+    transition: background-color 0.5s;
+  }
 
-/* 세부디자인 */
-.icon {
-	width: 100px;
-	font-weight: 500;
-	margin-top: 5px;
-}
+  /* 세부디자인 */
+  .icon{ width: 100px; font-weight: 500; margin-top: 5px;}
 </style>
-
-
-<style>
-ul li {
-	list-style: none;
-	font-weight: 600;
-}
-
-a {
-	text-decoration: none;
-}
-</style>
-
 
 </head>
 <body>
@@ -231,17 +214,16 @@ a {
 	</div>
 
 
-
 	<!-- footer -->
 	<div class="container">
-		<footer class="py-5 ">
+		<footer class="py-5" style="color:#555;">
 			<div class="d-flex justify-content-between py-4 my-4 border-top">
 				<div class="row">
 					<div class="col">
 						<ul class="list-unstyled">
-							<li>© 2022 Company, Inc. All rights reserved.</li>
-							<li>주식회사 컴패니멀 어쩌구 저쩌구</li>
-							<li>그래서 만든사람 어쩌구저쩌구</li>
+							<li class="fw-normal">© 2022 Company, Inc. All rights reserved.</li>
+							<li class="fw-normal">주식회사 컴패니멀 어쩌구 저쩌구</li>
+							<li class="fw-normal">그래서 만든사람 어쩌구저쩌구</li>
 						</ul>
 					</div>
 				</div>

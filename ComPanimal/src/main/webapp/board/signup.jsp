@@ -112,7 +112,7 @@
 		<div class="container">
 		<div class="input-form-backgroud row">
 			<div class="input-form col-md-12 mx-auto">
-				<img class="mx-5" src="${cpath }/images/logo.png" alt="로고" width="80%" >
+				<img class="mx-5 mb-4" src="${cpath }/images/logo.png" alt="로고" width="80%" >
 				<form class="validation-form" novalidate action="${cpath}/signup.do" method="get">
 					<div class="row">
 						<div class="mb-3">
@@ -151,20 +151,19 @@
 							<div class="invalid-feedback">주소를 입력해주세요.</div>
 						</div>
 					</div>
-					<hr class="mb-4">
-					<div class="custom-control custom-checkbox">
-						<label class="custom-control-label" for="aggrement">개인정보
-							수집 및 이용에 동의합니다</label>
-							<br>
-							<input type="radio" class="custom-control-input" id="aggrement" required name="user_type" value="1">
-							<label class="custom-control-label" for="aggrement">동의</label>
-							<input type="radio" class="custom-control-input" id="aggrement" required name="user_type" value="0">
-							<label class="custom-control-label" for="aggrement">비동의</label>
-					</div>
-					<div class="mb-4"></div>
-					<button class="btn-lg btn-block"
-						style="background-color: #ff7530; border: none; color: white"
-						type="submit">가입 하기</button>
+						
+						<!-- radioBox -->
+						<div class="form-check form-check-inline me-4">
+						 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" style="height:16px;">
+						 <label class="form-check-label" for="inlineRadio1">동의</label>
+						</div>
+						<div class="form-check form-check-inline">
+						 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" style="height:16px;">
+						 <label class="form-check-label" for="inlineRadio2">비동의</label>
+						</div>
+					
+					<div class="w-100 mb-4"></div>
+					<button class="w-100 btn btn-lg btn-primary mb-4" type="submit">JOIN</button>
 				</form>
 			  </div>
 			</div>
@@ -187,14 +186,14 @@
 	</main>
 	<!-- footer -->
 	<div class="container">
-		<footer class="py-5 ">
+		<footer class="py-5" style="color:#555;">
 			<div class="d-flex justify-content-between py-4 my-4 border-top">
 				<div class="row">
 					<div class="col">
 						<ul class="list-unstyled">
-							<li>© 2022 Company, Inc. All rights reserved.</li>
-							<li>주식회사 컴패니멀 어쩌구 저쩌구</li>
-							<li>그래서 만든사람 어쩌구저쩌구</li>
+							<li class="fw-normal">© 2022 Company, Inc. All rights reserved.</li>
+							<li class="fw-normal">주식회사 컴패니멀 어쩌구 저쩌구</li>
+							<li class="fw-normal">그래서 만든사람 어쩌구저쩌구</li>
 						</ul>
 					</div>
 				</div>
