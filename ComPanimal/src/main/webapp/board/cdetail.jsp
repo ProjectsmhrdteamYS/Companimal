@@ -93,6 +93,7 @@
 			<BR>
 			<table class="table">
 				<tr>
+				
 					<td>제목</td>
 					<td>${vo.c_title}</td>
 				</tr>
