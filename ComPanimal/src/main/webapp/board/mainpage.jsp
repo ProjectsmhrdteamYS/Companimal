@@ -167,8 +167,8 @@ a {
 	<div class="row justify-content-center">
 
 		<div class="col-md-1 me-4 text-center ">
-			<a onclick="location.href='${cpath }/companimal.do'"> <img
-				class="rounded-circle" src="${cpath }/images/icon_1.png"
+			<a type="button" onclick="location.href='${cpath }/companimal.do'">
+				<img class="rounded-circle" src="${cpath }/images/icon_1.png"
 				alt="icon_1" width="100" height="100">
 			</a>
 		</div>
@@ -176,35 +176,36 @@ a {
 		<!-- col_2 -->
 
 		<div class="col-md-1 me-4 text-center">
-			<a onclick="location.href='${cpath }/searchform.do'"> <img
-				class="rounded-circle" src="${cpath }/images/icon_2.png"
+			<a type="button" onclick="location.href='${cpath }/searchform.do'">
+				<img class="rounded-circle" src="${cpath }/images/icon_2.png"
 				alt="icon_1" width="100" height="100">
 			</a>
 		</div>
 		<!-- col_3 -->
 
 		<div class="col-md-1 me-4 text-center">
-			<a onclick="location.href='${cpath }/checkform.do'"> <img
-				class="rounded-circle" src="${cpath }/images/icon_3.png"
+			<a type="button" onclick="location.href='${cpath }/checkform.do'">
+				<img class="rounded-circle" src="${cpath }/images/icon_3.png"
 				alt="icon_1" width="100" height="100">
 			</a>
 		</div>
 		<!-- col_4 -->
 
 		<div class="col-md-1 me-4 text-center">
-			<a onclick="location.href='${cpath }/boardform.do'"> <img
-				class="rounded-circle" src="${cpath }/images/icon_4.png"
+			<a type="button" onclick="location.href='${cpath }/boardform.do'">
+				<img class="rounded-circle" src="${cpath }/images/icon_4.png"
 				alt="icon_1" width="100" height="100">
 			</a>
 		</div>
 		<!-- con_5 -->
 		<div class="col-md-1 me-4 text-center">
-			<a onclick="location.href='${cpath }/findboardform.do'"> <img
-				class="rounded-circle" src="${cpath }/images/icon_5.png"
+			<a type="button" onclick="location.href='${cpath }/findboardform.do'">
+				<img class="rounded-circle" src="${cpath }/images/icon_5.png"
 				alt="icon_1" width="100" height="100">
 			</a>
 		</div>
-
+	</div>
+	<div class="container">
 		<div class="row pt-5">
 			<div class="col-md-6">
 				<div class="h-100 p-5 text-white bg-dark rounded-3"
@@ -231,6 +232,7 @@ a {
 			</div>
 		</div>
 	</div>
+
 
 
 	<!-- footer -->
