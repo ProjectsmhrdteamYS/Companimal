@@ -12,8 +12,10 @@
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 	crossorigin="anonymous"></script>
+
 <script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+	</script>
 
 
 <link rel="stylesheet" href="${cpath }/css/bootstrap.css">
@@ -21,10 +23,40 @@
 <link rel="stylesheet" href="${cpath }/css/bootstrap-reboot.css">
 <link rel="stylesheet" href="${cpath }/css/bootstrap-utilities.css">
 <title>회원가입</title>
+
 <style>
-    ul li{list-style: none; font-weight: 600; }
-    a {text-decoration: none;}
-    </style>
+
+  /* 공통 style */
+  ul li{list-style: none; font-weight: 700; }
+  a {text-decoration: none;  color :#150906;}
+  a:hover {
+  color: orange;
+  transition: background-color 0.5s;
+  }
+  body {
+    min-height: 100vh;
+  }
+
+  .input-form {
+    max-width: 650px;
+
+    margin-top: 80px;
+    padding: 50px;
+
+    background: #fff;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15)
+  }
+
+  .input-form  input{
+    height: 48px;
+  }
+  </style>
+  
 </head>
 <body>
 	<header class=" container-fluid p-3 bg-white ">
@@ -63,15 +95,11 @@
 		</div>
 	</header>
 	<main id="wrap">
-		<!-- <div class="input-form col-md-12 mx-auto"> -->
-		<div class="container"></div>
+		<div class="container">
 		<div class="input-form-backgroud row">
 			<div class="input-form col-md-12 mx-auto">
-				<br>
-				<!--사진 크기조절  -->
-				<div style="text-align: center";>
-					<img alt="erorr" src="${cpath }/images/logo.png" width="320">
-				</div>
+				<img class="mx-5" src="${cpath }/images/logo.png" alt="로고" width="80%" >
+				
 				<br> <br>
 				
 				<!-- form methods 선정되는거 없으면 get방식임 -->
@@ -132,7 +160,7 @@
 						style="background-color: #ff7530; border: none; color: white"
 						type="submit">가입 하기</button>
 				</form>
-				<!-- 	</div> -->
+				</div>
 			</div>
 		</div>
 		<script>window.addEventListener('load', () => {
