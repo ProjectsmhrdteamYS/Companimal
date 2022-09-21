@@ -205,29 +205,26 @@ a {
 			</a>
 		</div>
 	</div>
+	
 	<div class="container">
 		<div class="row pt-5">
 			<div class="col-md-6">
 				<div class="h-100 p-5 text-white bg-dark rounded-3"
-					style="background-image: url(images/main_con_1.jpg); background-size: cover;">
-					<h2 class="fw-bold">Change the background</h2>
-					<p>Swap the background-color utility and add a `.text-*` color
-						utility to mix up the jumbotron look. Then, mix and match with
-						additional component themes and more.</p>
-					<button class="btn btn-outline-light" type="button">Example
-						button</button>
+					style="background-image: url(${cpath }/images/main_con_1.jpg); background-size: cover;">
+					<h2 class="fw-bold">찾아주세요</h2>
+					<p>Swap the background-color utility <br>
+				    and add a Then, mix and match with <br>
+				    additional component themes and more.</p>
+					 <button class="btn btn-outline-primary fw-bold" onclick="${cpath }location.href='/find.html'" type="button" style="width:130px;">Find</button>
 				</div>
 			</div>
 			<div class="col-md-6">
-				<div class="h-100 p-5 bg-light border rounded-3"
-					style="background-image: url(images/main_con_2.jpg); background-size: cover;">
-					<h2 class="fw-bold">Add borders</h2>
-					<p>Or, keep it light and add a border for some added definition
-						to the boundaries of your content. Be sure to look under the hood
-						at the source HTML here as we've adjusted the alignment and sizing
-						of both column's content for equal-height.</p>
-					<button class="btn btn-outline-secondary" type="button">Example
-						button</button>
+				<div class="h-100 p-5 text-white border rounded-3" style="background-image:url(${cpath }/images/main_con_2.jpg); background-size: cover;">
+					<h2 class="fw-bold">우리 댕댕이</h2>
+				   	  <p>Swap the background-color utility <br>
+				      and add a Then, mix and match with <br>
+				      additional component themes and more.</p>
+					<button class="btn btn-outline-light fw-bold" onclick="location.href='/${cpath }board.html'" type="button" style="width:130px;">board</button>
 				</div>
 			</div>
 		</div>
