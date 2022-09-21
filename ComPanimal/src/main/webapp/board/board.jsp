@@ -3,96 +3,128 @@
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var="cpath" value="${pageContext.request.contextPath }" />
+
 <!DOCTYPE html>
-<html>
+
+<html lang="ko">
 <head>
-<meta charset="EUC-KR">
-<title>커뮤니티 게시판</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판</title>
+    
+    <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 	crossorigin="anonymous"></script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>커뮤니티 게시판</title>
-<link rel="stylesheet" href="${cpath }/css/bootstrap.css">
-<link rel="stylesheet" href="${cpath }/css/bootstrap-grid.css">
-<link rel="stylesheet" href="${cpath }/css/bootstrap-reboot.css">
-<link rel="stylesheet" href="${cpath }/css/bootstrap-utilities.css">
+
+
+   <link rel="stylesheet" href="${cpath }/css/bootstrap.css">
+   <link rel="stylesheet" href="${cpath }/css/bootstrap-grid.css">
+   <link rel="stylesheet" href="${cpath }/css/bootstrap-reboot.css">
+   <link rel="stylesheet" href="${cpath }/css/bootstrap-utilities.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+  
+
+<style>
+
+/* 공통 style */
+ul li{list-style: none; font-weight: 700; }
+a {text-decoration: none;  color :#150906;}
+a:hover {
+color: orange;
+transition: background-color 0.5s;
+}
+</style>
+
 </head>
+
 <body>
-	<!-- header -->
+    
+    <!-- header -->
     <header class=" container-fluid p-3 bg-white ">
-        <div class="container p-3">
-          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start ">
-            <a class="navbar-brand me-4" href="${cpath }/mainpage.do"  >
-                <img src="${cpath }/images/logo.png" alt="" width="286" class="d-inline-block align-text-top ">
-            </a>
-    
-            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-              
-              <li><a href="${cpath }/companimal.do" class="nav-link px-3 link-dark">COMPANIMAL</a></li>
-              <li><a href="${cpath }/searchform.do" class="nav-link px-3 link-dark">반려견조회</a></li>
-              <li><a href="${cpath }/checkform.do" class="nav-link px-3 link-dark">반려견등록</a></li>
-              <li><a href="${cpath }/boardform.do" class="nav-link px-3 link-dark">게시판</a></li>
-              <li><a href="${cpath }/findboardform.do" class="nav-link px-3 link-dark">찾아주세요</a></li>
-            </ul>
-    
-            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-2">
-              <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
-            </form>
-            <div class="text-end">
-              <c:if test= "${empty uvo }">
-              <button type="button" class="btn btn-outline-secondary me-1" onclick="location.href='${cpath }/signinform.do'">Login</button>              
-              <button type="button" class="btn btn-primary" onclick="location.href='${cpath }/signupform.do'">Sign-up</button>
-              </c:if>
+      <div class="container p-3">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start ">
+          <a class="navbar-brand me-4" href="${cpath }/mainpage.do" >
+              <img src="${cpath }/images/logo.png" alt="" width="286" class="d-inline-block align-text-top ">
+          </a>
+  
+          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            
+            <li><a href="${cpath }/companimal.do" class="nav-link px-3 link-dark">COMPANIMAL</a></li>
+            <li><a href="${cpath }/searchform.do" class="nav-link px-3 link-dark">반려견조회</a></li>
+            <li><a href="${cpath }/checkform.do" class="nav-link px-3 link-dark">반려견등록</a></li>
+            <li><a href="${cpath }/boardform.do" class="nav-link px-3 link-dark">게시판</a></li>
+            <li><a href="${cpath }/findboardform.do" class="nav-link px-3 link-dark">찾아주세요</a></li>
+          </ul>
+  
+          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-2">
+            <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
+          </form>
+  
+          <div class="text-end">
+             <c:if test= "${empty uvo }">
+            <button type="button" class="btn btn-outline-secondary me-1" onclick="location.href='${cpath }/signinform.do'">Login</button>
+            <button type="button" class="btn btn-primary"onclick="location.href='${cpath }/signupform.do'">Sign-up</button>
+           </c:if>
               <c:if test= "${!empty uvo }">
               ${uvo.user_id}님 환영합니다.
               <button type="button" class="btn btn-outline-secondary me-1" onclick="location.href='${cpath }/logout.do'">Logout</button>             
               </c:if>
-            </div>
+          
           </div>
         </div>
-      </header>
-  	<main id="wrap">
-		<div class="container">
-			<h2>이야기</h2>
-			<BR>
-			<HR>
-			<table class="table">
-				<thead>
-					<tr>
-						<th scope="col">번호</th>
-						<th scope="col">제목</th>
-						<th scope="col">내용</th>
-						<th scope="col">작성자</th>
-						<th scope="col">작성일</th>
-						<th scope="col">조회수</th>
-					</tr>
-				</thead>
-				<tbody>
-					<c:forEach var="vo" items="${list }">
-						<tr>
-							<th>${vo.c_seq}</th>
-							<td><A CLASS="fw-bold text-dark"
-								HREF="${cpath }/cdetailform.do?c_seq=${vo.c_seq}">${vo.c_title}</A></td>
-							<td>${vo.c_content }</td>
-							<td>${vo.user_id }</td>
-							<td>${vo.c_date}</td>
-							<td>${vo.c_cnt}</td>
-						</tr>
-					</c:forEach>
-			</table>
-		</div>
-		<c:if test="${!empty uvo }">
-				<div align="right">
-					<button type="button" class="btn btn-primary"
-						onclick="location.href='${cpath }/boardwriteform.do'">게시물
-						작성</button>
-				</div>
-				</c:if>
-	</main>
+      </div>
+    </header>
+    <!-- container -->
+      
+
+    <main id="wrap" class="position-relative">
+      <div class="container">
+        <!-- <img src="${cpath }/images/mongja.jpg" alt="" width="380px" -->
+        <img src="${cpath }/images/board_banner_1.jpg" class="mt-2 mb-2" alt="" width="100%"
+          class="d-inline-block align-text-top">
+        <br><br>
+        <HR>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">번호</th>
+              <th scope="col">제목</th>
+              <th scope="col">내용</th>
+              <th scope="col">작성자</th>
+              <th scope="col">작성일</th>
+              <th scope="col">조회수</th>
+            </tr>
+          </thead>
+          <tbody>
+            <c:forEach var="vo" items = "${list }">
+              <tr>
+                <th>${vo.c_seq}</th>
+                <td><A CLASS="fw-bold text-dark"
+                  	HREF="${cpath }/cdetailform.do?c_seq=${vo.c_seq}">${vo.c_title}</A></td>
+                <td>${vo.c_content }</td>
+                <td>${vo.user_id }</td>
+                <td>${vo.c_date}</td>
+                <td>${vo.c_cnt}</td>
+              </tr>
+            </c:forEach>
+        </table>
+      <p> </p>
+      <c:if test="${!empty uvo }">
+      <div class="float-end">
+        <button type="button" class="btn btn-primary" style="width: 120px; height:50px;"
+          onclick="location.href='${cpath }/boardwriteform.do'">
+          게시물 작성</button>
+      </div>
+      </div>
+      	</c:if>
+    </main>
+
+      <!-- footer -->
+      
+<div class="container">
 <footer class="py-5 " >
 
 
@@ -125,6 +157,7 @@
 
 
   </footer>
-</body>
+</div>
 
+</body>
 </html>

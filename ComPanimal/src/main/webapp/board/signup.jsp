@@ -8,6 +8,7 @@
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<<<<<<< HEAD
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
@@ -18,13 +19,25 @@
 	</script>
 
 
+=======
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>메인</title>
+>>>>>>> branch 'master' of https://github.com/ProjectsmhrdteamYS/Companimal.git
 <link rel="stylesheet" href="${cpath }/css/bootstrap.css">
 <link rel="stylesheet" href="${cpath }/css/bootstrap-grid.css">
 <link rel="stylesheet" href="${cpath }/css/bootstrap-reboot.css">
 <link rel="stylesheet" href="${cpath }/css/bootstrap-utilities.css">
+<<<<<<< HEAD
 <title>회원가입</title>
 
+=======
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+	crossorigin="anonymous"></script>
+>>>>>>> branch 'master' of https://github.com/ProjectsmhrdteamYS/Companimal.git
 <style>
+<<<<<<< HEAD
 
   /* 공통 style */
   ul li{list-style: none; font-weight: 700; }
@@ -57,8 +70,20 @@
   }
   </style>
   
+=======
+ul li {
+	list-style: none;
+	font-weight: 600;
+}
+
+a {
+	text-decoration: none;
+}
+</style>
+>>>>>>> branch 'master' of https://github.com/ProjectsmhrdteamYS/Companimal.git
 </head>
 <body>
+	<!-- header -->
 	<header class=" container-fluid p-3 bg-white ">
 		<div class="container p-3">
 			<div
@@ -67,8 +92,10 @@
 					src="${cpath }/images/logo.png" alt="" width="286"
 					class="d-inline-block align-text-top ">
 				</a>
+
 				<ul
 					class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+
 					<li><a href="${cpath }/companimal.do"
 						class="nav-link px-3 link-dark">COMPANIMAL</a></li>
 					<li><a href="${cpath }/searchform.do"
@@ -80,20 +107,30 @@
 					<li><a href="${cpath }/findboardform.do"
 						class="nav-link px-3 link-dark">찾아주세요</a></li>
 				</ul>
+
 				<form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-2">
 					<input type="search" class="form-control form-control-dark"
 						placeholder="Search..." aria-label="Search">
 				</form>
 
 				<div class="text-end">
-					<button type="button" class="btn btn-outline-secondary me-1"
-						onclick="location.href='${cpath }/signinform.do'">Login</button>
-					<button type="button" class="btn btn-primary"
-						onclick="location.href='${cpath }/signupform.do'">Sign-up</button>
+					<c:if test="${empty uvo }">
+						<button type="button" class="btn btn-outline-secondary me-1"
+							onclick="location.href='${cpath }/signinform.do'">Login</button>
+						<button type="button" class="btn btn-primary"
+							onclick="location.href='${cpath }/signupform.do'">Sign-up</button>
+					</c:if>
+					<c:if test="${!empty uvo }">
+              ${uvo.user_id}님 환영합니다.
+              <button type="button"
+							class="btn btn-outline-secondary me-1"
+							onclick="location.href='${cpath }/logout.do'">Logout</button>
+					</c:if>
 				</div>
 			</div>
 		</div>
 	</header>
+	<!-- header end -->
 	<main id="wrap">
 		<div class="container">
 		<div class="input-form-backgroud row">
@@ -101,10 +138,10 @@
 				<img class="mx-5" src="${cpath }/images/logo.png" alt="로고" width="80%" >
 				
 				<br> <br>
-				
+
 				<!-- form methods 선정되는거 없으면 get방식임 -->
-				<form accept-charset = "UTF-8" class="validation-form" action="${cpath}/signup.do"
-					method="get">
+				<form accept-charset="UTF-8" class="validation-form"
+					action="${cpath}/signup.do" method="get">
 					<div class="row">
 						<div class="mb-3">
 							<label for="id">ID</label> <input type="text"
@@ -145,15 +182,15 @@
 					<hr class="mb-4">
 					<div class="custom-control custom-checkbox">
 						<!-- <input type="checkbox" class="custom-control-input" id="aggrement"
-							required> --> 
-							<label class="custom-control-label" for="aggrement">개인정보 수집 및 이용에 동의합니다</label>
-							<br>
-							<input type="radio" class="custom-control-input" id="aggrement"
-							required name = "user_type" value = "1">
-							<label class="custom-control-label" for="aggrement">동의</label>
-							<input type="radio" class="custom-control-input" id="aggrement"
-							required name = "user_type" value = "0">
-							<label class="custom-control-label" for="aggrement">비동의</label>
+							required> -->
+						<label class="custom-control-label" for="aggrement">개인정보
+							수집 및 이용에 동의합니다</label> <br> <input type="radio"
+							class="custom-control-input" id="aggrement" required
+							name="user_type" value="1"> <label
+							class="custom-control-label" for="aggrement">동의</label> <input
+							type="radio" class="custom-control-input" id="aggrement" required
+							name="user_type" value="0"> <label
+							class="custom-control-label" for="aggrement">비동의</label>
 					</div>
 					<div class="mb-4"></div>
 					<button class="btn-lg btn-block"
@@ -176,29 +213,27 @@
       });
     }, false);</script>
 	</main>
-<footer class="py-5 ">
-		<div class="d-flex justify-content-between py-4 my-4 border-top">
-			<div class="row">
-				<div class="col">
-					<ul>
-						<li>© 2022 Company, Inc. All rights reserved.</li>
-						<li>주식회사 컴패니멀 어쩌구 저쩌구</li>
-						<li>그래서 만든사람 어쩌구저쩌구</li>
-					</ul>
+	<!-- footer -->
+	<div class="container">
+		<footer class="py-5 ">
+			<div class="d-flex justify-content-between py-4 my-4 border-top">
+				<div class="row">
+					<div class="col">
+						<ul class="list-unstyled">
+							<li>© 2022 Company, Inc. All rights reserved.</li>
+							<li>주식회사 컴패니멀 어쩌구 저쩌구</li>
+							<li>그래서 만든사람 어쩌구저쩌구</li>
+						</ul>
+					</div>
 				</div>
-				<div class="col">
-					<ul>
-						<li>© 2022 Company, Inc. All rights reserved.</li>
-						<li>주식회사 컴패니멀 어쩌구 저쩌구</li>
-						<li>그래서 만든사람 어쩌구저쩌구</li>
-					</ul>
-				</div>
+				<ul class="list-unstyled d-flex ">
+					<li class="btn btn-primary py-4 me-2">짹짹이</li>
+					<li class="btn btn-outline-secondary py-4 me-2">인서타</li>
+					<li class="btn btn-primary py-4 me-2">농농농</li>
+				</ul>
 			</div>
-			<ul class="list-unstyled d-flex ">
-				<li class="btn btn-primary py-4 me-2">짹짹이</li>
-				<li class="btn btn-outline-secondary py-4 me-2">인서타</li>
-				<li class="btn btn-primary py-4 me-2">농농농</li>
-			</ul>
-	</footer>
+		</footer>
+	</div>
+	<!-- footer end -->
 </body>
 </html>
