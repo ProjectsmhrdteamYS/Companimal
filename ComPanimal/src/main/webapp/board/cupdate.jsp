@@ -9,11 +9,22 @@
 
 <html lang="ko">
 <head>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>메인</title>
+<link rel="stylesheet" href="${cpath }/css/bootstrap.css">
+<link rel="stylesheet" href="${cpath }/css/bootstrap-grid.css">
+<link rel="stylesheet" href="${cpath }/css/bootstrap-reboot.css">
+<link rel="stylesheet" href="${cpath }/css/bootstrap-utilities.css">
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>게시판</title>
     
+
     <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
@@ -25,8 +36,6 @@
    <link rel="stylesheet" href="${cpath }/css/bootstrap-reboot.css">
    <link rel="stylesheet" href="${cpath }/css/bootstrap-utilities.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
-  
 
 <style>
 

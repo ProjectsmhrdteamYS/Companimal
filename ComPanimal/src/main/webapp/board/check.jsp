@@ -7,23 +7,70 @@
 <html>
 <head>
 <meta charset="UTF-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>메인</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>반려동물등록</title>
+<link rel="stylesheet" href="${cpath }/css/bootstrap.css">
+<link rel="stylesheet" href="${cpath }/css/bootstrap-grid.css">
+<link rel="stylesheet" href="${cpath }/css/bootstrap-reboot.css">
+<link rel="stylesheet" href="${cpath }/css/bootstrap-utilities.css">
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+	crossorigin="anonymous"></script>
+<style>
+/* 공통 style */
+ul li{list-style: none; font-weight: 700; }
+a {text-decoration: none;  color :#150906;}
+a:hover {
+color: orange;
+transition: background-color 0.5s;
+}
 
-<title>동물 등록</title>
-   <link rel="stylesheet" href="${cpath }/css/bootstrap.css">
-   <link rel="stylesheet" href="${cpath }/css/bootstrap-grid.css">
-   <link rel="stylesheet" href="${cpath }/css/bootstrap-reboot.css">
-   <link rel="stylesheet" href="${cpath }/css/bootstrap-utilities.css">
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  /* 세부디자인 */
+.search {
+      max-width: 680px;
 
+      margin-top: 80px;
+      padding: 32px;
 
-    <style>
+      background: #fff;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      -webkit-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+      -moz-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+      box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15)
+    }
 
-ul li{list-style: none;}
-    </style>
+/* 첨부파일 디자인 수정 */
 
+    .filebox input { 
+      width: 300px;
+      height: 40px;
+    }
+    .filebox label {
+    width: 236px;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    vertical-align: middle;
+    background-color:  #595350;
+    cursor: pointer;
+    height: 40px;
+    margin-left: 10px;
+}
+
+/* 기존 디자인 수정 */
+.filebox input[type="file"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}
+</style>
 </head>
 <body>
 	<!-- header -->
@@ -66,11 +113,11 @@ ul li{list-style: none;}
       
       <!-- content -->
       
-	<div class="container p-lg-5" style="height: 780px;">
+	<div class="container" style="height: 780px;">
 	<div class="form-signin mx-auto mt-5"  >
-  	<form  class="border rounded-4 p-5 mx-auto" style="width: 650px; height: 720px;">
+  	<form  class="search rounded-4 p-5 mx-auto h-100" style="width: 650px;">
     <br>
-    <img class="mb-4" src="${cpath }/images/222.jpg"alt="로고" width="100%" height="120px">
+    <img class="mx-5" src="${cpath }/images/logo.png"alt="로고" width="80%">
     <h1 class="h3 mt-3 fw-normal text-center">반려동물 등록 서비스</h1>
 
     <div class="mb-3">
@@ -85,42 +132,60 @@ ul li{list-style: none;}
     </div>
     <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">동물 사진 등록</label>
-    <br>
-      <input type="file" id="myFile" name="filename">
+     <div class="filebox">
+       <input class="upload-name" value="첨부파일" placeholder="첨부파일">
+        <label for="file">파일찾기</label> 
+        <input type="file" id="file">
+    </div>
     </div>
     
     
 
-    <div class="checkbox mt-3 mb-3 " >
-      
+     <div class="checkbox mt-3 mb-3 " >
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
     </div>
     <button class="w-100 btn btn-lg btn-primary" type="submit" style="height: 60px;">submit</button>
     <p class="mt-5 mb-3 text-muted">© 2022–2025</p>
   </form>
 </div>
 
-</div>
- <!-- footer -->
+    
 	<div class="container">
-		<footer class="py-5 ">
-			<div class="d-flex justify-content-between py-4 my-4 border-top">
-				<div class="row">
-					<div class="col">
-						<ul class="list-unstyled">
-							<li>© 2022 Company, Inc. All rights reserved.</li>
-							<li>주식회사 컴패니멀 어쩌구 저쩌구</li>
-							<li>그래서 만든사람 어쩌구저쩌구</li>
-						</ul>
-					</div>
-				</div>
-				<ul class="list-unstyled d-flex ">
-					<li class="btn btn-primary py-4 me-2">짹짹이</li>
-					<li class="btn btn-outline-secondary py-4 me-2">인서타</li>
-					<li class="btn btn-primary py-4 me-2">농농농</li>
-				</ul>
-			</div>
-		</footer>
-	</div>
-	<!-- footer end -->
+<footer class="py-5 " >
+
+
+  <div class="d-flex justify-content-between py-4 my-4 border-top">
+      
+      <div class="row">
+      <div class="col">
+      <ul>
+          <li>© 2022 Company, Inc. All rights reserved.</li>
+          <li>주식회사 컴패니멀 어쩌구 저쩌구</li>
+          <li>그래서 만든사람 어쩌구저쩌구</li>
+      </ul>
+  </div>
+      
+      <div class="col">
+      <ul>
+          <li>© 2022 Company, Inc. All rights reserved.</li>
+          <li>주식회사 컴패니멀 어쩌구 저쩌구</li>
+          <li>그래서 만든사람 어쩌구저쩌구</li>
+      </ul>
+  </div>
+</div>
+    
+
+    <ul class="list-unstyled d-flex ">
+      <li class="btn btn-primary py-4 me-2" >짹짹이</li>
+      <li class="btn btn-outline-secondary py-4 me-2">인서타</li>
+      <li class="btn btn-primary py-4 me-2">농농농</li>
+    </ul>
+
+
+</footer>
+</div>
+
 </body>
 </html>

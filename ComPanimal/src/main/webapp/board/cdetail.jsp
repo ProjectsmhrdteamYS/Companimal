@@ -28,6 +28,7 @@
 	function goDel(c_seq) {
 		location.href = "${cpath}/cdelete.do?c_seq=" + c_seq;
 	}
+
 	function goUpdate(c_seq) {
 		location.href = "${cpath}/cupdateform.do?c_seq=" + c_seq;
 
