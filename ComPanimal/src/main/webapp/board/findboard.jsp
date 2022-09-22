@@ -78,7 +78,8 @@ a {
 		</div>
 	</header>
 	<!-- header end -->
-
+	
+	<!-- content -->
 	<main id=wrap>
 		<div class="container">
 			<img src="${cpath }/images/board_banner_2.jpg" alt="" width="100%"
@@ -89,8 +90,7 @@ a {
 				<c:forEach var="vo" items="${list }">
 					<div class="col">
 						<div class="card">
-							<img
-								src="https://img.insight.co.kr/static/2018/11/05/700/888208025o428h6408hs.jpg"
+							<img src="${cpath }/img/${vo.f_file}"
 								class="bd-placeholder-img card-img-top" width="100%"
 								height="225" xmlns="http://www.w3.org/2000/svg" role="img"
 								aria-label="Placeholder: Thumbnail"
@@ -128,14 +128,16 @@ a {
 			</c:if>
 		</div>
 	</main>
-<!-- footer -->
+	<!-- content end -->
+	<!-- footer -->
 	<div class="container">
-		<footer class="py-5" style="color:#555;">
+		<footer class="py-5" style="color: #555;">
 			<div class="d-flex justify-content-between py-4 my-4 border-top">
 				<div class="row">
 					<div class="col">
 						<ul class="list-unstyled">
-							<li class="fw-normal">© 2022 Company, Inc. All rights reserved.</li>
+							<li class="fw-normal">© 2022 Company, Inc. All rights
+								reserved.</li>
 							<li class="fw-normal">주식회사 컴패니멀 어쩌구 저쩌구</li>
 							<li class="fw-normal">그래서 만든사람 어쩌구저쩌구</li>
 						</ul>

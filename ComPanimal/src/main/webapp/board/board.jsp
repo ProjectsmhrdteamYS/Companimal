@@ -77,9 +77,9 @@ transition: background-color 0.5s;
         </div>
       </div>
     </header>
+    <!-- header end -->
+    
     <!-- container -->
-      
-
     <main id="wrap" class="position-relative">
       <div class="container">
         <!-- <img src="${cpath }/images/mongja.jpg" alt="" width="380px" -->
