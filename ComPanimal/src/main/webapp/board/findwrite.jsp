@@ -114,7 +114,7 @@ a {
 				<br>
 				<div>
 					<input class="form-control" type="text"
-						placeholder=" ${uvo.user_id}" disabled>
+						placeholder=" ${uvo.user_name}" disabled>
 				</div>
 
 				<br>
