@@ -92,7 +92,7 @@ transition: background-color 0.5s;
             <tr>
               <th scope="col">번호</th>
               <th scope="col">제목</th>
-              <th scope="col">내용</th>
+              
               <th scope="col">작성자</th>
               <th scope="col">작성일</th>
               <th scope="col">조회수</th>
@@ -104,7 +104,7 @@ transition: background-color 0.5s;
                 <th>${vo.c_seq}</th>
                 <td><A CLASS="fw-bold text-dark"
                   	HREF="${cpath }/cdetailform.do?c_seq=${vo.c_seq}">${vo.c_title}</A></td>
-                <td>${vo.c_content }</td>
+            
                 <td>${vo.user_id }</td>
                 <td>${vo.c_date}</td>
                 <td>${vo.c_cnt}</td>
