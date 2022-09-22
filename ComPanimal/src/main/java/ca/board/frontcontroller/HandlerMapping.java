@@ -5,7 +5,6 @@ import java.util.HashMap;
 import ca.board.controller.BoardFormController;
 import ca.board.controller.BoardWriteController;
 import ca.board.controller.BoardWriteFormController;
-import ca.board.controller.CdetailController;
 import ca.board.controller.CdetailFormController;
 import ca.board.controller.CheckController;
 import ca.board.controller.CheckFormController;
@@ -21,6 +20,7 @@ import ca.board.controller.FindUpdateFormController;
 import ca.board.controller.FindWriteController;
 import ca.board.controller.FindWriteFormController;
 import ca.board.controller.FindboardFormController;
+import ca.board.controller.InsertCommentController;
 import ca.board.controller.MainPageController;
 import ca.board.controller.SearchController;
 import ca.board.controller.SearchFormController;
@@ -49,8 +49,6 @@ public class HandlerMapping {
 		mappings.put("/boardwriteform.do", new BoardWriteFormController());
 		mappings.put("/boardwrite.do", new BoardWriteController());
 		mappings.put("/cdetailform.do", new CdetailFormController()); // 상세페이지 
-		mappings.put("/cdetail.do", new CdetailController()); // 수정하기 눌렀을때 
-		// cupdateForm 만들어서 업데이트 페이지로 보내기
 		mappings.put("/findboardform.do", new FindboardFormController());
 		mappings.put("/findwriteform.do", new FindWriteFormController());
 		mappings.put("/findwrite.do", new FindWriteController());
@@ -67,9 +65,10 @@ public class HandlerMapping {
 		mappings.put("/fupdateform.do", new FindUpdateFormController());
 		mappings.put("/cupdateform.do", new CupdateFormController());
 		mappings.put("/cupdate.do", new CupdateController());
-		// 회원수정
 		mappings.put("/user_update.do", new user_updateController());
 		mappings.put("/user_updateform.do", new user_updateFormController());
+		mappings.put("/check.do", new CheckController());
+		mappings.put("/inputcomment.do", new InsertCommentController());
 	}
 	public Controller getController(String key) {
 		return mappings.get(key);

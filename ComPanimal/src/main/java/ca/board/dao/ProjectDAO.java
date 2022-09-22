@@ -132,4 +132,26 @@ public class ProjectDAO {
 	}
 	
 	
+	// 동물 등록 메소드
+	public void petinsert(petVO vo) {
+		SqlSession session = sqlSessionFactory.openSession();
+		session.insert("petinsert",vo);
+		session.commit();
+		session.close();
+	}
+	// 댓글 쓰기 메소드
+		public void insertcomment(mentVO vo) {
+			SqlSession session =sqlSessionFactory.openSession();
+			session.insert("insertcomment", vo);
+			session.commit();
+			session.close();
+		}
+	// 댓글 전체 보기
+		public List<mentVO> mentList() {  
+			SqlSession session=sqlSessionFactory.openSession();
+			List<mentVO> list = session.selectList("mentList");  
+			session.close();
+			return list;
+		}
+
 }

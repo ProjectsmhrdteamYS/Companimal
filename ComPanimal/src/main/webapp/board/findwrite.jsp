@@ -79,29 +79,35 @@ a {
 		</div>
 	</header>
 	<!-- header end -->
+
+	<!-- content -->
 	<main id="wrap" class="position-relative">
 		<div class="container">
 			<img src="${cpath }/images/mongja.jpg" alt="" width="380px"
 				class="d-inline-block align-text-top">
 			<h2>현상수배</h2>
 			<BR>
-			<form action="${cpath}/findwrite.do">
+			<form action="${cpath}/findwrite.do" method="post"
+				enctype="multipart/form-data">
 				<input type="hidden" name="user_id" value="${uvo.user_id }">
 				<div class="input-group flex-nowrap">
-					<span class="input-group-text" id="addon-wrapping">제목</span>
-					 <input	type="text" class="form-control"aria-label="title" 
-					 aria-describedby="addon-wrapping" placeholder="반려견 상태를 적어주세요"name="f_title">
+					<span class="input-group-text" id="addon-wrapping">제목</span> <input
+						type="text" class="form-control" aria-label="title"
+						aria-describedby="addon-wrapping" placeholder="반려견 상태를 적어주세요"
+						name="f_title">
 				</div>
 				<br>
 				<div class="input-group">
 					<span class="input-group-text">내용</span>
 					<textarea class="form-control" aria-label="With textarea"
-						style="height: 300px" placeholder="잃어버린 지역 위치를 적어주세요" name="f_content"></textarea>
+						style="height: 300px" placeholder="잃어버린 지역 위치를 적어주세요"
+						name="f_content"></textarea>
 				</div>
 				<br>
 				<div class="mb-3">
-					<label for="formFile" class="form-label">사진 첨부</label>
-					 <input class="form-control" type="file" name="f_file" placeholder="반려견 사진을 올려주세요">
+					<label for="formFile" class="form-label">사진 첨부</label> <input
+						class="form-control" type="file" name="f_file"
+						placeholder="반려견 사진을 올려주세요">
 				</div>
 				<br>
 				<div>
@@ -113,7 +119,7 @@ a {
 				<div class="form-group">
 					<div class="col-sm-offset-2 col-sm-10">
 						<button type="submit" class="btn btn-success btn-sm">등록</button>
-							<button type="button" class="btn btn-sm btn-primary"
+						<button type="button" class="btn btn-sm btn-primary"
 							onclick="location.href='${cpath }/findboardform.do'">취소</button>
 
 					</div>
@@ -121,16 +127,18 @@ a {
 			</form>
 
 		</div>
-		</div>
 	</main>
+	<!-- content end -->
+
 	<!-- footer -->
 	<div class="container">
-		<footer class="py-5" style="color:#555;">
+		<footer class="py-5" style="color: #555;">
 			<div class="d-flex justify-content-between py-4 my-4 border-top">
 				<div class="row">
 					<div class="col">
 						<ul class="list-unstyled">
-							<li class="fw-normal">© 2022 Company, Inc. All rights reserved.</li>
+							<li class="fw-normal">© 2022 Company, Inc. All rights
+								reserved.</li>
 							<li class="fw-normal">주식회사 컴패니멀 어쩌구 저쩌구</li>
 							<li class="fw-normal">그래서 만든사람 어쩌구저쩌구</li>
 						</ul>

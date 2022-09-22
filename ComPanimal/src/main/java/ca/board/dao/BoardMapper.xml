@@ -50,5 +50,15 @@
 		delete from tbl_find where f_seq=#{f_seq}	</delete>
 	<!-- 14. 찾아주세요 게시판 수정 -->
 	<update id="fUpdate" parameterType="ca.board.dao.fboardVO">
-		update tbl_find set f_seq=#{f_seq},f_title=#{f_title},f_content=#{f_content} where f_seq=#{f_seq} </update>
+		update tbl_find set f_seq=#{f_seq},f_title=#{f_title},f_content=#{f_content},f_file=#{f_file} where f_seq=#{f_seq} </update>
+	<!-- 15. 동물 등록 -->
+	<insert id="petinsert" parameterType="ca.board.dao.petVO">
+		insert into tbl_pet(pet_regno,dognm,pet_img,owner_nm,reg_date,user_id)
+		values(${pet_regno},#{dognm},#{pet_img},#{owner_nm},sysdate,#{user_id}) </insert>
+	<!-- 16. 댓글 등록 -->
+	<insert id="insertcomment" parameterType="ca.board.dao.mentVO">
+		insert into tbl_comment(cmt_seq,c_seq,cmt_content,cmt_date,user_id)
+		values(tbl_comment_SEQ.NEXTVAL,#{c_seq},#{cmt_content},sysdate,#{user_id}) </insert>
+	<select id="mentList" resultType="ca.board.dao.mentVO">
+		select * from tbl_comment order by cmt_seq desc</select>
 </mapper>

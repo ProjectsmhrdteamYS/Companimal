@@ -34,57 +34,81 @@
 
 	}
 	</script>
-	
-	 <style>
 
-	/* 공통 style */
-	ul li{list-style: none; font-weight: 700; }
-	a {text-decoration: none;  color :#150906;}
-	a:hover {
+<style>
+
+/* 공통 style */
+ul li {
+	list-style: none;
+	font-weight: 700;
+}
+
+a {
+	text-decoration: none;
+	color: #150906;
+}
+
+a:hover {
 	color: orange;
 	transition: background-color 0.5s;
-	}
-	</style>
+}
+</style>
 
-	</head>
+</head>
 
-	<body>
-	    
-	    <!-- header -->
-	    <header class=" container-fluid p-3 bg-white ">
-	      <div class="container p-3">
-	        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start ">
-	          <a class="navbar-brand me-4" href="${cpath }/mainpage.do" >
-	              <img src="${cpath }/images/logo.png" alt="" width="286" class="d-inline-block align-text-top ">
-	          </a>
-	  
-	          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-	            
-	            <li><a href="${cpath }/companimal.do" class="nav-link px-3 link-dark">COMPANIMAL</a></li>
-	            <li><a href="${cpath }/searchform.do" class="nav-link px-3 link-dark">반려견조회</a></li>
-	            <li><a href="${cpath }/checkform.do" class="nav-link px-3 link-dark">반려견등록</a></li>
-	            <li><a href="${cpath }/boardform.do" class="nav-link px-3 link-dark">게시판</a></li>
-	            <li><a href="${cpath }/findboardform.do" class="nav-link px-3 link-dark">찾아주세요</a></li>
-	          </ul>
-	  
-	          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-2">
-	            <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
-	          </form>
-	  
-	          <div class="text-end">
-	             <c:if test= "${empty uvo }">
-	            <button type="button" class="btn btn-outline-secondary me-1" onclick="location.href='${cpath }/signinform.do'">Login</button>
-	            <button type="button" class="btn btn-primary"onclick="location.href='${cpath }/signupform.do'">Sign-up</button>
-	           </c:if>
-	              <c:if test= "${!empty uvo }">
+<body>
+
+	<!-- header -->
+	<header class=" container-fluid p-3 bg-white ">
+		<div class="container p-3">
+			<div
+				class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start ">
+				<a class="navbar-brand me-4" href="${cpath }/mainpage.do"> <img
+					src="${cpath }/images/logo.png" alt="" width="286"
+					class="d-inline-block align-text-top ">
+				</a>
+
+				<ul
+					class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+
+					<li><a href="${cpath }/companimal.do"
+						class="nav-link px-3 link-dark">COMPANIMAL</a></li>
+					<li><a href="${cpath }/searchform.do"
+						class="nav-link px-3 link-dark">반려견조회</a></li>
+					<li><a href="${cpath }/checkform.do"
+						class="nav-link px-3 link-dark">반려견등록</a></li>
+					<li><a href="${cpath }/boardform.do"
+						class="nav-link px-3 link-dark">게시판</a></li>
+					<li><a href="${cpath }/findboardform.do"
+						class="nav-link px-3 link-dark">찾아주세요</a></li>
+				</ul>
+
+				<form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-2">
+					<input type="search" class="form-control form-control-dark"
+						placeholder="Search..." aria-label="Search">
+				</form>
+
+				<div class="text-end">
+					<c:if test="${empty uvo }">
+						<button type="button" class="btn btn-outline-secondary me-1"
+							onclick="location.href='${cpath }/signinform.do'">Login</button>
+						<button type="button" class="btn btn-primary"
+							onclick="location.href='${cpath }/signupform.do'">Sign-up</button>
+					</c:if>
+					<c:if test="${!empty uvo }">
 	              ${uvo.user_id}님 환영합니다.
-	              <button type="button" class="btn btn-outline-secondary me-1" onclick="location.href='${cpath }/logout.do'">Logout</button>             
-	              </c:if>
-	          
-	          </div>
-	        </div>
-	      </div>
-	    </header>
+	              <button type="button"
+							class="btn btn-outline-secondary me-1"
+							onclick="location.href='${cpath }/logout.do'">Logout</button>
+					</c:if>
+
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- header end -->
+
+	<!-- container -->
 	<main id="wrap" class="position-relative">
 		<div class="container">
 			<img src="${cpath }/images/mongja.jpg" alt="" width="380px"
@@ -101,6 +125,10 @@
 					<td>${fn:replace(vo.c_content,newLine,"<br>") }</td>
 				</tr>
 				<tr>
+					<td>사진</td>
+					<td><img src="${cpath }/img/${vo.c_file}"></td>
+				</tr>
+				<tr>
 					<td>작성자</td>
 					<td>${vo.user_id}</td>
 				</tr>
@@ -110,31 +138,67 @@
 				</tr>
 
 				<tr>
-					<td colspan="2" align="center">
-    	 <c:if test="${uvo.user_id eq vo.user_id}">
-    	<button class = "btn btn-sm btn-success" onclick = "goUpdate(${vo.c_seq})">수정</button>
-    	<button class = "btn btn-sm btn-danger" onclick = "goDel(${vo.c_seq})">삭제</button>
-    	<button class = "btn btn-sm btn-primary" onclick = "location.href='${cpath}/boardform.do'">리스트</button>
- 		</c:if>
-        <c:if test="${uvo.user_id ne vo.user_id}">
-    	<button class = "btn btn-sm btn-primary" onclick = "location.href='${cpath}/boardform.do'">리스트</button>
-    	</c:if>
-    				
-    			</td>
+					<td colspan="2" align="center"><c:if
+							test="${uvo.user_id eq vo.user_id}">
+							<button class="btn btn-sm btn-success"
+								onclick="goUpdate(${vo.c_seq})">수정</button>
+							<button class="btn btn-sm btn-danger"
+								onclick="goDel(${vo.c_seq})">삭제</button>
+							<button class="btn btn-sm btn-primary"
+								onclick="location.href='${cpath}/boardform.do'">리스트</button>
+						</c:if> <c:if test="${uvo.user_id ne vo.user_id}">
+							<button class="btn btn-sm btn-primary"
+								onclick="location.href='${cpath}/boardform.do'">리스트</button>
+						</c:if></td>
 				</tr>
 			</table>
-
 		</div>
+		<!-- 댓글 -->
+		<div class="container">
+			<c:if test="${!empty uvo}">
+				<form action="${cpath}/inputcomment.do" class="form-horizontal"
+					method="post">
+					<input type="hidden" name="c_seq" value="${vo.c_seq}">
+					<div class="input-group flex-nowrap">
+						<input type="hidden" name="user_id" value="${uvo.user_id}">
+						<span class="input-group-text" id="addon-wrapping">"${uvo.user_id}"</span>
+						<input type="text" class="form-control" placeholder="댓글 입력"
+							name="cmt_content" aria-label="title"
+							aria-describedby="addon-wrapping">
+						<button type="submit">등록</button>
+					</div>
+				</form>
+			</c:if>
+		</div>
+		<!-- 댓글 리스트 -->
+		<div class="container">
+
+			<table class="table">
+				<c:forEach var="cvo" items="${list }">
+					<c:if test="${cvo.c_seq eq vo.c_seq}">
+						<tr>
+							<th>${cvo.cmt_seq}</th>
+							<td>${cvo.cmt_content }</td>
+							<td>${cvo.user_id }</td>
+							<td>${cvo.c_seq}</td>
+
+						</tr>
+					</c:if>
+				</c:forEach>
+			</table>
 		</div>
 	</main>
-<!-- footer -->
+	<!-- container end -->
+	
+	<!-- footer -->
 	<div class="container">
-		<footer class="py-5" style="color:#555;">
+		<footer class="py-5" style="color: #555;">
 			<div class="d-flex justify-content-between py-4 my-4 border-top">
 				<div class="row">
 					<div class="col">
 						<ul class="list-unstyled">
-							<li class="fw-normal">© 2022 Company, Inc. All rights reserved.</li>
+							<li class="fw-normal">© 2022 Company, Inc. All rights
+								reserved.</li>
 							<li class="fw-normal">주식회사 컴패니멀 어쩌구 저쩌구</li>
 							<li class="fw-normal">그래서 만든사람 어쩌구저쩌구</li>
 						</ul>
