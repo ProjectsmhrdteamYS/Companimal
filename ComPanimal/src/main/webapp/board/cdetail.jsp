@@ -89,7 +89,7 @@ a:hover {
 				</form>
 
 				<div class="text-end">
-					<c:if test="${empty uvo }">
+					<c:if test="${empty uvo}">
 						<button type="button" class="btn btn-outline-secondary me-1"
 							onclick="location.href='${cpath }/signinform.do'">Login</button>
 						<button type="button" class="btn btn-primary"
