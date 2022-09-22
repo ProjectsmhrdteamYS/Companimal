@@ -30,6 +30,8 @@ import ca.board.controller.SignupController;
 import ca.board.controller.SignupFormController;
 import ca.board.controller.logoutController;
 import ca.board.controller.logoutFormController;
+import ca.board.controller.user_updateController;
+import ca.board.controller.user_updateFormController;
 
 public class HandlerMapping {
 	
@@ -65,6 +67,9 @@ public class HandlerMapping {
 		mappings.put("/fupdateform.do", new FindUpdateFormController());
 		mappings.put("/cupdateform.do", new CupdateFormController());
 		mappings.put("/cupdate.do", new CupdateController());
+		// 회원수정
+		mappings.put("/user_update.do", new user_updateController());
+		mappings.put("/user_updateform.do", new user_updateFormController());
 	}
 	public Controller getController(String key) {
 		return mappings.get(key);

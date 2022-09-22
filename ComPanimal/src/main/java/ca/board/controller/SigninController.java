@@ -60,6 +60,8 @@ public class SigninController implements Controller {
 		
 		System.out.println(vo.getUser_id());
 		System.out.println(vo.getUser_pw());
+		System.out.println(vo.getUser_tel());
+		System.out.println(vo.getUser_addr());
 		// 임시적으로 메인페이지 넘어감 그 이후에 수정할예정
 		return "redirect:/mainpage.do";
 	}

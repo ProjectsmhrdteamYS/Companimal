@@ -123,4 +123,13 @@ public class ProjectDAO {
 		session.close();
 	}
 	
+	// 회원 수정 메소드
+	public void user_update(userVO vo) {
+		SqlSession session = sqlSessionFactory.openSession();
+		session.update("user_update",vo);
+		session.commit();
+		session.close();
+	}
+	
+	
 }
