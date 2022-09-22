@@ -37,8 +37,8 @@
 	<select id="fList" resultType="ca.board.dao.fboardVO"> select * from tbl_find order by f_seq desc </select>
 	<!-- 10. 찾아주세요 게시판 글쓰기 -->
 	<insert id="insertf" parameterType="ca.board.dao.fboardVO">
-		insert into tbl_find(f_seq,f_title,f_content,f_date,f_file,user_id)
-		values(tbl_find_SEQ.NEXTVAL,#{f_title},#{f_content},sysdate,#{f_file},#{user_id}) </insert>
+		insert into tbl_find(f_seq,f_title,f_content,f_date,f_file,user_id,user_name)
+		values(tbl_find_SEQ.NEXTVAL,#{f_title},#{f_content},sysdate,#{f_file},#{user_id},#{user_name}) </insert>
 	<!-- 11. 찾아주세요 게시판 상세 페이지 -->
 	<select id="fdetail" parameterType="int" resultType="ca.board.dao.fboardVO">
 		select * from tbl_find where f_seq = #{f_seq} </select>
