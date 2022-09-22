@@ -166,7 +166,7 @@ a:hover {
 						<input type="text" class="form-control" placeholder="댓글 입력"
 							name="cmt_content" aria-label="title"
 							aria-describedby="addon-wrapping">
-						<button type="submit">등록</button>
+						<button type="submit" class="btn btn-sm btn-primary">등록</button>
 					</div>
 				</form>
 			</c:if>
@@ -186,6 +186,7 @@ a:hover {
 				</c:forEach>
 			</table>
 		</div>
+		
 	</main>
 	<!-- container end -->
 	
