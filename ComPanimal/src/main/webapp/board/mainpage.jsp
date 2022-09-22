@@ -199,7 +199,7 @@
 					<p>Swap the background-color utility <br>
 				    and add a Then, mix and match with <br>
 				    additional component themes and more.</p>
-					 <button class="btn btn-outline-primary fw-bold" onclick="${cpath }location.href='/find.html'" type="button" style="width:130px;">Find</button>
+					 <button class="btn btn-outline-primary fw-bold" onclick="location.href='${cpath}/findboardform.do'" type="button" style="width:130px;">Find</button>
 				</div>
 			</div>
 			<div class="col-md-6">
@@ -208,7 +208,7 @@
 				   	  <p>Swap the background-color utility <br>
 				      and add a Then, mix and match with <br>
 				      additional component themes and more.</p>
-					<button class="btn btn-outline-light fw-bold" onclick="location.href='/${cpath }board.html'" type="button" style="width:130px;">board</button>
+					<button class="btn btn-outline-light fw-bold" onclick="location.href='${cpath }/boardform.do'" type="button" style="width:130px;">board</button>
 				</div>
 			</div>
 		</div>
