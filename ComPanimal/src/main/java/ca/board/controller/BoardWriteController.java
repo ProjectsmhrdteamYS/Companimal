@@ -25,13 +25,15 @@ public class BoardWriteController implements Controller {
 		String encoding="utf-8";
 		MultipartRequest multi = new MultipartRequest(request,savePath,maxSize,encoding,new DefaultFileRenamePolicy() );
 		
-		String writer = multi.getParameter("user_id");
+		String user_id = multi.getParameter("user_id");
+		String writer = multi.getParameter("user_name");
 		String c_title = multi.getParameter("c_title");
 		String c_content = multi.getParameter("c_content");
 		String c_file = multi.getFilesystemName("c_file");
 		
 		cboardVO vo = new cboardVO();
-		vo.setUser_id(writer);
+		vo.setUser_id(user_id);
+		vo.setUser_name(writer);
 		vo.setC_title(c_title);
 		vo.setC_content(c_content);
 		vo.setC_file(c_file);

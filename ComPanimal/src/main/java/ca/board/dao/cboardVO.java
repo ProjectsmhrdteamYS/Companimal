@@ -8,18 +8,27 @@ public class cboardVO {
 	private String c_file;
 	private int c_cnt;
 	private String user_id;
+	private String user_name;
 	
-	public cboardVO(int c_seq, String c_title, String c_content, String c_date, String c_file, String user_id,
-			int c_cnt) {
+	public cboardVO(int c_seq, String c_title, String c_content, String c_date, String c_file, int c_cnt,
+			String user_id, String user_name) {
 		super();
 		this.c_seq = c_seq;
 		this.c_title = c_title;
 		this.c_content = c_content;
 		this.c_date = c_date;
 		this.c_file = c_file;
-		this.user_id = user_id;
 		this.c_cnt = c_cnt;
+		this.user_id = user_id;
+		this.user_name = user_name;
 	}
+	public String getUser_name() {
+		return user_name;
+	}
+	public void setUser_name(String user_name) {
+		this.user_name = user_name;
+	}
+	
 	public String getUser_id() {
 		return user_id;
 	}
@@ -69,6 +78,6 @@ public class cboardVO {
 	@Override
 	public String toString() {
 		return "cboardVO [c_seq=" + c_seq + ", c_title=" + c_title + ", c_content=" + c_content + ", c_date=" + c_date
-				+ ", c_file=" + c_file + ", user_id=" + user_id + ", c_cnt=" + c_cnt + "]";
+				+ ", c_file=" + c_file + ", c_cnt=" + c_cnt + ", user_id=" + user_id + ", user_name=" + user_name + "]";
 	}
 }
