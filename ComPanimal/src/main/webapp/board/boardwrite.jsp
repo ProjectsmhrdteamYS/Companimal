@@ -76,10 +76,13 @@
     <!-- container -->
     <main id="wrap" class="position-relative">
       <div class="container">
+        <img src="${cpath }/images/mongja.jpg" alt="" width="380px"
+          class="d-inline-block align-text-top">
         <h2>우리강아지는요!!</h2>
         <BR>
         	<form action="${cpath}/boardwrite.do" class="form-horizontal" method="post" enctype="multipart/form-data">
         <input type="hidden" name="user_id" value="${uvo.user_id}">
+        <input type="hidden" name="user_name" value="${uvo.user_name}">
 				<div class="input-group flex-nowrap">
             <span class="input-group-text" id="addon-wrapping">제목</span> 
             <input

@@ -131,7 +131,7 @@ a:hover {
 				</tr>
 				<tr>
 					<td>작성자</td>
-					<td>${vo.user_id}</td>
+					<td>${vo.user_name}</td>
 				</tr>
 				<tr>
 					<td>작성일</td>
@@ -162,7 +162,7 @@ a:hover {
 					<input type="hidden" name="c_seq" value="${vo.c_seq}">
 					<div class="input-group flex-nowrap">
 						<input type="hidden" name="user_id" value="${uvo.user_id}">
-						<span class="input-group-text" id="addon-wrapping">"${uvo.user_id}"</span>
+						<span class="input-group-text" id="addon-wrapping">${uvo.user_name}</span>
 						<input type="text" class="form-control" placeholder="댓글 입력"
 							name="cmt_content" aria-label="title"
 							aria-describedby="addon-wrapping">

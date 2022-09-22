@@ -101,7 +101,7 @@ a {
 				</tr>
 				<tr>
 					<td>작성자</td>
-					<td>${vo.user_id}</td>
+					<td>${vo.user_name}</td>
 				</tr>
 				<tr>
 					<td>작성일</td>

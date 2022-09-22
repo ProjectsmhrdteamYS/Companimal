@@ -18,10 +18,10 @@
 	<!-- 3. 커뮤니티 게시판 전체 리스트 -->
 	<select id="cList" resultType="ca.board.dao.cboardVO">
 		select * from tbl_community order by c_seq desc	</select>
-	<!-- 4. 커뮤니티 게시판 글쓰기 -->
+		<!-- 4. 커뮤니티 게시판 글쓰기 -->
 	<insert id="insertc" parameterType="ca.board.dao.cboardVO">
-		insert into	tbl_community(c_seq,c_title,c_content,c_date,c_file,user_id)
-		values(tbl_community_SEQ.NEXTVAL,#{c_title},#{c_content},sysdate,#{c_file},#{user_id}) </insert>
+		insert into	tbl_community(c_seq,c_title,c_content,c_date,c_file,user_id,user_name)
+		values(tbl_community_SEQ.NEXTVAL,#{c_title},#{c_content},sysdate,#{c_file},#{user_id},#{user_name}) </insert>
 	<!-- 5. 커뮤니티 게시판 상세 페이지 -->
 	<select id="cdetail" parameterType="int" resultType="ca.board.dao.cboardVO">
 		select * from tbl_community where c_seq=#{c_seq} </select>
@@ -37,8 +37,8 @@
 	<select id="fList" resultType="ca.board.dao.fboardVO"> select * from tbl_find order by f_seq desc </select>
 	<!-- 10. 찾아주세요 게시판 글쓰기 -->
 	<insert id="insertf" parameterType="ca.board.dao.fboardVO">
-		insert into tbl_find(f_seq,f_title,f_content,f_date,f_file,user_id)
-		values(tbl_find_SEQ.NEXTVAL,#{f_title},#{f_content},sysdate,#{f_file},#{user_id}) </insert>
+		insert into tbl_find(f_seq,f_title,f_content,f_date,f_file,user_id,user_name)
+		values(tbl_find_SEQ.NEXTVAL,#{f_title},#{f_content},sysdate,#{f_file},#{user_id},#{user_name}) </insert>
 	<!-- 11. 찾아주세요 게시판 상세 페이지 -->
 	<select id="fdetail" parameterType="int" resultType="ca.board.dao.fboardVO">
 		select * from tbl_find where f_seq = #{f_seq} </select>
