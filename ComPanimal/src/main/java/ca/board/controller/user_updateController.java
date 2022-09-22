@@ -17,7 +17,7 @@ public class user_updateController implements Controller {
 		// TODO Auto-generated method stub
 		
 		String user_pw=request.getParameter("user_pw");
-		int user_tel = Integer.parseInt(request.getParameter("user_tel"));
+		String user_tel = request.getParameter("user_tel");
 		String user_addr = request.getParameter("user_addr");
 		String user_id = request.getParameter("user_id");
 		

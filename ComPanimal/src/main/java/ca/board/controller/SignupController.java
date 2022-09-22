@@ -28,7 +28,7 @@ public class SignupController implements Controller {
 		String user_pw = request.getParameter("user_pw");
 		String user_name = request.getParameter("user_name");
 		int user_birth = Integer.parseInt(request.getParameter("user_birth"));
-		int user_tel = Integer.parseInt(request.getParameter("user_tel"));
+		String user_tel = request.getParameter("user_tel");
 		String user_addr = request.getParameter("user_addr");
 //		Date user_joindate = request.getParameter("user_joindate"); 이거는 안해도 상관없음
 		String user_type = request.getParameter("user_type"); // 개인정보 동의

@@ -90,6 +90,8 @@ a {
 			<form action="${cpath}/findwrite.do" method="post"
 				enctype="multipart/form-data">
 				<input type="hidden" name="user_id" value="${uvo.user_id }">
+				<input type="hidden" name="user_name" value="${uvo.user_name }">
+				
 				<div class="input-group flex-nowrap">
 					<span class="input-group-text" id="addon-wrapping">제목</span> <input
 						type="text" class="form-control" aria-label="title"
@@ -112,7 +114,7 @@ a {
 				<br>
 				<div>
 					<input class="form-control" type="text"
-						placeholder=" ${uvo.user_id}" disabled>
+						placeholder=" ${uvo.user_name}" disabled>
 				</div>
 
 				<br>

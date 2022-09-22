@@ -37,8 +37,8 @@
 	<select id="fList" resultType="ca.board.dao.fboardVO"> select * from tbl_find order by f_seq desc </select>
 	<!-- 10. 찾아주세요 게시판 글쓰기 -->
 	<insert id="insertf" parameterType="ca.board.dao.fboardVO">
-		insert into tbl_find(f_seq,f_title,f_content,f_date,f_file,user_id)
-		values(tbl_find_SEQ.NEXTVAL,#{f_title},#{f_content},sysdate,#{f_file},#{user_id}) </insert>
+		insert into tbl_find(f_seq,f_title,f_content,f_date,f_file,user_id,user_name)
+		values(tbl_find_SEQ.NEXTVAL,#{f_title},#{f_content},sysdate,#{f_file},#{user_id},#{user_name}) </insert>
 	<!-- 11. 찾아주세요 게시판 상세 페이지 -->
 	<select id="fdetail" parameterType="int" resultType="ca.board.dao.fboardVO">
 		select * from tbl_find where f_seq = #{f_seq} </select>
@@ -57,8 +57,15 @@
 		values(${pet_regno},#{dognm},#{pet_img},#{owner_nm},sysdate,#{user_id}) </insert>
 	<!-- 16. 댓글 등록 -->
 	<insert id="insertcomment" parameterType="ca.board.dao.mentVO">
-		insert into tbl_comment(cmt_seq,c_seq,cmt_content,cmt_date,user_id)
-		values(tbl_comment_SEQ.NEXTVAL,#{c_seq},#{cmt_content},sysdate,#{user_id}) </insert>
+		insert into tbl_comment(cmt_seq,c_seq,cmt_content,cmt_date,user_id,user_name)
+		values(tbl_comment_SEQ.NEXTVAL,#{c_seq},#{cmt_content},sysdate,#{user_id},#{user_name}) </insert>
+
+		<!--17. 댓글 목록  -->
+
 	<select id="mentList" resultType="ca.board.dao.mentVO">
 		select * from tbl_comment order by cmt_seq desc</select>
+	<!-- 18. 댓글 삭제 -->
+	<delete id="mentDelete">
+		delete from tbl_comment where c_seq=#{c_seq}	</delete>
+	
 </mapper>

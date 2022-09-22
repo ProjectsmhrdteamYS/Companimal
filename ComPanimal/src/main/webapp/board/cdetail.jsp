@@ -162,7 +162,8 @@ a:hover {
 					<input type="hidden" name="c_seq" value="${vo.c_seq}">
 					<div class="input-group flex-nowrap">
 						<input type="hidden" name="user_id" value="${uvo.user_id}">
-						<span class="input-group-text" id="addon-wrapping">"${uvo.user_id}"</span>
+						<input type="hidden" name="user_name" value="${uvo.user_name}">
+						<span class="input-group-text" id="addon-wrapping">${uvo.user_name}</span>
 						<input type="text" class="form-control" placeholder="댓글 입력"
 							name="cmt_content" aria-label="title"
 							aria-describedby="addon-wrapping">
@@ -178,9 +179,8 @@ a:hover {
 				<c:forEach var="cvo" items="${list }">
 					<c:if test="${cvo.c_seq eq vo.c_seq}">
 						<tr>
-							<td>${cvo.user_id }</td>
+							<td>${cvo.user_name }</td>
 							<td>${cvo.cmt_content }</td>
-
 						</tr>
 					</c:if>
 				</c:forEach>
