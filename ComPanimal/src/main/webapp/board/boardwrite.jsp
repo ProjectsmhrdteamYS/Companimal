@@ -76,8 +76,6 @@
     <!-- container -->
     <main id="wrap" class="position-relative">
       <div class="container">
-        <img src="${cpath }/images/mongja.jpg" alt="" width="380px"
-          class="d-inline-block align-text-top">
         <h2>우리강아지는요!!</h2>
         <BR>
         	<form action="${cpath}/boardwrite.do" class="form-horizontal" method="post" enctype="multipart/form-data">
