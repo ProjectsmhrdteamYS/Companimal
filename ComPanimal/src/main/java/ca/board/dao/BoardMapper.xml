@@ -57,8 +57,8 @@
 		values(${pet_regno},#{dognm},#{pet_img},#{owner_nm},sysdate,#{user_id}) </insert>
 	<!-- 16. 댓글 등록 -->
 	<insert id="insertcomment" parameterType="ca.board.dao.mentVO">
-		insert into tbl_comment(cmt_seq,c_seq,cmt_content,cmt_date,user_id)
-		values(tbl_comment_SEQ.NEXTVAL,#{c_seq},#{cmt_content},sysdate,#{user_id}) </insert>
+		insert into tbl_comment(cmt_seq,c_seq,cmt_content,cmt_date,user_id,user_name)
+		values(tbl_comment_SEQ.NEXTVAL,#{c_seq},#{cmt_content},sysdate,#{user_id},#{user_name}) </insert>
 	<select id="mentList" resultType="ca.board.dao.mentVO">
 		select * from tbl_comment order by cmt_seq desc</select>
 </mapper>
