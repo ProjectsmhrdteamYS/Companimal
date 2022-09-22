@@ -18,10 +18,10 @@
 	<!-- 3. 커뮤니티 게시판 전체 리스트 -->
 	<select id="cList" resultType="ca.board.dao.cboardVO">
 		select * from tbl_community order by c_seq desc	</select>
-	<!-- 4. 커뮤니티 게시판 글쓰기 -->
+		<!-- 4. 커뮤니티 게시판 글쓰기 -->
 	<insert id="insertc" parameterType="ca.board.dao.cboardVO">
-		insert into	tbl_community(c_seq,c_title,c_content,c_date,c_file,user_id)
-		values(tbl_community_SEQ.NEXTVAL,#{c_title},#{c_content},sysdate,#{c_file},#{user_id}) </insert>
+		insert into	tbl_community(c_seq,c_title,c_content,c_date,c_file,user_id,user_name)
+		values(tbl_community_SEQ.NEXTVAL,#{c_title},#{c_content},sysdate,#{c_file},#{user_id},#{user_name}) </insert>
 	<!-- 5. 커뮤니티 게시판 상세 페이지 -->
 	<select id="cdetail" parameterType="int" resultType="ca.board.dao.cboardVO">
 		select * from tbl_community where c_seq=#{c_seq} </select>
