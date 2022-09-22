@@ -18,8 +18,8 @@ public class CdeleteController implements Controller {
 		ProjectDAO dao = new ProjectDAO();
 		
 		int c_seq = Integer.parseInt(request.getParameter("c_seq"));
+		dao.mentDelete(c_seq);
 		dao.cboardDelete(c_seq);
-	
 		return "redirect:/boardform.do";
 	}
 

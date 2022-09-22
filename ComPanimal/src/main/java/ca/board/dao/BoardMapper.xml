@@ -62,5 +62,8 @@
 		<!--17. 댓글 목록  -->
 	<select id="mentList" resultType="ca.board.dao.mentVO">
 		select * from tbl_comment order by cmt_seq desc</select>
+	<!-- 18. 댓글 삭제 -->
+	<delete id="mentDelete">
+		delete from tbl_comment where c_seq=#{c_seq}	</delete>
 	
 </mapper>
