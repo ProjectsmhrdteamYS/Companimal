@@ -161,5 +161,11 @@ public class ProjectDAO {
 			session.close();
 			return list;
 		}
-
+	// 댓글 삭제
+		public void mentDelete(int idx) {
+			SqlSession session = sqlSessionFactory.openSession();
+			int vo = session.delete("mentDelete", idx);
+			session.commit();
+			session.close();
+		}
 }
