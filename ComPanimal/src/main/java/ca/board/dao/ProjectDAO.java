@@ -131,6 +131,14 @@ public class ProjectDAO {
 		session.close();
 	}
 	
+	// 회원 상세보기 메소드
+	public userVO user_detail(userVO vo) {
+		SqlSession session = sqlSessionFactory.openSession();
+		userVO uvo = session.selectOne("user_detail", vo);
+		session.close();
+		return uvo;
+	}
+	
 	
 	// 동물 등록 메소드
 	public void petinsert(petVO vo) {

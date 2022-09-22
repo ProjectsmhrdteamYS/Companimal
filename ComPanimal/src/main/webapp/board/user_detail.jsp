@@ -1,3 +1,4 @@
+<%@page import="ca.board.dao.userVO"%>
 <%@page import="ca.board.dao.ProjectDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -6,6 +7,7 @@
 <c:set var="cpath" value="${pageContext.request.contextPath }" />
 <!-- 테스트하는 중 이것부터 -->
 <%!ProjectDAO dao = new ProjectDAO(); %>
+<%!userVO vo = new userVO(); %>
 
 <% String userid = request.getParameter("user_id");
    String userpw = request.getParameter("user_pw");
@@ -24,27 +26,36 @@
 <link rel="stylesheet" href="${cpath }/css/bootstrap-utilities.css">
 
 
- <style>
-    /* 공통 style */
-    ul li{list-style: none; font-weight: 700; }
-    a {text-decoration: none;  color :#150906;}
-    a:hover {
-    color: orange;
-    transition: background-color 0.5s;
-  }
-      .search {
-      max-width: 680px;
-      margin-top: 80px;
-      padding: 32px;
-      background: #fff;
-      -webkit-border-radius: 10px;
-      -moz-border-radius: 10px;
-      border-radius: 10px;
-      -webkit-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
-      -moz-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
-      box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15)
-    }
-    </style>
+<style>
+/* 공통 style */
+ul li {
+	list-style: none;
+	font-weight: 700;
+}
+
+a {
+	text-decoration: none;
+	color: #150906;
+}
+
+a:hover {
+	color: orange;
+	transition: background-color 0.5s;
+}
+
+.search {
+	max-width: 680px;
+	margin-top: 80px;
+	padding: 32px;
+	background: #fff;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	-webkit-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+	box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15)
+}
+</style>
 
 
 
@@ -88,45 +99,65 @@
 					</c:if>
 					<c:if test="${!empty uvo }">
               		${uvo.user_id}님 환영합니다.
-              		<button type="button" class="btn btn-outline-secondary me-1"
+              		<button type="button"
+							class="btn btn-outline-secondary me-1"
 							onclick="location.href='${cpath }/logout.do'">Logout</button>
 					</c:if>
 				</div>
 			</div>
 		</div>
 	</header>
-	
+
 	<div class="form-signin">
-		<form class="search rounded-4 p-5 mx-auto h-100" style="width: 650px;" action="${cpath }/user_update.do">
-			<a class="logo" href="${cpath }/mainpage.do"> 
-			<img class="mx-5" src="${cpath }/images/logo.png" alt="로고" width="80%">
-			</a> <br>
-			<br>
-			<br>
-			<div class="form-floating mb-2">
-				<input type="password" class="form-control"
-				id="floatingPassword" name = "user_pw" placeholder="Password"> 
-					<label for="floatingPassword">수정할 Password</label>
-			</div>
-			<div class="form-floating mb-2">
-				<input type="text" class="form-control"
-				id="floatingPassword" name = "user_tel" placeholder="tel"> 
-					<label for="floatingPassword">수정할 tel</label>
-			</div>
-			<div class="form-floating mb-2">
-				<input type="text" class="form-control"
-				id="floatingPassword" name = "user_addr" placeholder="addr"> 
-					<label for="floatingPassword">수정할 addr</label>
-			</div>
-				<input type="hidden" class="form-control"
-				id="floatingPassword" name = "user_id" placeholder="addr" value="${uvo.user_id }"> 
-			<button class="w-100 btn btn-lg btn-primary mb-4" type="submit">Update in</button>
+		<form class="search rounded-4 p-5 mx-auto h-100" style="width: 650px;"
+			action="${cpath }/user_update.do">
+			<a class="logo" href="${cpath }/mainpage.do"> <img class="mx-5"
+				src="${cpath }/images/logo.png" alt="로고" width="80%">
+			</a> <br> <br> <br>
+			<table class="form-control">
+				<tr>
+					<td>이름 :</td>
+					<td>${uvo.user_name }</td>
+				</tr>
+				<tr>
+					<td>아이디 :</td>
+					<td>${uvo.user_id }</td>
+				</tr>
+				<tr>
+					<td>비밀번호 :</td>
+					<td>${uvo.user_pw }</td>
+				</tr>
+				<tr>
+					<td>주소 :</td>
+					<td>${uvo.user_addr}</td>
+				</tr>
+				<tr>
+					<td>생년월일 :</td>
+					<td>${uvo.user_birth}</td>
+				</tr>
+				<tr>
+					<td>전화번호 :</td>
+					<td>${uvo.user_tel}</td>
+				</tr>
+				<tr>
+					<td>가입일자 :</td>
+					<td>${uvo.user_joindate}</td>
+				</tr>
+				<tr>
+					<td>개인정보동의(동의:1 비동의:0) :</td>
+					<td>${uvo.user_type}</td>
+				</tr>
+			</table>
+			<button class="w-100 btn btn-lg btn-primary mb-4"
+				onclick="location.href='${cpath }/mainpage.do'" type="button">확인</button>
+			<button class="w-100 btn btn-lg btn-primary mb-4"
+				onclick="location.href='${cpath }/user_updateform.do'" type="button">수정</button>
 		</form>
 	</div>
 
 
 
-<!-- footer -->
+	<!-- footer -->
 	<div class="container">
 		<footer class="py-5 ">
 			<div class="d-flex justify-content-between py-4 my-4 border-top">
@@ -145,6 +176,7 @@
 					<li class="btn btn-primary py-4 me-2">농농농</li>
 				</ul>
 			</div>
+
 		</footer>
 	</div>
 	<!-- footer end -->
