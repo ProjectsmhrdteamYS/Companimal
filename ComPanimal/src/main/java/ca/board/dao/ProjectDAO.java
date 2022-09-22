@@ -122,6 +122,16 @@ public class ProjectDAO {
 		session.commit();
 		session.close();
 	}
+	
+	// 회원 수정 메소드
+	public void user_update(userVO vo) {
+		SqlSession session = sqlSessionFactory.openSession();
+		session.update("user_update",vo);
+		session.commit();
+		session.close();
+	}
+	
+	
 	// 동물 등록 메소드
 	public void petinsert(petVO vo) {
 		SqlSession session = sqlSessionFactory.openSession();
@@ -143,4 +153,5 @@ public class ProjectDAO {
 			session.close();
 			return list;
 		}
+
 }

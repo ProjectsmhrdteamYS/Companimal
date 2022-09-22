@@ -77,10 +77,11 @@
 					</c:if>
 
 					<c:if test="${!empty uvo }">
-              ${uvo.user_id}님 환영합니다.
-              	<button type="button"
-							class="btn btn-outline-secondary me-1"
+              			${uvo.user_id}님 환영합니다.
+              				<button type="button" class="btn btn-outline-secondary me-1"
 							onclick="location.href='${cpath }/logout.do'">Logout</button>
+							<button type="button" class="btn btn-outline-secondary me-1"
+							onclick="location.href='${cpath }/user_updateform.do'">회원 수정</button>
 					</c:if>
 				</div>
 			</div>
