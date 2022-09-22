@@ -79,6 +79,8 @@ a {
 		</div>
 	</header>
 	<!-- header end -->
+	
+	<!-- content -->
 	<main id="wrap" class="position-relative">
 		<div class="container">
 			<h2>현상수배</h2>
@@ -88,9 +90,14 @@ a {
 					<td>제목</td>
 					<td>${vo.f_title}</td>
 				</tr>
-				<tr>
+				<tr >
 					<td>내용</td>
 					<td>${fn:replace(vo.f_content,newLine,"<br>") }</td>
+					
+				</tr>
+				<tr>
+					<td>사진</td>
+					<td><img src="${cpath }/img/${vo.f_file}"></td>
 				</tr>
 				<tr>
 					<td>작성자</td>
@@ -117,8 +124,8 @@ a {
 			</table>
 
 		</div>
-		</div>
 	</main>
+	<!-- content end -->
 	<!-- footer -->
 	<div class="container">
 		<footer class="py-5" style="color:#555;">

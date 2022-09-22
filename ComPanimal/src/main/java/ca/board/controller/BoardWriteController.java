@@ -6,8 +6,12 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.oreilly.servlet.MultipartRequest;
+import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
+
 import ca.board.dao.ProjectDAO;
 import ca.board.dao.cboardVO;
+import ca.board.dao.fboardVO;
 
 public class BoardWriteController implements Controller {
 
@@ -16,21 +20,21 @@ public class BoardWriteController implements Controller {
 			throws ServletException, IOException {
 		// 글쓰기 기능
 		ProjectDAO dao = new ProjectDAO();
-		// 파라미터 수집 
-		String c_title = request.getParameter("c_title");
-		String c_content = request.getParameter("c_content");
+		String savePath = request.getServletContext().getRealPath("img");
+		int maxSize = 5*1024*1024;
+		String encoding="utf-8";
+		MultipartRequest multi = new MultipartRequest(request,savePath,maxSize,encoding,new DefaultFileRenamePolicy() );
 		
-		String c_file = request.getParameter("c_file");
-		String user_id = request.getParameter("user_id");
+		String writer = multi.getParameter("user_id");
+		String c_title = multi.getParameter("c_title");
+		String c_content = multi.getParameter("c_content");
+		String c_file = multi.getFilesystemName("c_file");
+		
 		cboardVO vo = new cboardVO();
-		
-		
+		vo.setUser_id(writer);
 		vo.setC_title(c_title);
 		vo.setC_content(c_content);
-		
 		vo.setC_file(c_file);
-		vo.setUser_id(user_id);
-	
 		dao.insertc(vo);
 		
 		return "redirect:/boardform.do";

@@ -20,155 +20,180 @@
 	crossorigin="anonymous"></script>
 <style>
 /* 공통 style */
-ul li{list-style: none; font-weight: 700; }
-a {text-decoration: none;  color :#150906;}
-a:hover {
-color: orange;
-transition: background-color 0.5s;
+ul li {
+	list-style: none;
+	font-weight: 700;
 }
 
-  /* 세부디자인 */
+a {
+	text-decoration: none;
+	color: #150906;
+}
+
+a:hover {
+	color: orange;
+	transition: background-color 0.5s;
+}
+
+/* 세부디자인 */
 .search {
-      max-width: 650px;
-      margin-top: 80px;
-      padding: 32px;
-      background: #fff;
-      -webkit-border-radius: 10px;
-      -moz-border-radius: 10px;
-      border-radius: 10px;
-      -webkit-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
-      -moz-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
-      box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15)
-    }
+	max-width: 650px;
+	margin-top: 80px;
+	padding: 32px;
+	background: #fff;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	-webkit-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+	box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15)
+}
 
 /* 첨부파일 디자인 수정 */
+.filebox input {
+	width: 300px;
+	height: 40px;
+}
 
-    .filebox input { 
-      width: 300px;
-      height: 40px;
-    }
-    .filebox label {
-    width: 236px;
-    display: inline-block;
-    padding: 10px 20px;
-    color: #fff;
-    vertical-align: middle;
-    background-color:  #595350;
-    cursor: pointer;
-    height: 40px;
-    margin-left: 10px;
+.filebox label {
+	width: 236px;
+	display: inline-block;
+	padding: 10px 20px;
+	color: #fff;
+	vertical-align: middle;
+	background-color: #595350;
+	cursor: pointer;
+	height: 40px;
+	margin-left: 10px;
 }
 
 /* 기존 디자인 수정 */
 .filebox input[type="file"] {
-    position: absolute;
-    width: 0;
-    height: 0;
-    padding: 0;
-    overflow: hidden;
-    border: 0;
+	position: absolute;
+	width: 0;
+	height: 0;
+	padding: 0;
+	overflow: hidden;
+	border: 0;
 }
 </style>
 </head>
 <body>
 	<!-- header -->
-    <header class=" container-fluid p-3 bg-white ">
-        <div class="container p-3">
-          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start ">
-            <a class="navbar-brand me-4" href="${cpath }/mainpage.do"  >
-                <img src="${cpath }/images/logo.png" alt="" width="286" class="d-inline-block align-text-top ">
-            </a>
-    
-            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-              
-              <li><a href="${cpath }/companimal.do" class="nav-link px-3 link-dark">COMPANIMAL</a></li>
-              <li><a href="${cpath }/searchform.do" class="nav-link px-3 link-dark">반려견조회</a></li>
-              <li><a href="${cpath }/checkform.do" class="nav-link px-3 link-dark">반려견등록</a></li>
-              <li><a href="${cpath }/boardform.do" class="nav-link px-3 link-dark">게시판</a></li>
-              <li><a href="${cpath }/findboardform.do" class="nav-link px-3 link-dark">찾아주세요</a></li>
-            </ul>
-    
-            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-2">
-              <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
-            </form>
-    
-            <div class="text-end">
-              <c:if test= "${empty uvo }">
-              <button type="button" class="btn btn-outline-secondary me-1" onclick="location.href='${cpath }/signinform.do'">Login</button>              
-              <button type="button" class="btn btn-primary" onclick="location.href='${cpath }/signupform.do'">Sign-up</button>
-              </c:if>
+	<header class=" container-fluid p-3 bg-white ">
+		<div class="container p-3">
+			<div
+				class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start ">
+				<a class="navbar-brand me-4" href="${cpath }/mainpage.do"> <img
+					src="${cpath }/images/logo.png" alt="" width="286"
+					class="d-inline-block align-text-top ">
+				</a>
 
-              <c:if test= "${!empty uvo }">
+				<ul
+					class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+
+					<li><a href="${cpath }/companimal.do"
+						class="nav-link px-3 link-dark">COMPANIMAL</a></li>
+					<li><a href="${cpath }/searchform.do"
+						class="nav-link px-3 link-dark">반려견조회</a></li>
+					<li><a href="${cpath }/checkform.do"
+						class="nav-link px-3 link-dark">반려견등록</a></li>
+					<li><a href="${cpath }/boardform.do"
+						class="nav-link px-3 link-dark">게시판</a></li>
+					<li><a href="${cpath }/findboardform.do"
+						class="nav-link px-3 link-dark">찾아주세요</a></li>
+				</ul>
+
+				<form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-2">
+					<input type="search" class="form-control form-control-dark"
+						placeholder="Search..." aria-label="Search">
+				</form>
+
+				<div class="text-end">
+					<c:if test="${empty uvo }">
+						<button type="button" class="btn btn-outline-secondary me-1"
+							onclick="location.href='${cpath }/signinform.do'">Login</button>
+						<button type="button" class="btn btn-primary"
+							onclick="location.href='${cpath }/signupform.do'">Sign-up</button>
+					</c:if>
+
+					<c:if test="${!empty uvo }">
               ${uvo.user_id}님 환영합니다.
-              <button type="button" class="btn btn-outline-secondary me-1" onclick="location.href='${cpath }/logout.do'">Logout</button>             
-              </c:if>
-              
-            </div>
-          </div>
-        </div>
-      </header>
-      
-      
-     <!-- content -->
-	<div class="container">
-	<div class="form-signin mx-auto mt-5">
-  	<form class="search rounded-4 p-5 mx-auto h-100">
-    <img class="mx-5" src="${cpath }/images/logo.png"alt="로고" width="80%">
-    <h1 class="h3 mt-3 fw-bold text-center" style=color:#444;>반려동물 등록 서비스</h1>
-	<br><br>
-    
-    <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label">반려동물 이름</label>
-      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="반려견 이름을 입력하세요"
-      style="height: 3em;">
-    </div>
-    
-    <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label">동물 등록번호</label>
-      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="반려견 등록번호를 입력하세요"
-      style="height: 3em;">
-    </div>
-    
-    <div class="mb-5">
-      <label for="exampleFormControlInput1" class="form-label">동물 사진 등록</label>
-     	<div class="filebox">
-       <input class="upload-name" value="첨부파일" placeholder="첨부파일">
-        <label for="file" style="background-color:#444;">파일찾기</label> 
-        <input type="file" id="file">
-    </div>
-    </div>
+              <button type="button"
+							class="btn btn-outline-secondary me-1"
+							onclick="location.href='${cpath }/logout.do'">Logout</button>
+					</c:if>
 
-     <div class="checkbox mt-3 mb-3 " >
-    </div>
-    <button class="w-100 btn btn-lg btn-primary" type="submit" style="height: 60px;">submit</button>
-  </form>
-</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- header end -->
 
-    
-	<div class="container">
-<!-- footer -->
-	<div class="container">
-		<footer class="py-5" style="color:#555;">
-			<div class="d-flex justify-content-between py-4 my-4 border-top">
-				<div class="row">
-					<div class="col">
-						<ul class="list-unstyled">
-							<li class="fw-normal">© 2022 Company, Inc. All rights reserved.</li>
-							<li class="fw-normal">주식회사 컴패니멀 어쩌구 저쩌구</li>
-							<li class="fw-normal">그래서 만든사람 어쩌구저쩌구</li>
-						</ul>
+	<!-- content -->
+	<div class="container" style="height: 780px;">
+		<div class="form-signin mx-auto mt-5">
+			<form class="search rounded-4 p-5 mx-auto h-100"
+				style="width: 650px;" action="${cpath }/check.do" method="post"
+				enctype="multipart/form-data">
+				<br> <img class="mx-5" src="${cpath }/images/logo.png" alt="로고"
+					width="80%">
+				<h1 class="h3 mt-3 fw-normal text-center">반려동물 등록 서비스</h1>
+				<input type="hidden" name="user_id" value="${uvo.user_id }">
+				<div class="mb-3">
+					<label for="exampleFormControlInput1" class="form-label">반려동물
+						이름</label> <input type="email" class="form-control" name="dognm"
+						placeholder="반려견 이름을 입력하세요" style="height: 3em;">
+				</div>
+				<div class="mb-3">
+					<label for="exampleFormControlInput1" class="form-label">동물
+						등록번호</label> <input type="email" class="form-control" name="pet_regno"
+						placeholder="반려견 등록번호를 입력하세요" style="height: 3em;">
+				</div>
+				<div class="mb-3">
+					<label for="exampleFormControlInput1" class="form-label">소유자
+						명</label> <input type="email" class="form-control" name="owner_nm"
+						placeholder="반려견 이름을 입력하세요" style="height: 3em;">
+				</div>
+
+				<div class="mb-3">
+					<label for="exampleFormControlInput1" class="form-label">동물
+						사진 등록</label>
+					<div class="filebox">
+						<input class="upload-name" value="동물사진"> <label for="file">파일찾기</label>
+						<input type="file" name="pet_img">
 					</div>
 				</div>
-				<ul class="list-unstyled d-flex ">
-					<li class="btn btn-primary py-4 me-2">짹짹이</li>
-					<li class="btn btn-outline-secondary py-4 me-2">인서타</li>
-					<li class="btn btn-primary py-4 me-2">농농농</li>
-				</ul>
-			</div>
-		</footer>
-	</div>
-	<!-- footer end -->
-</div>
+				<button class="w-100 btn btn-lg btn-primary" type="submit"
+					style="height: 60px;">submit</button>
+				<p class="mt-5 mb-3 text-muted">© 2022–2025</p>
+			</form>
+		</div>
+		<!-- content end -->
 
+
+		<!-- footer -->
+			<div class="container">
+				<footer class="py-5" style="color: #555;">
+					<div class="d-flex justify-content-between py-4 my-4 border-top">
+						<div class="row">
+							<div class="col">
+								<ul class="list-unstyled">
+									<li class="fw-normal">© 2022 Company, Inc. All rights
+										reserved.</li>
+									<li class="fw-normal">주식회사 컴패니멀 어쩌구 저쩌구</li>
+									<li class="fw-normal">그래서 만든사람 어쩌구저쩌구</li>
+								</ul>
+							</div>
+						</div>
+						<ul class="list-unstyled d-flex ">
+							<li class="btn btn-primary py-4 me-2">짹짹이</li>
+							<li class="btn btn-outline-secondary py-4 me-2">인서타</li>
+							<li class="btn btn-primary py-4 me-2">농농농</li>
+						</ul>
+					</div>
+				</footer>
+			</div>
+		<!-- footer end -->
 </body>
 </html>
