@@ -108,7 +108,7 @@ a {
 									</div>
 									<p class="card-text">위치 : ${vo.f_content }</p>
 								</div>
-								<small class="text-muted">작성자 : ${vo.user_id}</small> <small
+								<small class="text-muted">작성자 : ${vo.user_name}</small> <small
 									class="text-muted">조회수 : ${vo.f_cnt }</small> <small
 									class="text-muted">작성일 : ${vo.f_date }</small>
 							</div>

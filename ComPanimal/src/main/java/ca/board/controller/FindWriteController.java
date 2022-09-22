@@ -26,13 +26,15 @@ public class FindWriteController implements Controller {
 		String encoding="utf-8";
 		MultipartRequest multi = new MultipartRequest(request,savePath,maxSize,encoding,new DefaultFileRenamePolicy() );
 		
-		String writer = multi.getParameter("user_id");
+		String user_id = multi.getParameter("user_id");
+		String writer = multi.getParameter("user_name");
 		String f_title = multi.getParameter("f_title");
 		String f_content = multi.getParameter("f_content");
 		String f_file = multi.getFilesystemName("f_file");
 		
 		fboardVO vo = new fboardVO();
-		vo.setUser_id(writer);
+		vo.setUser_name(writer);
+		vo.setUser_id(user_id);
 		vo.setF_title(f_title);
 		vo.setF_content(f_content);
 		vo.setF_file(f_file);
