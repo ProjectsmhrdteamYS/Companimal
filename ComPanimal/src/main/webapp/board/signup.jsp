@@ -154,11 +154,11 @@
 						
 						<!-- radioBox -->
 						<div class="form-check form-check-inline me-4">
-						 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" style="height:16px;">
+						 <input class="form-check-input" type="radio" name="user_type" value="1" style="height:16px;">
 						 <label class="form-check-label" for="inlineRadio1">동의</label>
 						</div>
 						<div class="form-check form-check-inline">
-						 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" style="height:16px;">
+						 <input class="form-check-input" type="radio" name="user_type" value="0" style="height:16px;">
 						 <label class="form-check-label" for="inlineRadio2">비동의</label>
 						</div>
 					
