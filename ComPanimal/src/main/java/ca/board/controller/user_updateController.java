@@ -15,19 +15,22 @@ public class user_updateController implements Controller {
 	public String requestHandler(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String user_name=request.getParameter("user_name");
+		
 		String user_pw=request.getParameter("user_pw");
 		int user_tel = Integer.parseInt(request.getParameter("user_tel"));
 		String user_addr = request.getParameter("user_addr");
+		String user_id = request.getParameter("user_id");
+		
 		userVO vo = new userVO();
 		vo.setUser_pw(user_pw);
 		vo.setUser_tel(user_tel);
 		vo.setUser_addr(user_addr);
-		vo.setUser_name(user_name);
+		vo.setUser_id(user_id);
 	
 		ProjectDAO dao = new ProjectDAO();
 		dao.user_update(vo);
-		System.out.println(vo.getUser_name());
+		
+		System.out.println(vo.getUser_id());
 		System.out.println(vo.getUser_pw());
 		System.out.println(vo.getUser_tel());
 		System.out.println(vo.getUser_addr());

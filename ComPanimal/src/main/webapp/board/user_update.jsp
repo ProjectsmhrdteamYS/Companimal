@@ -120,8 +120,8 @@
 			</div>
 			<div class="form-floating mb-2">
 				<input type="text" class="form-control"
-				id="floatingPassword" name = "user_name" placeholder="addr"> 
-					<label for="floatingPassword">찾을 이름</label>
+				id="floatingPassword" name = "user_id" placeholder="addr"> 
+					<label for="floatingPassword">찾을 아이디</label>
 			</div>
 			<button class="w-100 btn btn-lg btn-primary mb-4" type="submit">Update in</button>
 		</form>
