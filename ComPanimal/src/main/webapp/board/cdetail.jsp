@@ -117,6 +117,7 @@ a:hover {
 			<BR>
 			<table class="table">
 				<tr>
+				
 					<td>제목</td>
 					<td>${vo.c_title}</td>
 				</tr>
@@ -177,10 +178,8 @@ a:hover {
 				<c:forEach var="cvo" items="${list }">
 					<c:if test="${cvo.c_seq eq vo.c_seq}">
 						<tr>
-							<th>${cvo.cmt_seq}</th>
-							<td>${cvo.cmt_content }</td>
 							<td>${cvo.user_id }</td>
-							<td>${cvo.c_seq}</td>
+							<td>${cvo.cmt_content }</td>
 
 						</tr>
 					</c:if>
