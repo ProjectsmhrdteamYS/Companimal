@@ -108,16 +108,6 @@
 				id="floatingPassword" name = "user_pw" placeholder="Password"> 
 					<label for="floatingPassword">수정할 Password</label>
 			</div>
-			<div class="form-floating mb-2">
-				<input type="text" class="form-control"
-				id="floatingPassword" name = "user_tel" placeholder="tel"> 
-					<label for="floatingPassword">수정할 tel</label>
-			</div>
-			<div class="form-floating mb-2">
-				<input type="text" class="form-control"
-				id="floatingPassword" name = "user_addr" placeholder="addr"> 
-					<label for="floatingPassword">수정할 addr</label>
-			</div>
 				<input type="hidden" class="form-control"
 				id="floatingPassword" name = "user_id" placeholder="addr" value="${uvo.user_id }"> 
 			<button class="w-100 btn btn-lg btn-primary mb-4" type="submit">Update in</button>
