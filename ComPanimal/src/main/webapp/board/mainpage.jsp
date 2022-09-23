@@ -80,7 +80,6 @@
               			${uvo.user_id}님 환영합니다.
               				<button type="button" class="btn btn-outline-secondary me-1"
 							onclick="location.href='${cpath }/logout.do'">Logout</button>
-							
 							<button type="button" class="btn btn-outline-secondary me-1"
 							onclick="location.href='${cpath }/user_detailform.do'">회원 상세정보</button>
 					</c:if>

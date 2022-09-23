@@ -56,7 +56,7 @@ public class SignupController implements Controller {
 		//이부분이 문제라고볼수있음(만약 컨텍스트 패스 뭐라고 나오면은 무조건 BoardMapper.xml 문제라고 볼수있음)
 		dao.signupMethod(vo);
 	
-		return "redirect:/mainpage.do";
+		return "redirect:/signinform.do";
 //		return null;
 	}
 
