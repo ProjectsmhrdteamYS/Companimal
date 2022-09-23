@@ -20,9 +20,9 @@ public class logoutController implements Controller {
 		session.invalidate();
 		writer.println("<script>alert('로그아웃되었습니다.');"
 				+ "location.href='mainpage.do';</script>");
+//		response.sendRedirect("mainpage.do"); location이랑 같음 
 		
 		writer.flush();
-//		response.sendRedirect("mainpage.do");
 		return null;
 	}
 
