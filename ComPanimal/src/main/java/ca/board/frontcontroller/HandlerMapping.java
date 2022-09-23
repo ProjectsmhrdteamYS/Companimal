@@ -22,6 +22,7 @@ import ca.board.controller.FindWriteFormController;
 import ca.board.controller.FindboardFormController;
 import ca.board.controller.InsertCommentController;
 import ca.board.controller.MainPageController;
+import ca.board.controller.PetimgController;
 import ca.board.controller.SearchController;
 import ca.board.controller.SearchFormController;
 import ca.board.controller.SigninController;
@@ -30,6 +31,8 @@ import ca.board.controller.SignupController;
 import ca.board.controller.SignupFormController;
 import ca.board.controller.logoutController;
 import ca.board.controller.logoutFormController;
+import ca.board.controller.user_detailController;
+import ca.board.controller.user_detailFormController;
 import ca.board.controller.user_updateController;
 import ca.board.controller.user_updateFormController;
 
@@ -69,6 +72,9 @@ public class HandlerMapping {
 		mappings.put("/user_updateform.do", new user_updateFormController());
 		mappings.put("/check.do", new CheckController());
 		mappings.put("/inputcomment.do", new InsertCommentController());
+		mappings.put("/user_detail.do", new user_detailController());
+		mappings.put("/user_detailform.do", new user_detailFormController());
+		mappings.put("/petimg.do", new PetimgController());
 	}
 	public Controller getController(String key) {
 		return mappings.get(key);

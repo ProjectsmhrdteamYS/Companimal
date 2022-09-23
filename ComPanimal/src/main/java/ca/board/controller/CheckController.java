@@ -35,6 +35,7 @@ public class CheckController implements Controller {
 		vo.setPet_img(pet_img);
 		vo.setOwner_nm(owner_nm);
 		vo.setUser_id(user_id);
+		dao.petinsert(vo);
 		return "redirect:/checkform.do";
 	}
 

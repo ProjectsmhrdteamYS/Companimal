@@ -7,12 +7,12 @@ public class userVO {
 	private String user_pw;
 	private String user_name;
 	private int user_birth;
-	private int user_tel;
+	private String user_tel;
 	private String user_addr;
 	private Date user_joindate;
 	private String user_type;
 	
-	public userVO(String user_id, String user_pw, String user_name, int user_birth, int user_tel, String user_addr,
+	public userVO(String user_id, String user_pw, String user_name, int user_birth, String user_tel, String user_addr,
 			Date user_joindate, String user_type) {
 		super();
 		this.user_id = user_id;
@@ -44,12 +44,12 @@ public class userVO {
 	}
 
 
-	public int getUser_tel() {
+	public String getUser_tel() {
 		return user_tel;
 	}
 
 
-	public void setUser_tel(int user_tel) {
+	public void setUser_tel(String user_tel) {
 		this.user_tel = user_tel;
 	}
 

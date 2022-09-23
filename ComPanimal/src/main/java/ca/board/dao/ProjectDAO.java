@@ -131,6 +131,14 @@ public class ProjectDAO {
 		session.close();
 	}
 	
+	// 회원 상세보기 메소드
+	public userVO user_detail(userVO vo) {
+		SqlSession session = sqlSessionFactory.openSession();
+		userVO uvo = session.selectOne("user_detail", vo);
+		session.close();
+		return uvo;
+	}
+	
 	
 	// 동물 등록 메소드
 	public void petinsert(petVO vo) {
@@ -153,5 +161,18 @@ public class ProjectDAO {
 			session.close();
 			return list;
 		}
-
+	// 댓글 삭제
+		public void mentDelete(int idx) {
+			SqlSession session = sqlSessionFactory.openSession();
+			int vo = session.delete("mentDelete", idx);
+			session.commit();
+			session.close();
+		}
+	// 동물 db 부르기
+			public petVO search(petVO vo) {
+				SqlSession session = sqlSessionFactory.openSession();
+				petVO pvo = session.selectOne("search", vo);
+				session.close();
+				return pvo;
+		}
 }

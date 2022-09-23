@@ -19,8 +19,11 @@ public class InsertCommentController implements Controller {
 		int c_seq = Integer.parseInt(request.getParameter("c_seq"));
 		String cmt_content = request.getParameter("cmt_content");
 		String user_id = request.getParameter("user_id");
+		String user_name = request.getParameter("user_name");
 		mentVO vo = new mentVO();
+		
 		vo.setC_seq(c_seq);
+		vo.setUser_name(user_name);
 		vo.setCmt_content(cmt_content);
 		vo.setUser_id(user_id);
 		dao.insertcomment(vo);
