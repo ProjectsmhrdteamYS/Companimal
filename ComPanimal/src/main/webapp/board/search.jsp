@@ -144,31 +144,45 @@ a:hover {
 			</div>
 		</div>
 		<div id="petList"></div>
+		<div id="ibox"></div>
 
-		<script>
-    	$('#btn1').on('click', ()=>{
-     		ajax1();
-   			})
-   	
-    	function ajax1(){
+	<script>
+   
+   
+  
+     $('#btn1').on('click', ()=>{
+     	
+     	ajax1();
+           
+   	})
+    function ajax1(){
         	var lname=$('#lname').val();
         	var fname=$('#fname').val();
+        	
         	$.ajax({
         		url: "${cpath}/petimg.do",
         		type : "post",
         		data : {
         			"fname" : fname
-        			},
+        		},
         		dataType : 'json',
         		success : function(res){
         			console.log(res);
+        			let img='<img src="${cpath }/images/'
+        			img+=res.pet_img
+        			img+='" alt="" width="500px">'
+        			$('#ibox').html(img);
+        			      			
+        			
         			api(fname, lname)
-        			},
+        			var a =$(res.pet_img).html();
+        		},
         		error : function(){
                     alert('aa')
-            		}
-        		})
-        	}
+            	}
+        	})
+        }
+    
     function api(fname, lname){
         	$.ajax({                
 			        url : "http://apis.data.go.kr/1543061/animalInfoSrvc/animalInfo?_type=json&dog_reg_no="+fname+"&owner_nm="+lname+"&serviceKey=%2FR3EvQD0BDHw%2FwKWewHQFMQ8MXNoIIlhw1%2BNBkbz7Ut52RP7ylh84FK27bQDPhcXi2xxtpfnbsF5iRjvUnskxg%3D%3D", 
@@ -178,41 +192,44 @@ a:hover {
        				console.log(object)
         			if(object.includes('errorMsg')){
         				alert(res.response.header.errorMsg)
-        				}
+        			}
 		        	else{
 		        	let code='<div class="container"><table class ="table table-bordered" id="ct"><tr style="background-color:#F57F32">'
 		                code +='<th>번호</th>'
+		                code +='<th>소유자이름</th>'
 		                code +='<th>이름</th>'
 		                code +='<th>견종</th>'
 		                code +='<th>성별</th>'
 		                code +='<th>중성화여부</th>'
 		                code +='<th>관할</th>'
 		                code +='<th>관할센터번호</th></tr>'
-		            	console.log(res.response.body.item)
+		               
+		            console.log(res.response.body.item)
 		            	/* 소유자명이나 등록번호(15자리 다쳣을경우)이 잘못됏을 경우 오류코드가 없어서 만듦  */
 		            	if(typeof res.response.body.item=="undefined"){
-		   			         	alert("소유자명 또는 동물등록번호가 잘못되었습니다.")
-		           			}else{
-		         	  			let items = res.response.body.item;
-		          		  		code += '<tr>';
-		        				code += '<td>'+items.dogRegNo+'</td>';
-		        				code += '<td>'+items.dogNm+'</td>';
-		        				code += '<td>'+items.sexNm+'</td>';
-		        				code += '<td>'+items.kindNm+'</td>';
-		        				code += '<td>'+items.neuterYn+'</td>';
-		        				code += '<td>'+items.orgNm+'</td>';
-		        				code += '<td>'+items.officeTel+'</td>';
-		        				code += '</tr>'; 
-		  		   		   		code +='</table></div>';
-		  		  		        $('#petList').html(code);
-			    	        }
-		        		}
-        			},
-       			error : function(){
-       				alert('등록되지 않은 번호 입니다')
-  					}
-				})
-      		}
+		            	alert("소유자명 또는 동물등록번호가 잘못되었습니다.")
+		           		}else{
+		           		let items = res.response.body.item;
+		            	code += '<tr>';
+		        		code += '<td>'+items.dogRegNo+'</td>';
+		        		code += '<td>'+fname+'</td>';
+		        		code += '<td>'+items.dogNm+'</td>';
+		        		code += '<td>'+items.sexNm+'</td>';
+		        		code += '<td>'+items.kindNm+'</td>';
+		        		code += '<td>'+items.neuterYn+'</td>';
+		        		code += '<td>'+items.orgNm+'</td>';
+		        		code += '<td>'+items.officeTel+'</td>';
+		        		code += '</tr>'; 
+		        		code +='</table></div>';
+		            $('#petList').html(code);
+		            }
+		        	}
+        } ,
+        error : function(){
+            alert('등록되지 않은 번호 입니다')
+    }
+})
+        }
     </script>
 	</main>
 	<!-- content end -->

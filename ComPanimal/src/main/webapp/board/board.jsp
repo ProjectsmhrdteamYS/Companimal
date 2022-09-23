@@ -99,7 +99,7 @@ transition: background-color 0.5s;
             </tr>
           </thead>
           <tbody>
-            <c:forEach var="vo" items = "${list }">
+            <c:forEach var="vo" items = "${list}">
               <tr>
                 <th>${vo.c_seq}</th>
                 
