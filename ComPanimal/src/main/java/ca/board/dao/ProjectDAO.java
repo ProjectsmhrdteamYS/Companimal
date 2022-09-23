@@ -175,4 +175,11 @@ public class ProjectDAO {
 				session.close();
 				return pvo;
 		}
+			//본인 댓글 삭제 
+			public void commentDelete(int cmt_seq) {
+				SqlSession session = sqlSessionFactory.openSession();
+				int vo = session.delete("commentDelete", cmt_seq);
+				session.commit();
+				session.close();
+}
 }
