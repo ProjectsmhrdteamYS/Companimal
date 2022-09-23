@@ -19,6 +19,8 @@
 <link rel="stylesheet" href="${cpath }/css/bootstrap-grid.css">
 <link rel="stylesheet" href="${cpath }/css/bootstrap-reboot.css">
 <link rel="stylesheet" href="${cpath }/css/bootstrap-utilities.css">
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
@@ -33,6 +35,13 @@
 		location.href = "${cpath}/cupdateform.do?c_seq=" + c_seq;
 
 	}
+	
+	function goCDel(cmt_seq,c_seq){
+		console.log("글번호", c_seq)
+		console.log("댓글번호",cmt_seq)
+		location.href="${cpath}/commentdelete.do?cmt_seq=" +cmt_seq +"&c_seq="+c_seq;
+	}
+  	
 	</script>
 
 <style>
@@ -172,15 +181,18 @@ a:hover {
 				</form>
 			</c:if>
 		</div>
-		<!-- 댓글 리스트 -->
+	<!-- 댓글 리스트 -->
 		<div class="container">
 
 			<table class="table">
 				<c:forEach var="cvo" items="${list }">
 					<c:if test="${cvo.c_seq eq vo.c_seq}">
+					<input type="hidden" name="cmt_seq" value="${cvo.cmt_seq}">
 						<tr>
-							<td>${cvo.user_name }</td>
-							<td>${cvo.cmt_content }</td>
+							<td>${cvo.user_name}</td>
+							<td>${cvo.cmt_content }
+							<button type="button" class="btn float-end" onclick="goCDel(${cvo.cmt_seq},${vo.c_seq})">삭제</button></td>
+						
 						</tr>
 					</c:if>
 				</c:forEach>

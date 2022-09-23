@@ -5,67 +5,111 @@
 <mapper namespace="ca.board.dao.BoardMapper">
 	<!-- 1. 회원가입 -->
 	<insert id="signupMethod" parameterType="ca.board.dao.userVO">
-		insert into	tbl_user(user_id,user_pw,user_name,user_birth,user_tel,user_addr,user_type,user_joindate)
-		values(#{user_id},#{user_pw},#{user_name},#{user_birth},#{user_tel},#{user_addr},#{user_type},sysdate) </insert>
+		insert into
+		tbl_user(user_id,user_pw,user_name,user_birth,user_tel,user_addr,user_type,user_joindate)
+		values(#{user_id},#{user_pw},#{user_name},#{user_birth},#{user_tel},#{user_addr},#{user_type},sysdate)
+	</insert>
 	<!-- 2. 로그인 -->
-	<select id="loginMethod" resultType="ca.board.dao.userVO" parameterType="ca.board.dao.userVO">
-		select * from tbl_user where user_id=#{user_id} and user_pw=#{user_pw} </select>
-		
+	<select id="loginMethod" resultType="ca.board.dao.userVO"
+		parameterType="ca.board.dao.userVO">
+		select * from tbl_user where user_id=#{user_id} and
+		user_pw=#{user_pw}
+	</select>
+
 	<!-- 회원 수정 -->
 	<update id="user_update" parameterType="ca.board.dao.userVO">
-		update tbl_user set user_pw=#{user_pw} where user_id=#{user_id} </update>
+		update tbl_user set user_pw=#{user_pw} where user_id=#{user_id}
+		</update>
+
 
 	<!-- 3. 커뮤니티 게시판 전체 리스트 -->
 	<select id="cList" resultType="ca.board.dao.cboardVO">
-		select * from tbl_community order by c_seq desc	</select>
-		<!-- 4. 커뮤니티 게시판 글쓰기 -->
+		select * from tbl_community order
+		by c_seq desc
+	</select>
+	<!-- 4. 커뮤니티 게시판 글쓰기 -->
 	<insert id="insertc" parameterType="ca.board.dao.cboardVO">
-		insert into	tbl_community(c_seq,c_title,c_content,c_date,c_file,user_id,user_name)
-		values(tbl_community_SEQ.NEXTVAL,#{c_title},#{c_content},sysdate,#{c_file},#{user_id},#{user_name}) </insert>
+		insert into
+		tbl_community(c_seq,c_title,c_content,c_date,c_file,user_id,user_name)
+		values(tbl_community_SEQ.NEXTVAL,#{c_title},#{c_content},sysdate,#{c_file,jdbcType=VARCHAR},#{user_id},#{user_name})
+	</insert>
 	<!-- 5. 커뮤니티 게시판 상세 페이지 -->
-	<select id="cdetail" parameterType="int" resultType="ca.board.dao.cboardVO">
-		select * from tbl_community where c_seq=#{c_seq} </select>
+	<select id="cdetail" parameterType="int"
+		resultType="ca.board.dao.cboardVO">
+		select * from tbl_community where c_seq=#{c_seq}
+	</select>
 	<!-- 6. 커뮤니티 게시판 조회수 증가 -->
 	<update id="countc">
-		update tbl_community set c_cnt=c_cnt+1 where c_seq = #{c_seq} </update>
+		update tbl_community set c_cnt=c_cnt+1 where c_seq =
+		#{c_seq}
+	</update>
 	<!-- 7. 커뮤니티 게시판 삭제 -->
-	<delete id="cboardDelete"> delete from tbl_community where c_seq=#{c_seq} </delete>
+	<delete id="cboardDelete"> delete from tbl_community where c_seq=#{c_seq}
+	</delete>
 	<!-- 8. 커뮤니티 게시판 수정 -->
 	<update id="cupdate" parameterType="ca.board.dao.cboardVO">
-		update tbl_community set c_title=#{c_title},c_content=#{c_content} where c_seq=#{c_seq}	</update>
+		update tbl_community set
+		c_seq=#{c_seq},c_title=#{c_title},c_content=#{c_content},c_file=#{c_file,jdbcType=VARCHAR}
+		 where c_seq=#{c_seq}
+	</update>
 	<!-- 9. 찾아주세요 게시판 전체 리스트 -->
-	<select id="fList" resultType="ca.board.dao.fboardVO"> select * from tbl_find order by f_seq desc </select>
+	<select id="fList" resultType="ca.board.dao.fboardVO"> select * from tbl_find order by
+		f_seq desc </select>
 	<!-- 10. 찾아주세요 게시판 글쓰기 -->
 	<insert id="insertf" parameterType="ca.board.dao.fboardVO">
-		insert into tbl_find(f_seq,f_title,f_content,f_date,f_file,user_id,user_name)
-		values(tbl_find_SEQ.NEXTVAL,#{f_title},#{f_content},sysdate,#{f_file},#{user_id},#{user_name}) </insert>
+		insert into
+		tbl_find(f_seq,f_title,f_content,f_date,f_file,user_id,user_name)
+		values(tbl_find_SEQ.NEXTVAL,#{f_title},#{f_content},sysdate,#{f_file,jdbcType=VARCHAR},#{user_id},#{user_name})
+	</insert>
 	<!-- 11. 찾아주세요 게시판 상세 페이지 -->
-	<select id="fdetail" parameterType="int" resultType="ca.board.dao.fboardVO">
-		select * from tbl_find where f_seq = #{f_seq} </select>
+	<select id="fdetail" parameterType="int"
+		resultType="ca.board.dao.fboardVO">
+		select * from tbl_find where f_seq = #{f_seq}
+	</select>
 	<!-- 12. 찾아주세요 게시판 조회수 증가 -->
 	<update id="countf">
-		update tbl_find set f_cnt=f_cnt+1 where f_seq=#{f_seq} </update>
+		update tbl_find set f_cnt=f_cnt+1 where
+		f_seq=#{f_seq}
+	</update>
 	<!-- 13. 찾아주세요 게시판 삭제 -->
 	<delete id="fboardDelete">
-		delete from tbl_find where f_seq=#{f_seq}	</delete>
+		delete from tbl_find where f_seq=#{f_seq}
+	</delete>
 	<!-- 14. 찾아주세요 게시판 수정 -->
 	<update id="fUpdate" parameterType="ca.board.dao.fboardVO">
-		update tbl_find set f_seq=#{f_seq},f_title=#{f_title},f_content=#{f_content},f_file=#{f_file} where f_seq=#{f_seq} </update>
+		update tbl_find set
+		f_seq=#{f_seq},f_title=#{f_title},f_content=#{f_content},f_file=#{f_file,jdbcType=VARCHAR}
+		where f_seq=#{f_seq}
+	</update>
 	<!-- 15. 동물 등록 -->
 	<insert id="petinsert" parameterType="ca.board.dao.petVO">
-		insert into tbl_pet(pet_regno,dognm,pet_img,owner_nm,reg_date,user_id)
-		values(${pet_regno},#{dognm},#{pet_img},#{owner_nm},sysdate,#{user_id}) </insert>
+		insert into
+		tbl_pet(pet_regno,dognm,pet_img,owner_nm,reg_date,user_id)
+		values(${pet_regno},#{dognm},#{pet_img},#{owner_nm},sysdate,#{user_id})
+	</insert>
 	<!-- 16. 댓글 등록 -->
 	<insert id="insertcomment" parameterType="ca.board.dao.mentVO">
-		insert into tbl_comment(cmt_seq,c_seq,cmt_content,cmt_date,user_id,user_name)
-		values(tbl_comment_SEQ.NEXTVAL,#{c_seq},#{cmt_content},sysdate,#{user_id},#{user_name}) </insert>
+		insert into
+		tbl_comment(cmt_seq,c_seq,cmt_content,cmt_date,user_id,user_name)
+		values(tbl_comment_SEQ.NEXTVAL,#{c_seq},#{cmt_content},sysdate,#{user_id},#{user_name})
+	</insert>
 
-		<!--17. 댓글 목록  -->
-
+	<!--17. 댓글 목록 -->
 	<select id="mentList" resultType="ca.board.dao.mentVO">
-		select * from tbl_comment order by cmt_seq desc</select>
+		select * from tbl_comment order
+		by cmt_seq desc
+	</select>
 	<!-- 18. 댓글 삭제 -->
 	<delete id="mentDelete">
-		delete from tbl_comment where c_seq=#{c_seq}	</delete>
-	
+		delete from tbl_comment where c_seq=#{c_seq}
+	</delete>
+	<!-- 19. 동물 db 부르기 -->
+	<select id="search" parameterType="ca.board.dao.petVO"
+		resultType="ca.board.dao.petVO">
+		select * from tbl_pet where pet_regno = #{pet_regno}
+	</select>
+	<!--20. 본인 댓글 삭제 -->
+	<delete id="commentDelete">
+		delete from tbl_comment where cmt_seq =#{cmt_seq}
+	</delete>
 </mapper>

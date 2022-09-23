@@ -171,4 +171,18 @@ public class ProjectDAO {
 			session.commit();
 			session.close();
 		}
+	// 동물 db 부르기
+			public petVO search(petVO vo) {
+				SqlSession session = sqlSessionFactory.openSession();
+				petVO pvo = session.selectOne("search", vo);
+				session.close();
+				return pvo;
+		}
+			//본인 댓글 삭제 
+			public void commentDelete(int cmt_seq) {
+				SqlSession session = sqlSessionFactory.openSession();
+				int vo = session.delete("commentDelete", cmt_seq);
+				session.commit();
+				session.close();
+}
 }

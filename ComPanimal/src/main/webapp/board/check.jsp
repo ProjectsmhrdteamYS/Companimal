@@ -142,26 +142,25 @@ a:hover {
 				<input type="hidden" name="user_id" value="${uvo.user_id }">
 				<div class="mb-3">
 					<label for="exampleFormControlInput1" class="form-label">반려동물
-						이름</label> <input type="email" class="form-control" name="dognm"
+						이름</label> <input type="text" class="form-control" name="dognm"
 						placeholder="반려견 이름을 입력하세요" style="height: 3em;">
 				</div>
 				<div class="mb-3">
 					<label for="exampleFormControlInput1" class="form-label">동물
-						등록번호</label> <input type="email" class="form-control" name="pet_regno"
+						등록번호</label> <input type="text" class="form-control" name="pet_regno"
 						placeholder="반려견 등록번호를 입력하세요" style="height: 3em;">
 				</div>
 				<div class="mb-3">
 					<label for="exampleFormControlInput1" class="form-label">소유자
-						명</label> <input type="email" class="form-control" name="owner_nm"
+						명</label> <input type="text" class="form-control" name="owner_nm"
 						placeholder="반려견 이름을 입력하세요" style="height: 3em;">
 				</div>
 
 				<div class="mb-3">
 					<label for="exampleFormControlInput1" class="form-label">동물
 						사진 등록</label>
-					<div class="filebox">
-						<input class="upload-name" value="동물사진"> <label for="file">파일찾기</label>
-						<input type="file" name="pet_img">
+					<div class="mb-3">
+					<input class="form-control" type="file" name="pet_img">
 					</div>
 				</div>
 				<button class="w-100 btn btn-lg btn-primary" type="submit"

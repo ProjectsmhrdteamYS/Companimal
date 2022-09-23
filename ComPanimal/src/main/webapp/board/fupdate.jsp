@@ -82,6 +82,7 @@ a {
 	
 	<!-- content -->
 	<main>
+		<div class="container">
 		<form action="${cpath}/fdetail.do?f_seq=${vo.f_seq}" method="post" enctype="multipart/form-data">
 			<input type="hidden" name="f_seq" value="${vo.f_seq}">
 			<table class="table table-boardered">
@@ -119,6 +120,7 @@ a {
 				</tr>
 			</table>
 		</form>
+		</div>
 	</main>
 	<!-- content end -->
 	

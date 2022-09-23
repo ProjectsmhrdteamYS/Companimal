@@ -127,7 +127,6 @@ a {
 					</div>
 				</div>
 			</form>
-
 		</div>
 	</main>
 	<!-- content end -->
