@@ -168,4 +168,11 @@ public class ProjectDAO {
 			session.commit();
 			session.close();
 		}
+	// 동물 db 부르기
+			public petVO search(petVO vo) {
+				SqlSession session = sqlSessionFactory.openSession();
+				petVO pvo = session.selectOne("search", vo);
+				session.close();
+				return pvo;
+		}
 }

@@ -159,9 +159,8 @@ a:hover {
 				<div class="mb-3">
 					<label for="exampleFormControlInput1" class="form-label">동물
 						사진 등록</label>
-					<div class="filebox">
-						<input class="upload-name" value="동물사진"> <label for="file">파일찾기</label>
-						<input type="file" name="pet_img">
+					<div class="mb-3">
+					<input class="form-control" type="file" name="pet_img">
 					</div>
 				</div>
 				<button class="w-100 btn btn-lg btn-primary" type="submit"

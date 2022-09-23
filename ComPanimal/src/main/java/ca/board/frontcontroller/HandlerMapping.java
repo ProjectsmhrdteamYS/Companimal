@@ -22,6 +22,7 @@ import ca.board.controller.FindWriteFormController;
 import ca.board.controller.FindboardFormController;
 import ca.board.controller.InsertCommentController;
 import ca.board.controller.MainPageController;
+import ca.board.controller.PetimgController;
 import ca.board.controller.SearchController;
 import ca.board.controller.SearchFormController;
 import ca.board.controller.SigninController;
@@ -73,6 +74,7 @@ public class HandlerMapping {
 		mappings.put("/inputcomment.do", new InsertCommentController());
 		mappings.put("/user_detail.do", new user_detailController());
 		mappings.put("/user_detailform.do", new user_detailFormController());
+		mappings.put("/petimg.do", new PetimgController());
 	}
 	public Controller getController(String key) {
 		return mappings.get(key);
