@@ -34,7 +34,8 @@ public class userVO {
 	}
 
 
-	public int getUser_birth() {
+	public in
+	t getUser_birth() {
 		return user_birth;
 	}
 
