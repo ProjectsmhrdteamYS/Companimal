@@ -56,6 +56,7 @@ public class SignupController implements Controller {
 //		
 		//이부분이 문제라고볼수있음(만약 컨텍스트 패스 뭐라고 나오면은 무조건 BoardMapper.xml 문제라고 볼수있음)
 		dao.signupMethod(vo);
+		
 		response.setContentType("text/html; charset=UTF-8");
 		PrintWriter writer = response.getWriter();
 		writer.println("<script>alert('회원가입완료되었습니다.');"
