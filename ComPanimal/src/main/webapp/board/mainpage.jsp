@@ -22,8 +22,11 @@
 	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 	crossorigin="anonymous"></script>
 
+<!-- 부트스트랩 아이콘 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+
 <style>
- /* 공통 style */
+ 	/* 공통 style */
     ul li{list-style: none; font-weight: 700; }
     a {text-decoration: none;  color :#150906;}
     a:hover {
@@ -31,8 +34,45 @@
     transition: background-color 0.5s;
   }
 
-  /* 세부디자인 */
-  .icon{ width: 100px; font-weight: 500; margin-top: 5px;}
+  	/* 세부디자인==================================== */
+  
+	nav{display:flex; justify-content:center;}
+		section{margin: 0;}
+		
+		.icon{width:100px; font-weight:500; margin-top: 5px;}
+		/* .test{height: 624px; background-size: contain;} */
+		.test{height: 624px; background-size: contain;}
+	 	.test:before{content:""; height: 624px; background: linear-gradient(to right, rgba(0,0,0,0.7), transparent);
+		position:absolute; left:0; height:100%%; width:50%;} 
+
+		.test_r{height: 624px; background-size: contain;}
+	    .test_r:before{content:""; height: 624px; background: linear-gradient(to left, rgba(0,0,0,1), transparent);
+		position:absolute; right:0; height:100%; width:60%;} 
+
+		.title_l{position:absolute; top:150px; left:200px; color:white; font-family: sans-serif; 
+			animation:l_slide 1s ease-out;}
+			.title_l h1{font-size:5rem; font-weight:700; text-shadow: 4px 4px 8px rgba(0,0,0,0.4);}
+			.title_l h2{font-size:4rem; font-weight:700; line-height:74px; text-shadow: 4px 4px 8px rgba(0,0,0,0.4);}
+			.title_l p{font-size:20px; line-height:28px; text-shadow: 2px 2px 3px rgba(0,0,0,0.3);}
+			
+			
+			
+			.title_r{position:absolute; top:150px; right:200px; color:white; font-family: sans-serif; 
+				animation:r_slide 1s ease-out;}
+				.title_r h1{font-size:5rem; font-weight:700; text-shadow: 4px 4px 8px rgba(0,0,0,0.4);}
+				.title_r p{font-size:20px; line-height:28px; text-shadow: 2px 2px 3px rgba(0,0,0,0.3);}
+				
+	   
+	   
+	   @keyframes l_slide{
+		   from{left: -100px;}
+		   to{left: 200px;}
+	   }
+		@keyframes r_slide{
+		   from{right: -100px;	}
+		   to{right: 200px;}
+	   }
+  
 </style>
 
 </head>
@@ -41,8 +81,7 @@
 	<!-- header -->
 	<header class=" container-fluid p-3 bg-white ">
 		<div class="container p-3">
-			<div
-				class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start ">
+			<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start ">
 				<a class="navbar-brand me-4" href="${cpath }/mainpage.do"> <img
 					src="${cpath }/images/logo.png" alt="" width="286"
 					class="d-inline-block align-text-top ">
@@ -77,10 +116,11 @@
 					</c:if>
 
 					<c:if test="${!empty uvo }">
-						
               			${uvo.user_id}님 환영합니다.
               				<button type="button" class="btn btn-outline-secondary me-1"
 							onclick="location.href='${cpath }/logout.do'">Logout</button>
+							<button type="button" class="btn btn-outline-secondary me-1"
+							onclick="location.href='${cpath }/user_updateform.do'">회원 수정</button>
 							<button type="button" class="btn btn-outline-secondary me-1"
 							onclick="location.href='${cpath }/user_detailform.do'">회원 상세정보</button>
 					</c:if>
@@ -89,22 +129,51 @@
 		</div>
 	</header>
 
+
 	<!-- banner -->
-
-	<main class="container-fluid">
-
+		<section>
 		<div id="carouselExampleFade" class="carousel slide carousel-fade"
 			data-bs-ride="carousel">
 			<div class="carousel-inner ">
-				<div class="carousel-item active">
-					<img src="${cpath }/images/111.jpg" class="d-block w-100" alt="...">
+				
+				<div class="carousel-item active">			
+				<div class="test" style="background: url('${cpath }/images/111.jpg');
+				background-size: contain;">
+					<div class="title_l">
+					<h1>COMPANIMAL</h1>
+					<p>사랑하는 우리 반려견의 나이 몸무게 특이사항을 저장하고<br>
+						반려견의 건강을 지켜주세요!</p>
+					</div>
 				</div>
+				</div>
+				
+				
 				<div class="carousel-item">
-					<img src="${cpath }/images/222.jpg" class="d-block w-100" alt="...">
-				</div>
+				<div class="test_r" style="background: url('${cpath }/images/222.jpg');
+				background-size: contain;">
+					<div class="title_r">
+						<p>동물등록신청 후 </p>
+						<h1>동물판매 의무</h1>
+						<p>동물판매업자가 등록대상 동물ㅇ르 판매시 구매자의 명의로<br>
+						동물 등록신청을 한 후 판매하도록 하는[동물보호법]이 시행</p>
+						</div>
+				</div>	
+				</div> <!-- item_2 -->
+				
 				<div class="carousel-item">
-					<img src="${cpath }/images/333.jpg" class="d-block w-100" alt="...">
-				</div>
+				<div class="test" style="background: url('${cpath }/images/333.jpg');
+				background-size: contain;">
+					<div class="title_l">
+						<p>2022동물등록 자진신고 집중단속 기간 운영<br>
+						자진신고  7.1 ~ 8.31<br>
+						집중단속 9.1 ~ 9.30</p>
+						<h2>반려견 등록,
+						<br>선택이 아닌 필수입니다</h2>
+						<p>컴패니멀과 함께하세요</p>
+						</div>
+				</div><!-- item_2 -->
+				
+			
 			</div>
 			<button class="carousel-control-prev" type="button"
 				data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -116,16 +185,18 @@
 				<span class="carousel-control-next-icon" aria-hidden="true"></span>
 				<span class="visually-hidden">Next</span>
 			</button>
-
 		</div>
-	</main>
+		</div>
+		</section>
+
 
 
 
 	<!-- info -->
-	<div class="mt-3 p-3  text-center w-100 " style="height: 600px;">
-		<img class="d-block mx-auto mb-5" src="${cpath }/images/big_logo.png"
-			alt="" width="700">
+<!-- 	<div class="mt-3 p-3  text-center w-100 " style="height: 500px;"> -->
+	<div class="mt-4 mb-4 p-3  text-center w-100 h-100 ">
+		<img class="d-block mx-auto mt-3 mb-5" src="${cpath }/images/big_logo.png"
+			alt="" width="600">
 		<div class="col-lg-6 mx-auto ">
 			<p class="lead mb-4">
 				입양시까지 책임지고 보호하며 안전한 입양을 통해 다시금 반려동물로서의 <br>행복한 삶을 살아갈 수 있도록 최선을
@@ -147,11 +218,9 @@
 
 
 
-
-	<!-- <div class="container"> -->
+	<!-- icon -->
 	<div class="row justify-content-center">
-
-		<div class="col-md-1 me-4 text-center ">
+		<div class="col-md-1 text-center ">
 			<a type="button" onclick="location.href='${cpath }/companimal.do'">
 				<img class="rounded-circle" src="${cpath }/images/icon_1.png"
 				alt="icon_1" width="100" height="100">
@@ -160,7 +229,7 @@
 
 		<!-- col_2 -->
 
-		<div class="col-md-1 me-4 text-center">
+		<div class="col-md-1 text-center">
 			<a type="button" onclick="location.href='${cpath }/searchform.do'">
 				<img class="rounded-circle" src="${cpath }/images/icon_2.png"
 				alt="icon_1" width="100" height="100">
@@ -168,7 +237,7 @@
 		</div>
 		<!-- col_3 -->
 
-		<div class="col-md-1 me-4 text-center">
+		<div class="col-md-1 text-center">
 			<a type="button" onclick="location.href='${cpath }/checkform.do'">
 				<img class="rounded-circle" src="${cpath }/images/icon_3.png"
 				alt="icon_1" width="100" height="100">
@@ -176,7 +245,7 @@
 		</div>
 		<!-- col_4 -->
 
-		<div class="col-md-1 me-4 text-center">
+		<div class="col-md-1 text-center">
 			<a type="button" onclick="location.href='${cpath }/boardform.do'">
 				<img class="rounded-circle" src="${cpath }/images/icon_4.png"
 				alt="icon_1" width="100" height="100">
@@ -191,24 +260,27 @@
 		</div>
 	</div>
 	
+	
+	<!-- content_banner_1 -->
 	<div class="container">
 		<div class="row pt-5">
-			<div class="col-md-6">
+			<div class="col">
 				<div class="h-100 p-5 text-white bg-dark rounded-3"
 					style="background-image: url(${cpath }/images/main_con_1.jpg); background-size: cover;">
 					<h2 class="fw-bold">찾아주세요</h2>
-					<p>Swap the background-color utility <br>
-				    and add a Then, mix and match with <br>
-				    additional component themes and more.</p>
-					 <button class="btn btn-outline-primary fw-bold" onclick="location.href='${cpath}/findboardform.do'" type="button" style="width:130px;">Find</button>
+					<div class="text-wrap mb-3">우리의 소중한 반려견을 분실했을때<br>
+				    <strong>COMPANIMAL</strong>에서 실시간으로 도움을 요청하세요<br>
+				    골든타임안에 우리의 반려견을 만날수 있을거예요</div>
+					<button class="btn btn-outline-primary fw-bold" onclick="location.href='${cpath}/findboardform.do'" type="button" style="width:130px;">Find</button>
 				</div>
 			</div>
-			<div class="col-md-6">
+	<!-- content_banner_2 -->
+			<div class="col">
 				<div class="h-100 p-5 text-white border rounded-3" style="background-image:url(${cpath }/images/main_con_2.jpg); background-size: cover;">
 					<h2 class="fw-bold">우리 댕댕이</h2>
-				   	  <p>Swap the background-color utility <br>
-				      and add a Then, mix and match with <br>
-				      additional component themes and more.</p>
+				   	  <div class="text-wrap mb-3">지구 최강 귀여운 우리집 댕댕이<br>
+				      <strong>COMPANIMAL</strong>에서 지금바로 공개하세요<br>
+				      우리 댕댕이의 친구들이 기다리고 있어요!</div>
 					<button class="btn btn-outline-light fw-bold" onclick="location.href='${cpath }/boardform.do'" type="button" style="width:130px;">board</button>
 				</div>
 			</div>
@@ -220,23 +292,32 @@
 	<div class="container">
 		<footer class="py-5" style="color:#555;">
 			<div class="d-flex justify-content-between py-4 my-4 border-top">
-				<div class="row">
-					<div class="col">
-						<ul class="list-unstyled">
-							<li class="fw-normal">© 2022 Company, Inc. All rights reserved.</li>
-							<li class="fw-normal">주식회사 컴패니멀 어쩌구 저쩌구</li>
-							<li class="fw-normal">그래서 만든사람 어쩌구저쩌구</li>
-						</ul>
-					</div>
+				
+				<div class="float-start pt-2 pe-5" style="border-right:1.4px solid; border-color:#DEE2E6;"><img src="${cpath }/images/black_symbol.jpg" alt="#" style="width:120px;"></div>
+				
+				<div class="col px-5 pt-3" style ="width: 300px;">
+					<ul class="list-unstyled" style="color:#858789;">
+						<li class="fw-bold"><h4>COMPANIMAL</h3></li>
+						<li class="fw-normal">주소ㅣ광주 동구 예술길 31-15 3층</li>
+						<li class="fw-normal">번호ㅣ062-123-4567</li>
+						<li class="fw-normal">Copyright 2022. Companimal Co., Ltd. all Rights reserved.</li>
+					</ul>
 				</div>
-				<ul class="list-unstyled d-flex ">
-					<li class="btn btn-primary py-4 me-2">짹짹이</li>
-					<li class="btn btn-outline-secondary py-4 me-2">인서타</li>
-					<li class="btn btn-primary py-4 me-2">농농농</li>
-				</ul>
-			</div>
-		</footer>
-	</div>
-	<!-- footer end -->
+				
+				<div>
+					<ul class="list-unstyled d-flex float-end mt-2" style="height:54px;">					
+						<li class="btn btn-primary me-2"  onclick="location.href='https://twitter.com/?lang=ko'" style="width:56px; line-height:38px;"><i class="bi bi-twitter" style="font-size:1.3em"></i></li>					
+						<li class="btn btn-primary me-2" onclick="location.href='https://www.instagram.com'" style="width:56px; line-height:38px;"><i class="bi bi-instagram" style="font-size:1.3em"></i></li>
+						<a href="#"  title="Popover title" data-bs-content="Popover body content is set in this attribute.">
+						<li class="btn btn-primary me-2" style="width:56px; line-height:38px;"><i class="bi bi-arrow-up-circle-fill" style="font-size:1.3em"></i></li>
+						</a>
+						
+					
+					</ul>
+				</div>
+				</div>				
+			</footer>
+		</div>
+			<!-- footer end -->
 </body>
 </html>

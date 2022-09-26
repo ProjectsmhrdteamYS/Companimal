@@ -23,7 +23,8 @@
 <link rel="stylesheet" href="${cpath }/css/bootstrap-reboot.css">
 <link rel="stylesheet" href="${cpath }/css/bootstrap-utilities.css">
 
-
+<!-- 부트스트랩 아이콘 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
  <style>
     /* 공통 style */
     ul li{list-style: none; font-weight: 700; }
@@ -118,25 +119,34 @@
 
 <!-- footer -->
 	<div class="container">
-		<footer class="py-5 ">
+		<footer class="py-5" style="color:#555;">
 			<div class="d-flex justify-content-between py-4 my-4 border-top">
-				<div class="row">
-					<div class="col">
-						<ul class="list-unstyled">
-							<li>© 2022 Company, Inc. All rights reserved.</li>
-							<li>주식회사 컴패니멀 어쩌구 저쩌구</li>
-							<li>그래서 만든사람 어쩌구저쩌구</li>
-						</ul>
-					</div>
+				
+				<div class="float-start pt-2 pe-5" style="border-right:1.4px solid; border-color:#DEE2E6;"><img src="${cpath }/images/black_symbol.jpg" alt="#" style="width:120px;"></div>
+				
+				<div class="col px-5 pt-3" style ="width: 300px;">
+					<ul class="list-unstyled" style="color:#858789;">
+						<li class="fw-bold"><h4>COMPANIMAL</h3></li>
+						<li class="fw-normal">주소ㅣ광주 동구 예술길 31-15 3층</li>
+						<li class="fw-normal">번호ㅣ062-123-4567</li>
+						<li class="fw-normal">Copyright 2022. Companimal Co., Ltd. all Rights reserved.</li>
+					</ul>
 				</div>
-				<ul class="list-unstyled d-flex ">
-					<li class="btn btn-primary py-4 me-2">짹짹이</li>
-					<li class="btn btn-outline-secondary py-4 me-2">인서타</li>
-					<li class="btn btn-primary py-4 me-2">농농농</li>
-				</ul>
-			</div>
-		</footer>
-	</div>
-	<!-- footer end -->
+				
+				<div>
+					<ul class="list-unstyled d-flex float-end mt-2" style="height:54px;">					
+						<li class="btn btn-primary me-2"  onclick="location.href='https://twitter.com/?lang=ko'" style="width:56px; line-height:38px;"><i class="bi bi-twitter" style="font-size:1.3em"></i></li>					
+						<li class="btn btn-primary me-2" onclick="location.href='https://www.instagram.com'" style="width:56px; line-height:38px;"><i class="bi bi-instagram" style="font-size:1.3em"></i></li>
+						<a href="#"  title="Popover title" data-bs-content="Popover body content is set in this attribute.">
+						<li class="btn btn-primary me-2" style="width:56px; line-height:38px;"><i class="bi bi-arrow-up-circle-fill" style="font-size:1.3em"></i></li>
+						</a>
+						
+					
+					</ul>
+				</div>
+				</div>				
+			</footer>
+		</div>
+			<!-- footer end -->
 </body>
 </html>
