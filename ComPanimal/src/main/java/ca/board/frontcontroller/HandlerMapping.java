@@ -31,7 +31,6 @@ import ca.board.controller.SigninFormController;
 import ca.board.controller.SignupController;
 import ca.board.controller.SignupFormController;
 import ca.board.controller.commentDeleteController;
-import ca.board.controller.idCheckController;
 import ca.board.controller.logoutController;
 import ca.board.controller.logoutFormController;
 import ca.board.controller.user_detailController;
@@ -80,6 +79,7 @@ public class HandlerMapping {
 		mappings.put("/petimg.do", new PetimgController());
 		mappings.put("/commentdelete.do",new commentDeleteController());
 		mappings.put("/catch.do", new QrCatchController());
+		
 
 	}
 	public Controller getController(String key) {
