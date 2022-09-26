@@ -20,6 +20,11 @@
 	<update id="user_update" parameterType="ca.board.dao.userVO">
 		update tbl_user set user_pw=#{user_pw} where user_id=#{user_id}
 		</update>
+		
+	<!-- 회원 체크 -->
+	<select id = "id_check" parameterType= "ca.board.dao.userVO">
+		select * from tbl_user where user_id = {#user_id}
+	</select>
 
 
 	<!-- 3. 커뮤니티 게시판 전체 리스트 -->

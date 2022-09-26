@@ -45,6 +45,22 @@ public class ProjectDAO {
 		session.close();
 	}
 	
+	// 회원아이디 체크 메소드
+	public String user_idcheck(userVO vo) {
+		int idCheck = 0;
+		SqlSession session = sqlSessionFactory.openSession();
+		String a = session.selectOne("id_check", vo);
+		session.commit();
+		session.close();
+		if(a == vo.getUser_id()) {
+			idCheck = 0;
+		}
+		else {
+			idCheck = 1;
+		}
+		return idCheck;
+	}
+	
 	// 회원 상세보기 메소드 이거는 따로 만들어둔건데 어떻게쓸지..뭔가 아닌것같은데..
 	// jsp만으로 보기했으니 메소드 필요없음
 //	public userVO user_detail(userVO vo) {
