@@ -41,6 +41,8 @@
 		console.log("댓글번호",cmt_seq)
 		location.href="${cpath}/commentdelete.do?cmt_seq=" +cmt_seq +"&c_seq="+c_seq;
 	}
+	
+	
   	
 	</script>
 
@@ -191,7 +193,8 @@ a:hover {
 						<tr>
 							<td>${cvo.user_name}</td>
 							<td>${cvo.cmt_content }
-							<button type="button" class="btn float-end" onclick="goCDel(${cvo.cmt_seq},${vo.c_seq})">삭제</button></td>
+							<button type="button" class="btn float-end" onclick="goCDel(${cvo.cmt_seq},${vo.c_seq})">삭제</button>
+							<button type="button" class="btn float-end" onclick="goCUp(${cvo.cmt_seq},${vo.c_seq})">수정</button></td>
 						
 						</tr>
 					</c:if>

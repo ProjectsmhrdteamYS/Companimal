@@ -7,8 +7,11 @@ select * from tbl_community;
 select * from TBL_USER
 
 =======
-select * from tbl_find;
+select * from tbl_comment;
 delete tbl_community;
+
+select tbl_community_SEQ.NEXTVAL from dual;
+
 
 alter table tbl_community modify c_cnt number(15) default 1 not null; 
 
