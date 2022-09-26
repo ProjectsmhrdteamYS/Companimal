@@ -31,10 +31,6 @@ public class user_updateController implements Controller {
 		ProjectDAO dao = new ProjectDAO();
 		dao.user_update(vo);
 		
-		System.out.println(vo.getUser_id());
-		System.out.println(vo.getUser_pw());
-//		System.out.println(vo.getUser_tel());
-//		System.out.println(vo.getUser_addr());
 	
 		
 		HttpSession session = request.getSession();
