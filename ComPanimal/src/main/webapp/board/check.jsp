@@ -134,7 +134,7 @@ a:hover {
 	</header>
 	<!-- header end -->
 
-	<!-- content -->
+		<!-- content -->
 	<div class="container" style="height: 780px;">
 		<div class="form-signin mx-auto mt-5">
 			<form class="search rounded-4 p-5 mx-auto h-100"
@@ -172,7 +172,7 @@ a:hover {
 				<p class="mt-5 mb-3 text-muted">© 2022–2025</p>
 			</form>
 		</div>
-		<!-- content end -->
+<!-- content end -->
 
 <!-- footer -->
 	<div class="container">

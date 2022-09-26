@@ -29,14 +29,16 @@ public class CheckController implements Controller {
 		String pet_img = multi.getFilesystemName("pet_img");
 		String owner_nm= multi.getParameter("owner_nm");
 		String user_id= multi.getParameter("user_id");
+		String QR_code = "https://chart.apis.google.com/chart?cht=qr&chs=150x150&chl=http://210.223.239.172:8081/ComPanimal/board/search_qr.jsp?pet_regno="+pet_regno;
 		petVO vo = new petVO();
 		vo.setPet_regno(pet_regno);
 		vo.setDognm(dognm);
 		vo.setPet_img(pet_img);
 		vo.setOwner_nm(owner_nm);
 		vo.setUser_id(user_id);
+		vo.setPet_QR(QR_code);
 		dao.petinsert(vo);
-		return "redirect:/checkform.do";
+		return "user_detail";
 	}
 
 }
