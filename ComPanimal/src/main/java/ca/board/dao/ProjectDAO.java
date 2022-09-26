@@ -47,17 +47,17 @@ public class ProjectDAO {
 	
 	// 회원아이디 체크 메소드
 	public String user_idcheck(userVO vo) {
-		int idCheck = 0;
+		String idCheck = "0";
 		SqlSession session = sqlSessionFactory.openSession();
-		String a = session.selectOne("id_check", vo);
-		session.commit();
-		session.close();
-		if(a == vo.getUser_id()) {
-			idCheck = 0;
+		String id = session.selectOne("id_check", vo);
+		if(id == null) {
+			idCheck = "1";
 		}
 		else {
-			idCheck = 1;
+			idCheck = "0";
 		}
+		session.commit();
+		session.close();
 		return idCheck;
 	}
 	

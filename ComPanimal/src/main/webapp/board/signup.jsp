@@ -117,35 +117,10 @@
 					<div class="row">
 						<div class="mb-3">
 							<label for="id">ID</label>
-							<input type="text" class="form-control" name="user_id" placeholder="" required class = "user_id">
+							<input type="text" class="form-control user_id" name="user_id" placeholder="" required>
 							<div class="invalid-feedback">아이디를 입력해주세요.</div>
 							<font id = "checkId" size = "2"></font>
-							<script type="text/javascript">
-							${'.user_id'}.focusout(function() {
-								let userId = ${'.user_id'}.val();
-								
-								$.ajax({
-									url : "signup.jsp",
-									type : "post",
-									data : {userId: userId},
-									dataType : 'json',
-									success : fuction(result){
-										if(result == 0){
-											${"#checkId"}.html('사용할수 없는 아이디입니다.');
-											${"#checkId"}.attr('color', 'red');
-										} else {
-											${"#checkId"}.html('사용할수 있는 아이디입니다.');
-											${"#checkId"}.attr('color', 'green');
-										}
-									},
-									error : fuction(){
-										alert("서버요청실패");
-									}
-								})
-							})
-							
-							</script>
-							<button type = "button" onclick="id_check()" name = "id_check">중복확인</button>
+							<button type = "button" onclick="function();" name = "id_check">중복확인</button>
 						</div>
 						<div class="mb-3">
 							<label for="pw">비밀번호</label> <input type="text"
@@ -192,6 +167,31 @@
 					<div class="w-100 mb-4"></div>
 					<button class="w-100 btn btn-lg btn-primary mb-4" type="submit">JOIN</button>
 				</form>
+							<script type="text/javascript">
+							${'.user_id'}.focusout(function() {
+								let userId = ${'.user_id'}.val();
+								consol.log(userId);
+								$.ajax({
+									url : "signup.jsp",
+									type : "post",
+									data : {user_id: user_id},
+									dataType : 'json',
+									success : fuction(result){
+										if(result == "1"){
+											${"#checkId"}.html('사용할수 있는 아이디입니다.');
+											${"#checkId"}.attr('color', 'green');
+										} else {
+											${"#checkId"}.html('사용할수 없는 아이디입니다.');
+											${"#checkId"}.attr('color', 'red');
+										}
+									},
+									error : fuction(){
+										alert("서버요청실패");
+									}
+								})
+							})
+							
+							</script>
 			  </div>
 			</div>
 		</div>
