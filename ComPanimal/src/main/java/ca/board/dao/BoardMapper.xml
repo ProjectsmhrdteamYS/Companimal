@@ -89,8 +89,8 @@
 	<!-- 15. 동물 등록 -->
 	<insert id="petinsert" parameterType="ca.board.dao.petVO">
 		insert into
-		tbl_pet(pet_regno,dognm,pet_img,owner_nm,reg_date,user_id)
-		values(${pet_regno},#{dognm},#{pet_img},#{owner_nm},sysdate,#{user_id})
+		tbl_pet(pet_regno,dognm,pet_img,owner_nm,reg_date,user_id,pet_QR)
+		values(${pet_regno},#{dognm},#{pet_img},#{owner_nm},sysdate,#{user_id},#{pet_QR})
 	</insert>
 	<!-- 16. 댓글 등록 -->
 	<insert id="insertcomment" parameterType="ca.board.dao.mentVO">

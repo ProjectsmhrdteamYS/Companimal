@@ -69,57 +69,7 @@ a:hover {
 </style>
 </head>
 <body>
-	<!-- header -->
-	<header class=" container-fluid p-3 bg-white ">
-		<div class="container p-3">
-			<div
-				class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start ">
-				<a class="navbar-brand me-4" href="${cpath }/mainpage.do"> <img
-					src="${cpath }/images/logo.png" alt="" width="286"
-					class="d-inline-block align-text-top ">
-				</a>
-
-				<ul
-					class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-
-					<li><a href="${cpath }/companimal.do"
-						class="nav-link px-3 link-dark">COMPANIMAL</a></li>
-					<li><a href="${cpath }/searchform.do"
-						class="nav-link px-3 link-dark">반려견조회</a></li>
-					<li><a href="${cpath }/checkform.do"
-						class="nav-link px-3 link-dark">반려견등록</a></li>
-					<li><a href="${cpath }/boardform.do"
-						class="nav-link px-3 link-dark">게시판</a></li>
-					<li><a href="${cpath }/findboardform.do"
-						class="nav-link px-3 link-dark">찾아주세요</a></li>
-				</ul>
-
-				<form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-2">
-					<input type="search" class="form-control form-control-dark"
-						placeholder="Search..." aria-label="Search">
-				</form>
-
-				<div class="text-end">
-					<c:if test="${empty uvo }">
-						<button type="button" class="btn btn-outline-secondary me-1"
-							onclick="location.href='${cpath }/signinform.do'">Login</button>
-						<button type="button" class="btn btn-primary"
-							onclick="location.href='${cpath }/signupform.do'">Sign-up</button>
-					</c:if>
-					<c:if test="${!empty uvo }">
-              		${uvo.user_id}님 환영합니다.
-              			<button type="button"
-							class="btn btn-outline-secondary me-1"
-							onclick="location.href='${cpath }/logout.do'">Logout</button>
-					</c:if>
-				</div>
-			</div>
-		</div>
-	</header>
-	<!-- header end -->
-
-	<p></p>
-
+<%@ include file="header.jsp" %>
 	<!-- content -->
 	<main>
 		<div class="container">
@@ -175,12 +125,14 @@ a:hover {
         				
         			}else{
         			console.log(res.pet_img);
-        			/* position-absolute top-50 start-50 클래스에 넣어보기 */
-        			let code='<div class="container"><table border="solid 1px;" style ="width:500px; height:300px;">'
+        			/* mx-auto h-100 */
+        			let code='<div class="containe">'
+        			code+='<div class="content-item:center">'
+        		    code+='<table border="solid 1px;" style ="width:500px; height:300px;">'
         			code+='<tr style="background-color: orange;">'
         			code+='<p></p><td colspan="3" style="color: white;" align="center">'+lname+'</td></p></tr>'
         			code+=' <tr><td rowspan="7" align="center">'			
-        			code+='<img src="${cpath }/images/'+res.pet_img+'" alt=""></td>'
+        			code+='<img src="ComPanimal/../img/'+res.pet_img+'" style="width:240px; height:240px;"/></td>'
         			
         			
         			   	$.ajax({                
@@ -217,7 +169,10 @@ a:hover {
         		        		code +='<tr><td>관할센터번호</td>'
         		        		code += '<td>'+items.officeTel+'</td>';
         		        		code += '</tr>'; 
-        		        		code +='</table></div>';
+        		        		code +='</table>'
+        		        		code +='</div>'
+        		        		code +='</div>';
+        		        		
         		            $('#petList').html(code);
         		            }
         		        	}

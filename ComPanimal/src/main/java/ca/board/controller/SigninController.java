@@ -33,36 +33,12 @@ public class SigninController implements Controller {
 			HttpSession session = request.getSession(); // 세션id 값이 있는지 먼저 확인 -> 있다 -> 쓰면됨 (getSession은 가지고 오는 것만 아니라 내려보내는것까지 해줌)
 			// session으로 바인딩 시 동일한 session으로 jsp들이 정보를 받을 수 있음.
 			session.setAttribute("uvo", uvo);
-//			response.setCharacterEncoding("UTF-8");
-//			response.setContentType("text/html; charset=UTF-8");
-//			
-//			PrintWriter out = response.getWriter();
-//			out.print("<script>alert('로그인성공');</script>");
 		}
 		
 		
 		
 		
-//		
-//		HttpSession session = request.getSession();
-//		session.invalidate(); // 무효화(
-//		return "redirect:/boardList.do";
-//		userVO vo1 = new userVO();
-//		ProjectDAO dao2 = new ProjectDAO();
-//		
-//		String user_name = request.getParameter("user_id");
-//		String user_password = request.getParameter("user_pw");
-//		vo.setUser_id(user_name);
-//		vo.setUser_pw(user_password);
-//		System.out.println(vo.getUser_id());
-//		System.out.println(vo.getUser_pw());
-//		dao.loginMethod(vo);
 		
-		System.out.println(vo.getUser_id());
-		System.out.println(vo.getUser_pw());
-		System.out.println(vo.getUser_tel());
-		System.out.println(vo.getUser_addr());
-		// 임시적으로 메인페이지 넘어감 그 이후에 수정할예정
 		return "redirect:/mainpage.do";
 	}
 

@@ -7,6 +7,30 @@ public class petVO {
 	private String owner_nm;
 	private String reg_date;
 	private String user_id;
+	private String pet_QR;
+	public petVO(String pet_regno, String dognm, String pet_img, String owner_nm, String reg_date, String user_id,
+			String pet_QR) {
+		super();
+		this.pet_regno = pet_regno;
+		this.dognm = dognm;
+		this.pet_img = pet_img;
+		this.owner_nm = owner_nm;
+		this.reg_date = reg_date;
+		this.user_id = user_id;
+		this.pet_QR = pet_QR;
+	}
+
+
+	public String getPet_QR() {
+		return pet_QR;
+	}
+
+
+	public void setPet_QR(String pet_QR) {
+		this.pet_QR = pet_QR;
+	}
+
+
 	public petVO() {};
 	
 	
@@ -63,7 +87,7 @@ public class petVO {
 	@Override
 	public String toString() {
 		return "petVO [pet_regno=" + pet_regno + ", dognm=" + dognm + ", pet_img=" + pet_img + ", owner_nm=" + owner_nm
-				+ ", reg_date=" + reg_date + ", user_id=" + user_id + "]";
+				+ ", reg_date=" + reg_date + ", user_id=" + user_id + ", pet_QR=" + pet_QR + "]";
 	}
 	
 }

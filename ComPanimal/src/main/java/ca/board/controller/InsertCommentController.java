@@ -26,7 +26,9 @@ public class InsertCommentController implements Controller {
 		vo.setUser_name(user_name);
 		vo.setCmt_content(cmt_content);
 		vo.setUser_id(user_id);
+		
 		dao.insertcomment(vo);
+		
 		return "redirect:/cdetailform.do?c_seq="+c_seq;
 	}
 
