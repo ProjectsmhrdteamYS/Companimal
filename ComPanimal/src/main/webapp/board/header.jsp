@@ -39,6 +39,16 @@ color: orange;
 transition: background-color 0.5s;
 }
 </style>
+<script type="text/javascript">
+	function moveUrl(url){
+		if(${empty uvo}){
+			alert("로그인 후 이용해주시기 바랍니다.")
+			url="#";
+		}
+			location.href=url;
+			}
+	
+	</script>
 
 </head>
 <body>
@@ -53,8 +63,12 @@ transition: background-color 0.5s;
           <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
             
             <li><a href="${cpath }/companimal.do" class="nav-link px-3 link-dark">COMPANIMAL</a></li>
-            <li><a href="${cpath }/searchform.do" class="nav-link px-3 link-dark">반려견조회</a></li>
-            <li><a href="${cpath }/checkform.do" class="nav-link px-3 link-dark">반려견등록</a></li>
+            <li>
+						<a href="#" onclick="moveUrl('${cpath }/searchform.do')"
+						class="nav-link px-3 link-dark">반려견조회</a></li>
+					<li>
+						<a href="#" onclick="moveUrl('${cpath }/checkform.do')"
+						class="nav-link px-3 link-dark">반려견등록</a></li>
             <li><a href="${cpath }/boardform.do" class="nav-link px-3 link-dark">게시판</a></li>
             <li><a href="${cpath }/findboardform.do" class="nav-link px-3 link-dark">찾아주세요</a></li>
           </ul>
