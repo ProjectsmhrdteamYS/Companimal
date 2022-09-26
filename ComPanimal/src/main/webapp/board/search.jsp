@@ -180,7 +180,7 @@ a:hover {
         			code+='<tr style="background-color: orange;">'
         			code+='<p></p><td colspan="3" style="color: white;" align="center">'+lname+'</td></p></tr>'
         			code+=' <tr><td rowspan="7" align="center">'			
-        			code+='<img src="${cpath }/images/'+res.pet_img+'" alt=""></td>'
+        			code+='<img src="../img/'+res.pet_img+'" alt=""></td>'
         			
         			
         			   	$.ajax({                
