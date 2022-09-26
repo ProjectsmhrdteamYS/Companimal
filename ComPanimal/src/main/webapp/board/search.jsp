@@ -132,7 +132,7 @@ a:hover {
         			code+='<tr style="background-color: orange;">'
         			code+='<p></p><td colspan="3" style="color: white;" align="center">'+lname+'</td></p></tr>'
         			code+=' <tr><td rowspan="7" align="center">'			
-        			code+='<img src="../img/'+res.pet_img+'" style="width:240px; height:240px;" alt=""></td>'
+        			code+='<img src="ComPanimal/../img/'+res.pet_img+'" style="width:240px; height:240px;"/></td>'
         			
         			
         			   	$.ajax({                
