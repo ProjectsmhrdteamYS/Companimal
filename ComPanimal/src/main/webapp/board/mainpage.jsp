@@ -33,7 +33,6 @@
     color: orange;
     transition: background-color 0.5s;
   }
-
   	/* 세부디자인==================================== */
   
 	nav{display:flex; justify-content:center;}
@@ -44,11 +43,9 @@
 		.test{height: 624px; background-size: contain;}
 	 	.test:before{content:""; height: 624px; background: linear-gradient(to right, rgba(0,0,0,0.7), transparent);
 		position:absolute; left:0; height:100%%; width:50%;} 
-
 		.test_r{height: 624px; background-size: contain;}
 	    .test_r:before{content:""; height: 624px; background: linear-gradient(to left, rgba(0,0,0,1), transparent);
 		position:absolute; right:0; height:100%; width:60%;} 
-
 		.title_l{position:absolute; top:150px; left:200px; color:white; font-family: sans-serif; 
 			animation:l_slide 1s ease-out;}
 			.title_l h1{font-size:5rem; font-weight:700; text-shadow: 4px 4px 8px rgba(0,0,0,0.4);}

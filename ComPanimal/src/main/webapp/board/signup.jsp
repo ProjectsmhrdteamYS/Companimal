@@ -131,7 +131,7 @@
 					<div class="row">
 						<div class="mb-3">
 							<label for="id">ID</label>
-							<input type="text" class="form-control" name="user_id" placeholder="" required>
+							<input type="text" class="form-control user_id" name="user_id" placeholder="" required>
 							<div class="invalid-feedback">아이디를 입력해주세요.</div>
 						</div>
 						<div class="mb-3">

@@ -79,6 +79,8 @@ public class HandlerMapping {
 		mappings.put("/petimg.do", new PetimgController());
 		mappings.put("/commentdelete.do",new commentDeleteController());
 		mappings.put("/catch.do", new QrCatchController());
+		
+
 	}
 	public Controller getController(String key) {
 		return mappings.get(key);
