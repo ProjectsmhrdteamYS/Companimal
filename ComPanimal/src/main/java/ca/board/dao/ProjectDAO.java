@@ -37,6 +37,24 @@ public class ProjectDAO {
 		session.close();
 		return uvo;
 	}
+	// 회원 수정 메소드
+	public void user_update(userVO vo) {
+		SqlSession session = sqlSessionFactory.openSession();
+		session.update("user_update",vo);
+		session.commit();
+		session.close();
+	}
+	
+	// 회원 상세보기 메소드 이거는 따로 만들어둔건데 어떻게쓸지..뭔가 아닌것같은데..
+	// jsp만으로 보기했으니 메소드 필요없음
+//	public userVO user_detail(userVO vo) {
+//		SqlSession session = sqlSessionFactory.openSession();
+//		// select * from 가져왔으니 이것을 uvo에 담음 
+//		userVO uvo = session.selectOne("user_detail", vo);
+//		session.close();
+//		return uvo;
+//	}
+
 	// 커뮤니티 게시판 전체 리스트 가져오기 메소드
 
 	public List<cboardVO> cList() {
@@ -123,21 +141,6 @@ public class ProjectDAO {
 		session.close();
 	}
 	
-	// 회원 수정 메소드
-	public void user_update(userVO vo) {
-		SqlSession session = sqlSessionFactory.openSession();
-		session.update("user_update",vo);
-		session.commit();
-		session.close();
-	}
-	
-	// 회원 상세보기 메소드
-	public userVO user_detail(userVO vo) {
-		SqlSession session = sqlSessionFactory.openSession();
-		userVO uvo = session.selectOne("user_detail", vo);
-		session.close();
-		return uvo;
-	}
 	
 	
 	// 동물 등록 메소드

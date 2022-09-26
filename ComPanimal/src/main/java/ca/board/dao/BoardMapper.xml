@@ -18,10 +18,9 @@
 
 	<!-- 회원 수정 -->
 	<update id="user_update" parameterType="ca.board.dao.userVO">
-		update tbl_user set
-		user_pw=#{user_pw},user_tel=#{user_tel},user_addr=#{user_addr} where
-		user_id=#{user_id}
-	</update>
+		update tbl_user set user_pw=#{user_pw} where user_id=#{user_id}
+		</update>
+
 
 	<!-- 3. 커뮤니티 게시판 전체 리스트 -->
 	<select id="cList" resultType="ca.board.dao.cboardVO">

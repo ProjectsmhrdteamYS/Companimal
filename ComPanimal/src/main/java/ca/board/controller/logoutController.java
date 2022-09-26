@@ -1,6 +1,7 @@
 package ca.board.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -13,9 +14,15 @@ public class logoutController implements Controller {
 	public String requestHandler(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		response.setContentType("text/html; charset=UTF-8");
+		PrintWriter writer = response.getWriter();
 		HttpSession session = request.getSession();
 		session.invalidate();
-		response.sendRedirect("mainpage.do");
+		writer.println("<script>alert('로그아웃되었습니다.');"
+				+ "location.href='mainpage.do';</script>");
+//		response.sendRedirect("mainpage.do"); location이랑 같음 
+		
+		writer.flush();
 		return null;
 	}
 
