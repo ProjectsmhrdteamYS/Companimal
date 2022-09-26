@@ -53,50 +53,8 @@
 
 </head>
 <body>
-	<!-- header -->
-	<header class=" container-fluid p-3 bg-white ">
-		<div class="container p-3">
-			<div
-				class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start ">
-				<a class="navbar-brand me-4" href="${cpath }/mainpage.do"> <img
-					src="${cpath }/images/logo.png" alt="" width="286"
-					class="d-inline-block align-text-top ">
-				</a>
-				<ul
-					class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-					<li><a href="${cpath }/companimal.do"
-						class="nav-link px-3 link-dark">COMPANIMAL</a></li>
-					<li><a href="${cpath }/searchform.do"
-						class="nav-link px-3 link-dark">반려견조회</a></li>
-					<li><a href="${cpath }/checkform.do"
-						class="nav-link px-3 link-dark">반려견등록</a></li>
-					<li><a href="${cpath }/boardform.do"
-						class="nav-link px-3 link-dark">게시판</a></li>
-					<li><a href="${cpath }/findboardform.do"
-						class="nav-link px-3 link-dark">찾아주세요</a></li>
-				</ul>
-				<form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-2">
-					<input type="search" class="form-control form-control-dark"
-						placeholder="Search..." aria-label="Search">
-				</form>
+<%@ include file="header.jsp" %>
 
-				<div class="text-end">
-					<c:if test="${empty uvo }">
-						<button type="button" class="btn btn-outline-secondary me-1"
-							onclick="location.href='${cpath }/signinform.do'">Login</button>
-						<button type="button" class="btn btn-primary"
-							onclick="location.href='${cpath }/signupform.do'">Sign-up</button>
-					</c:if>
-					<c:if test="${!empty uvo }">
-              		${uvo.user_id}님 환영합니다.
-              		<button type="button" class="btn btn-outline-secondary me-1"
-							onclick="location.href='${cpath }/logout.do'">Logout</button>
-					</c:if>
-				</div>
-			</div>
-		</div>
-	</header>
-	
 	<div class="form-signin">
 		<form class="search rounded-4 p-5 mx-auto h-100" style="width: 650px;" action="${cpath }/user_update.do">
 			<a class="logo" href="${cpath }/mainpage.do"> 
