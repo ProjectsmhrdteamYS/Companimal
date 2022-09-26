@@ -175,12 +175,14 @@ a:hover {
         				
         			}else{
         			console.log(res.pet_img);
-        			/* position-absolute top-50 start-50 클래스에 넣어보기 */
-        			let code='<div class="container"><table border="solid 1px;" style ="width:500px; height:300px;">'
+        			/* mx-auto h-100 */
+        			let code='<div class="containe">'
+        			code+='<div class="content-item:center">'
+        		    code+='<table border="solid 1px;" style ="width:500px; height:300px;">'
         			code+='<tr style="background-color: orange;">'
         			code+='<p></p><td colspan="3" style="color: white;" align="center">'+lname+'</td></p></tr>'
         			code+=' <tr><td rowspan="7" align="center">'			
-        			code+='<img src="../img/'+res.pet_img+'" alt=""></td>'
+        			code+='<img src="../img/'+res.pet_img+'" style="width:240px; height:240px;" alt=""></td>'
         			
         			
         			   	$.ajax({                
@@ -217,7 +219,10 @@ a:hover {
         		        		code +='<tr><td>관할센터번호</td>'
         		        		code += '<td>'+items.officeTel+'</td>';
         		        		code += '</tr>'; 
-        		        		code +='</table></div>';
+        		        		code +='</table>'
+        		        		code +='</div>'
+        		        		code +='</div>';
+        		        		
         		            $('#petList').html(code);
         		            }
         		        	}
