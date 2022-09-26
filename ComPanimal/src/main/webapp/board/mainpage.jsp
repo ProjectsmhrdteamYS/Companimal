@@ -74,7 +74,16 @@
 	   }
   
 </style>
-
+	<script type="text/javascript">
+	function moveUrl(url){
+		if(${empty uvo}){
+			alert("로그인 후 이용해주시기 바랍니다.")
+			url="#";
+		}
+			location.href=url;
+			}
+	
+	</script>
 </head>
 <body>
 
@@ -92,10 +101,13 @@
 
 					<li><a href="${cpath }/companimal.do"
 						class="nav-link px-3 link-dark">COMPANIMAL</a></li>
-					<li><a href="${cpath }/searchform.do"
+					<li>
+						<a href="#" onclick="moveUrl('${cpath }/searchform.do')"
 						class="nav-link px-3 link-dark">반려견조회</a></li>
-					<li><a href="${cpath }/checkform.do"
+					<li>
+						<a href="#" onclick="moveUrl('${cpath }/checkform.do')"
 						class="nav-link px-3 link-dark">반려견등록</a></li>
+						
 					<li><a href="${cpath }/boardform.do"
 						class="nav-link px-3 link-dark">게시판</a></li>
 					<li><a href="${cpath }/findboardform.do"
@@ -107,6 +119,9 @@
 						placeholder="Search..." aria-label="Search">
 				</form>
 
+				
+				
+				
 				<div class="text-end">
 					<c:if test="${empty uvo }">
 						<button type="button" class="btn btn-outline-secondary me-1"
@@ -154,7 +169,7 @@
 					<div class="title_r">
 						<p>동물등록신청 후 </p>
 						<h1>동물판매 의무</h1>
-						<p>동물판매업자가 등록대상 동물ㅇ르 판매시 구매자의 명의로<br>
+						<p>동물판매업자가 등록대상 동물을 판매시 구매자의 명의로<br>
 						동물 등록신청을 한 후 판매하도록 하는[동물보호법]이 시행</p>
 						</div>
 				</div>	
@@ -205,11 +220,11 @@
 			<br>
 			<div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
 				<button type="button" class="btn btn-primary btn-lg px-4 gap-3"
-					onclick="location.href='${cpath }/checkform.do'">
+					onclick="moveUrl('${cpath}/checkform.do')">
 					<a>반려견 등록</a>
 				</button>
 				<button type="button" class="btn btn-outline-secondary btn-lg px-4 "
-					onclick="location.href='${cpath }/searchform.do'">
+					onclick="moveUrl('${cpath }/searchform.do')">
 					<a>반려견 조회</a>
 				</button>
 			</div>
@@ -230,7 +245,7 @@
 		<!-- col_2 -->
 
 		<div class="col-md-1 text-center">
-			<a type="button" onclick="location.href='${cpath }/searchform.do'">
+			<a type="button" onclick="moveUrl('${cpath }/searchform.do')">
 				<img class="rounded-circle" src="${cpath }/images/icon_2.png"
 				alt="icon_1" width="100" height="100">
 			</a>
@@ -238,7 +253,7 @@
 		<!-- col_3 -->
 
 		<div class="col-md-1 text-center">
-			<a type="button" onclick="location.href='${cpath }/checkform.do'">
+			<a type="button" onclick="moveUrl('${cpath}/checkform.do')">
 				<img class="rounded-circle" src="${cpath }/images/icon_3.png"
 				alt="icon_1" width="100" height="100">
 			</a>
