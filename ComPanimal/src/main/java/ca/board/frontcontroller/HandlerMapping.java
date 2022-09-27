@@ -23,6 +23,7 @@ import ca.board.controller.FindboardFormController;
 import ca.board.controller.InsertCommentController;
 import ca.board.controller.MainPageController;
 import ca.board.controller.MapController;
+import ca.board.controller.PetListController;
 import ca.board.controller.PetimgController;
 import ca.board.controller.QrCatchController;
 import ca.board.controller.SearchController;
@@ -81,6 +82,7 @@ public class HandlerMapping {
 		mappings.put("/commentdelete.do",new commentDeleteController());
 		mappings.put("/catch.do", new QrCatchController());
 		mappings.put("/map.do", new MapController());
+		mappings.put("/petlist.do", new PetListController());
 
 	}
 	public Controller getController(String key) {

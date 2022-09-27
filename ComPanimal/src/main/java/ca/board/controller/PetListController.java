@@ -1,32 +1,35 @@
 package ca.board.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import ca.board.dao.ProjectDAO;
-import ca.board.dao.fboardVO;
-import ca.board.dao.petVO;
-import ca.board.dao.userVO;
+import com.google.gson.Gson;
 
-public class user_updateFormController implements Controller {
+import ca.board.dao.ProjectDAO;
+import ca.board.dao.petVO;
+
+public class PetListController implements Controller {
 
 	@Override
 	public String requestHandler(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		String user_id = request.getParameter("user_id");
 		ProjectDAO dao = new ProjectDAO();
-		System.out.println(user_id);
-		petVO pvo = new petVO();
-		pvo.setUser_id(user_id);
-		List<petVO> plist = dao.petlist(pvo);
-		System.out.println(plist);
-		request.setAttribute("plist", plist);
+		petVO vo = new petVO();
+		String user_id = request.getParameter("user_id");
+		vo.setUser_id(user_id);
+		List<petVO> list = dao.petlist(vo);
+		request.setAttribute("list",list);
 		
-		return "user_update";
+		response.setCharacterEncoding("UTF-8");
+		PrintWriter out = response.getWriter();
+		Gson gson = new Gson();
+		out.print(gson.toJson(list));
+		return null;
 	}
+
 }

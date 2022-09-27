@@ -111,4 +111,8 @@
 	<delete id="commentDelete">
 		delete from tbl_comment where cmt_seq =#{cmt_seq}
 	</delete>
+	<!-- 로그인 아이디로 동물 db 부르기 -->
+	<select id="petlist" resultType="ca.board.dao.petVO">
+		select * from tbl_pet where user_id = #{user_id}
+	</select>
 </mapper>

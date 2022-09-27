@@ -45,16 +45,6 @@ public class ProjectDAO {
 		session.close();
 	}
 	
-	// 회원 상세보기 메소드 이거는 따로 만들어둔건데 어떻게쓸지..뭔가 아닌것같은데..
-	// jsp만으로 보기했으니 메소드 필요없음
-//	public userVO user_detail(userVO vo) {
-//		SqlSession session = sqlSessionFactory.openSession();
-//		// select * from 가져왔으니 이것을 uvo에 담음 
-//		userVO uvo = session.selectOne("user_detail", vo);
-//		session.close();
-//		return uvo;
-//	}
-
 	// 커뮤니티 게시판 전체 리스트 가져오기 메소드
 
 	public List<cboardVO> cList() {
@@ -185,4 +175,10 @@ public class ProjectDAO {
 				session.commit();
 				session.close();
 }
+			public List<petVO> petlist(petVO vo){
+				SqlSession session = sqlSessionFactory.openSession();
+				List<petVO> list = session.selectList("petlist",vo);
+				session.close();
+				return list;
+			}
 }
