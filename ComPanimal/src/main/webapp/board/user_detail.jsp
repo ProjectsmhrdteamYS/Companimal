@@ -80,12 +80,10 @@ a:hover {
 				<tr>
 					<td>아이디 :</td>
 					<td>${uvo.user_id }</td>
-					<td><input type = "checkbox" name = "check_update" value = 1></td>
 				</tr>
 				<tr>
 					<td>비밀번호 :</td>
 					<td>${uvo.user_pw }</td>
-					<td><input type = "checkbox" name = "check_update" value = 2></td>
 				</tr>
 				<tr>
 					<td>주소 :</td>
@@ -94,12 +92,10 @@ a:hover {
 				<tr>
 					<td>생년월일 :</td>
 					<td>${uvo.user_birth}</td>
-					<td><input type = "checkbox" name = "check_update" value = 3></td>
 				</tr>
 				<tr>
 					<td>전화번호 :</td>
 					<td>${uvo.user_tel}</td>
-					<td><input type = "checkbox"  name = "check_update" value = 4></td>
 				</tr>
 				<tr>
 					<td>가입일자 :</td>
@@ -108,11 +104,8 @@ a:hover {
 				<tr>
 					<td>개인정보동의(동의:1 비동의:0) :</td>
 					<td>${uvo.user_type}</td>
-					<td><input type = "checkbox" name = "check_update" value = 5></td>
 				</tr>
 			</table>
-			<!-- 임시적으로 전송 -->
-			<input type = "submit" value = "제출">
 			<button class="w-100 btn btn-lg btn-primary mb-4"
 				onclick="location.href='${cpath }/mainpage.do'" type="button">확인</button>
 			<button class="w-100 btn btn-lg btn-primary mb-4"
