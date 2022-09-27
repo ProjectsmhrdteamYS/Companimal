@@ -77,10 +77,17 @@
 				<p class="text-center m-0">회원정보 수정</p></div>
 			<br>
 			<br>
+			<p>${uvo.user_id }</p>
+			<p>${uvo.user_pw }</p>
+			<p>${uvo.user_name }</p>
+			<c:forEach var="pvo" items="${plist }">
+			<p>${pvo.dognm }</p>
+			<p>${pvo.pet_regno }</p>
+			</c:forEach>
 			<div class="form-floating mb-2">
 				<input type="password" class="form-control"
 				id="floatingPassword" name = "user_pw" placeholder="Password"> 
-					<label for="floatingPassword">수정할 Password</label>
+					<label for="floatingPassword">비밀번호 수정</label>
 			</div>
 				<input type="hidden" class="form-control"
 				id="floatingPassword" name = "user_id" placeholder="addr" value="${uvo.user_id }"> 

@@ -5,6 +5,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <c:set var="cpath" value="${pageContext.request.contextPath }" />
+<script src="https://code.jquery.com/jquery-3.6.1.js"></script>
 <!-- 테스트하는 중 이것부터 -->
 <%!ProjectDAO dao = new ProjectDAO(); %>
 <%!userVO vo = new userVO(); %>
@@ -65,14 +66,12 @@ a:hover {
 </head>
 <body>
 	<%@ include file="header.jsp" %>
-
-	<div class="form-signin">
-		<form class="search rounded-4 p-5 mx-auto h-100" style="width: 650px;"
-			action="${cpath }/user_update.do">
+<div class="container" align="center">
+	<div class="form-signin" style="width: 650px;">
 			<a class="logo" href="${cpath }/mainpage.do"> <img class="mx-5"
 				src="${cpath }/images/logo.png" alt="로고" width="80%">
 			</a> <br> <br> <br>
-			<table class="form-control">
+			<table class="form-control" id="pet">
 				<tr>
 					<td>이름 :</td>
 					<td>${uvo.user_name }</td>
@@ -98,23 +97,50 @@ a:hover {
 					<td>${uvo.user_tel}</td>
 				</tr>
 				<tr>
-					<td>가입일자 :</td>
-					<td>${uvo.user_joindate}</td>
-				</tr>
-				<tr>
 					<td>개인정보동의(동의:1 비동의:0) :</td>
 					<td>${uvo.user_type}</td>
 				</tr>
 			</table>
+			
 			<button class="w-100 btn btn-lg btn-primary mb-4"
 				onclick="location.href='${cpath }/mainpage.do'" type="button">확인</button>
 			<button class="w-100 btn btn-lg btn-primary mb-4"
-				onclick="location.href='${cpath }/user_updateform.do'" type="button">수정</button>
-		</form>
+				onclick="location.href='${cpath }/user_updateform.do?user_id=${uvo.user_id }'" type="button">수정</button>
 	</div>
-
-
-
+	</div>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		var user_id = "${uvo.user_id}"
+		console.log(user_id)
+		$.ajax({
+			url : "${cpath}/petlist.do",
+			type : "post",
+			data :{
+				"user_id" : user_id
+			},
+			dataType : 'json',
+			success : function(data){
+				console.log(data);
+				for (var i in data){
+					let a = '<hr><table>'
+					a += '<tr><td>강아지 이름 : </td><td>'+data[i].dognm+'</td></tr>'
+					a += '<tr><td>QR코드 : </td><td><img src="'+data[i].pet_QR+'"></td></tr>'
+					a += '<tr><td>강아지 사진 : </td><td><img src="../img/'+data[i].pet_img+'"></td></tr>'
+					a += '<tr><td>등록 번호 : </td><td>'+data[i].pet_regno+'</td></tr>'
+					a += '</table>'
+					a += '<hr>'
+					$('#pet').append(a);
+				}
+			},
+			error : function(){
+				alert('err')
+			}
+		})
+	});
+	
+	</script>
+	
+	
 	<!-- footer -->
 	<div class="container">
 		<footer class="py-5" style="color:#555;">
