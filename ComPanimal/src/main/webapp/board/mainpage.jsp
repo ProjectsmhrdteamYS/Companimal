@@ -151,7 +151,7 @@
 				
 				<div class="carousel-item active">			
 				<div class="test" style="background: url('${cpath }/images/111.jpg');
-				background-repeat : no-repeat; background-size : cover;">
+				background-repeat : no-repeat; background-size :cover;">
 					<div class="title_l">
 					<h1>COMPANIMAL</h1>
 					<p>사랑하는 우리 반려견의 나이 몸무게 특이사항을 저장하고<br>
@@ -279,7 +279,7 @@
 		<div class="row pt-5">
 			<div class="col">
 				<div class="h-100 p-5 text-white bg-dark rounded-3"
-					style="background-image: url(${cpath }/images/main_con_1.jpg); background-size: cover;">
+					style="background-image: url(${cpath }/images/main_con_1.jpg); background-size:cover;">
 					<h2 class="fw-bold">찾아주세요</h2>
 					<div class="text-wrap mb-3">우리의 소중한 반려견을 분실했을때<br>
 				    <strong>COMPANIMAL</strong>에서 실시간으로 도움을 요청하세요<br>

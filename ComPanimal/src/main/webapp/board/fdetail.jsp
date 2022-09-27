@@ -3,7 +3,7 @@
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var="cpath" value="${pageContext.request.contextPath }" />
-
+<script src="https://code.jquery.com/jquery-3.6.1.js"></script>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -33,6 +33,39 @@ a {
 	text-decoration: none;
 }
 </style>
+<script type="text/javascript"
+		src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f08ba0bdf026921c7fa3adf9182a2b38&libraries=services"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#btn').click(function(){
+			var f_content="${vo.f_content}"
+			console.log(f_content)
+			$.ajax({
+				url : "${cpath}/map.do",
+				type : "post",
+				data : {"f_content":f_content},
+				dataType : "xml",
+				success : function(data){
+					console.log(data)
+					$(data).find("address").each(function(){
+						var x = $(this).find('x').text();
+						var y = $(this).find('y').text();
+					console.log(x,y)
+					var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+						mapOption = {
+										center : new kakao.maps.LatLng(y,x), // 지도의 중심좌표
+										level : 3
+										// 지도의 확대 레벨
+									};
+					var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+					})
+				},
+				error : ()=>{
+					alert('err')}
+			})
+		})
+	})
+</script>
 </head>
 <body>
 	<%@ include file="header.jsp" %>
@@ -49,8 +82,10 @@ a {
 				</tr>
 				<tr >
 					<td>위치</td>
-					<td>${fn:replace(vo.f_content,newLine,"<br>") }</td>
-					
+					<td>${vo.f_content}
+					<button id = "btn">지도보기</button>
+					<div id="map" style="width: 1200px; height: 350px;"></div>
+					</td>
 				</tr>
 				<tr>
 					<td>강아지 사진</td>

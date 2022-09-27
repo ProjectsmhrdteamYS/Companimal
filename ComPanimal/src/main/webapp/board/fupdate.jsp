@@ -61,8 +61,8 @@ a {
 						</td>
 					</tr>
 					<tr>
-						<td>위치</td>
-						<td><textarea rows="10" class="form-control" name="f_content">${vo.f_content}</textarea>
+						<td>위치 정보</td>
+						<td><textarea rows="1" class="form-control" name="f_content">${vo.f_content}</textarea>
 						</td>
 					</tr>
 					<tr>
