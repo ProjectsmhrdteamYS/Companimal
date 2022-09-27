@@ -59,8 +59,8 @@ public class user_updateController implements Controller {
 //		pvo.setPet_sta(pet_sta);
 		dao.petupdate(pvo);
 		
-		HttpSession session = request.getSession();
-		session.invalidate();
+//		HttpSession session = request.getSession();
+//		session.invalidate();
 		return "redirect:/mainpage.do";
 	}
 
