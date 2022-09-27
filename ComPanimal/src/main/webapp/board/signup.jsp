@@ -59,20 +59,6 @@
   .input-form  input{
     height: 48px;
   }
- 
-  
-   /* 세부디자인 */
-    .title{
-     margin: 0 auto;
-     width: 443px;
-   	 font-size: 30px;
-     color:#FC9364;
-     font-weight:700;
-     border: solid 1px #FC9364;
-     border-radius: 28px;
-     margin-top:14px;
-     margin-bottom:48px;
-    }
   </style>
 <script type="text/javascript">
 	function moveUrl(url){
@@ -84,6 +70,41 @@
 			}
 	
 	</script>
+	
+	<script>
+		$(function(){
+			$('#user_id').focusout(function(){
+			
+				let user_id = $('#user_id').val();
+				console.log(user_id);
+				
+				$.ajax({
+					url : "${cpath}/checkId.do",
+					type : "post",
+					data : {"user_id" : user_id},
+					dataType : 'json',
+					success : function(result){
+						if(result == 0){
+							$("#checkID").html('사용할 수 없는 아이디입니다.');
+							$("#checkID").attr('color','red');
+						}else if(result ==1){
+							$("#checkID").html('사용할 수 있는 아이디입니다.');
+							$("#checkID").attr('color','green');
+						}
+					},
+					error : function(){
+						alert("실패");
+					}
+					
+				}) 
+			});
+			
+		});
+	
+	</script>
+	
+	
+	
 
 </head>
 <body>
@@ -136,24 +157,19 @@
 		</div>
 	</header>
 	<!-- header end -->
-	
-	<!-- join -->
 	<main id="wrap">
 		<div class="container">
 		<div class="input-form-backgroud row">
 			<div class="input-form col-md-12 mx-auto">
-				<a class="logo" href="${cpath }/mainpage.do"> 
-			<img class="mx-5" src="${cpath }/images/logo.png" alt="로고" width="80%">
-			</a>
-				<div class="title">
-				<p class="text-center m-0">SIGN UP</p></div>
-				
+				<img class="mx-5 mb-4" src="${cpath }/images/logo.png" alt="로고" width="80%" >
 				<form class="validation-form" novalidate action="${cpath}/signup.do" method="get">
 					<div class="row">
 						<div class="mb-3">
 							<label for="id">ID</label>
-							<input type="text" class="form-control user_id" name="user_id" placeholder="" required>
+							<input type="text" class="form-control user_id" id = "user_id" name="user_id" placeholder="" required>
 							<div class="invalid-feedback">아이디를 입력해주세요.</div>
+							<font id ="checkID" size = "2"></font>
+							
 						</div>
 						<div class="mb-3">
 							<label for="pw">비밀번호</label> <input type="text"
