@@ -175,10 +175,18 @@ public class ProjectDAO {
 				session.commit();
 				session.close();
 }
+			// userid로 동물 db 리스트 
 			public List<petVO> petlist(petVO vo){
 				SqlSession session = sqlSessionFactory.openSession();
 				List<petVO> list = session.selectList("petlist",vo);
 				session.close();
 				return list;
+			}
+			// petVO update
+			public void petupdate(petVO vo) {
+				SqlSession session = sqlSessionFactory.openSession();
+				session.update("petupdate",vo);
+				session.commit();
+				session.close();
 			}
 }

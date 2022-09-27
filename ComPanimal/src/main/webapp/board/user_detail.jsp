@@ -125,8 +125,9 @@ a:hover {
 					let a = '<hr><table>'
 					a += '<tr><td>강아지 이름 : </td><td>'+data[i].dognm+'</td></tr>'
 					a += '<tr><td>QR코드 : </td><td><img src="'+data[i].pet_QR+'"></td></tr>'
-					a += '<tr><td>강아지 사진 : </td><td><img src="../img/'+data[i].pet_img+'"></td></tr>'
+					a += '<tr><td>강아지 사진 : </td><td><img src="${cpath}/img/'+data[i].pet_img+'"></td></tr>'
 					a += '<tr><td>등록 번호 : </td><td>'+data[i].pet_regno+'</td></tr>'
+					a += '<tr><td>현재 상태 : </td><td>'+data[i].pet_sta+'</td></tr>'
 					a += '</table>'
 					a += '<hr>'
 					$('#pet').append(a);
@@ -137,10 +138,7 @@ a:hover {
 			}
 		})
 	});
-	
 	</script>
-	
-	
 	<!-- footer -->
 	<div class="container">
 		<footer class="py-5" style="color:#555;">
