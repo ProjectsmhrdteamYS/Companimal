@@ -124,11 +124,7 @@
 	<!-- header end -->
 	<main id="wrap">
 		<div class="container">
-		<div class="input-form-backgroud row">
-			<div class="input-form col-md-12 mx-auto">
-				<img class="mx-5 mb-4" src="${cpath }/images/logo.png" alt="로고" width="80%" >
-				<form class="validation-form" novalidate action="${cpath}/signup.do" method="get">
-					<div class="row">
+		<div class="input-form-backgroud row">-
 						<div class="mb-3">
 							<label for="id">ID</label>
 							<input type="text" class="form-control user_id" name="user_id" placeholder="" required>

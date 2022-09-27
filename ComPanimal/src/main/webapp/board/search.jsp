@@ -95,7 +95,7 @@ a:hover {
 				</form>
 			</div>
 		</div>
-		<div class="container">
+		<div class="container" align="center">
 			<div id="petList" width=50%></div>
 			<div id="ibox" width=50%></div>
 		</div>

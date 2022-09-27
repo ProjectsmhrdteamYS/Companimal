@@ -6,6 +6,7 @@
 <c:set var="cpath" value="${pageContext.request.contextPath }" />
 <!-- 테스트하는 중 이것부터 -->
 <%!ProjectDAO dao = new ProjectDAO(); %>
+
 <% String userid = request.getParameter("user_id");
    String userpw = request.getParameter("user_pw");
 %>
@@ -21,6 +22,7 @@
 <link rel="stylesheet" href="${cpath }/css/bootstrap-grid.css">
 <link rel="stylesheet" href="${cpath }/css/bootstrap-reboot.css">
 <link rel="stylesheet" href="${cpath }/css/bootstrap-utilities.css">
+
 <!-- 부트스트랩 아이콘 -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
  <style>
@@ -54,7 +56,10 @@
 			}
 	
 	</script>
+
+
 <title>로그인</title>
+
 </head>
 <body>
 	<!-- header -->
@@ -85,6 +90,7 @@
 					<input type="search" class="form-control form-control-dark"
 						placeholder="Search..." aria-label="Search">
 				</form>
+
 				<div class="text-end">
 					<button type="button" class="btn btn-outline-secondary me-1"
 						onclick="location.href='${cpath }/signinform.do'">Login</button>
@@ -97,24 +103,27 @@
 	
 	<div class="form-signin">
 		<form class="search rounded-4 p-5 mx-auto h-100" style="width: 650px;" action="${cpath }/signin.do">
-			<a class="logo" href="${cpath }/mainpage.do">
+			<a class="logo" href="${cpath }/mainpage.do"> 
 			<img class="mx-5" src="${cpath }/images/logo.png" alt="로고" width="80%">
 			</a> <br>
 			<br>
 			<br>
 			<div class="form-floating mb-2">
 				<input type="text" class="form-control"
-				id="floatingInput" name = "user_id" placeholder="id">
+				id="floatingInput" name = "user_id" placeholder="id"> 
 				<label for="floatingInput">ID</label>
 			</div>
 			<div class="form-floating mb-5">
 				<input type="password" class="form-control"
-				id="floatingPassword" name = "user_pw" placeholder="Password">
+				id="floatingPassword" name = "user_pw" placeholder="Password"> 
 					<label for="floatingPassword">Password</label>
 			</div>
 			<button class="w-100 btn btn-lg btn-primary mb-4" type="submit">Sign in</button>
 		</form>
 	</div>
+
+
+
 <!-- footer -->
 	<div class="container">
 		<footer class="py-5" style="color:#555;">
