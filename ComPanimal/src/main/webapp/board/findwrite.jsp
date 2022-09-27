@@ -19,9 +19,10 @@
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 	crossorigin="anonymous"></script>
-	
+
 <!-- 부트스트랩 아이콘 -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
 
 <style>
 ul li {
@@ -35,7 +36,7 @@ a {
 </style>
 </head>
 <body>
-	<%@ include file="header.jsp" %>
+	<%@ include file="header.jsp"%>
 	<!-- content -->
 	<main id="wrap" class="position-relative">
 		<div class="container">
@@ -47,16 +48,20 @@ a {
 				enctype="multipart/form-data">
 				<input type="hidden" name="user_id" value="${uvo.user_id }">
 				<input type="hidden" name="user_name" value="${uvo.user_name }">
-				
-				<div class="input-group flex-nowrap">
-					<span class="input-group-text" id="addon-wrapping">제목</span> <input
-						type="text" class="form-control" aria-label="title"
-						aria-describedby="addon-wrapping" placeholder="반려견 상태를 적어주세요"
-						name="f_title">
+
+				<div class="form-check">
+					<input class="form-check-input" type="radio"
+						name="f_title" value="실종"> <label
+						class="form-check-label" for="flexRadioDefault1"> 실종 </label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio"
+						name="f_title" value="인도완료" checked> <label
+						class="form-check-label" for="flexRadioDefault2"> 인도 완료 </label>
 				</div>
 				<br>
 				<div class="input-group">
-					<span class="input-group-text">내용</span>
+					<span class="input-group-text">위치 정보</span>
 					<textarea class="form-control" aria-label="With textarea"
 						style="height: 300px" placeholder="잃어버린 지역 위치를 적어주세요"
 						name="f_content"></textarea>
@@ -89,34 +94,51 @@ a {
 
 	<!-- footer -->
 	<div class="container">
-		<footer class="py-5" style="color:#555;">
+		<footer class="py-5" style="color: #555;">
 			<div class="d-flex justify-content-between py-4 my-4 border-top">
-				
-				<div class="float-start pt-2 pe-5" style="border-right:1.4px solid; border-color:#DEE2E6;"><img src="${cpath }/images/black_symbol.jpg" alt="#" style="width:120px;"></div>
-				
-				<div class="col px-5 pt-3" style ="width: 300px;">
-					<ul class="list-unstyled" style="color:#858789;">
-						<li class="fw-bold"><h4>COMPANIMAL</h3></li>
+
+				<div class="float-start pt-2 pe-5"
+					style="border-right: 1.4px solid; border-color: #DEE2E6;">
+					<img src="${cpath }/images/black_symbol.jpg" alt="#"
+						style="width: 120px;">
+				</div>
+
+				<div class="col px-5 pt-3" style="width: 300px;">
+					<ul class="list-unstyled" style="color: #858789;">
+						<li class="fw-bold"><h4>
+								COMPANIMAL
+								</h3></li>
 						<li class="fw-normal">주소ㅣ광주 동구 예술길 31-15 3층</li>
 						<li class="fw-normal">번호ㅣ062-123-4567</li>
-						<li class="fw-normal">Copyright 2022. Companimal Co., Ltd. all Rights reserved.</li>
+						<li class="fw-normal">Copyright 2022. Companimal Co., Ltd.
+							all Rights reserved.</li>
 					</ul>
 				</div>
-				
+
 				<div>
-					<ul class="list-unstyled d-flex float-end mt-2" style="height:54px;">					
-						<li class="btn btn-primary me-2"  onclick="location.href='https://twitter.com/?lang=ko'" style="width:56px; line-height:38px;"><i class="bi bi-twitter" style="font-size:1.3em"></i></li>					
-						<li class="btn btn-primary me-2" onclick="location.href='https://www.instagram.com'" style="width:56px; line-height:38px;"><i class="bi bi-instagram" style="font-size:1.3em"></i></li>
-						<a href="#"  title="Popover title" data-bs-content="Popover body content is set in this attribute.">
-						<li class="btn btn-primary me-2" style="width:56px; line-height:38px;"><i class="bi bi-arrow-up-circle-fill" style="font-size:1.3em"></i></li>
+					<ul class="list-unstyled d-flex float-end mt-2"
+						style="height: 54px;">
+						<li class="btn btn-primary me-2"
+							onclick="location.href='https://twitter.com/?lang=ko'"
+							style="width: 56px; line-height: 38px;"><i
+							class="bi bi-twitter" style="font-size: 1.3em"></i></li>
+						<li class="btn btn-primary me-2"
+							onclick="location.href='https://www.instagram.com'"
+							style="width: 56px; line-height: 38px;"><i
+							class="bi bi-instagram" style="font-size: 1.3em"></i></li>
+						<a href="#" title="Popover title"
+							data-bs-content="Popover body content is set in this attribute.">
+							<li class="btn btn-primary me-2"
+							style="width: 56px; line-height: 38px;"><i
+								class="bi bi-arrow-up-circle-fill" style="font-size: 1.3em"></i></li>
 						</a>
-						
-					
+
+
 					</ul>
 				</div>
-				</div>				
-			</footer>
-		</div>
-			<!-- footer end -->
+			</div>
+		</footer>
+	</div>
+	<!-- footer end -->
 </body>
 </html>
