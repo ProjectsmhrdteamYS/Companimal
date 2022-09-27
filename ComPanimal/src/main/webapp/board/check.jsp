@@ -80,6 +80,19 @@ a:hover {
 	overflow: hidden;
 	border: 0;
 }
+
+ /* 세부디자인 */
+    .title{
+     margin: 0 auto;
+     width: 443px;
+   	 font-size: 30px;
+     color:#FC9364;
+     font-weight:700;
+     border: solid 1px #FC9364;
+     border-radius: 28px;
+     margin-top:14px;
+     margin-bottom:48px;
+    }
 </style>
 </head>
 <body>
@@ -93,7 +106,8 @@ a:hover {
 				enctype="multipart/form-data">
 				<br> <img class="mx-5" src="${cpath }/images/logo.png" alt="로고"
 					width="80%">
-				<h1 class="h3 mt-3 fw-normal text-center">반려동물 등록 서비스</h1>
+					<div class="title">
+					<p class="text-center m-0">반려동물 등록 서비스</p></div>
 				<input type="hidden" name="user_id" value="${uvo.user_id }">
 				<div class="mb-3">
 					<label for="exampleFormControlInput1" class="form-label">반려동물
