@@ -75,31 +75,38 @@ a:hover {
 			<table class="form-control">
 				<tr>
 					<td>이름 :</td>
-					<td> ${uvo.user_name }</td>
+					<td> <input type = "text" name = "user_name" value = "${uvo.user_name }" readonly = "readonly"> </td>
+					<td><input type = "checkbox"></td>
 				</tr>
 				<tr>
 					<td>아이디 :</td>
-					<td>${uvo.user_id }</td>
+					<td><input type = "text" name = "user_id" value = "${uvo.user_id }" readonly = "readonly"></td>
+					<td><input type = "checkbox"></td>
 				</tr>
 				<tr>
 					<td>비밀번호 :</td>
-					<td>${uvo.user_pw }</td>
+					<td><input type = "text" name = "user_pw" value = "${uvo.user_pw }" readonly = "readonly"></td>
+					<td><input type = "checkbox"></td>
 				</tr>
 				<tr>
 					<td>주소 :</td>
-					<td>${uvo.user_addr}</td>
+					<td><input type = "text" name = "user_addr" value = "${uvo.user_addr}" readonly = "readonly"></td>
+					<td><input type = "checkbox"></td>
 				</tr>
 				<tr>
 					<td>생년월일 :</td>
-					<td>${uvo.user_birth}</td>
+					<td><input type = "text" name = "user_birth" value = "${uvo.user_birth}" readonly = "readonly"></td>
+					<td><input type = "checkbox"></td>
 				</tr>
 				<tr>
 					<td>전화번호 :</td>
-					<td>${uvo.user_tel}</td>
+					<td><input type = "text" name = "user_tel" value = "${uvo.user_tel}" readonly = "readonly"></td>
+					<td><input type = "checkbox"></td>
 				</tr>
 				<tr>
 					<td>가입일자 :</td>
-					<td>${uvo.user_joindate}</td>
+					<td><input type = "text" name = "user_joindate" value = "${uvo.user_joindate}" readonly = "readonly"></td>
+					<td><input type = "checkbox"></td>
 				</tr>
 				<tr>
 					<td>개인정보동의(동의:1 비동의:0) :</td>
