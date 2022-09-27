@@ -29,9 +29,7 @@ public class user_updateController implements Controller {
 		vo.setUser_id(user_id);
 	
 		ProjectDAO dao = new ProjectDAO();
-		dao.user_update(vo);
-		
-	
+		dao.user_update(vo);	
 		
 		HttpSession session = request.getSession();
 		session.invalidate();
