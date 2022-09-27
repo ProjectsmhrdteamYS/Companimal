@@ -22,6 +22,7 @@ import ca.board.controller.FindWriteFormController;
 import ca.board.controller.FindboardFormController;
 import ca.board.controller.InsertCommentController;
 import ca.board.controller.MainPageController;
+import ca.board.controller.MapController;
 import ca.board.controller.PetimgController;
 import ca.board.controller.QrCatchController;
 import ca.board.controller.SearchController;
@@ -79,7 +80,7 @@ public class HandlerMapping {
 		mappings.put("/petimg.do", new PetimgController());
 		mappings.put("/commentdelete.do",new commentDeleteController());
 		mappings.put("/catch.do", new QrCatchController());
-		
+		mappings.put("/map.do", new MapController());
 
 	}
 	public Controller getController(String key) {

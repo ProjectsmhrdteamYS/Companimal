@@ -63,7 +63,7 @@ a {
 				<div class="input-group">
 					<span class="input-group-text">위치 정보</span>
 					<textarea class="form-control" aria-label="With textarea"
-						style="height: 300px" placeholder="잃어버린 지역 위치를 적어주세요"
+						placeholder="잃어버린 지역 위치를 적어주세요"
 						name="f_content"></textarea>
 				</div>
 				<br>
