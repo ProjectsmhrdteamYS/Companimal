@@ -9,6 +9,7 @@
 
 <% String userid = request.getParameter("user_id");
    String userpw = request.getParameter("user_pw");
+   String[] update = request.getParameterValues("check_update");
 %>
 <!-- 이것까지 -->
 <!DOCTYPE html>
@@ -104,7 +105,23 @@
 			</a> <br>
 			<br>
 			<br>
+			<div>
+			<% for(int i=0; i<update.length; i++){ %>
+			<%-- <% switch(update[i])  %> --%>
+			<%-- <% case 1: System.out.println("안녕");%> --%>
+			
+			<div><%=update[i] %></div>
+			<%-- <% default: System.out.println("살려주세요"); } %> --%>
+			<% } %>
+			
+			</div>
 			<div class="form-floating mb-2">
+				<input type="password" class="form-control"
+				id="floatingPassword" name = "user_pw" placeholder="Password"> 
+					<label for="floatingPassword">수정할 Password</label>
+				<input type="password" class="form-control"
+				id="floatingPassword" name = "user_pw" placeholder="Password"> 
+					<label for="floatingPassword">수정할 Password</label>
 				<input type="password" class="form-control"
 				id="floatingPassword" name = "user_pw" placeholder="Password"> 
 					<label for="floatingPassword">수정할 Password</label>
