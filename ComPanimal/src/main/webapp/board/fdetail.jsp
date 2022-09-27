@@ -44,16 +44,16 @@ a {
 			<BR>
 			<table class="table">
 				<tr>
-					<td>제목</td>
+					<td>상태</td>
 					<td>${vo.f_title}</td>
 				</tr>
 				<tr >
-					<td>내용</td>
+					<td>위치</td>
 					<td>${fn:replace(vo.f_content,newLine,"<br>") }</td>
 					
 				</tr>
 				<tr>
-					<td>사진</td>
+					<td>강아지 사진</td>
 					<td><img src="${cpath }/img/${vo.f_file}"></td>
 				</tr>
 				<tr>
