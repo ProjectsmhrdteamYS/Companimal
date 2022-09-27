@@ -46,6 +46,19 @@
       -moz-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
       box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15)
     }
+    
+    
+    /* 세부디자인 */
+    .title{
+     margin: 0 auto;
+     width: 443px;
+   	 font-size: 30px;
+     color:#FC9364;
+     font-weight:700;
+     border: solid 1px #FC9364;
+     border-radius: 28px;
+     margin-top:14px;
+    }
     </style>
 
 
@@ -61,6 +74,8 @@
 			<a class="logo" href="${cpath }/mainpage.do"> 
 			<img class="mx-5" src="${cpath }/images/logo.png" alt="로고" width="80%">
 			</a> <br>
+			<div class="title">
+				<p class="text-center m-0">회원정보 수정</p></div>
 			<br>
 			<br>
 			<div>

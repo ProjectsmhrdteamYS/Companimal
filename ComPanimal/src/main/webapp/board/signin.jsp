@@ -45,8 +45,22 @@
       -moz-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
       box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15)
     }
+    
+    /* 세부디자인 */
+    .title{
+     margin: 0 auto;
+     width: 443px;
+   	 font-size: 30px;
+     color:#FC9364;
+     font-weight:700;
+     border: solid 1px #FC9364;
+     border-radius: 28px;
+     margin-top:14px;
+     margin-bottom:48px;
+    }
+    
     </style>
-<script type="text/javascript">
+	<script type="text/javascript">
 	function moveUrl(url){
 		if(${empty uvo}){
 			alert("로그인 후 이용해주시기 바랍니다.")
@@ -101,13 +115,15 @@
 		</div>
 	</header>
 	
+	<!-- 로그인 -->
 	<div class="form-signin">
 		<form class="search rounded-4 p-5 mx-auto h-100" style="width: 650px;" action="${cpath }/signin.do">
 			<a class="logo" href="${cpath }/mainpage.do"> 
 			<img class="mx-5" src="${cpath }/images/logo.png" alt="로고" width="80%">
-			</a> <br>
+			</a>
 			<br>
-			<br>
+			<div class="title">
+			<p class="text-center m-0">LOGIN</p></div>
 			<div class="form-floating mb-2">
 				<input type="text" class="form-control"
 				id="floatingInput" name = "user_id" placeholder="id"> 

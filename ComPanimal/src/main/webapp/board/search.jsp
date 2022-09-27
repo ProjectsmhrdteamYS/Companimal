@@ -64,8 +64,21 @@ a:hover {
 	border-radius: 10px;
 	-webkit-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
 	-moz-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
-	box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15)
+	box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
 }
+
+ /* 세부디자인 */
+    .title{
+     margin: 0 auto;
+     width: 443px;
+   	 font-size: 30px;
+     color:#FC9364;
+     font-weight:700;
+     border: solid 1px #FC9364;
+     border-radius: 28px;
+     margin-top:14px;
+     margin-bottom:48px;
+    }
 </style>
 </head>
 <body>
@@ -77,9 +90,8 @@ a:hover {
 				<form class="search rounded-4 p-5 mx-auto h-100">
 					<img class="mx-5" src="${cpath }/images/logo.png" alt="로고"
 						width="80%">
-					<h1 class="h3 mt-3 fw-bold text-center" style="color: #444;">반려동물
-						조회 서비스</h1>
-					<br> <br>
+					<div class="title">
+					<p class="text-center m-0">반려동물 조회 서비스</p></div>
 					<div class="mb-3">
 						<label for="lname">소유자명</label> <input type="text"
 							class="form-control" style="height: 3em;" id="lname"
@@ -125,7 +137,6 @@ a:hover {
         				
         			}else{
         			console.log(res.pet_img);
-        			/* mx-auto h-100 */
         			let code='<div class="containe">'
         			code+='<div class="content-item:center">'
         		    code+='<table border="solid 1px;" style ="width:500px; height:300px;">'

@@ -47,17 +47,18 @@
 	    .test_r:before{content:""; height: 624px; background: linear-gradient(to left, rgba(0,0,0,1), transparent);
 		position:absolute; right:0; height:100%; width:60%;} 
 		.title_l{position:absolute; top:150px; left:200px; color:white; font-family: sans-serif; 
-			animation:l_slide 1s ease-out;}
-			.title_l h1{font-size:5rem; font-weight:700; text-shadow: 4px 4px 8px rgba(0,0,0,0.4);}
-			.title_l h2{font-size:4rem; font-weight:700; line-height:74px; text-shadow: 4px 4px 8px rgba(0,0,0,0.4);}
-			.title_l p{font-size:20px; line-height:28px; text-shadow: 2px 2px 3px rgba(0,0,0,0.3);}
+		animation:l_slide 1s ease-out; }
+		.title_l h1{font-size:5rem; font-weight:800; text-shadow: 4px 4px 8px rgba(0,0,0,0.4);}
+		.title_l h2{font-size:4rem; font-weight:700; line-height:74px; text-shadow: 4px 4px 8px rgba(0,0,0,0.4);}
+		.title_l p{font-size:24px; line-height:30px; text-shadow: 2px 2px 3px rgba(0,0,0,0.3);}
 			
 			
 			
-			.title_r{position:absolute; top:150px; right:200px; color:white; font-family: sans-serif; 
-				animation:r_slide 1s ease-out;}
-				.title_r h1{font-size:5rem; font-weight:700; text-shadow: 4px 4px 8px rgba(0,0,0,0.4);}
-				.title_r p{font-size:20px; line-height:28px; text-shadow: 2px 2px 3px rgba(0,0,0,0.3);}
+		.title_r{position:absolute; top:150px; right:220px; color:white; font-family: sans-serif; 
+		animation:r_slide 1s ease-out;}
+		.title_r h1{font-size:5rem; font-weight:800; text-shadow: 4px 4px 8px rgba(0,0,0,0.4);}
+		.title_r h2{font-size:4rem; font-weight:700; line-height:74px; text-shadow: 4px 4px 8px rgba(0,0,0,0.4);}
+		.title_r p{font-size:24px; line-height:30px; text-shadow: 2px 2px 3px rgba(0,0,0,0.3);}
 				
 	   
 	   
@@ -67,7 +68,7 @@
 	   }
 		@keyframes r_slide{
 		   from{right: -100px;	}
-		   to{right: 200px;}
+		   to{right: 220px;}
 	   }
   
 </style>
@@ -150,7 +151,7 @@
 				
 				<div class="carousel-item active">			
 				<div class="test" style="background: url('${cpath }/images/111.jpg');
-				background-size: contain;">
+				background-repeat : no-repeat; background-size : cover;">
 					<div class="title_l">
 					<h1>COMPANIMAL</h1>
 					<p>사랑하는 우리 반려견의 나이 몸무게 특이사항을 저장하고<br>
@@ -164,10 +165,11 @@
 				<div class="test_r" style="background: url('${cpath }/images/222.jpg');
 				background-size: contain;">
 					<div class="title_r">
-						<p>동물등록신청 후 </p>
-						<h1>동물판매 의무</h1>
+						<img src="${cpath }/images/일정.png" alt="#" style="width:300px;" class="mb-5">
+						<p class="mb-4" style="font-size:80px; font-weight:800; color:#81fdfe" >동물등록신청 후</p>
+						<h1>동물판매 의무화</h1>
 						<p>동물판매업자가 등록대상 동물을 판매시 구매자의 명의로<br>
-						동물 등록신청을 한 후 판매하도록 하는[동물보호법]이 시행</p>
+						동물 등록신청을 한 후 판매하도록 하는 「동물보호법」이 시행</p>
 						</div>
 				</div>	
 				</div> <!-- item_2 -->
@@ -176,12 +178,11 @@
 				<div class="test" style="background: url('${cpath }/images/333.jpg');
 				background-size: contain;">
 					<div class="title_l">
-						<p>2022동물등록 자진신고 집중단속 기간 운영<br>
-						자진신고  7.1 ~ 8.31<br>
-						집중단속 9.1 ~ 9.30</p>
-						<h2>반려견 등록,
-						<br>선택이 아닌 필수입니다</h2>
-						<p>컴패니멀과 함께하세요</p>
+						<img src="${cpath }/images/자진신고.png" class="mb-4" style="width:400px;">
+						<!-- <p style="font-size:26px; font-weight:600;">자진신고 「 7.1 ~ 8.31 」 ㅣ 집중단속 「 9.1 ~ 9.30 」</p> -->
+						<p style="line-height:10px; font-weight:bold;">자진신고 「 7.1 ~ 8.31 」 ㅣ 집중단속 「 9.1 ~ 9.30 」</p>
+						<h1 style="font-size:80px; font-weight:800; color:#f3c48e">반려견 등록,</h1>
+						<h2 style="font-size:60px; font-weight:700; line-height:56px;" >선택이 아닌 필수입니다.</h2>
 						</div>
 				</div><!-- item_2 -->
 				
@@ -231,17 +232,17 @@
 
 
 	<!-- icon -->
-	<div class="row justify-content-center">
-		<div class="col-md-1 text-center ">
+	<div class="row justify-content-center w-sm">
+		<div class="col-sm-1 text-center">
 			<a type="button" onclick="location.href='${cpath }/companimal.do'">
 				<img class="rounded-circle" src="${cpath }/images/icon_1.png"
-				alt="icon_1" width="100" height="100">
+				alt="icon_1" width="100">
 			</a>
 		</div>
 
 		<!-- col_2 -->
 
-		<div class="col-md-1 text-center">
+		<div class="col-sm-1 text-center">
 			<a type="button" onclick="moveUrl('${cpath }/searchform.do')">
 				<img class="rounded-circle" src="${cpath }/images/icon_2.png"
 				alt="icon_1" width="100" height="100">
@@ -249,7 +250,7 @@
 		</div>
 		<!-- col_3 -->
 
-		<div class="col-md-1 text-center">
+		<div class="col-sm-1 text-center">
 			<a type="button" onclick="moveUrl('${cpath}/checkform.do')">
 				<img class="rounded-circle" src="${cpath }/images/icon_3.png"
 				alt="icon_1" width="100" height="100">
@@ -257,14 +258,14 @@
 		</div>
 		<!-- col_4 -->
 
-		<div class="col-md-1 text-center">
+		<div class="col-sm-1 text-center">
 			<a type="button" onclick="location.href='${cpath }/boardform.do'">
 				<img class="rounded-circle" src="${cpath }/images/icon_4.png"
 				alt="icon_1" width="100" height="100">
 			</a>
 		</div>
 		<!-- con_5 -->
-		<div class="col-md-1 me-4 text-center">
+		<div class="col-sm-1 text-center">
 			<a type="button" onclick="location.href='${cpath }/findboardform.do'">
 				<img class="rounded-circle" src="${cpath }/images/icon_5.png"
 				alt="icon_1" width="100" height="100">
