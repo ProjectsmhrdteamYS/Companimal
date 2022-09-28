@@ -46,6 +46,9 @@ public class user_updateController implements Controller {
 		dao.user_update(uvo);
 		
 		//pet update
+		for(int i =0 ; i<5; i++) {
+			
+		}
 //		String dognm = multi.getParameter("dognm");
 //		String pet_QR = multi.getParameter("pet_QR");
 		String pet_img = multi.getFilesystemName("pet_img");
@@ -59,8 +62,8 @@ public class user_updateController implements Controller {
 //		pvo.setPet_sta(pet_sta);
 		dao.petupdate(pvo);
 		
-//		HttpSession session = request.getSession();
-//		session.invalidate();
+		HttpSession session = request.getSession();
+		session.invalidate();
 		return "redirect:/mainpage.do";
 	}
 
