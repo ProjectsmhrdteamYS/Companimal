@@ -121,10 +121,11 @@ a:hover {
 						<td><input type="text" class="form-control" name="user_type"
 							value="${uvo.user_type }"></td>
 					</tr>
-
+					</table>
+					<hr>
 					<c:set var="i" value="0" />
 					<c:forEach var="pvo" items="${plist }">
-						<hr>
+						<table>
 						<tr>
 							<td>강아지 이름 :</td>
 							<td>${pvo.dognm }</td>
@@ -155,10 +156,10 @@ a:hover {
 							<td><input type="text" class="form-control"
 								name="pet_sta_${i }" value="${pvo.pet_sta }" /></td>
 						</tr>
+						</table>
 						<hr>
 						<c:set var="i" value="${i+1}" />
 					</c:forEach>
-				</table>
 				<button class="w-100 btn btn-lg btn-primary mb-4" type="submit">Update
 					in</button>
 			</form>
