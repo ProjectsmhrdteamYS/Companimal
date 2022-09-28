@@ -42,12 +42,15 @@ background-size: 100%;"
 
 .main_banner{width:380px; position: relative; top:50px; right:-40px; animation:r_slide 1s ease-out;}
 
+
+
 @keyframes r_slide{
 		   from{right: -140px;}
 		   to{right: -40px;}
 	   }
 
-.read{font-weight:300; font-size:1.2em; line-height:1.5em; color:#777;}
+#title{font-weight:800}
+.read{font-weight:400; font-size:1.2em; line-height:1.5em; color:#666;}
 
 </style>
 
@@ -63,15 +66,16 @@ background-size: 100%;"
 		<div class="container my-5">
 			<div class="row p-5  align-items-center rounded-5 border shadow-lg">
 				<div class="col p-5  pt-lg-3">
-					<h1 class="display-4 fw-bold lh-1 text-primary">COMPANIMAL</h1>
+					<h1 id="title" class="display-4 lh-1 text-primary">COMPANIMAL</h1>
 					<br><br>
 					<p class="read">저희 컴패니멀의 어원은<br>
 					<strong>Companion + animal</strong>의 합성어 입니다.<br>
 					'동반자', '동료'라는 뜻의 영어 'Companion'의 어원으로<br>
-					'빵(Pan)을 함께(Com) 먹는 사이'라는 의미를 담고 있습니다.<br>
-					풀어서 표현하면 '한솥밥을 먹는 사이' 이자 더 나아가 가족을 의미합니다.<br>
-					저희 Companimal에서는 유기동물의 생명과 안전을 적정하게 보호, 관리하여<br>
-					생명존중에 대한 정서함양을 이바지 하기 위하여 수립되었습니다.</p>
+					'빵(Pan)을 함께(Com) 먹는 사이'라는 의미를 담고 있으며<br>
+					'한솥밥을 먹는 사이'이자 더 나아가 가족을 의미합니다.<br>
+					저희 Companimal에서는 유기동물의 생명과 안전을<br> 
+					적정하게 보호, 관리하여 생명존중에 대한 정서함양을<br>
+					이바지 하기 위하여 수립되었습니다.</p>
 					
 					<br><br>
 					<div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">

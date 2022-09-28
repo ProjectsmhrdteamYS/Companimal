@@ -39,13 +39,16 @@
 		section{margin: 0;}
 		
 		.icon{width:100px; font-weight:500; margin-top: 5px;}
-		/* .test{height: 624px; background-size: contain;} */
-		.test{height: 624px; background-size: contain;}
-	 	.test:before{content:""; height: 624px; background: linear-gradient(to right, rgba(0,0,0,0.7), transparent);
-		position:absolute; left:0; height:100%%; width:50%;} 
-		.test_r{height: 624px; background-size: contain;}
-	    .test_r:before{content:""; height: 624px; background: linear-gradient(to left, rgba(0,0,0,1), transparent);
+		
+		
+	/* banner구간  */
+	 	.test{width: 100%; height: 660px; object-fit: cover; }
+	 	.test:before{content:""; height: 660px;  background: linear-gradient(to right, rgba(0,0,0,0.7), transparent);
+		position:absolute; left:0; height:100%; width:50%;} 
+		.test_r{height: 660px; background-size: cover;}
+	    .test_r:before{content:""; height: 660px;  background: linear-gradient(to left, rgba(0,0,0,1), transparent);
 		position:absolute; right:0; height:100%; width:60%;} 
+		
 		.title_l{position:absolute; top:150px; left:200px; color:white; font-family: sans-serif; 
 		animation:l_slide 1s ease-out; }
 		.title_l h1{font-size:5rem; font-weight:800; text-shadow: 4px 4px 8px rgba(0,0,0,0.4);}
@@ -59,6 +62,7 @@
 		.title_r h1{font-size:5rem; font-weight:800; text-shadow: 4px 4px 8px rgba(0,0,0,0.4);}
 		.title_r h2{font-size:4rem; font-weight:700; line-height:74px; text-shadow: 4px 4px 8px rgba(0,0,0,0.4);}
 		.title_r p{font-size:24px; line-height:30px; text-shadow: 2px 2px 3px rgba(0,0,0,0.3);}
+				
 				
 	   
 	   
@@ -147,36 +151,36 @@
 		<section>
 		<div id="carouselExampleFade" class="carousel slide carousel-fade"
 			data-bs-ride="carousel">
-			<div class="carousel-inner ">
-				
-				<div class="carousel-item active">			
-				<div class="test" style="background: url('${cpath }/images/111.jpg');
-				background-repeat : no-repeat; background-size :cover;">
-					<div class="title_l">
-					<h1>COMPANIMAL</h1>
-					<p>사랑하는 우리 반려견의 나이 몸무게 특이사항을 저장하고<br>
-						반려견의 건강을 지켜주세요!</p>
-					</div>
+		<!-- 배너 수정중 -->
+		<div class="carousel-inner">
+        <div class="carousel-item active">
+        <div class="test">
+          	<img src="${cpath }/images/111.jpg" class="d-block w-100" alt="..." >
+          	<div class="title_l">
+				<h1>COMPANIMAL</h1>
+				<p>사랑하는 우리 반려견의 나이 몸무게 특이사항을 저장하고<br>
+					반려견의 건강을 지켜주세요!</p>
 				</div>
 				</div>
+        </div>
+        
+        <div class="carousel-item">
+ 		<div class="test_r">
+         <img src="${cpath }/images/222.jpg" class="d-block w-100" alt="...">
+			<div class="title_r">
+				<img src="${cpath }/images/일정.png" alt="#" style="width:300px;" class="mb-5">
+				<p class="mb-4" style="font-size:80px; font-weight:800; color:#81fdfe" >동물등록신청 후</p>
+				<h1>동물판매 의무화</h1>
+				<p>동물판매업자가 등록대상 동물을 판매시 구매자의 명의로<br>
+				동물 등록신청을 한 후 판매하도록 하는 「동물보호법」이 시행</p>
+				</div>
 				
-				
-				<div class="carousel-item">
-				<div class="test_r" style="background: url('${cpath }/images/222.jpg');
-				background-size: contain;">
-					<div class="title_r">
-						<img src="${cpath }/images/일정.png" alt="#" style="width:300px;" class="mb-5">
-						<p class="mb-4" style="font-size:80px; font-weight:800; color:#81fdfe" >동물등록신청 후</p>
-						<h1>동물판매 의무화</h1>
-						<p>동물판매업자가 등록대상 동물을 판매시 구매자의 명의로<br>
-						동물 등록신청을 한 후 판매하도록 하는 「동물보호법」이 시행</p>
-						</div>
-				</div>	
-				</div> <!-- item_2 -->
-				
-				<div class="carousel-item">
-				<div class="test" style="background: url('${cpath }/images/333.jpg');
-				background-size: contain;">
+				</div>	 
+        </div>
+        
+        <div class="carousel-item">
+        <div class="test">
+          <img src="${cpath }/images/333.jpg" class="d-block w-100" alt="...">
 					<div class="title_l">
 						<img src="${cpath }/images/자진신고.png" class="mb-4" style="width:400px;">
 						<!-- <p style="font-size:26px; font-weight:600;">자진신고 「 7.1 ~ 8.31 」 ㅣ 집중단속 「 9.1 ~ 9.30 」</p> -->
@@ -184,10 +188,10 @@
 						<h1 style="font-size:80px; font-weight:800; color:#f3c48e">반려견 등록,</h1>
 						<h2 style="font-size:60px; font-weight:700; line-height:56px;" >선택이 아닌 필수입니다.</h2>
 						</div>
-				</div><!-- item_2 -->
-				
-			
-			</div>
+				</div><!-- //test -->
+        </div>
+      </div>
+
 			<button class="carousel-control-prev" type="button"
 				data-bs-target="#carouselExampleFade" data-bs-slide="prev">
 				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -198,7 +202,7 @@
 				<span class="carousel-control-next-icon" aria-hidden="true"></span>
 				<span class="visually-hidden">Next</span>
 			</button>
-		</div>
+
 		</div>
 		</section>
 
