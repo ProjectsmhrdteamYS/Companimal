@@ -4,6 +4,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <c:set var="cpath" value="${pageContext.request.contextPath }" />
+<script src="https://code.jquery.com/jquery-3.6.1.js"></script>
 <!-- 테스트하는 중 이것부터 -->
 <%!ProjectDAO dao = new ProjectDAO();%>
 
@@ -135,7 +136,7 @@ a:hover {
 			<c:set var="i" value="${i+1}" />
 			</c:forEach> 
 			</table>
-			<button class="w-100 btn btn-lg btn-primary mb-4" type="submit">Update
+			<button class="w-100 btn btn-lg btn-primary mb-4" type="submit" >Update
 				in</button>
 		</form>
 	</div>

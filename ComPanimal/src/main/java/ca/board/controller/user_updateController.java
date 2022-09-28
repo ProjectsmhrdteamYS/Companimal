@@ -51,7 +51,9 @@ public class user_updateController implements Controller {
 		petVO pvo = new petVO();
 		pvo.setUser_id(user_id);
 		List<petVO> list = dao.petlist(pvo);
-		if (!list.equals("[]")) {
+		System.out.println(list);
+		System.out.println(list.size());
+		if (list.size()!= 0) {
 			int i = Integer.parseInt(multi.getParameter("i_cnt")); // 등록동물수
 			for (int j = 0; j <= i; j++) {
 				String pet_regno = multi.getParameter("pet_regno_" + j);

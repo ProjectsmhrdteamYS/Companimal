@@ -20,11 +20,9 @@ public class user_updateFormController implements Controller {
 		// TODO Auto-generated method stub
 		String user_id = request.getParameter("user_id");
 		ProjectDAO dao = new ProjectDAO();
-		System.out.println(user_id);
 		petVO pvo = new petVO();
 		pvo.setUser_id(user_id);
 		List<petVO> plist = dao.petlist(pvo);
-		System.out.println(plist);
 		request.setAttribute("plist", plist);
 		
 		return "user_update";
