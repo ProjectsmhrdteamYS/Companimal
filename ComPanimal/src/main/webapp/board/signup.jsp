@@ -59,6 +59,21 @@
   .input-form  input{
     height: 48px;
   }
+  
+   /* 세부디자인 */
+    .title{
+     margin: 0 auto;
+     width: 443px;
+   	 font-size: 30px;
+     color:#FC9364;
+     font-weight:700;
+     border: solid 1px #FC9364;
+     border-radius: 28px;
+     margin-top:5px;
+     margin-bottom:48px;
+  
+  
+  
   </style>
 <script type="text/javascript">
 	function moveUrl(url){
@@ -161,7 +176,10 @@
 		<div class="container">
 		<div class="input-form-backgroud row">
 			<div class="input-form col-md-12 mx-auto">
-				<img class="mx-5 mb-4" src="${cpath }/images/logo.png" alt="로고" width="80%" >
+				<img class="mx-5 mb-2" src="${cpath }/images/logo.png" alt="로고" width="80%" >
+				<div class="title">
+			<p class="text-center m-0">SIGN UP</p></div>
+			<div class="form-floating mb-2">
 				<form class="validation-form" novalidate action="${cpath}/signup.do" method="get">
 					<div class="row">
 						<div class="mb-3">
