@@ -118,9 +118,9 @@
 		select * from tbl_pet where user_id = #{user_id}
 	</select>
 	<!-- 동물 db 업데이트 -->
-	<update id="petupdate" parameterType="ca.board.dao.petVO">
-		update tbl_pet set
-		pet_img=#{pet_img,jdbcType=VARCHAR}
-		 where pet_regno=#{pet_regno,jdbcType=VARCHAR}
+	<!-- 22. 동물 db 수정하기 -->
+	<update id="petupdate" parameterType="ca.board.dao.petVO">			
+		update tbl_pet set pet_img=#{pet_img},pet_sta=#{pet_sta}
+		where pet_regno=#{pet_regno}
 	</update>
 </mapper>

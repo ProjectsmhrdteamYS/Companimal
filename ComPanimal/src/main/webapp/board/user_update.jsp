@@ -70,11 +70,16 @@ a:hover {
 	margin-top: 14px;
 }
 </style>
+<script type="text/javascript">
+
+	$(document).ready(function() {
+	    alert('회원 정보 수정시 다시 로그인 합니다');
+	});
+</script>
+
+<title>회원정보 수정</title>
 
 
-
-<title>로그인</title>
-<c:set var="i" value="0" />
 </head>
 <body>
 	<%@ include file="header.jsp"%>
@@ -107,18 +112,27 @@ a:hover {
 				<tr><td>정보공개동의: </td><td><input type="text" class="form-control"
 					name="user_type" value="${uvo.user_type }"></td></tr>
 			
+			<c:set var="i" value="0" />
 			<c:forEach var="pvo" items="${plist }">
-			${i += i+1}
 				<hr><table>
-					<tr><td>강아지 이름 : </td><td>${pvo.dognm }</td></tr>
-					<tr><td>QR코드 : </td><td><img src="${pvo.pet_QR }"></td></tr>
-					<tr><td>강아지 사진 : </td><td><img src="../img/${pvo.pet_img}"><br>
-					 <input	class="form-control" type="file" name="pet_img" required></td></tr>
-					<tr><td>등록 번호 : </td><td><input type="text" class="form-control"
-					name="pet_regno" value="${pvo.pet_regno }" readonly></td></tr>
-					<tr><td>현재 상태 : </td><td>${pvo.pet_sta }</td></tr>
+					<tr><td>강아지 이름 : </td>
+					<td>${pvo.dognm }</td></tr>
+					
+					<tr><td>QR코드 : </td>
+					<td><img src="${pvo.pet_QR }" width="150px" height="150px"></td></tr>
+					
+					<tr><td>강아지 사진 : </td>
+					<td><img src="${cpath}/img/${pvo.pet_img}" width="150px" height="150px"><br>
+					 <input	class="form-control" type="file" name="pet_img_${i }" required></td></tr>
+					 
+					<tr><td>등록 번호 : </td>
+					<td><input type="text" class="form-control"	name="pet_regno_${i }" value="${pvo.pet_regno }" readonly></td></tr>
+					<input type="hidden" class="form-control"	name="i_cnt" value="${i}" />
+					<tr><td>현재 상태<br>보유: 1<br>분실: 2</td><td>
+					<input type="text" class="form-control" name="pet_sta_${i }" value="${pvo.pet_sta }"/></td></tr>
 					</table>
 					<hr>
+			<c:set var="i" value="${i+1}" />
 			</c:forEach> 
 			</table>
 			<button class="w-100 btn btn-lg btn-primary mb-4" type="submit">Update
