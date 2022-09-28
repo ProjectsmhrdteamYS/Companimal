@@ -39,6 +39,7 @@ public class BoardWriteController implements Controller {
 		vo.setC_file(c_file);
 		dao.insertc(vo);
 		
+	
 		return "redirect:/boardform.do";
 	}
 
