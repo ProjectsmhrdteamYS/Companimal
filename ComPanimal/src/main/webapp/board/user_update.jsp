@@ -83,7 +83,7 @@ a:hover {
 </head>
 <body>
 	<%@ include file="header.jsp"%>
-
+	<!-- content -->
 	<div class="form-signin">
 		<form class="search rounded-4 p-5 mx-auto h-100" style="width: 650px;"
 			action="${cpath }/user_update.do" method="post"
@@ -139,6 +139,7 @@ a:hover {
 				in</button>
 		</form>
 	</div>
+	<!-- content end -->
 	<!-- footer -->
 	<div class="container">
 		<footer class="py-5" style="color: #555;">
@@ -161,7 +162,6 @@ a:hover {
 							all Rights reserved.</li>
 					</ul>
 				</div>
-
 				<div>
 					<ul class="list-unstyled d-flex float-end mt-2"
 						style="height: 54px;">
@@ -179,8 +179,6 @@ a:hover {
 							style="width: 56px; line-height: 38px;"><i
 								class="bi bi-arrow-up-circle-fill" style="font-size: 1.3em"></i></li>
 						</a>
-
-
 					</ul>
 				</div>
 			</div>

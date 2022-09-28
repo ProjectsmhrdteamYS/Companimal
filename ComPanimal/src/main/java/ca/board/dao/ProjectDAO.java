@@ -168,21 +168,21 @@ public class ProjectDAO {
 				session.close();
 				return pvo;
 		}
-			//본인 댓글 삭제 
+		//본인 댓글 삭제 
 			public void commentDelete(int cmt_seq) {
 				SqlSession session = sqlSessionFactory.openSession();
 				int vo = session.delete("commentDelete", cmt_seq);
 				session.commit();
 				session.close();
-}
-			// userid로 동물 db 리스트 
+		}
+		// userid로 동물 db 리스트 
 			public List<petVO> petlist(petVO vo){
 				SqlSession session = sqlSessionFactory.openSession();
 				List<petVO> list = session.selectList("petlist",vo);
 				session.close();
 				return list;
 			}
-			// petVO update
+		// petVO update
 			public void petupdate(petVO vo) {
 				SqlSession session = sqlSessionFactory.openSession();
 				session.update("petupdate",vo);

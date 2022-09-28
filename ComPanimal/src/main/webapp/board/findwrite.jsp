@@ -37,6 +37,7 @@ a {
 </head>
 <body>
 	<%@ include file="header.jsp"%>
+	
 	<!-- content -->
 	<main id="wrap" class="position-relative">
 		<div class="container">

@@ -35,11 +35,12 @@ a {
 </style>
 </head>
 <body>
-	<%@ include file="header.jsp" %>
+	<%@ include file="header.jsp"%>
+
 	<!-- content -->
 	<div class="container">
-			<div id="petList" width=50%></div>
-		</div>
+		<div id="petList" width=50%></div>
+	</div>
 	<script type="text/javascript">
 	 		$(document).ready(function() {
 	 			const url = new URL(window.location.href);
@@ -65,11 +66,11 @@ a {
 	        			code+='<div class="content-item:center">'
 	        		    code+='<table border="solid 1px;" style ="width:500px; height:300px;">'
 	        			code+='<tr style="background-color: orange;">'
-	        			code+='<p></p><td colspan="3" style="color: white;" align="center">'+lname+'</td></p></tr>'
+	        			code+='<p></p><td colspan="3" style="color: white;" align="center">'+res.owner_nm+'</td></p></tr>'
 	        			code+=' <tr><td rowspan="7" align="center">'			
 	        			code+='<img src="../img/'+res.pet_img+'" style="width:240px; height:240px;" alt=""></td>'
-	        			
-	        			
+	        			var lname = res.owner_nm
+	        			var fname = res.pet_regno
 	        			   	$.ajax({                
 	        			        url : "http://apis.data.go.kr/1543061/animalInfoSrvc/animalInfo?_type=json&dog_reg_no="+fname+"&owner_nm="+lname+"&serviceKey=%2FR3EvQD0BDHw%2FwKWewHQFMQ8MXNoIIlhw1%2BNBkbz7Ut52RP7ylh84FK27bQDPhcXi2xxtpfnbsF5iRjvUnskxg%3D%3D", 
 	                		type : 'get',
@@ -122,8 +123,10 @@ a {
 	                    alert('aa')
 	            	}
 	        	})
-	        }
+	        })
 		</script>
+	<!-- content end -->
+
 	<!-- footer -->
 	<div class="container">
 		<footer class="py-5" style="color: #555;">

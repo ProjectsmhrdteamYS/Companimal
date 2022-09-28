@@ -25,7 +25,6 @@ public class userVO {
 		this.user_type = user_type;
 	}
 
-
 	@Override
 	public String toString() {
 		return "userVO [user_id=" + user_id + ", user_pw=" + user_pw + ", user_name=" + user_name + ", user_birth="

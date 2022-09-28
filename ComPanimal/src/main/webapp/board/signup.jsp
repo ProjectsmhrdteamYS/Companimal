@@ -172,6 +172,7 @@
 		</div>
 	</header>
 	<!-- header end -->
+	<!-- content  -->
 	<main id="wrap">
 		<div class="container">
 		<div class="input-form-backgroud row">
@@ -253,6 +254,8 @@
     		}, false);
 		</script>
 	</main>
+	<!-- content end -->
+	
 	<!-- footer -->
 	<div class="container">
 		<footer class="py-5" style="color:#555;">

@@ -137,9 +137,9 @@ a:hover {
 				<p class="mt-5 mb-3 text-muted">© 2022–2025</p>
 			</form>
 		</div>
-<!-- content end -->
+	<!-- content end -->
 
-<!-- footer -->
+	<!-- footer -->
 	<div class="container">
 		<footer class="py-5" style="color:#555;">
 			<div class="d-flex justify-content-between py-4 my-4 border-top">

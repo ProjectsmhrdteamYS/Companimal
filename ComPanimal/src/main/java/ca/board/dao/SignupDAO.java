@@ -11,7 +11,6 @@ public class SignupDAO {
 				private Connection conn;
 				private PreparedStatement ps;
 				private ResultSet rs;
-		
 				
 				public Connection getConnect() {
 					String url = "jdbc:oracle:thin:@project-db-stu.ddns.net:1524:xe";
@@ -26,8 +25,6 @@ public class SignupDAO {
 					}
 					return conn;
 				}	
-		
-				
 				// 아이디 중복 체크
 				public int checkId(String user_id) {
 					getConnect();

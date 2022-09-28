@@ -21,7 +21,6 @@ public class user_updateController implements Controller {
 	@Override
 	public String requestHandler(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		ProjectDAO dao = new ProjectDAO();
 		String savePath = request.getServletContext().getRealPath("img");
 		int maxSize = 5 * 1024 * 1024;
@@ -51,43 +50,19 @@ public class user_updateController implements Controller {
 		// 동물정보 수정
 		petVO pvo = new petVO();
 		pvo.setUser_id(user_id);
-		List<petVO> list =dao.petlist(pvo);
-		if(!list.equals("[]")) {
-		int i = Integer.parseInt(multi.getParameter("i_cnt")); // 등록동물수
-
-		for (int j = 0; j <= i; j++) {
-
-			String pet_regno = multi.getParameter("pet_regno_" + j);
-			System.out.println("pet_regno: " + pet_regno);
-
-			String pet_img = multi.getFilesystemName("pet_img_" + j);
-			System.out.println("pet_img: " + pet_img);
-
-			int pet_sta = Integer.parseInt(multi.getParameter("pet_sta_" + j));
-//			String pet_sta =request.getParameter("pet_sta_" + j);
-			System.out.println("pet_sta: " + pet_sta);
-			System.out.println("=========================");
-
-			
-			pvo.setPet_regno(pet_regno);
-			pvo.setPet_img(pet_img);
-			pvo.setPet_sta(pet_sta);
-
-			dao.petupdate(pvo);
+		List<petVO> list = dao.petlist(pvo);
+		if (!list.equals("[]")) {
+			int i = Integer.parseInt(multi.getParameter("i_cnt")); // 등록동물수
+			for (int j = 0; j <= i; j++) {
+				String pet_regno = multi.getParameter("pet_regno_" + j);
+				String pet_img = multi.getFilesystemName("pet_img_" + j);
+				int pet_sta = Integer.parseInt(multi.getParameter("pet_sta_" + j));
+				pvo.setPet_regno(pet_regno);
+				pvo.setPet_img(pet_img);
+				pvo.setPet_sta(pet_sta);
+				dao.petupdate(pvo);
+			}
 		}
-		}
-		/*
-		 * 기존 -- for(int i =0 ; i<5; i++) {
-		 * 
-		 * } //String dognm = multi.getParameter("dognm"); //String pet_QR =
-		 * multi.getParameter("pet_QR"); String pet_img =
-		 * multi.getFilesystemName("pet_img"); String pet_regno =
-		 * multi.getParameter("pet_regno"); //int pet_sta =
-		 * Integer.parseInt(multi.getParameter("pet_sta")); petVO pvo = new petVO();
-		 * //pvo.setDognm(dognm); //pvo.setPet_QR(pet_QR); pvo.setPet_img(pet_img);
-		 * pvo.setPet_regno(pet_regno); //pvo.setPet_sta(pet_sta); dao.petupdate(pvo);
-		 */
-
 		HttpSession session = request.getSession();
 		session.invalidate();
 		return "redirect:/mainpage.do";
@@ -95,23 +70,3 @@ public class user_updateController implements Controller {
 	}
 
 }
-
-/*
- * for(int i =0 ; i<5; i++) {
- * 
- * } // String dognm = multi.getParameter("dognm"); // String pet_QR =
- * multi.getParameter("pet_QR"); // int pet_sta =
- * Integer.parseInt(multi.getParameter("pet_sta")); petVO pvo = new petVO(); //
- * pvo.setDognm(dognm); // pvo.setPet_QR(pet_QR); List<petVO> list =
- * dao.petlist(pvo); if(!list.equals("[]")) { String pet_img =
- * multi.getFilesystemName("pet_img"); String pet_regno =
- * multi.getParameter("pet_regno"); pvo.setPet_img(pet_img);
- * pvo.setPet_regno(pet_regno); // pvo.setPet_sta(pet_sta); dao.petupdate(pvo);
- * 
- * }
- * 
- * HttpSession session = request.getSession(); session.invalidate(); return
- * "redirect:/mainpage.do"; }
- * 
- * }
- */

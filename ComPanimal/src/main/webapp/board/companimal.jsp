@@ -89,7 +89,7 @@ background-size: 100%;"
 			</div>
 		</div>
 	</main>
-
+	<!-- content end -->
 	
 	<!-- footer -->
 	<div class="container">

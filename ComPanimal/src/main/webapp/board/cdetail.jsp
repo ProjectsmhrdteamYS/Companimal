@@ -73,6 +73,7 @@ a:hover {
 <body>
 
 <%@ include file="header.jsp" %>
+
 	<!-- container -->
 	<main id="wrap" class="position-relative">
 		<div class="container">

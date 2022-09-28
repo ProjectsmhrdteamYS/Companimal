@@ -83,6 +83,7 @@ a:hover {
 </head>
 <body>
 <%@ include file="header.jsp" %>
+
 	<!-- content -->
 	<main>
 		<div class="container">

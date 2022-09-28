@@ -6,14 +6,12 @@
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <c:set var="cpath" value="${pageContext.request.contextPath }" />
 <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
-<!-- 테스트하는 중 이것부터 -->
 <%!ProjectDAO dao = new ProjectDAO(); %>
 <%!userVO vo = new userVO(); %>
 
 <% String userid = request.getParameter("user_id");
    String userpw = request.getParameter("user_pw");
 %>
-<!-- 이것까지 -->
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -66,6 +64,8 @@ a:hover {
 </head>
 <body>
 	<%@ include file="header.jsp" %>
+	
+	<!-- content -->
 <div class="container" align="center">
 	<div class="form-signin" style="width: 650px;">
 			<a class="logo" href="${cpath }/mainpage.do"> <img class="mx-5"
@@ -144,7 +144,7 @@ a:hover {
 		})
 	});
 	</script>
-
+	<!-- content end -->
 	<!-- footer -->
 	<div class="container">
 		<footer class="py-5" style="color:#555;">

@@ -29,16 +29,9 @@ public class SigninController implements Controller {
 		userVO uvo = dao.loginMethod(vo);
 		
 		if(uvo!=null) {
-			//로그인 성공 => 세션을 만들어 준다. ( request로 객체 바인딩 시 return하는 해당 jsp만 로그인 정보를 받아볼 수 있다)
-			HttpSession session = request.getSession(); // 세션id 값이 있는지 먼저 확인 -> 있다 -> 쓰면됨 (getSession은 가지고 오는 것만 아니라 내려보내는것까지 해줌)
-			// session으로 바인딩 시 동일한 session으로 jsp들이 정보를 받을 수 있음.
+			HttpSession session = request.getSession(); 
 			session.setAttribute("uvo", uvo);
 		}
-		
-		
-		
-		
-		
 		return "redirect:/mainpage.do";
 	}
 

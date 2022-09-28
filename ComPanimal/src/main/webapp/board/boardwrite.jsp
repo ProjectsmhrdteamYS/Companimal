@@ -11,8 +11,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>게시판 상세보기</title>
-
-
     <link rel="stylesheet" href="${cpath }/css/bootstrap.css">
    <link rel="stylesheet" href="${cpath }/css/bootstrap-grid.css">
    <link rel="stylesheet" href="${cpath }/css/bootstrap-reboot.css">
@@ -20,10 +18,7 @@
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <!-- 부트스트랩 아이콘 -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
-  
-
   <style>
-
     /* 공통 style */
     ul li{list-style: none; font-weight: 700; }
     a {text-decoration: none;  color :#150906;}
