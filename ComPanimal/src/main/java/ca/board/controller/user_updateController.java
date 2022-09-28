@@ -1,6 +1,7 @@
 package ca.board.controller;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -51,16 +52,20 @@ public class user_updateController implements Controller {
 		}
 //		String dognm = multi.getParameter("dognm");
 //		String pet_QR = multi.getParameter("pet_QR");
-		String pet_img = multi.getFilesystemName("pet_img");
-		String pet_regno = multi.getParameter("pet_regno");
 //		int pet_sta = Integer.parseInt(multi.getParameter("pet_sta"));
 		petVO pvo = new petVO();
 //		pvo.setDognm(dognm);
 //		pvo.setPet_QR(pet_QR);
-		pvo.setPet_img(pet_img);
-		pvo.setPet_regno(pet_regno);
+		List<petVO> list = dao.petlist(pvo);
+		if(!list.equals("[]")) {
+			String pet_img = multi.getFilesystemName("pet_img");
+			String pet_regno = multi.getParameter("pet_regno");
+			pvo.setPet_img(pet_img);
+			pvo.setPet_regno(pet_regno);
 //		pvo.setPet_sta(pet_sta);
-		dao.petupdate(pvo);
+			dao.petupdate(pvo);
+			
+		}
 		
 		HttpSession session = request.getSession();
 		session.invalidate();

@@ -74,7 +74,7 @@ a:hover {
 
 
 <title>로그인</title>
-<c:set var="i" value=0 />
+<c:set var="i" value="0" />
 </head>
 <body>
 	<%@ include file="header.jsp"%>
@@ -108,6 +108,7 @@ a:hover {
 					name="user_type" value="${uvo.user_type }"></td></tr>
 			
 			<c:forEach var="pvo" items="${plist }">
+			${i += i+1}
 				<hr><table>
 					<tr><td>강아지 이름 : </td><td>${pvo.dognm }</td></tr>
 					<tr><td>QR코드 : </td><td><img src="${pvo.pet_QR }"></td></tr>

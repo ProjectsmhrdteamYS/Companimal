@@ -121,6 +121,6 @@
 	<update id="petupdate" parameterType="ca.board.dao.petVO">
 		update tbl_pet set
 		pet_img=#{pet_img,jdbcType=VARCHAR}
-		 where pet_regno=#{pet_regno}
+		 where pet_regno=#{pet_regno,jdbcType=VARCHAR}
 	</update>
 </mapper>
