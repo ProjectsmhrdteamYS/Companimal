@@ -323,7 +323,7 @@
 				
 				<div>
 					<ul class="list-unstyled d-flex float-end mt-2" style="height:54px;">					
-						<li class="btn btn-primary me-2"  onclick="location.href='https://twitter.com/?lang=ko'" style="width:56px; line-height:38px;"><i class="bi bi-twitter" style="font-size:1.3em"></i></li>					
+						<li class="btn btn-primary me-2"  onclick="location.href='https://twitter.com/Companimal1'" style="width:56px; line-height:38px;"><i class="bi bi-twitter" style="font-size:1.3em"></i></li>					
 						<li class="btn btn-primary me-2" onclick="location.href='https://www.instagram.com/companimal__'" style="width:56px; line-height:38px;"><i class="bi bi-instagram" style="font-size:1.3em"></i></li>
 						<a href="#"  title="Popover title" data-bs-content="Popover body content is set in this attribute.">
 						<li class="btn btn-primary me-2" style="width:56px; line-height:38px;"><i class="bi bi-arrow-up-circle-fill" style="font-size:1.3em"></i></li>
