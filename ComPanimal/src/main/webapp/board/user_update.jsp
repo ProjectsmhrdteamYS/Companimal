@@ -4,11 +4,8 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <c:set var="cpath" value="${pageContext.request.contextPath }" />
-<script src="https://code.jquery.com/jquery-3.6.1.js"></script>
 <!-- 테스트하는 중 이것부터 -->
 <%!ProjectDAO dao = new ProjectDAO();%>
-
-
 <%
 String userid = request.getParameter("user_id");
 String userpw = request.getParameter("user_pw");
@@ -71,76 +68,102 @@ a:hover {
 	margin-top: 14px;
 }
 </style>
-<script type="text/javascript">
-
-	$(document).ready(function() {
-	    alert('회원 정보 수정시 다시 로그인 합니다');
-	});
-</script>
-
 <title>회원정보 수정</title>
-
-
 </head>
 <body>
 	<%@ include file="header.jsp"%>
-	<!-- content -->
-	<div class="form-signin">
-		<form class="search rounded-4 p-5 mx-auto h-100" style="width: 650px;"
-			action="${cpath }/user_update.do" method="post"
-				enctype="multipart/form-data">
-			<input type="hidden" class="form-control" name="user_id" value="${uvo.user_id }">
-			<a class="logo" href="${cpath }/mainpage.do">
-			<img class="mx-5" src="${cpath }/images/logo.png" alt="로고" width="80%"></a>
-			<br>
-			<div class="title">
-				<p class="text-center m-0">회원정보 수정</p>
-			</div>
-			<br> <br>
-			<table class="table table-boardered">
-				<tr><td>이름: </td>
-				<td>${uvo.user_name }</td></tr>
-				<tr><td>아이디: </td>
-				<td> ${uvo.user_id }</td></tr>
-				<tr><td>비밀번호: </td><td> <input type="text" class="form-control"
-					name="user_pw" value="${uvo.user_pw }"></td></tr>
-				<tr><td>주소: </td><td><input type="text" class="form-control"
-					name="user_addr" value="${uvo.user_addr }"></td></tr>
-				<tr><td>생년월일: </td><td><input type="text" class="form-control"
-					name="user_birth" value="${uvo.user_birth }"></td></tr>
-				<tr><td>전화번호: </td><td><input type="text" class="form-control"
-					name="user_tel" value="${uvo.user_tel }"></td></tr>
-				<tr><td>정보공개동의: </td><td><input type="text" class="form-control"
-					name="user_type" value="${uvo.user_type }"></td></tr>
-			
-			<c:set var="i" value="0" />
-			<c:forEach var="pvo" items="${plist }">
-				<hr><table>
-					<tr><td>강아지 이름 : </td>
-					<td>${pvo.dognm }</td></tr>
-					
-					<tr><td>QR코드 : </td>
-					<td><img src="${pvo.pet_QR }" width="150px" height="150px"></td></tr>
-					
-					<tr><td>강아지 사진 : </td>
-					<td><img src="${cpath}/img/${pvo.pet_img}" width="150px" height="150px"><br>
-					 <input	class="form-control" type="file" name="pet_img_${i }" required></td></tr>
-					 
-					<tr><td>등록 번호 : </td>
-					<td><input type="text" class="form-control"	name="pet_regno_${i }" value="${pvo.pet_regno }" readonly></td></tr>
-					<input type="hidden" class="form-control"	name="i_cnt" value="${i}" />
-					<tr><td>현재 상태<br>보유: 1<br>분실: 2</td><td>
-					<input type="text" class="form-control" name="pet_sta_${i }" value="${pvo.pet_sta }"/></td></tr>
-					</table>
-					<hr>
-			<c:set var="i" value="${i+1}" />
-			</c:forEach> 
-			</table>
-			<button class="w-100 btn btn-lg btn-primary mb-4" type="submit" >Update
-				in</button>
-		</form>
+	
+	
+	<div class="container" align="center">
+		<div class="form-signin">
+			<form class="search rounded-4 p-5 mx-auto h-100"
+				style="width: 650px;" action="${cpath }/user_update.do"
+				method="post" enctype="multipart/form-data">
+				<input type="hidden" class="form-control" name="user_id"
+					value="${uvo.user_id }"> <a class="logo"
+					href="${cpath }/mainpage.do"> <img class="mx-5"
+					src="${cpath }/images/logo.png" alt="로고" width="80%"></a> <br>
+				<div class="title">
+					<p class="text-center m-0">회원정보 수정</p>
+				</div>
+				<br> <br>
+				<table>
+					<tr>
+						<td>이름:</td>
+						<td>${uvo.user_name }</td>
+					</tr>
+					<tr>
+						<td>아이디:</td>
+						<td>${uvo.user_id }</td>
+					</tr>
+					<tr>
+						<td>비밀번호:</td>
+						<td><input type="text" class="form-control" name="user_pw"
+							value="${uvo.user_pw }"></td>
+					</tr>
+					<tr>
+						<td>주소:</td>
+						<td><input type="text" class="form-control" name="user_addr"
+							value="${uvo.user_addr }"></td>
+					</tr>
+					<tr>
+						<td>생년월일:</td>
+						<td><input type="text" class="form-control" name="user_birth"
+							value="${uvo.user_birth }"></td>
+					</tr>
+					<tr>
+						<td>전화번호:</td>
+						<td><input type="text" class="form-control" name="user_tel"
+							value="${uvo.user_tel }"></td>
+					</tr>
+					<tr>
+						<td>정보공개동의:</td>
+						<td><input type="text" class="form-control" name="user_type"
+							value="${uvo.user_type }"></td>
+					</tr>
+
+					<c:set var="i" value="0" />
+					<c:forEach var="pvo" items="${plist }">
+						<hr>
+						<tr>
+							<td>강아지 이름 :</td>
+							<td>${pvo.dognm }</td>
+						</tr>
+
+						<tr>
+							<td>QR코드 :</td>
+							<td><img src="${pvo.pet_QR }" width="150px" height="150px"></td>
+						</tr>
+
+						<tr>
+							<td>강아지 사진 :</td>
+							<td><img src="${cpath}/img/${pvo.pet_img}" width="150px"
+								height="150px"><br> <input class="form-control"
+								type="file" name="pet_img_${i }" required></td>
+						</tr>
+
+						<tr>
+							<td>등록 번호 :</td>
+							<td><input type="text" class="form-control"
+								name="pet_regno_${i }" value="${pvo.pet_regno }" readonly></td>
+						</tr>
+						<input type="hidden" class="form-control" name="i_cnt"
+							value="${i}" />
+						<tr>
+							<td>현재 상태<br>보유: 1<br>분실: 2
+							</td>
+							<td><input type="text" class="form-control"
+								name="pet_sta_${i }" value="${pvo.pet_sta }" /></td>
+						</tr>
+						<hr>
+						<c:set var="i" value="${i+1}" />
+					</c:forEach>
+				</table>
+				<button class="w-100 btn btn-lg btn-primary mb-4" type="submit">Update
+					in</button>
+			</form>
+		</div>
 	</div>
-	<!-- content end -->
 	<!-- footer -->
 	<div class="container">
 		<footer class="py-5" style="color: #555;">
@@ -186,5 +209,11 @@ a:hover {
 		</footer>
 	</div>
 	<!-- footer end -->
+	<script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		alert('회원 정보 수정시 다시 로그인 합니다');
+	});
+</script>
 </body>
 </html>
