@@ -78,7 +78,7 @@ a:hover {
 		<div class="container">
 			<img src="${cpath }/images/mongja.jpg" alt="" width="380px"
 				class="d-inline-block align-text-top">
-			<h2>디테일페이지</h2>
+			<h2></h2>
 			<BR>
 			<table class="table">
 				<tr>
