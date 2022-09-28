@@ -97,6 +97,11 @@ a:hover {
 					<td>${uvo.user_tel}</td>
 				</tr>
 				<tr>
+					<td>가입일자 :</td>
+					<td>${uvo.user_joindate}</td>
+				</tr>
+				<tr>
+
 					<td>개인정보동의(동의:1 비동의:0) :</td>
 					<td>${uvo.user_type}</td>
 				</tr>
@@ -139,6 +144,7 @@ a:hover {
 		})
 	});
 	</script>
+
 	<!-- footer -->
 	<div class="container">
 		<footer class="py-5" style="color:#555;">

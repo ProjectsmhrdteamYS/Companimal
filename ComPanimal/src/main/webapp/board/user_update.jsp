@@ -7,6 +7,7 @@
 <!-- 테스트하는 중 이것부터 -->
 <%!ProjectDAO dao = new ProjectDAO();%>
 
+
 <%
 String userid = request.getParameter("user_id");
 String userpw = request.getParameter("user_pw");
