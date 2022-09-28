@@ -39,11 +39,14 @@
 		section{margin: 0;}
 		
 		.icon{width:100px; font-weight:500; margin-top: 5px;}
-		/* .test{height: 624px; background-size: contain;} */
-		.test{height: 624px; background-size: contain;}
+		
+		
+/* banner구간  */
+	 	.test{position: relative; top:0; left:0; width:100%; height:724px; background-size:contain; background-color:black; background-repeat: no-repeat}
+/* 		.test{height: 624px; background-size:cover; background-repeat: no-repeat} */
 	 	.test:before{content:""; height: 624px; background: linear-gradient(to right, rgba(0,0,0,0.7), transparent);
 		position:absolute; left:0; height:100%%; width:50%;} 
-		.test_r{height: 624px; background-size: contain;}
+		.test_r{height: 624px; background-size: cover;}
 	    .test_r:before{content:""; height: 624px; background: linear-gradient(to left, rgba(0,0,0,1), transparent);
 		position:absolute; right:0; height:100%; width:60%;} 
 		.title_l{position:absolute; top:150px; left:200px; color:white; font-family: sans-serif; 
@@ -150,8 +153,9 @@
 			<div class="carousel-inner ">
 				
 				<div class="carousel-item active">			
-				<div class="test" style="background: url('${cpath }/images/111.jpg');
-				background-repeat : no-repeat; background-size : cover;">
+				<%-- <div class="test" style="background: url('${cpath }/images/111.jpg');
+				background-repeat: no-repeat; background-size:cover;"> --%>
+				<div class="test" style="background: url('${cpath }/images/111.jpg');">
 					<div class="title_l">
 					<h1>COMPANIMAL</h1>
 					<p>사랑하는 우리 반려견의 나이 몸무게 특이사항을 저장하고<br>
@@ -162,8 +166,9 @@
 				
 				
 				<div class="carousel-item">
-				<div class="test_r" style="background: url('${cpath }/images/222.jpg');
-				background-size: contain;">
+				<%-- <div class="test_r" style="background: url('${cpath }/images/222.jpg');
+				background-size: contain;"> --%>
+				<div class="test_r" style="background: url('${cpath }/images/222.jpg');">
 					<div class="title_r">
 						<img src="${cpath }/images/일정.png" alt="#" style="width:300px;" class="mb-5">
 						<p class="mb-4" style="font-size:80px; font-weight:800; color:#81fdfe" >동물등록신청 후</p>
@@ -175,8 +180,9 @@
 				</div> <!-- item_2 -->
 				
 				<div class="carousel-item">
-				<div class="test" style="background: url('${cpath }/images/333.jpg');
-				background-size: contain;">
+				<div class="test" style="background: url('${cpath }/images/333.jpg');">
+				<%-- <div class="test" style="background: url('${cpath }/images/333.jpg');
+				background-size: contain;"> --%>
 					<div class="title_l">
 						<img src="${cpath }/images/자진신고.png" class="mb-4" style="width:400px;">
 						<!-- <p style="font-size:26px; font-weight:600;">자진신고 「 7.1 ~ 8.31 」 ㅣ 집중단속 「 9.1 ~ 9.30 」</p> -->
