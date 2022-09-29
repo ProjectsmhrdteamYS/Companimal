@@ -137,7 +137,7 @@ a:hover {
 				console.log(data);
 				let pet_sta_ment = null;
 				for (var i in data){
-					// 분실여부 문자로 표기 //
+					// 분실여부 문자로 표기  //
  					let pet_sta = data[i].pet_sta;
 					console.log(pet_sta);
 					
