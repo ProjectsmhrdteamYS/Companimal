@@ -38,10 +38,17 @@ a {
 	<%@ include file="header.jsp"%>
 
 	<!-- content -->
+	<center>
 	<div class="container">
+		<div id="petSta" width=50%></div><div id="user_type" width=50%></div>
+        								
 		<div id="petList" width=50%></div>
 	</div>
+	</center>
 	<script type="text/javascript">
+
+	var user_id=null;
+	var pet_sta = null;
 	 		$(document).ready(function() {
 	 			const url = new URL(window.location.href);
 	 			console.log(url)
@@ -62,13 +69,68 @@ a {
 	        			}else{
 	        			console.log(res.pet_img);
 	        			/* mx-auto h-100 */
+	    	   			// ==================================
+	    	   			user_id = res.user_id  // id
+	    	   			console.log("user_id"+user_id);
+	    	   			pet_sta = res.pet_sta; //상태
+	    	   			
+	    	   			// 분실상태	    	   			
+	    	   			if(pet_sta == 1){ //DB 기능보류
+	    	   				$('#petSta').html("<h1><font color='blue'>산책중이에요</font></h1>");
+	    	   			}else if(pet_sta == 2){
+	    	   				$('#petSta').html("<h1><font color='red'>찾고 있어요</font></h1>");
+	    	   			}else{};
+	    	   			
+	    	   			// 유저 DB 정보
+	    	   			$.ajax({
+	    	   				//console.log("user_id 2"+user_id);
+	    	   				url : "${cpath}/search_qr_user.do",
+	    	    			type : "post",
+	    	    			data :{
+	    	    				"user_id" : user_id
+	    	    			},
+	    	    			dataType : 'json',
+	    	    			success : function(uvo){
+
+	    	        			console.log("test")
+	    	        			console.log(uvo.user_id)
+	    	        			console.log(uvo.user_type)
+	    	        			console.log(uvo.user_tel)
+
+	    	        			var user_type=uvo.user_type;
+	    	        			if(user_type = null){
+	    	        				user_type=1;
+	    	        			};
+	    	        			user_type=uvo.user_type;
+	    	        			console.log(user_type)
+	    	        			
+        						if(user_type == 1  ){
+        							console.log(uvo.user_tel)
+        							var user_tel =uvo.user_tel;
+        							console.log(user_tel)
+        					
+        								$('#user_type').html("소유자 연락처 : <a href=tel:"+user_tel+"> "+user_tel+"</a>");
+        								
+        						}else if(user_type == 2 ){
+        				
+        								$('#user_type').html("연락처 비공개");
+        						}         						
+	    	    				
+	    	    			
+	    	    				},
+	    	    			
+	    	    			error:()=>{
+	    	    				}
+	    	    			}) 	
+	    	   			//
+	        			
 	        			let code='<div class="containe">'
 	        			code+='<div class="content-item:center">'
 	        		    code+='<table border="solid 1px;" style ="width:500px; height:300px;">'
 	        			code+='<tr style="background-color: orange;">'
 	        			code+='<p></p><td colspan="3" style="color: white;" align="center">'+res.owner_nm+'</td></p></tr>'
-	        			code+=' <tr><td rowspan="7" align="center">'			
-	        			code+='<p>반려견 상태 (보유1,분실2) : '+res.pet_sta+'</p><img src="../img/'+res.pet_img+'" style="width:240px; height:240px;" alt=""></td>'
+	        			code+='<tr><td rowspan="7" align="center">'			
+	        			code+='<img src="../img/'+res.pet_img+'" style="width:240px; height:240px;" alt=""></td>'
 	        			var lname = res.owner_nm
 	        			var fname = res.pet_regno
 	        			   	$.ajax({                
@@ -100,7 +162,7 @@ a {
 	        		        		code += '<td>'+items.kindNm+'</td></tr>';
 	        		        		code +='<tr><td>중성화여부</td>'
 	        		        		code += '<td>'+items.neuterYn+'</td></tr>';
-	        		        		 code +='<tr><td>관할</td>'
+	        		        		code +='<tr><td>관할</td>'
 	        		        		code += '<td>'+items.orgNm+'</td></tr>';
 	        		        		code +='<tr><td>관할센터번호</td>'
 	        		        		code += '<td>'+items.officeTel+'</td>';

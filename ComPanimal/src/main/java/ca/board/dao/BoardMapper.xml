@@ -140,4 +140,10 @@
 		update tbl_pet set pet_img=#{pet_img},pet_sta=#{pet_sta}
 		where pet_regno=#{pet_regno}
 	</update>
+	
+		<!-- 회원정보 가져오기 -->
+	<select id="userList" resultType="ca.board.dao.userVO"
+		parameterType="ca.board.dao.userVO">
+		select * from tbl_user where user_id=#{user_id}
+	</select>
 </mapper>

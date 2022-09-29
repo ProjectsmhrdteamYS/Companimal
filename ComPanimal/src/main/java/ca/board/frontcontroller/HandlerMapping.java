@@ -28,6 +28,7 @@ import ca.board.controller.PetimgController;
 import ca.board.controller.QrCatchController;
 import ca.board.controller.SearchController;
 import ca.board.controller.SearchFormController;
+import ca.board.controller.Search_qr_userController;
 import ca.board.controller.SigninController;
 import ca.board.controller.SigninFormController;
 import ca.board.controller.SignupController;
@@ -85,7 +86,8 @@ public class HandlerMapping {
 		mappings.put("/map.do", new MapController());
 		mappings.put("/petlist.do", new PetListController());
 		mappings.put("/checkId.do", new checkIdController());
-
+		mappings.put("/search_qr_user.do", new Search_qr_userController()); // QR 이미지로 userDB접근시 조회
+		
 	}
 	public Controller getController(String key) {
 		return mappings.get(key);

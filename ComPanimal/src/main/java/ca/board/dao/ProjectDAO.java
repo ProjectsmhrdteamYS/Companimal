@@ -189,4 +189,12 @@ public class ProjectDAO {
 				session.commit();
 				session.close();
 			}
+
+			// userList 가져오기
+			public userVO userList(userVO vo) {
+				SqlSession session = sqlSessionFactory.openSession();
+				userVO uvo = session.selectOne("userList", vo);
+				session.close();
+				return uvo;
+			}
 }
