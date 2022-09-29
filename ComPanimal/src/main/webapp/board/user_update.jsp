@@ -116,46 +116,86 @@ a:hover {
 						<td><input type="text" class="form-control" name="user_tel"
 							value="${uvo.user_tel }"></td>
 					</tr>
-					<tr>
-						<td>정보공개동의:</td>
-						<td><input type="text" class="form-control" name="user_type"
-							value="${uvo.user_type }"></td>
-					</tr>
+					
+					<tr><td>분실시연락처<br>공 개&nbsp 여 부</td>					
+						<!-- radioBox -->
+						<div>			
+						<c:if test="${uvo.user_type eq '1'}">
+						 <td>
+						 <font color="red">공개 </font>
+						 <input class="form-check-input" type="radio" name="user_type" value="1" checked='checked' style="height:16px;">
+						 <font color="blue"> 비공개</font> 
+						 <input class="form-check-input" type="radio" name="user_type" value="2" style="height:16px;">
+						 </td></tr>
+						 </c:if>
+						 
+						 <c:if test="${uvo.user_type eq '2'}">
+						 <td>
+						 <font color="red">공개</font> 
+						 <input class="form-check-input" type="radio" name="user_type" value="1" style="height:16px;">
+						 <font color="blue">비공개</font> 
+						 <input class="form-check-input" type="radio" name="user_type" value="2" checked='checked' style="height:16px;">
+						 </td></tr>
+						 </c:if>						 
+						</div>
+					
 					</table>
 					<hr>
 					<c:set var="i" value="0" />
 					<c:forEach var="pvo" items="${plist }">
 						<table>
 						<tr>
-							<td>강아지 이름 :</td>
+							<td>강아지 이름 </td>
 							<td>${pvo.dognm }</td>
 						</tr>
 
 						<tr>
-							<td>QR코드 :</td>
+							<td>QR 코드 </td>
 							<td><img src="${pvo.pet_QR }" width="150px" height="150px"></td>
 						</tr>
 
 						<tr>
-							<td>강아지 사진 :</td>
+							<td>강아지 사진 </td>
 							<td><img src="${cpath}/img/${pvo.pet_img}" width="150px"
 								height="150px"><br> <input class="form-control"
 								type="file" name="pet_img_${i }" required></td>
 						</tr>
 
 						<tr>
-							<td>등록 번호 :</td>
+							<td>등 록 번 호</td>
 							<td><input type="text" class="form-control"
 								name="pet_regno_${i }" value="${pvo.pet_regno }" readonly></td>
 						</tr>
 						<input type="hidden" class="form-control" name="i_cnt"
 							value="${i}" />
-						<tr>
-							<td>현재 상태<br>보유: 1<br>분실: 2
-							</td>
-							<td><input type="text" class="form-control"
-								name="pet_sta_${i }" value="${pvo.pet_sta }" /></td>
-						</tr>
+							
+						<tr><td>현재 상태</td>
+						<!-- radioBox -->
+						<div>			
+						<c:if test="${pvo.pet_sta eq '1'}">
+						 <td>
+						 보유중 
+						 <input class="form-check-input" type="radio" name="pet_sta_${i }" value="1" checked='checked' style="height:16px;">
+						 분실중 
+						 <input class="form-check-input" type="radio" name="pet_sta_${i }" value="2" style="height:16px;">
+						 </td></tr>
+						 </c:if>
+						 
+						 <c:if test="${pvo.pet_sta eq '2'}">
+						 <td>
+						 보유중 
+						 <input class="form-check-input" type="radio" name="pet_sta_${i }" id="pet_sta_${i }" value="1" style="height:16px;">
+						 분실중 
+						 <input class="form-check-input" type="radio" name="pet_sta_${i }" id="pet_sta_${i }" value="2" checked='checked' style="height:16px;">
+						 </td></tr>
+						 </c:if>						 
+						</div>
+					<!-- 상태 정보 텍스트박스
+					<td>					
+					<input type="text" class="form-control" name="pet_sta_${i }" value="${pvo.pet_sta }"/></td>			
+					
+					 -->
+					</tr>
 						</table>
 						<hr>
 						<c:set var="i" value="${i+1}" />
