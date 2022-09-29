@@ -73,7 +73,6 @@ a {
 	<!-- content -->
 	<main id="wrap" class="position-relative">
 		<div class="container">
-			<h2>현상수배</h2>
 			<BR>
 			<table class="table">
 				<tr>
