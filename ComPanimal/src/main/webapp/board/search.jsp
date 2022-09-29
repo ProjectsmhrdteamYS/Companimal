@@ -181,6 +181,11 @@ a:hover {
         		        		code +='<tr><td>관할센터번호</td>'
         		        		code += '<td>'+items.officeTel+'</td>';
         		        		code += '</tr>'; 
+        		        		if(${uvo.user_type} == 1  ){
+	        		        		code +=	'<tr><td>전화번호 </td>'
+	        		        		code += '<td>'+${uvo.user_tel}+'</td>'
+	        		        		code += '</tr>';
+        		        		}    			
         		        		code +='</table>'
         		        		code +='</div>'
         		        		code +='</div>';
