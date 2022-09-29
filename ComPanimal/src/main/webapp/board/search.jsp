@@ -182,7 +182,7 @@ a:hover {
         		        		code += '<td>'+items.officeTel+'</td>';
         		        		code += '</tr>'; 
         		        		if(${uvo.user_type} == 1  ){
-	        		        		code +=	'<tr><td>전화번호 </td>'
+	        		        		code +=	'<tr><td></td><td>전화번호 </td>'
 	        		        		code += '<td>'+${uvo.user_tel}+'</td>'
 	        		        		code += '</tr>';
         		        		}    			
