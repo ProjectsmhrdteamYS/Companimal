@@ -135,13 +135,28 @@ a:hover {
 			dataType : 'json',
 			success : function(data){
 				console.log(data);
+				let pet_sta_ment = null;
 				for (var i in data){
+					// 분실여부 문자로 표기 //
+ 					let pet_sta = data[i].pet_sta;
+					console.log(pet_sta);
+					
+					if (pet_sta == '1'){
+						pet_sta_ment = "<font color='blue'>보 유 중 </font>";					
+					}else if(pet_sta == '2'){
+						pet_sta_ment = "<font color='red'>분 실 중 </font>";
+					}else{
+						pet_sta_ment = "<font color='green'>정보없음 </font>";
+					}	
+					//쇼핑주소
+					let pay = "<button onclick='window.open('https://naver.com ')'>네이버</button>";
+					
 					let a = '<hr><table>'
 					a += '<tr><td>강아지 이름 : </td><td>'+data[i].dognm+'</td></tr>'
 					a += '<tr><td>QR코드 : </td><td><img src="'+data[i].pet_QR+'"></td></tr>'
 					a += '<tr><td>강아지 사진 : </td><td><img src="${cpath}/img/'+data[i].pet_img+'" width="150px" height="150px"></td></tr>'
 					a += '<tr><td>등록 번호 : </td><td>'+data[i].pet_regno+'</td></tr>'
-					a += '<tr><td>현재 상태 : </td><td>'+data[i].pet_sta+'</td></tr>'
+					a += '<tr><td>현재 상태 : </td><td>'+pet_sta_ment+'</td></tr>'
 					a += '</table>'
 					a += '<hr>'
 					$('#pet').append(a);
