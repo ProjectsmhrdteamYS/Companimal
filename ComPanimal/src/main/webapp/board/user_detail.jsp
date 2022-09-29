@@ -73,38 +73,47 @@ a:hover {
 			</a> <br> <br> <br>
 			<table class="form-control" id="pet">
 				<tr>
-					<td>이름 :</td>
+					<td text-align: justify; text-justify: distribute; text-align-last: justify>이 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 름 </td>
 					<td>${uvo.user_name }</td>
 				</tr>
 				<tr>
-					<td>아이디 :</td>
+					<td text-align: justify; text-justify: distribute; text-align-last: justify>아&nbsp&nbsp 이&nbsp&nbsp 디 </td>
 					<td>${uvo.user_id }</td>
 				</tr>
 				<tr>
-					<td>비밀번호 :</td>
+					<td text-align: justify; text-justify: distribute; text-align-last: justify>비 밀 번 호 </td>
 					<td>${uvo.user_pw }</td>
 				</tr>
 				<tr>
-					<td>주소 :</td>
+					<td text-align: justify; text-justify: distribute; text-align-last: justify>주 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 소 </td>
 					<td>${uvo.user_addr}</td>
 				</tr>
 				<tr>
-					<td>생년월일 :</td>
+					<td text-align: justify; text-justify: distribute; text-align-last: justify>생 년 월 일 </td>
 					<td>${uvo.user_birth}</td>
 				</tr>
 				<tr>
-					<td>전화번호 :</td>
+					<td text-align: justify; text-justify: distribute; text-align-last: justify>전 화 번 호 </td>
 					<td>${uvo.user_tel}</td>
 				</tr>
 				<tr>
-					<td>가입일자 :</td>
+					<td text-align: justify; text-justify: distribute; text-align-last: justify>가 입 일 자 </td>
 					<td>${uvo.user_joindate}</td>
 				</tr>
-				<tr>
-
-					<td>개인정보동의(동의:1 비동의:0) :</td>
-					<td>${uvo.user_type}</td>
+				
+				<tr><td text-align: justify; text-justify: distribute; text-align-last: justify>
+				분실시연락처<br>공 개&nbsp 여 부</td>					
+						<!-- 개인정보 공개 상황 -->
+						<div>
+						<td>			
+						<c:if test="${uvo.user_type eq '1'}">
+						 &nbsp&nbsp&nbsp  <font color="red"><b>공 개 중 </font> </td>
+						</c:if>
+						<c:if test="${uvo.user_type eq '2'}">
+						 &nbsp&nbsp&nbsp <font color="blue"><b>비공개</font></td>
+						 </c:if>
 				</tr>
+				
 			</table>
 			
 			<button class="w-100 btn btn-lg btn-primary mb-4"
