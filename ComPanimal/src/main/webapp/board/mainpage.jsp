@@ -103,7 +103,7 @@
 
 					<li><a href="${cpath }/companimal.do"
 						class="nav-link px-3 link-dark">COMPANIMAL</a></li>
-					<li>
+				           <li>
 						<a href="#" onclick="moveUrl('${cpath }/searchform.do')"
 						class="nav-link px-3 link-dark">반려견조회</a></li>
 					<li>

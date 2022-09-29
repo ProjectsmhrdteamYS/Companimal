@@ -93,7 +93,7 @@ a:hover {
 				</tr>
 				<tr>
 					<td>사진</td>
-					<td><img src="${cpath }/img/${vo.c_file}"></td>
+					<td><img src="${cpath }/img/${vo.c_file}" width="250px" height="250px" ></td>
 				</tr>
 				<tr>
 					<td>작성자</td>
