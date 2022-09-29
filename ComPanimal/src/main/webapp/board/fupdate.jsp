@@ -67,7 +67,7 @@ a {
 					</tr>
 					<tr>
 						<td>사진</td>
-						<td><img src="${cpath }/img/${vo.f_file}"> <input
+						<td><img src="${cpath }/img/${vo.f_file}" width="250px" height="250px"> <input
 							class="form-control" type="file" name="f_file"
 							placeholder="반려견 사진을 올려주세요"></td>
 					</tr>

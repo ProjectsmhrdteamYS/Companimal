@@ -20,8 +20,8 @@
 	crossorigin="anonymous">
 	</script>
 <script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
-	</script>
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"/>
+	
 
 <style>
 ul li {
@@ -40,8 +40,8 @@ a {
 	<!-- content -->
 	<center>
 	<div class="container">
-		<div id="petSta" width=50%></div><div id="user_type" width=50%></div>
-        								
+		<div id="petSta" width=50%></div>
+		<div id="user_type" width=50%></div>
 		<div id="petList" width=50%></div>
 	</div>
 	</center>
@@ -68,8 +68,6 @@ a {
 	        				
 	        			}else{
 	        			console.log(res.pet_img);
-	        			/* mx-auto h-100 */
-	    	   			// ==================================
 	    	   			user_id = res.user_id  // id
 	    	   			console.log("user_id"+user_id);
 	    	   			pet_sta = res.pet_sta; //상태
@@ -164,14 +162,9 @@ a {
 	        		        		code += '<td>'+items.neuterYn+'</td></tr>';
 	        		        		code +='<tr><td>관할</td>'
 	        		        		code += '<td>'+items.orgNm+'</td></tr>';
-	        		        		code +='<tr><td>관할센터번호</td>'
-	        		        		code += '<td>'+items.officeTel+'</td>';
-	        		        		code += '</tr>'; 
-	        		        		if(${uvo.user_type} == 1  ){
-		        		        		code +=	'<tr><td></td><td>전화번호 </td>'
-		        		        		code += '<td>'+${uvo.user_tel}+'</td>'
-		        		        		code += '</tr>';
-	        		        		}    
+	        		        		code +='<tr><td>관할센터번호</td>'	        		        		
+		        		        		code += '<td><a href=tel:'+items.officeTel+'>'+items.officeTel+'</a></td>'; 
+		        		        		code += '</tr>'; 	 
 	        		        		code +='</table>'
 	        		        		code +='</div>'
 	        		        		code +='</div>';

@@ -88,8 +88,8 @@ a:hover {
 					</tr>
 					<tr>
 						<td>사진</td>
-						<td><img src="${cpath }/img/${vo.c_file}">
-						 <input	class="form-control" type="file" name="c_file" placeholder="반려견 사진을 올려주세요">
+						<td><img src="${cpath }/img/${vo.c_file}" width="250px" height="250px">
+						 <input	class="form-control" type="file" name="c_file" placeholder="반려견 사진을 올려주세요" >
 							</td>
 					</tr>
 					<tr>

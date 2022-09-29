@@ -224,6 +224,8 @@
 						
 						<!-- radioBox -->
 						<div class="form-check form-check-inline me-4">
+						<label>번호 공개 여부</label>
+						<br>
 						 <input class="form-check-input" type="radio" name="user_type" value="1" style="height:16px;">
 						 <label class="form-check-label" for="inlineRadio1">동의</label>
 						</div>

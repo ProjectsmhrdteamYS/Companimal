@@ -88,7 +88,7 @@ a {
 				</tr>
 				<tr>
 					<td>강아지 사진</td>
-					<td><img src="${cpath }/img/${vo.f_file}"></td>
+					<td><img src="${cpath }/img/${vo.f_file}" width="250px" height="250px"></td>
 				</tr>
 				<tr>
 					<td>작성자</td>
