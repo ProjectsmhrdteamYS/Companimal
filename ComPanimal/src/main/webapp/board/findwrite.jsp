@@ -43,7 +43,7 @@ a {
 		<div class="container">
 			<img src="${cpath }/images/mongja.jpg" alt="" width="380px"
 				class="d-inline-block align-text-top">
-			<h2>현상수배</h2>
+			<h2>꼭...찾아주세요....</h2>
 			<BR>
 			<form action="${cpath}/findwrite.do" method="post"
 				enctype="multipart/form-data">
